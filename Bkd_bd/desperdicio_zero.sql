@@ -36,6 +36,7 @@ CREATE TABLE doacoes (
     id_usuario INT,
     nome_doador VARCHAR(100),
     tipo_alimento VARCHAR(100),
+    alimento_expecifico VARCHAR(100),
     quantidade VARCHAR(50),
     validade DATE,
     endereco VARCHAR(200),

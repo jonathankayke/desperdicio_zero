@@ -1,24 +1,14 @@
 <?php
-// Definindo variáveis para conexão
-$hostname_conn  =   "localhost";
-$database_conn  =   "desperdicio_zero";
-$username_conn  =   "desperdicio_zero";
-$password_conn  =   "senacti19";
-$charset_conn   =   "utf8";
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db = "desperdicio_zero";
 
-$conn_alimentos  =   
-    new mysqli(
-        $hostname_conn,
-        $username_conn,
-        $password_conn,
-        $database_conn
-    );
-// Definir o conjunto de caracteres da conexão
-mysqli_set_charset($conn_alimentos,$charset_conn);
+$conn = new mysqli($host, $user, $pass, $db);
 
-// Verificando possíveis erros na conexão
-if($conn_alimentos->connect_error){
-    echo "Error: ".$conn_alimentos->connect_error;
-};
-// Não deixar espaços vazios depois do fechamento do PHP pois causa erro HEADER
+if ($conn->connect_error) {
+    die("Erro ao conectar ao banco: " . $conn->connect_error);
+}
+
+$conn->set_charset("utf8mb4");
 ?>
