@@ -1,6 +1,6 @@
 <?php
 session_start();
-require "..\Connections\conn_alimentos.php";
+require "..\Connections\conn_alimentos.php"
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
