@@ -83,6 +83,11 @@
                                 <textarea class="form-control" id="observacoes" name="observacoes" rows="3" placeholder="Ex: Precisa de refrigeração, retirar até as 17h, contém glúten..."></textarea>
                             </div>
 
+                            <div class="col-md-6 mb-3">
+                                    <label for="doacao_criada" class="form-label">Data de criação da Doação</label>
+                                    <input type="date" class="form-control" id="doacao_criada" name="validade" required>
+                                </div>
+
                             <input type="hidden" name="status" value="disponível">
                             
                             <div class="d-grid">

@@ -41,6 +41,7 @@ CREATE TABLE doacoes (
     validade DATE,
     endereco VARCHAR(200),
     contato VARCHAR(100),
+    observacoes VARCHAR(300),
     status ENUM('disponível','entregue') DEFAULT 'disponível',
     criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (id_usuario) REFERENCES usuarios(id)
