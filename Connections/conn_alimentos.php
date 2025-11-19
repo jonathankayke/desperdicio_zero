@@ -1,14 +1,19 @@
 <?php
-$host = "localhost";
-$user = "root";
-$pass = "";
-$db = "desperdicio_zero";
+// conexao.php
 
-$conn = new mysqli($host, $user, $pass, $db);
+$host = 'localhost';
+$dbname = 'desperdicio_zero';
+$username = 'desperdicio_zero';
+$password = 'desperdicio_zero';
 
-if ($conn->connect_error) {
-    die("Erro ao conectar ao banco: " . $conn->connect_error);
+try {
+    // Conexão usando PDO (Mais seguro contra SQL Injection)
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
+    
+    // Configura o PDO para lançar exceções em caso de erro
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    
+} catch (PDOException $e) {
+    die("Erro na conexão com o banco de dados: " . $e->getMessage());
 }
-
-$conn->set_charset("utf8mb4");
 ?>
