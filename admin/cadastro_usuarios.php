@@ -12,7 +12,7 @@
             <div class="text-center mb-3">
                 <span class="font-size: 3rem;">🌿</span>
                 <h3 class="text-success fw-bold">Cadastrar</h3>
-                <form action="">
+                <form action="cadastro_usuarios.php" enc>
                     
                 </form>
             </div>
