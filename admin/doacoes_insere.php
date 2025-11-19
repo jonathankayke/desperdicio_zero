@@ -85,7 +85,7 @@
 
                             <div class="col-md-6 mb-3">
                                     <label for="doacao_criada" class="form-label">Data de criação da Doação</label>
-                                    <input type="date" class="form-control" id="doacao_criada" name="validade" required>
+                                    <input type="date" class="form-control" id="doacao_criada" name="doacao_criada" required>
                                 </div>
 
                             <input type="hidden" name="status" value="disponível">
