@@ -32,17 +32,19 @@ CREATE TABLE usuarios (
 
 -- Tabela de doações
 CREATE TABLE doacoes (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    id_usuario INT,
-    nome_doador VARCHAR(100),
-    tipo_alimento VARCHAR(100),
-    alimento_especifico VARCHAR(100),
-    quantidade VARCHAR(50),
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome_alimento VARCHAR(150) NOT NULL,
+    quantidade VARCHAR(50) NOT NULL,
     validade DATE,
-    endereco VARCHAR(200),
-    contato VARCHAR(100),
-    observacoes VARCHAR(300),
-    status ENUM('disponível','entregue') DEFAULT 'disponível',
-    criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (id_usuario) REFERENCES usuarios(id)
+    descricao TEXT,
+    data_doacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+ 
+INSERT INTO doacoes (nome_alimento, quantidade, validade, descricao)
+VALUES
+('Arroz', '10 kg', '2025-05-10', 'Pacotes novos, ótima condição'),
+('Feijão', '5 kg', '2025-04-22', 'Produto fechado, pronto para uso'),
+('Maçãs', '15 unidades', '2025-03-14', 'Frutas frescas'),
+('Pão francês', '20 unidades', '2025-02-10', 'Pães feitos hoje'),
+('Leite', '6 caixas', '2025-06-01', 'Validade longa');
+ 
