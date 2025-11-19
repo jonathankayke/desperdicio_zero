@@ -1,5 +1,4 @@
 <?php
-// conexao.php
 
 $host = 'localhost';
 $dbname = 'desperdicio_zero';
