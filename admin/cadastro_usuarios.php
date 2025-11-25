@@ -12,8 +12,34 @@
             <div class="text-center mb-3">
                 <span class="font-size: 3rem;">🌿</span>
                 <h3 class="text-success fw-bold">Cadastrar</h3>
-                <form action="cadastro_usuarios.php" enc>
-                    
+                <form action="cadastro_usuarios.php" enctype >
+                    <div class="mb-3">
+                        <label class="form-label">E-mail:</label>
+                        <input type="email" class="form-control" name="email_cadastro" placeholder="seu@email.com" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Senha:</label>
+                        <input type="password" class="form-control" name="senha_cadastro" placeholder="********" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="tipo_cadastro">Tipo cadastro?</label>
+                        <div class="input-group">
+                            <label for="tipo_usuario_b" class="radio-inline">
+                                <input type="radio" name="tipo_usuario_" id="tipo_usuario_b" value="ben">
+                                Beneficiário
+                            </label>
+                            <label for="tipo_usuario_d" class="radio-inline">
+                                <input type="radio" name="tipo_usuario_" id="tipo_usuario_d" value="doa" checked>
+                                Doador
+                            </label>
+                        </div>
+                         <!-- fecha tipo usuario -->
+                        <br>
+
+                        <input type="submit" value="Cadastrar" name="enviar" id="enviar" class="btn btn-info btn-block">
+                    </div>
                 </form>
             </div>
         </div>
