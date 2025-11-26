@@ -15,7 +15,6 @@
     </style>
 </head>
 <body class="bg-light">
-
     <div class="container py-5">
         <div class="row justify-content-center">
             <div class="col-lg-7 col-md-9">
