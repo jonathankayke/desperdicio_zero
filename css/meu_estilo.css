@@ -2,10 +2,19 @@
 /* CSS Document */
 
 .fundofixo{
-    /* background-image: url("../imagens/bg_fogo.jpg");
+    /* background-image: url("../imagens/fundosite.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed; */
-    background: url(../imagens/) no-repeat fixed;
+    background: url(../imagens/fundosite.jpg) no-repeat fixed;
     background-size: cover;
-    -webkit-background-size: cover;
+    -webkit-background-size: cover; 
 }
+
+/* ------------------------ NAVBAR ---------------------- */
+.navbar-green{
+    background-color: rgb(97, 189, 97); 
+}
+.navbar-green a{
+    color: white;
+}
+/* ------------------------------------------------------ */
