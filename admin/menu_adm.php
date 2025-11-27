@@ -10,13 +10,15 @@
     <link rel="stylesheet" href="../css/meu_estilo.css">
 </head>
 <body>
-    <nav class="navbar navbar-success">
+    <nav class="navbar navbar-inverse">
         <div class="container-fluid">
     
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed"
                     data-toggle="collapse"
-                    data-target="#defaultNavbar">
+                    data-target="#defaultNavbar"
+                    aria-expanded="false"
+                >
                     <span class="sr-only">Navegação Mobile</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -24,7 +26,7 @@
                 </button>
     
                 <a href="index.php" class="navbar-brand">
-                    <img src="../imagens/icon_menu.png" alt="">
+                    <img src="../imagens/Logo.png" alt="">
                 </a>
             </div>
     
