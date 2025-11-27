@@ -9,3 +9,12 @@
     background-size: cover;
     -webkit-background-size: cover; 
 }
+
+/* ------------------------ NAVBAR ---------------------- */
+.navbar-green{
+    background-color: rgb(97, 189, 97); 
+}
+.navbar-green a{
+    color: white;
+}
+/* ------------------------------------------------------ */

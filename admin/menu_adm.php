@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/meu_estilo.css">
 </head>
 <body>
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-green">
         <div class="container-fluid">
     
             <div class="navbar-header">
