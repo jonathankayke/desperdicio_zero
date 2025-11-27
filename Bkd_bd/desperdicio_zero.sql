@@ -73,7 +73,75 @@ VALUES
 ('Maçãs', '15 unidades', '2025-03-14', 'Frutas frescas'),
 ('Pão francês', '20 unidades', '2025-02-10', 'Pães feitos hoje'),
 ('Leite', '6 caixas', '2025-06-01', 'Validade longa');
-    
+
+
+-- Tabela de solicitações
+
+USE desperdicio_zero;
+ 
+CREATE TABLE IF NOT EXISTS solicitacoes (
+    id_solicitacao INT AUTO_INCREMENT PRIMARY KEY,
+    id_doacao INT NOT NULL,
+    id_usuario INT NOT NULL,
+    status ENUM('pendente','aceita','retirada','cancelada') DEFAULT 'pendente',
+    data_solicitacao DATETIME DEFAULT CURRENT_TIMESTAMP,
+ 
+    FOREIGN KEY (id_doacao) REFERENCES doacoes(id_doacao)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+ 
+    FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
+ 
+USE desperdicio_zero;
+ 
+DELIMITER $$
+ 
+CREATE TRIGGER trg_solicitacao_insert
+AFTER INSERT ON solicitacoes
+FOR EACH ROW
+BEGIN
+    UPDATE doacoes
+    SET status = 'reservado'
+    WHERE id_doacao = NEW.id_doacao;
+END$$
+ 
+DELIMITER ;
+ 
+DELIMITER $$
+ 
+CREATE TRIGGER trg_solicitacao_retirada
+AFTER UPDATE ON solicitacoes
+FOR EACH ROW
+BEGIN
+    IF NEW.status = 'retirada' THEN
+        UPDATE doacoes
+        SET status = 'retirado'
+        WHERE id_doacao = NEW.id_doacao;
+    END IF;
+END$$
+ 
+DELIMITER ;
+ 
+DELIMITER $$
+ 
+CREATE TRIGGER trg_solicitacao_cancelada
+AFTER UPDATE ON solicitacoes
+FOR EACH ROW
+BEGIN
+    IF NEW.status = 'cancelada' THEN
+        UPDATE doacoes
+        SET status = 'disponivel'
+        WHERE id_doacao = NEW.id_doacao;
+    END IF;
+END$$
+ 
+DELIMITER ;
+ 
+
+
 
  -- -------- VIEW --------
 -- Criando a view vw_tbprodutos
