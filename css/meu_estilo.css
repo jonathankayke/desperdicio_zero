@@ -12,9 +12,13 @@
 
 /* ------------------------ NAVBAR ---------------------- */
 .navbar-green{
-    background-color: rgb#28a745;; 
+    background-color:#28a745;; 
 }
 .navbar-green a{
     color: white;
+    font-weight: bold;
+}
+.navbar-green a:hover {
+    color: #000000 !important;
 }
 /* ------------------------------------------------------ */
