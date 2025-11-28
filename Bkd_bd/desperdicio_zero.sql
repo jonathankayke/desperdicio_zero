@@ -31,30 +31,29 @@ CREATE TABLE tbusuarios (
     foto_usuario
 );
  
-INSERT INTO usuarios (nome_usuario, email_usuario, senha_usuario, tipo_usuario) VALUES
+INSERT INTO tbusuarios (nome_usuario, email_usuario, senha_usuario, tipo_usuario) VALUES
 ('Administrador', 'admin@site.com', '$2y$10$Z7d71rxeFA2CjqxJcw8oHeHqFQkQJJ0rNWIGQqfYTLsAECA30rFO2', 'Admin'),
 ('Gustavo Henrick', 'gustavo@example.com', '$2y$10$Z7d71rxeFA2CjqxJcw8oHeHqFQkQJJ0rNWIGQqfYTLsAECA30rFO2', 'User'),
 ('Maria Silva', 'maria@gmail.com', '$2y$10$Z7d71rxeFA2CjqxJcw8oHeHqFQkQJJ0rNWIGQqfYTLsAECA30rFO2', 'User');
  
 
--- Tabela de doações
+-- Tabela de tbdoações
 CREATE TABLE tbdoacoes (
     id_doacao INT AUTO_INCREMENT PRIMARY KEY,
+    nome_doacao VARCHAR(150) NOT NULL,
+    tipo_instituicao VARCHAR(150) NOT NULL,
+    endereco_empresa VARCHAR(150) NOT NULL,
+    contato_doacao VARCHAR(150) NOT NULL,
+    cpf_cnpj_doacao VARCHAR(150) NOT NULL,
+    email_doacao VARCHAR(150) NOT NULL,
     tipo_alimento VARCHAR(150) NOT NULL,
+    nome_alimento VARCHAR(150) NOT NULL,
     quantidade_doacao VARCHAR(50) NOT NULL,
     validade_doacao DATE,
-    descricao_doacao TEXT,
-    data_doacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    endereco_retirada VARCHAR(150) NOT NULL,
+    imagem_doacao VARCHAR(150) NOT NULL
 );
  
-INSERT INTO doacoes (tipo_alimento, quantidade_doacao, validade_doacao, descricao_doacao)
-VALUES
-('Arroz', '10 kg', '2025-05-10', 'Pacotes novos, ótima condição'),
-('Feijão', '5 kg', '2025-04-22', 'Produto fechado, pronto para uso'),
-('Maçãs', '15 unidades', '2025-03-14', 'Frutas frescas'),
-('Pão francês', '20 unidades', '2025-02-10', 'Pães feitos hoje'),
-('Leite', '6 caixas', '2025-06-01', 'Validade longa');
-
     -- Estrutura da tabela tbtipos
     CREATE TABLE tbtipos(
         id_tipo INT(11) NOT NULL,
