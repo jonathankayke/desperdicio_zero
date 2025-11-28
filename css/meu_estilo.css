@@ -1,20 +1,48 @@
 @charset "utf-8";
-/* CSS Document */
 
-.fundofixo{
-    /* background-image: url("../imagens/fundosite.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed; */
+/* ------------------------ CONFIGURAÇÕES GERAIS ---------------------- */
+html, body {
+    height: 100%; /* Garante que a página ocupe 100% da altura */
+    margin: 0;
+}
+
+/* ------------------------ FUNDO E CENTRALIZAÇÃO ---------------------- */
+.fundofixo {
+    /* Imagem de Fundo */
     background: url(../imagens/fundosite.jpg) no-repeat fixed;
     background-size: cover;
-    -webkit-background-size: cover; 
+    -webkit-background-size: cover;
+
+    /* Centralização (Flexbox) */
+    display: flex;
+    align-items: center;     /* Centraliza Verticalmente */
+    justify-content: center; /* Centraliza Horizontalmente */
 }
 
-/* ------------------------ NAVBAR ---------------------- */
-.navbar-green{
-    background-color: rgb(97, 189, 97); 
+/* ------------------------ ESTILO DO FORMULÁRIO (CARD) ---------------- */
+/* Aumenta o espaço interno e melhora o visual do quadrado verde */
+.alert-success {
+    padding: 30px;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    border: none; /* Remove borda padrão se houver */
 }
-.navbar-green a{
+
+/* Espaçamento entre os campos (Substituto do mb-3) */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Espaço acima do botão */
+.btn-block {
+    margin-top: 10px;
+}
+
+/* ------------------------ NAVBAR (SE HOUVER) ---------------------- */
+.navbar-green {
+    background-color: rgb(97, 189, 97);
+}
+
+.navbar-green a {
     color: white;
 }
-/* ------------------------------------------------------ */
