@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Área Administrativa</title>
     <!-- Link CSS do Bootstrap -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <!-- Link para CSS Específico -->
-    <link rel="stylesheet" href="../css/meu_estilo.css">
+    <!-- <link rel="stylesheet" href="../css/bootstrap.min.css">
+    Link para CSS Específi
+    <link rel="stylesheet" href="../css/meu_estilo.css"> -->
 </head>
 <body>
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-green">
         <div class="container-fluid">
     
             <div class="navbar-header">
@@ -26,7 +26,7 @@
                 </button>
     
                 <a href="index.php" class="navbar-brand">
-                    <img src="../imagens/Logo.png" alt="">
+                    <img src="../imagens/Icon_menu.png" alt="">
                 </a>
             </div>
     
@@ -40,9 +40,9 @@
             </div>
         </div>
     </nav>
-    
+</body>  
 <!-- Link arquivos Bootstrap js -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>    
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>     -->
 </body>
 </html>
