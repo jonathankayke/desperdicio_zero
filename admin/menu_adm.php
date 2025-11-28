@@ -34,7 +34,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="index.php">ADMIN</a></li>
                     <li><a href="">DOAÇÕES</a></li>
-                    <li><a href="">TIPOS</a></li>
+                    <li><a href="">TIPOS</a></li>   
                     <li><a href="">USUÁRIOS</a></li>
                 </ul>
             </div>
