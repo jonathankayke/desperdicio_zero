@@ -45,22 +45,22 @@ html, body {
 }
 
 /* ------------------------ NAVBAR ---------------------- */
-.navbar-green{
+.navegacao{
     background-color: rgba(255, 255, 255, 0.63); 
 }
-.navbar-green a {
+.navegacao a {
     color: rgb(0, 0, 0);
     font-weight: bold;
 }
-.navbar-green a:hover {
+.navegacao a:hover {
     color: #179b12 !important;
 }
-.navbar-green .navbar-brand img {
+.navegacao .navbar-brand img {
     height: 58px; 
     width: auto; /* mantém proporção */
     margin-left: 60px;
 }
-.navbar-green .navbar-brand {
+.navegacao .navbar-brand {
     display: flex;
     align-items: center; /* centraliza vertical */
 }
