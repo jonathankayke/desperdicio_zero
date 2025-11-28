@@ -8,20 +8,10 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/meu_estilo.css">
 
-    <style>
-        /* Estilo extra para os subtítulos ficarem bonitos */
-        .secao-titulo {
-            color: #3c763d;
-            /* Um verde escuro para combinar */
-            border-bottom: 1px solid #d6e9c6;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            font-size: 1.5em;
-        }
-    </style>
 </head>
-
+<?php include("menu_adm.php") ?>
 <body class="fundofixo">
+
 
     <div class="container">
         <div class="row">
