@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Área Administrativa</title>
     <!-- Link CSS do Bootstrap -->
-    <!-- <link rel="stylesheet" href="../css/bootstrap.min.css">
-    Link para CSS Específi
-    <link rel="stylesheet" href="../css/meu_estilo.css"> -->
+     <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- Link para CSS Específi -->
+    <link rel="stylesheet" href="../css/meu_estilo.css">
 </head>
 <body>
-    <nav class="navbar navbar-green">
+    <nav class="navbar navegacao">
         <div class="container-fluid">
     
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed"
+                <button 
+                    type="button" 
+                    class="navbar-toggle collapsed"
                     data-toggle="collapse"
                     data-target="#defaultNavbar"
                     aria-expanded="false"
@@ -42,7 +44,7 @@
     </nav>
 </body>  
 <!-- Link arquivos Bootstrap js -->
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>     -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script> 
 </body>
 </html>
