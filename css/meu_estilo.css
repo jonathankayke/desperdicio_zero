@@ -52,7 +52,7 @@ html, body {
 .navbar-green .navbar-brand img {
     height: 58px; 
     width: auto; /* mantém proporção */
-    margin-left: 40px;
+    margin-left: 60px;
 }
 .navbar-green .navbar-brand {
     display: flex;
