@@ -1,3 +1,28 @@
+<?php
+include("../Connections/conn_alimentos.php");
+
+// Verifica ID recebido
+if (!isset($_GET['id'])) {
+    die("ID da doação não informado!");
+}
+
+$id = $_GET['id'];
+
+// Consulta os dados da doação
+$sql = $conn->prepare("SELECT * FROM tbdoacoes WHERE id_doacao = ?");
+$sql->execute([$id]);
+$doacao = $sql->fetch(PDO::FETCH_ASSOC);
+
+if (!$doacao) {
+    die("Doação não encontrada!");
+}
+
+// Buscar todos os tipos para o select
+$sqlTipos = $conn->query("SELECT * FROM tbtipos ORDER BY rotulo_tipo");
+$tipos = $sqlTipos->fetchAll(PDO::FETCH_ASSOC);
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -145,6 +170,7 @@
     </div>
 </div>
 
-<script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 </body>
 </html>

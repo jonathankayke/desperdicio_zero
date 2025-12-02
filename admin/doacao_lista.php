@@ -1,17 +1,20 @@
 <?php
 include("../Connections/conn_alimentos.php");
 
-$consulta   =   "
-                SELECT  *
+$consulta   =   "SELECT *
                 FROM vw_doacoes
-                ORDER BY nome_alimento ASC;
-                ";
+                ORDER BY nome_alimento ASC";
 
-$lista      =   $->query($consulta);
+// AQUI ESTAVA O ERRO: Adicionei 'conn_produtos' antes da seta
+$lista      =   $conn_alimentos->query($consulta);
+
+// Verifica se houve erro na consulta SQL
+if (!$lista) {
+    die("Erro na consulta: " . $conn_alimentos->error);
+}
 
 $row        =   $lista->fetch_assoc();
-
-$totalRows  =   ($lista)->num_rows;
+$totalRows  =   $lista->num_rows; // Removi os parenteses extras que não precisava
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
