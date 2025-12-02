@@ -4,8 +4,14 @@ include("../Connections/conn_alimentos.php");
 $consulta   =   "
                 SELECT  *
                 FROM vw_doacoes
-                ORDER BY nome_alimento
+                ORDER BY nome_alimento ASC;
                 ";
+
+$lista      =   $conn_alimentos->query($consulta);
+
+$row        =   $lista->fetch_assoc();
+
+$totalRows  =   ($lista)->num_rows;
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
