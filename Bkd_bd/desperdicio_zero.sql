@@ -45,8 +45,7 @@ CREATE TABLE tbdoacoes (
     endereco_retirada VARCHAR(150) NOT NULL,
     imagem_doacao VARCHAR(150) NOT NULL,
     id_tipo_doacoes INT,
-    CONSTRAINT id_tipo_doacoes_fk FOREIGN KEY (id_tipo_doacoes) REFERENCES tbtipos(id_tipo) ON UPDATE CASCADE ON DELETE
-    SET NULL
+    
 )ENGINE = InnoDB DEFAULT CHARSET = utf8;
 
 INSERT INTO
@@ -191,6 +190,45 @@ VALUES
     ('C', 'Conserva'),
     ('S', 'Suco'),
     ('O', 'Outros');
+
+
+-- ------ CHAVES ------
+
+-- Chaves da tabela tbusuarios
+ALTER TABLE tbusuarios
+    ADD PRIMARY KEY (id_usuario),
+    ADD UNIQUE KEY email_usuario_uniq(email_usuario);
+
+-- Chaves da tabela tbtipos
+ALTER TABLE tbtipos
+    ADD PRIMARY KEY (id_tipo);
+
+-- Chaves da tabela tbdoacoes
+ALTER TABLE tbdoacoes
+    ADD PRIMARY KEY (id_doacao),
+    ADD KEY id_tipo_fk(id_tipo);
+
+
+-- ----- AUTO INCREMENTS -----
+
+ALTER TABLE tbusuarios
+    MODIFY id_usuario INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+ALTER TABLE tbtipos
+    MODIFY id_tipo INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+ALTER TABLE tbdoacoes
+    MODIFY id_doacao INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+
+-- ------ CHAVES ESTRANGEIRAS / LIMITADORES ------
+
+ALTER TABLE tbdoacoes
+    ADD CONSTRAINT fk_doacao_tipo FOREIGN KEY(id_tipo)
+        REFERENCES tbtipos(id_tipo)
+        ON DELETE SET NULL
+        ON UPDATE CASCADE;
+
 
 -- -------- VIEW -------- -- Criando a view vw_tbdoacoes 
 CREATE
