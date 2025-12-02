@@ -1,18 +1,27 @@
 <?php
 include("../Connections/conn_alimentos.php");
 
-$consulta   =   "
-                SELECT  *
-                FROM vw_doacoes
-                ORDER BY nome_alimento ASC;
-                ";
+// Verifica ID recebido
+if (!isset($_GET['id'])) {
+    die("ID da doação não informado!");
+}
 
-$lista      =   $->query($consulta);
+$id = $_GET['id'];
 
-$row        =   $lista->fetch_assoc();
+// Consulta os dados da doação
+$sql = $conn->prepare("SELECT * FROM tbdoacoes WHERE id_doacao = ?");
+$sql->execute([$id]);
+$doacao = $sql->fetch(PDO::FETCH_ASSOC);
 
-$totalRows  =   ($lista)->num_rows;
+if (!$doacao) {
+    die("Doação não encontrada!");
+}
+
+// Buscar todos os tipos para o select
+$sqlTipos = $conn->query("SELECT * FROM tbtipos ORDER BY rotulo_tipo");
+$tipos = $sqlTipos->fetchAll(PDO::FETCH_ASSOC);
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
