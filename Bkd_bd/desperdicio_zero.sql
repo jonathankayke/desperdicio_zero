@@ -60,6 +60,18 @@ CREATE TABLE tbdoacoes (
     rotulo_tipo VARCHAR(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+    INSERT INTO tbtipos (sigla_tipo, rotulo_tipo) VALUES
+    ('F', 'Fruta'),
+    ('V', 'Verdura'),
+    ('G', 'Grão'),
+    ('P', 'Proteína'),
+    ('L', 'Laticínio'),
+    ('B', 'Bebida'),
+    ('C', 'Conserva'),
+    ('S', 'Suco'),
+    ('O', 'Outros');
+
+
 
 
 
