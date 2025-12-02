@@ -7,7 +7,7 @@ $consulta   =   "
                 ORDER BY nome_alimento ASC;
                 ";
 
-$lista      =   $conn_alimentos->query($consulta);
+$lista      =   $->query($consulta);
 
 $row        =   $lista->fetch_assoc();
 
