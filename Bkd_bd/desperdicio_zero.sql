@@ -26,16 +26,10 @@ CREATE TABLE tbusuarios (
     id_usuario INT AUTO_INCREMENT PRIMARY KEY,
     nome_usuario VARCHAR(150) NOT NULL,
     email_usuario VARCHAR(120) NOT NULL UNIQUE,
-    senha_usuario VARCHAR(255) NOT NULL,   -- use password_hash no PHP
+    senha_usuario VARCHAR(255) NOT NULL,
     tipo_usuario ENUM('Admin', 'User') DEFAULT 'User',
-    foto_usuario
+    foto_usuario VARCHAR(255) NULL
 );
- 
-INSERT INTO tbusuarios (nome_usuario, email_usuario, senha_usuario, tipo_usuario) VALUES
-('Administrador', 'admin@site.com', '$2y$10$Z7d71rxeFA2CjqxJcw8oHeHqFQkQJJ0rNWIGQqfYTLsAECA30rFO2', 'Admin'),
-('Gustavo Henrick', 'gustavo@example.com', '$2y$10$Z7d71rxeFA2CjqxJcw8oHeHqFQkQJJ0rNWIGQqfYTLsAECA30rFO2', 'User'),
-('Maria Silva', 'maria@gmail.com', '$2y$10$Z7d71rxeFA2CjqxJcw8oHeHqFQkQJJ0rNWIGQqfYTLsAECA30rFO2', 'User');
- 
 
 -- Tabela de tbdoações
 CREATE TABLE tbdoacoes (
@@ -51,28 +45,36 @@ CREATE TABLE tbdoacoes (
     quantidade_doacao VARCHAR(50) NOT NULL,
     validade_doacao DATE,
     endereco_retirada VARCHAR(150) NOT NULL,
-    imagem_doacao VARCHAR(150) NOT NULL
+    imagem_doacao VARCHAR(150) NOT NULL,
+    id_tipo INT,
+    CONSTRAINT fk_tipo FOREIGN KEY (id_tipo) REFERENCES tbtipos(id_tipo)
+        ON UPDATE CASCADE
+        ON DELETE SET NULL
 );
+
  
     -- Estrutura da tabela tbtipos
-    CREATE TABLE tbtipos(
-        id_tipo INT(11) NOT NULL,
-        sigla_tipo VARCHAR(3) NOT NULL,
-        rotulo_tipo VARCHAR(15) NOT NULL
+   CREATE TABLE tbtipos (
+    id_tipo INT AUTO_INCREMENT PRIMARY KEY,
+    sigla_tipo VARCHAR(3) NOT NULL,
+    rotulo_tipo VARCHAR(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 
+
  -- -------- VIEW --------
--- Criando a view vw_tbprodutos
-CREATE VIEW vw_doacoes as
-    SELECT  p.id_doacao,
-            p.nome_alimento,
-            t.nome_doador,
-            t.tipo_doador,
-            p.quantidade_doacao,
-            p.validade_doacao,
-            p.descricao_doacao,
-            p.data_doacao,
-    FROM    doacoes p JOIN doadores t
-    WHERE   p.nome_alimento=t.id_doacao;
+-- Criando a view vw_tbdoacoes
+CREATE OR REPLACE VIEW vw_doacoes AS
+SELECT  
+    d.id_doacao,
+    d.nome_doacao,
+    d.nome_alimento,
+    d.quantidade_doacao,
+    d.validade_doacao,
+    d.endereco_retirada,
+    d.imagem_doacao,
+    t.sigla_tipo,
+    t.rotulo_tipo
+FROM tbdoacoes d
+LEFT JOIN tbtipos t ON d.id_tipo = t.id_tipo;
