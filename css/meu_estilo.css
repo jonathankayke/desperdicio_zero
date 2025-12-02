@@ -65,4 +65,7 @@ html, body {
     align-items: center; /* centraliza vertical */
 }
 
-/* ------------------------------------------------------ */
+/* -------------------- OPACIDADE LISTAS ---------------- */
+.tbopacidade {
+    background-color: #ffffff99;
+}
