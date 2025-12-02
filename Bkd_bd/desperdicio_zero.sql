@@ -1,6 +1,5 @@
+USE desperdicio_zero;
 
-USE desperdicio_zero
-GO
 -- Criar tabela tbtipos primeiro
 CREATE TABLE IF NOT EXISTS tbtipos (
     id_tipo INT AUTO_INCREMENT PRIMARY KEY,
