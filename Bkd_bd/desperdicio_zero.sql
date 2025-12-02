@@ -224,8 +224,8 @@ ALTER TABLE tbdoacoes
 -- ------ CHAVES ESTRANGEIRAS / LIMITADORES ------
 
 ALTER TABLE tbdoacoes
-    ADD CONSTRAINT fk_doacao_tipo FOREIGN KEY(id_tipo)
-        REFERENCES tbtipos(id_tipo)
+    ADD CONSTRAINT id_doacao_tipo_fk FOREIGN KEY(id_tipo_doacoes)
+        REFERENCES tbtipos(id_tipo_doacoes)
         ON DELETE SET NULL
         ON UPDATE CASCADE;
 
