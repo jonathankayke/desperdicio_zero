@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Doações</title>
+    <title>Lista de Usuários</title>
     <!-- Link CSS do Bootstrap -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- Link para CSS Específico -->
@@ -11,33 +11,21 @@
 </head>
 <body class="fundofixo">
     <main class="container">
-        <h1 class="breadcrumb alert-success text-center">Lista de Doações</h1>
+        <h1 class="breadcrumb alert-success text-center">Lista de Usuários</h1>
         <div class="btn btn-success disabled">
-            Total de Produtos:
+            Total de Usuários:
         </div>
+
         <table class="table table-hover table-condensed tbopacidade">
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Instituição</th>
-                    <th>Alimento</th>
-                    <th>Quantidade</th>
-                    <th>Validade</th>
-                    <th>Endereço</th>
+                    <th>Nome</th>
+                    <th>Senha</th>
+                    <th>Tipo</th>
                     <th>IMAGEM</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </tbody>
         </table>
     </main>
 <!-- Link arquivos Bootstrap js -->
