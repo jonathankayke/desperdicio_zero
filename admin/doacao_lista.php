@@ -1,3 +1,16 @@
+<?php
+include("../Connections/conn_alimentos.php");
+
+$consulta   =   "
+                SELECT      *
+                FROM        vw_doacoes
+                ORDER BY    nome_alimento ASC;
+                ";
+
+$lista      =   $conn_alimentos->query($consulta);
+$row        =   $lista->fetch_assoc();
+$totalRows  =   ($lista)->num_rows;
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -29,15 +42,19 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <!-- abre looping -->
+                    <?php do{ ?> 
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td><?php echo $row['id_doacao']; ?></td>
+                        <td><?php echo $row['nome_doacao']?></td>
+                        <td><?php echo $row['nome_alimento']?></td>
+                        <td><?php echo $row['quantidade_doacao']?></td>
+                        <td><?php echo $row['validade_doacao']?></td>
+                        <td><?php echo $row['endereco_retirada']?></td>
+                        <td><?php echo $row['']?></td>
                     </tr>
+                    <?php }while($row = $lista->fetch_assoc()); ?>
+                    <!-- fecha looping -->
                 </tbody>
             </table>
         </div>
