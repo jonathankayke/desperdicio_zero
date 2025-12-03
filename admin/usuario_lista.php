@@ -11,22 +11,38 @@
 </head>
 <body class="fundofixo">
     <main class="container">
-        <h1 class="breadcrumb alert-success text-center">Lista de Usuários</h1>
-        <div class="btn btn-success disabled">
-            Total de Usuários:
+        <div class="col-xs-12 col-md-10 col-md-offset-1">
+            <h1 class="breadcrumb alert-success text-center">Lista de Usuários</h1>
+            <div class="btn btn-success disabled">
+                Total de Usuários:
+            </div>
+            <table class="table table-hover table-condensed tbopacidade">
+                <thead>
+                    <tr>
+                        <th>Foto</th>
+                        <th>Nome</th>
+                        <th>Senha</th> <!-- ocultar -->
+                        <th>Tipo</th>
+                        <th>Telefone</th>
+                        <th>
+                            <a href="usuario_insere.php" class="btn btn-primary btn-block btn-xs">
+                                <span>ADICIONAR<br> </span>
+                                <span class="glyphicon glyphicon-plus"></span>
+                            </a>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-
-        <table class="table table-hover table-condensed tbopacidade">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Nome</th>
-                    <th>Senha</th>
-                    <th>Tipo</th>
-                    <th>IMAGEM</th>
-                </tr>
-            </thead>
-        </table>
     </main>
 <!-- Link arquivos Bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

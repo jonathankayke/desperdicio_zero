@@ -11,34 +11,36 @@
 </head>
 <body class="fundofixo">
     <main class="container">
-        <h1 class="breadcrumb alert-success text-center">Lista de Doações</h1>
-        <div class="btn btn-success disabled">
-            Total de Produtos:
+        <div class="col-xs-12 col-md-10 col-md-offset-1">
+            <h1 class="breadcrumb alert-success text-center">Lista de Doações</h1>
+            <div class="btn btn-success disabled">
+                Total de Produtos:
+            </div>
+            <table class="table table-hover table-condensed tbopacidade">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Instituição</th>
+                        <th>Alimento</th>
+                        <th>Quantidade</th>
+                        <th>Validade</th>
+                        <th>Endereço</th>
+                        <th>IMAGEM</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <table class="table table-hover table-condensed tbopacidade">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Instituição</th>
-                    <th>Alimento</th>
-                    <th>Quantidade</th>
-                    <th>Validade</th>
-                    <th>Endereço</th>
-                    <th>IMAGEM</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
     </main>
 <!-- Link arquivos Bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
