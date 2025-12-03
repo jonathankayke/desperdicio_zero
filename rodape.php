@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="css/meu_estilo.css"> 
 </head>
 <body class="fundofixo">
-<div class="row panel-footer" style="background-color: rgba(255, 255, 255, 0.6);"> <!-- abre painel do rodapé -->
+<div class="row panel-footer" style="background-color: rgba(255, 255, 255, 0.6);" > <!-- abre painel do rodapé -->
 <!-- Area de localização -->
 <div class="col-sm-6 col-md-4">
     <div class="panel-footer rodape" style="background:none; "> <!-- fecha panel footer -->
-        <img src="imagens/icon_rodape.png" alt="" style="height: 120px; margin-top: -20px;">
+        <img src="imagens/icon_rodape.png" alt="" style="height: 140px; margin-top: -20px;">
         <br>
         <address>
             <i>Rua Dom Joaquim, 495 - Centro - Itapetininga - SP - CEP 18200-000</i>
@@ -32,7 +32,7 @@
             <div class="embed-responsive embed-responsive-16by9"> <!-- mapa -->
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.352740323464!2d-48.
                 05545982398403!3d-23.591679162707983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c5cc93b46246ed%3A0x6ec0870ce87bb6fd!2sSenac%20Itapetininga!5e0!3m2!1spt-BR!2sbr!4v1761610477160!5m2!1spt-BR!2sbr" 
-                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                style="border:0; height: 240px; " allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div> <!-- fecha mapa -->
         </address>
     </div> <!-- fecha panel footer -->
@@ -40,7 +40,7 @@
 
 <!-- Area de Navegação -->
 <div class="col-sm-6 col-md-4">
-    <div class="panel-footer" style="background:none;">
+    <div class="panel-footer" style="background:none; margin-top: 40px; ">
         <h4>LINKS</h4>
         <ul class="nav nav-pills nav-stacked">
             <li>
@@ -79,7 +79,7 @@
 
 <!-- Area de Contato -->
 <div class="col-sm-6 col-md-4">
-    <div class="panel-footer" style="background:none;">
+    <div class="panel-footer" style="background:none; margin-top: 40px; ">
         <h4>CONTATO</h4>
         <form 
             action="rodape_contato_envia.php"

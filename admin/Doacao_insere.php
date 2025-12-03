@@ -143,7 +143,6 @@
                                     </button>
                                 </div>
                             </div>
-
                         </form>
                     </div>
                 </div>
@@ -151,36 +150,37 @@
         </div>
     </div>
 
-    <!-- Script para a imagem -->
-<script>
-document.getElementById("imagem_produto").onchange = function(){
-    var reader = new FileReader();
-    if(this.files[0].size>512000){
-        alert("A imagem deve ter no máximo 500kb.");
-        $("#imagem").attr("src","blank");
-        $("#imagem").hide();
-        $("#imagem_produto").wrap('<form>').closest('form').get(0).reset();
-        $("#imagem_produto").unwrap();
-        return false;
-    }
-    if(this.files[0].type.indexOf("image")==-1){
-        alert("Formato inválido, escolha uma imagem.");
-        $("#imagem").attr("src","blank");
-        $("#imagem").hide();
-        $("#imagem_produto").wrap('<form>').closest('form').get(0).reset();
-        $("#imagem_produto").unwrap();
-        return false;
-    }
-    reader.onload = function(e){
-        // obter dados carregados e renderizar uma miniatura.
-        document.getElementById("imagem").src = e.target.result;
-        $("imagem").show();
-    };
-    // leia o arquivo de imagem como um URL de dados.
-    reader.readAsDataURL(this.files[0]);
-};
-</script>
+    <?php include("../rodape.php")?>
 
+    <!-- Script para a imagem -->
+    <script>
+        document.getElementById("imagem_produto").onchange = function(){
+            var reader = new FileReader();
+            if(this.files[0].size>512000){
+                alert("A imagem deve ter no máximo 500kb.");
+                $("#imagem").attr("src","blank");
+                $("#imagem").hide();
+                $("#imagem_produto").wrap('<form>').closest('form').get(0).reset();
+                $("#imagem_produto").unwrap();
+                return false;
+            }
+            if(this.files[0].type.indexOf("image")==-1){
+                alert("Formato inválido, escolha uma imagem.");
+                $("#imagem").attr("src","blank");
+                $("#imagem").hide();
+                $("#imagem_produto").wrap('<form>').closest('form').get(0).reset();
+                $("#imagem_produto").unwrap();
+                return false;
+            }
+            reader.onload = function(e){
+                // obter dados carregados e renderizar uma miniatura.
+                document.getElementById("imagem").src = e.target.result;
+                $("imagem").show();
+            };
+        // leia o arquivo de imagem como um URL de dados.
+        reader.readAsDataURL(this.files[0]);
+        };
+</script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
 </body>
