@@ -73,6 +73,29 @@
                                         </select>
                                     </div>
                                 </div>
+                                  <div class=" form-group">
+                                    <label for="imagem_produto">Imagem</label>
+                                    
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-picture"></span>
+                                        </span>
+                                        <!-- Exibir a imagem a ser inserida -->
+                                        <img 
+                                            src="" 
+                                            alt=""
+                                            name="imagem"
+                                            id="imagem"
+                                            class="img-responsive"
+                                            style="max-height: 1100px;"
+                                        >
+                                        <input 
+                                            type="file" 
+                                            name="imagem_produto" 
+                                            id="imagem_produto"
+                                            class="form-control"
+                                            accept="image/*"
+                                        >
+                                    </div> 
                             </div>
 
                             <div class="row">
@@ -91,6 +114,36 @@
         </div>
     </div>
 
+
+      <!-- Script para a imagem -->
+    <script>
+        document.getElementById("imagem_produto").onchange = function(){
+        var reader = new FileReader();
+        if(this.files[0].size>512000){
+            alert("A imagem deve ter no máximo 500kb.");
+            $("#imagem").attr("src","blank");
+            $("#imagem").hide();
+            $("#imagem_produto").wrap('<form>').closest('form').get(0).reset();
+            $("#imagem_produto").unwrap();
+            return false;
+        }
+        if(this.files[0].type.indexOf("image")==-1){
+            alert("Formato inválido, escolha uma imagem.");
+            $("#imagem").attr("src","blank");
+            $("#imagem").hide();
+            $("#imagem_produto").wrap('<form>').closest('form').get(0).reset();
+            $("#imagem_produto").unwrap();
+            return false;
+        }
+        reader.onload = function(e){
+            // obter dados carregados e renderizar uma miniatura.
+            document.getElementById("imagem").src = e.target.result;
+            $("imagem").show();
+        };
+        // leia o arquivo de imagem como um URL de dados.
+        reader.readAsDataURL(this.files[0]);
+        };
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
 </body>
