@@ -13,8 +13,8 @@
 <div class="row panel-footer" style="background-color: rgba(255, 255, 255, 0.6);" > <!-- abre painel do rodapé -->
 <!-- Area de localização -->
 <div class="col-sm-6 col-md-4">
-    <div class="panel-footer rodape" style="background:none; "> <!-- fecha panel footer -->
-        <img src="imagens/icon_rodape.png" alt="" style="height: 140px; margin-top: -20px;">
+    <div class="panel-footer rodape" style="background:none; margin-top: 40px; "> <!-- fecha panel footer -->
+            <!--  <img src="imagens/icon_rodape.png" alt="" style="height: 140px; margin-top: -20px;">-->
         <br>
         <address>
             <i>Rua Dom Joaquim, 495 - Centro - Itapetininga - SP - CEP 18200-000</i>
@@ -30,9 +30,9 @@
                 contato@desperdiciozero.com.br
             </a>
             <div class="embed-responsive embed-responsive-16by9"> <!-- mapa -->
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.352740323464!2d-48.
-                05545982398403!3d-23.591679162707983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c5cc93b46246ed%3A0x6ec0870ce87bb6fd!2sSenac%20Itapetininga!5e0!3m2!1spt-BR!2sbr!4v1761610477160!5m2!1spt-BR!2sbr" 
-                style="border:0; height: 240px; " allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8697.677312597149!2d-48.025681518761495!3d-23.57121467083701!2m3!
+                     1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c5cd81e1b792fd%3A0xaedc541f16035396!2sPrefeitura%20de%20Itapetininga!5e0!3m2!1spt-BR!2sbr!4v1764722949252!5m2!1spt-BR!2sbr" 
+                      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div> <!-- fecha mapa -->
         </address>
     </div> <!-- fecha panel footer -->
@@ -149,7 +149,11 @@
         </form>
     </div>
 </div> <!-- fecha dimencionamento/area -->
-
+<div class="col-sm-12">
+    <div class="panel-footer" style="background:none; text-align: center;">
+        <img src="imagens/icon_rodape.png" alt="" style="height: 200px; ">
+    </div> <!-- fecha panel footer -->
+</div> <!-- fecha dimencionamento/area -->
 </div> <!-- fecha painel principal do rodapé -->
 
 <!-- Link arquivos Bootstrap js --> 
