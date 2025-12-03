@@ -13,8 +13,7 @@ html, body {
     background-size: cover;
     -webkit-background-size: cover;
 
-}
-  
+} 
 
 /* ------------------------ ESTILO DO FORMULÁRIO (CARD) ---------------- */
 /* Aumenta o espaço interno e melhora o visual do quadrado verde */
@@ -64,6 +63,7 @@ html, body {
     display: flex;
     align-items: center; /* centraliza vertical */
 }
+
 /* -------------------- OPACIDADE LISTAS ---------------- */
 .tbopacidade {
     background-color: #ffffff99;
