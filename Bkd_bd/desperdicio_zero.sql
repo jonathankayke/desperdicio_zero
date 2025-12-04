@@ -8,7 +8,7 @@ CREATE USER IF NOT EXISTS 'desperdicio_zero'@'localhost'
     IDENTIFIED BY 'senacti19';
 GRANT ALL PRIVILEGES ON *.* TO 'desperdicio_zero'@'localhost'
     WITH GRANT OPTION;
-    FLUSH PRIVILEGES;
+    
 
 -- Excluir o banco de dados desperdicio_zero caso ele exista 
 DROP DATABASE IF EXISTS desperdicio_zero; 

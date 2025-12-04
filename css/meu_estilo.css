@@ -64,7 +64,13 @@ html, body {
     align-items: center; /* centraliza vertical */
 }
 
-/* -------------------- OPACIDADE LISTAS ---------------- */
+/* -------------------- LISTAS -------------------------- */
+/* Opacidade das listas */
 .tbopacidade {
-    background-color: #ffffff99;
+    background-color: #ffffffda;
+}
+
+.fontelista {
+    font-family: 'inter', sans-serif;
+    font-size: 15px;
 }

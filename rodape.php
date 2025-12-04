@@ -13,11 +13,11 @@
 <div class="row panel-footer" style="background-color: rgba(255, 255, 255, 0.6);" > <!-- abre painel do rodapé -->
 <!-- Area de localização -->
 <div class="col-sm-6 col-md-4">
-    <div class="panel-footer rodape" style="background:none; "> <!-- fecha panel footer -->
-        <img src="imagens/icon_rodape.png" alt="" style="height: 140px; margin-top: -20px;">
+    <div class="panel-footer rodape" style="background:none; margin-top: 40px; "> <!-- fecha panel footer -->
+            <!--  <img src="imagens/icon_rodape.png" alt="" style="height: 140px; margin-top: -20px;">-->
         <br>
         <address>
-            <i>Rua Dom Joaquim, 495 - Centro - Itapetininga - SP - CEP 18200-000</i>
+            <i>Pr. Gaspar Ricardo, 1 - Centro, Itapetininga - SP, 18200-202</i>
             <br>
             <span class="glyphicon glyphicon-phone-alt"></span>
             &nbsp;Fone: (15) 4002 8922
@@ -30,9 +30,10 @@
                 contato@desperdiciozero.com.br
             </a>
             <div class="embed-responsive embed-responsive-16by9"> <!-- mapa -->
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.352740323464!2d-48.
-                05545982398403!3d-23.591679162707983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c5cc93b46246ed%3A0x6ec0870ce87bb6fd!2sSenac%20Itapetininga!5e0!3m2!1spt-BR!2sbr!4v1761610477160!5m2!1spt-BR!2sbr" 
-                style="border:0; height: 240px; " allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2174.2119879253696!2d-48.047933714033505!3d-23.58373390642377!2m3!1
+                f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c5cc8d18eaea31%3A0x1817097d7b57d444!2sFundo%20Social%20de%20Itapetininga!5e0!3m2!1spt-BR!2sbr!4v1764723473171!5m2!1spt-BR!2sbr" 
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
             </div> <!-- fecha mapa -->
         </address>
     </div> <!-- fecha panel footer -->
@@ -149,8 +150,18 @@
         </form>
     </div>
 </div> <!-- fecha dimencionamento/area -->
+<div class="col-sm-12">
+    <div class="panel-footer" style="background:none; text-align: center;">
+        <img src="imagens/icon_rodape.png" alt="" style="height: 200px; ">
+    </div> <!-- fecha panel footer -->
+    <h6 class="text-center">
+            Developed by Os Mamaco&trade; 2025
+            <br>
+            <a href="">
 
-</div> <!-- fecha painel principal do rodapé -->
+            </a>
+        </h6>
+</div> <!-- fecha dimencionamento/area -->
 
 <!-- Link arquivos Bootstrap js --> 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
