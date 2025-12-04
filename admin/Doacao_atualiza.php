@@ -2,7 +2,7 @@
 include("../Connections/conn_alimentos.php");
 
 // Verifica ID recebido
-if (!isset($_GET['id'])) {
+if (!isset($_GET['id_doacao'])) {
     die("ID da doação não informado!");
 }
 
@@ -10,7 +10,7 @@ $id = $_GET['id'];
 
 // Consulta os dados da doação
 $sql = $conn->prepare("SELECT * FROM tbdoacoes WHERE id_doacao = ?");
-$sql->execute([$id]);
+$sql->execute([$id_doacao]);
 $doacao = $sql->fetch(PDO::FETCH_ASSOC);
 
 if (!$doacao) {
