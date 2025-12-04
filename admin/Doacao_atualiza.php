@@ -1,28 +1,3 @@
-<?php
-include("../Connections/conn_alimentos.php");
-
-// Verifica ID recebido
-if (!isset($_GET['id_doacao'])) {
-    die("ID da doação não informado!");
-}
-
-$id = $_GET['id'];
-
-// Consulta os dados da doação
-$sql = $conn->prepare("SELECT * FROM tbdoacoes WHERE id_doacao = ?");
-$sql->execute([$id_doacao]);
-$doacao = $sql->fetch(PDO::FETCH_ASSOC);
-
-if (!$doacao) {
-    die("Doação não encontrada!");
-}
-
-// Buscar todos os tipos para o select
-$sqlTipos = $conn->query("SELECT * FROM tbtipos ORDER BY rotulo_tipo");
-$tipos = $sqlTipos->fetchAll(PDO::FETCH_ASSOC);
-?>
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -61,12 +36,6 @@ $tipos = $sqlTipos->fetchAll(PDO::FETCH_ASSOC);
                                 <h4 class="mb-3">Dados do Doador</h4>
 
                                 <div class="mb-3">
-                                    <label class="form-label">Nome / Empresa</label>
-                                    <input type="text" class="form-control" name="nome_doador"
-                                        value="<?= $dados['nome_doador'] ?>" required>
-                                </div>
-
-                                <div class="mb-3">
                                     <label class="form-label">Tipo de Instituição</label>
                                     <input type="text" class="form-control" name="tipo_instituicao"
                                         value="<?= $dados['tipo_instituicao'] ?>" required>
@@ -82,19 +51,7 @@ $tipos = $sqlTipos->fetchAll(PDO::FETCH_ASSOC);
                                     <label class="form-label">WhatsApp</label>
                                     <input type="tel" class="form-control" name="whatsapp"
                                         value="<?= $dados['whatsapp'] ?>" required>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label">CPF / CNPJ</label>
-                                    <input type="text" class="form-control" name="documento"
-                                        value="<?= $dados['documento'] ?>" required>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label">E-mail</label>
-                                    <input type="email" class="form-control" name="email"
-                                        value="<?= $dados['email'] ?>" required>
-                                </div>
+                        </div>
                             </div>
 
                             <!-- DADOS DA DOAÇÃO -->

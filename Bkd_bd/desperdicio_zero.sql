@@ -35,12 +35,9 @@ CREATE TABLE tbusuarios (
 CREATE TABLE tbdoacoes (
     id_doacao INT (11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     id_doacao_tipo INT (11) NOT NULL,
-    nome_doacao VARCHAR(150) NOT NULL,
     tipo_instituicao VARCHAR(150) NOT NULL,
     endereco_empresa VARCHAR(150) NOT NULL,
     contato_doacao VARCHAR(150) NOT NULL,
-    cpf_cnpj_doacao VARCHAR(150) NOT NULL,
-    email_doacao VARCHAR(150) NOT NULL,
     tipo_alimento VARCHAR(150) NOT NULL,
     nome_alimento VARCHAR(150) NOT NULL,
     quantidade_doacao VARCHAR(50) NOT NULL,
@@ -106,7 +103,6 @@ ALTER TABLE tbdoacoes
 -- -------- VIEW -------- -- Criando a view vw_tbdoacoes 
 CREATE VIEW vw_doacoes AS
 SELECT  d.id_doacao,
-        d.nome_doacao,
         d.nome_alimento,
         d.quantidade_doacao,
         d.validade_doacao,
