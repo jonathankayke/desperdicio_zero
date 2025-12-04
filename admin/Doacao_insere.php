@@ -31,11 +31,7 @@
                                 <div class="col-md-6">
                                     <h3 class="secao-titulo">Dados do Doador</h3>
 
-                                    <div class="form-group">
-                                        <label for="nome_doador" class="form-label">Seu Nome/Nome da Empresa</label>
-                                        <input type="text" class="form-control" id="nome_doador" name="nome_doador"
-                                            placeholder="Ex: Restaurante Sabor da Casa" required>
-                                    </div>
+                                    
 
                                     <div class="form-group">
                                         <label for="tipo_instituicao" class="form-label">Tipo de Instituição</label>
@@ -44,11 +40,7 @@
                                             required>
                                     </div>
 
-                                    <div class="form-group">
-                                        <label for="endereco_empresa" class="form-label">Endereço da Empresa</label>
-                                        <input type="text" class="form-control" id="endereco_empresa"
-                                            name="endereco_empresa" placeholder="Rua, Número, Bairro, Cidade" required>
-                                    </div>
+                                    
 
                                     <div class="form-group">
                                         <label for="whatsapp" class="form-label">Contato (WhatsApp)</label>
@@ -56,11 +48,7 @@
                                             placeholder="(XX) 9XXXX-XXXX" required>
                                     </div>
 
-                                    <div class="form-group">
-                                        <label for="documento" class="form-label">CPF/CNPJ</label>
-                                        <input type="text" class="form-control" id="documento" name="documento"
-                                            placeholder="CPF ou CNPJ" required>
-                                    </div>
+                                    
 
                                     <div class="form-group">
                                         <label for="email" class="form-label">Email</label>
