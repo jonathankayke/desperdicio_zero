@@ -31,7 +31,11 @@
                                 <div class="col-md-6">
                                     <h3 class="secao-titulo">Dados do Doador</h3>
 
-                                    
+                                    <div class="form-group">
+                                        <label for="nome_doador" class="form-label">Seu Nome/Nome da Empresa</label>
+                                        <input type="text" class="form-control" id="nome_doador" name="nome_doador"
+                                            placeholder="Ex: Restaurante Sabor da Casa" required>
+                                    </div>
 
                                     <div class="form-group">
                                         <label for="tipo_instituicao" class="form-label">Tipo de Instituição</label>
@@ -48,7 +52,7 @@
                                             placeholder="(XX) 9XXXX-XXXX" required>
                                     </div>
 
-                                    
+                                   
 
                                     <div class="form-group">
                                         <label for="email" class="form-label">Email</label>
