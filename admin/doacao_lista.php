@@ -60,8 +60,17 @@ $totalRows  =   ($lista)->num_rows;
                     <td><?php echo $row['validade_doacao']?></td>
                     <td><?php echo $row['endereco_retirada']?></td>
                     <td>
-                        <img src="../imagens/<?php echo $row['imagem_doacao']; ?>" alt="" width="100
-                        px">
+                        <img src="../imagens/<?php echo $row['imagem_doacao']; ?>" alt="" width="100px">
+                    </td>
+                    <td>
+                        <a href="Doacao_atualiza.php?id_doacao=<?php echo $row['id_doacao']?>" class="btn btn-block btn-warning" target="_self" role="button">
+                            <span>ALTERAR<br> </span>
+                            <span class="glyphicon glyphicon-refresh"></span>
+                        </a>
+                        <button class="btn btn-danger btn-block delete" data-nome="<?php echo $row['nome_alimento']?>" data-id="<?php echo $row['id_doacao']?>">
+                            <span class="">EXCLUIR <br></span>
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </button>
                     </td>
                 </tr>
                 <?php }while($row = $lista->fetch_assoc()); ?>
