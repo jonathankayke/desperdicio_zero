@@ -24,6 +24,7 @@ $totalRows  =   ($lista)->num_rows;
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body class="fundofixo">
+<?php include('menu_adm.php'); ?>
     <main class="container">
         <h1 class="breadcrumb alert-success text-center">Lista de Doações</h1>
         <div class="btn btn-success disabled">
