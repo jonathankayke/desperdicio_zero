@@ -44,11 +44,7 @@
                                             required>
                                     </div>
 
-                                    <div class="form-group">
-                                        <label for="endereco_empresa" class="form-label">Endereço da Empresa</label>
-                                        <input type="text" class="form-control" id="endereco_empresa"
-                                            name="endereco_empresa" placeholder="Rua, Número, Bairro, Cidade" required>
-                                    </div>
+                                    
 
                                     <div class="form-group">
                                         <label for="whatsapp" class="form-label">Contato (WhatsApp)</label>
@@ -56,11 +52,7 @@
                                             placeholder="(XX) 9XXXX-XXXX" required>
                                     </div>
 
-                                    <div class="form-group">
-                                        <label for="documento" class="form-label">CPF/CNPJ</label>
-                                        <input type="text" class="form-control" id="documento" name="documento"
-                                            placeholder="CPF ou CNPJ" required>
-                                    </div>
+                                   
 
                                     <div class="form-group">
                                         <label for="email" class="form-label">Email</label>
