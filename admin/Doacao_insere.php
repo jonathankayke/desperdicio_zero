@@ -51,14 +51,6 @@
                                         <input type="tel" class="form-control" id="whatsapp" name="whatsapp"
                                             placeholder="(XX) 9XXXX-XXXX" required>
                                     </div>
-
-                                   
-
-                                    <div class="form-group">
-                                        <label for="email" class="form-label">Email</label>
-                                        <input type="email" class="form-control" id="email" name="email"
-                                            placeholder="contato@gmail.com" required>
-                                    </div>
                                 </div>
 
                                 <div class="col-md-6">
