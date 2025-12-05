@@ -35,8 +35,8 @@ CREATE TABLE tbusuarios (
 CREATE TABLE tbdoacoes (
     id_doacao INT (11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     id_doacao_tipo INT (11) NOT NULL,
+    nome_empresa VARCHAR (150) NOT NULL,
     tipo_instituicao VARCHAR(150) NOT NULL,
-    endereco_empresa VARCHAR(150) NOT NULL,
     contato_doacao VARCHAR(150) NOT NULL,
     tipo_alimento VARCHAR(150) NOT NULL,
     nome_alimento VARCHAR(150) NOT NULL,
@@ -46,15 +46,14 @@ CREATE TABLE tbdoacoes (
     imagem_doacao VARCHAR(150) NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO
-    tbdoacoes (id_doacao_tipo,nome_doacao,tipo_instituicao,endereco_empresa,contato_doacao,cpf_cnpj_doacao,email_doacao,tipo_alimento,nome_alimento,quantidade_doacao,validade_doacao,endereco_retirada,imagem_doacao) VALUES
-    (1,'Doação de Frutas','ONG Alimenta','Rua A, 123','1111-1111','12345678901','contato@ongalimenta.com','F','Maçã','10 kg','2025-12-15','Rua A, 123','maca.jpg'),
-    (2,'Doação de Verduras','Associação Verde','Rua B, 456','2222-2222','98765432100','verde@associacao.com','V','Alface','5 kg','2025-12-12','Rua B, 456','alface.jpg'),
-    (3,'Doação de Grãos','Banco de Alimentos','Rua C, 789','3333-3333','11223344556','contato@bancoalimentos.com','G', 'Feijão','20 kg','2026-01-05','Rua C, 789','feijao.jpg'),
-    (4,'Doação de Proteína','ONG Solidariedade','Rua D, 101','4444-4444','55443322110','solidariedade@ong.com','P','Frango','15 kg','2025-12-20','Rua D, 101','frango.jpg'),
-    (5,'Doação de Laticínios','Associação Bem','Rua E, 202','5555-5555','66778899001','bem@associacao.com','L','Leite','30 litros','2025-12-18','Rua E, 202','leite.jpg'),
-    (6,'Doação de Bebidas','ONG Hidrate','Rua F, 303','6666-6666','99887766554','hidrate@ong.com','B','Suco de Laranja','25 litros','2025-12-22','Rua F, 303','suco.jpg'),
-    (7,'Doação de Conservas','Banco de Alimentos','Rua C, 789','3333-3333','11223344556','contato@bancoalimentos.com','C','Milho enlatado','50 unidades','2026-01-10','Rua C, 789','milho.jpg');
+INSERT INTO tbdoacoes (id_doacao_tipo,nome_empresa,tipo_instituicao,contato_doacao,tipo_alimento,nome_alimento,quantidade_doacao,validade_doacao,endereco_retirada)
+ VALUES (1,'Doação de Frutas','ONG Alimenta','1111-1111','F','Maçã','10 kg','2025-12-15','Rua A, 123'),
+  (2,'Doação de Verduras','Associação Verde','2222-2222','V','Alface','5 kg','2025-12-12','Rua B, 456'),
+  (3,'Doação de Grãos','Banco de Alimentos','3333-3333','G', 'Feijão','20 kg','2026-01-05','Rua C, 789'),
+  (4,'Doação de Proteína','ONG Solidariedade','4444-4444','P','Frango','15 kg','2025-12-20','Rua D, 101'),
+  (5,'Doação de Laticínios','Associação Bem','5555-5555','L','Leite','30 litros','2025-12-18','Rua E, 202'),
+  (6,'Doação de Bebidas','ONG Hidrate','6666-6666','B','Suco de Laranja','25 litros','2025-12-22','Rua F, 303'),
+  (7,'Doação de Conservas','Banco de Alimentos','3333-3333','C','Milho enlatado','50 unidades','2026-01-10','Rua C, 789');
 
 -- Estrutura da tabela tbtipos    
 CREATE TABLE tbtipos (
@@ -103,6 +102,8 @@ ALTER TABLE tbdoacoes
 -- -------- VIEW -------- -- Criando a view vw_tbdoacoes 
 CREATE VIEW vw_doacoes AS
 SELECT  d.id_doacao,
+        d.nome_empresa,
+        d.tipo_instituicao,
         d.nome_alimento,
         d.quantidade_doacao,
         d.validade_doacao,
