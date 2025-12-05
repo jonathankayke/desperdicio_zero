@@ -80,8 +80,41 @@ $totalRows  =   ($lista)->num_rows;
             </tbody>
         </table>
     </main>
+
+    <!-- Modal -->
+     <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title text-danger">ATENÇÃO</h4>
+                </div> <!-- fecha modal-header -->
+                <div class="modal-body">
+                    Deseja mesmo excluir a doação?
+                    <h4><span class="nome text-danger"></span></h4>
+                </div> <!-- fecha modal-body -->
+                <div class="modal-footer">
+                    <a href="#" type="button" class="btn btn-danger delete-yes">Confirmar</a>
+                    <button class="btn btn-success" data-dismiss="modal">
+                        Cancelar
+                    </button>
+                </div> <!-- fecha modal-footer -->
+            </div>
+        </div>
+     </div>
 <!-- Link arquivos Bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>    
+<script src="../js/bootstrap.min.js"></script>
+
+<!-- script para modal -->
+ <script type="text/javascript">
+    $('.delete').on('click',function(){
+        var nome    =   $(this).data('nome');
+        var id      =   $(this).data('id');
+        $('span.nome').text(nome);
+        $('a.delete-yes').attr('href','doacao_exclui.php?id_doacao='+id);
+        $('#myModal').modal('show');
+    });
+ </script>
 </body>
 </html>

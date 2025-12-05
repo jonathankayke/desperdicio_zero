@@ -1,0 +1,23 @@
+<?php
+Include('../Connections/conn_alimentos.php'); 
+
+mysqli_select_db($conn_alimentos,$database_conn);
+
+$tabela_delete  =   "tbdoacoes";
+$id_tabela_del  =   "id_doacao";
+$id_filtro_del  =   $_GET['id_doacao'];
+
+$deleteSQL  =   "
+                DELETE  
+                FROM    ".$tabela_delete."
+                WHERE   ".$id_tabela_del."=".$id_filtro_del.";
+                ";
+$resultado  =   $conn_alimentos->query($deleteSQL);
+
+$destino    =   "doacao_lista.php";
+if(mysqli_insert_id($conn_alimentos)){
+    header("Location: $destino");
+}else{
+    header("Location: $destino");
+}
+?>
