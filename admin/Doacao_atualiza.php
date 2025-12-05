@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizar Doação</title>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/meu_estilo.css">
+</head>
+
+<?php include("menu_adm.php"); ?>
+
+<body class="fundofixo">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-10 col-md-offset-1">
+
+                <h1 class="text-center"
+                    style="color:white; text-shadow:1px 1px 3px rgba(0,0,0,0.5); margin-bottom:20px;">
+                    Atualização de Doação
+                </h1>
+
+                <div class="thumbnail" style="border:none; background:none; box-shadow:none;">
+
+                    <div class="alert alert-success" role="alert">
+
+                        <form action="processa_atualiza_doacao.php"
+                              method="POST" enctype="multipart/form-data">
+
+                            <!-- ID DA DOAÇÃO -->
+                            <input type="hidden" name="id_doacao" value="<?=$dados['id_doacao']?>">
+
+                            <div class="row">
+                                <div class="col-md-6">
+
+                                    <h3 class="secao-titulo">Dados do Doador</h3>
+
+                                    <div class="form-group">
+                                        <label for="nome_doador">Seu Nome/Nome da Empresa</label>
+                                        <input type="text" class="form-control" id="nome_doador"
+                                               name="nome_doador" required
+                                               value="">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="tipo_instituicao">Tipo de Instituição</label>
+                                        <input type="text" class="form-control" id="tipo_instituicao"
+                                               name="tipo_instituicao" required
+                                               value="">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="whatsapp">Contato (WhatsApp)</label>
+                                        <input type="tel" class="form-control" id="whatsapp" 
+                                               name="whatsapp" required
+                                               value="">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <h3 class="secao-titulo">Dados da Doação</h3>
+
+                                    <div class="form-group">
+                                        <label for="tipo_alimento">Tipo de Alimento</label>
+                                        <select class="form-select form-control" id="tipo_alimento"
+                                                name="tipo_alimento" required>
+                                            <option value="" disabled>Selecione uma categoria</option>
+
+                                            <!-- Exemplo de categorias -->
+                                            <option value="Frutas">Frutas</option>
+                                            <option value="Verduras" >Verduras</option>
+                                            <option value="Pães" >Pães</option>
+                                            <option value="Cereais" >Cereais</option>
+
+                                            <!-- Você pode carregar dinamicamente do BD -->
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="alimento_especifico">Alimento Específico</label>
+                                        <input type="text" class="form-control" id="alimento_especifico"
+                                               name="alimento_especifico" required
+                                               value="">
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6 form-group">
+                                            <label for="quantidade">Quantidade</label>
+                                            <input type="text" class="form-control" id="quantidade"
+                                                   name="quantidade" required
+                                                   value="">
+                                        </div>
+
+                                        <div class="col-md-6 form-group">
+                                            <label for="validade">Validade</label>
+                                            <input type="date" class="form-control" id="validade"
+                                                   name="validade" required
+                                                   value="">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="endereco">Endereço para Retirada</label>
+                                        <input type="text" class="form-control" id="endereco"
+                                               name="endereco" required
+                                               value="">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Imagem Atual</label><br>
+
+                                        <img src="../imagens/doacoes/"
+                                             class="img-responsive"
+                                             style="max-height:250px; border:2px solid #ccc;">
+
+                                        <br><br>
+
+                                        <label for="imagem_produto">Nova Imagem (opcional)</label>
+
+                                        <input type="file" name="imagem_produto" id="imagem_produto"
+                                               class="form-control" accept="image/*">
+
+                                        <img id="imagem" src="" alt=""
+                                             class="img-responsive"
+                                             style="max-height:250px; margin-top:10px; display:none;">
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+                                    <br>
+                                    <button type="submit" class="btn btn-primary btn-lg btn-block">
+                                        Atualizar Doação
+                                    </button>
+                                </div>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <?php include("../rodape.php"); ?>
+
+    <!-- Preview da imagem -->
+    <script>
+        document.getElementById("imagem_produto").onchange = function () {
+            var reader = new FileReader();
+
+            if (this.files[0].size > 512000) {
+                alert("A imagem deve ter no máximo 500kb.");
+                $("#imagem").hide().attr("src", "");
+                this.value = "";
+                return false;
+            }
+
+            if (this.files[0].type.indexOf("image") === -1) {
+                alert("Formato inválido, selecione uma imagem.");
+                $("#imagem").hide().attr("src", "");
+                this.value = "";
+                return false;
+            }
+
+            reader.onload = function (e) {
+                document.getElementById("imagem").src = e.target.result;
+                $("#imagem").show();
+            };
+
+            reader.readAsDataURL(this.files[0]);
+        };
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+</body>
+</html>
