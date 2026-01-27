@@ -121,7 +121,7 @@ $totalRows_fk   =   ($lista_fk)->num_rows;
                                     <h3 class="secao-titulo">Dados do Doador</h3>
 
                                     <div class="form-group">
-                                        <label for="nome_empresa" class="form-label">Nome da Empr   esa/Doador</label>
+                                        <label for="nome_empresa" class="form-label">Nome da Empresa/Doador</label>
                                         <input type="text" class="form-control" id="nome_empresa" name="nome_empresa" placeholder="Ex: Restaurante Sabor" required>
                                     </div>
 
