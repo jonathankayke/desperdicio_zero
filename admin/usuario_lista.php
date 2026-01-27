@@ -37,7 +37,8 @@ $totalRows  =   ($lista)->num_rows;
                     <th>Nome</th>
                     <th>Senha</th> <!-- ocultar -->
                     <th>Tipo</th>
-                    <th>Telefone</th>
+                    <th>Email</th>
+                    <th>Login</th>
                     <th>
                         <a href="usuario_insere.php" class="btn btn-success btn-block btn-xs">
                             <span>ADICIONAR<br> </span>
@@ -52,11 +53,14 @@ $totalRows  =   ($lista)->num_rows;
                 while($row = $lista->fetch_assoc()) { 
                 ?>
                     <tr>
-                        <td><?php echo $row['foto_usuario']; ?></td>
+                        <td>
+                            <img src="../imagens/<?php echo $row['foto_usuario']; ?>" alt="<?php echo $row['nome_usuario']; ?>" class="img-responsive img-thumbnail" style="max-width: 80px;">
                         <td><?php echo $row['nome_usuario']; ?></td>
                         <td><?php echo $row['senha_usuario']; ?></td>
                         <td><?php echo $row['tipo_usuario']; ?></td>
-                        <td><?php echo $row['telefone_usuario']; ?></td>
+                        <td><?php echo $row['email_usuario']; ?></td>
+                        <td><?php echo $row['login_usuario']; ?></td>
+
                         <td>
                             <a href="usuario_atualiza.php" target="_self" class="btn btn-warning btn-xs btn-block">
                                 <span class="hidden-xs">ALTERAR <br></span>
@@ -74,6 +78,7 @@ $totalRows  =   ($lista)->num_rows;
             </tbody>
         </table>
     </main>
+
 <!-- Link arquivos Bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>    
