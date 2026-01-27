@@ -31,7 +31,7 @@ if($_POST){
                     VALUES
                         (".$valores_insert.");
                     ";
-    $resultado  =   $conn_produtos->query($insertSQL);
+    $resultado  =   $conn_alimentos->query($insertSQL);
 
     // Após a ação a página será redirecionada
     $destino    =   "tipos_lista.php";
@@ -121,7 +121,7 @@ if($_POST){
                             name="enviar"
                             id="enviar"
                             role="button"
-                            class="btn btn-warning btn-block"
+                            class="btn btn-success btn-block"
                         >
                     </form>
                 </div> <!-- fecha alert alert-warning  -->
