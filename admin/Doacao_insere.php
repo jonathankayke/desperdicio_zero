@@ -10,7 +10,6 @@ if($_POST){
     $campos_insert  =   "
                             id_doacao_tipo,
                             nome_empresa,
-                            tipo_instituicao,
                             contato_doacao,
                             tipo_alimento,
                             nome_alimento,
@@ -31,7 +30,7 @@ if($_POST){
 
     $id_doacao_tipo     =   $_POST['id_doacao_tipo'];
     $nome_empresa       =   $_POST['nome_empresa'];
-    $tipo_instituicao   =   $_POST['tipo_instituicao'];
+
     $contato_doacao     =   $_POST['contato_doacao'];
     $nome_alimento      =   $_POST['nome_alimento'];
     $quantidade_doacao  =   $_POST['quantidade_doacao'];
@@ -124,11 +123,6 @@ $totalRows_fk   =   ($lista_fk)->num_rows;
                                     <div class="form-group">
                                         <label for="nome_empresa" class="form-label">Nome da Empresa/Doador</label>
                                         <input type="text" class="form-control" id="nome_empresa" name="nome_empresa" placeholder="Ex: Restaurante Sabor" required>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="tipo_instituicao" class="form-label">Tipo de Instituição</label>
-                                        <input type="text" class="form-control" id="tipo_instituicao" name="tipo_instituicao" placeholder="Ex: Mercado, Restaurante" required>
                                     </div>
 
                                     <div class="form-group">
