@@ -1,7 +1,6 @@
 <?php
 // Incluir o arquivo e fazer a conexão
-Include('../Connections/conn_alimentos.php'); 
-
+include("../Connections/conn_alimentos.php");
 // Variáveis Globais
 $tabela         =   "tbdoacoes";
 $campo_filtro   =   "id_doacao";
@@ -90,6 +89,7 @@ $lista_fk       =   $conn_alimentos->query($consulta_fk);
 $row_fk         =   $lista_fk->fetch_assoc();
 $totalRows_fk   =   ($lista_fk)->num_rows;
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
