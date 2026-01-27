@@ -23,6 +23,7 @@ $totalRows  =   ($lista)->num_rows;
     <link rel="stylesheet" href="../css/meu_estilo.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
+<?php include("menu_adm.php") ?>
 <body class="fundofixo">
     <main class="container">
         <h1 class="breadcrumb alert-success text-center">Lista de Usuários</h1>
