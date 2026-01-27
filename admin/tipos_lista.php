@@ -12,7 +12,7 @@ $lista      =   $conn_alimentos->query($consulta);
 // Separar os dados em linhas (row)
 $row        =   $lista->fetch_assoc();
 // Contar o total de linhas
-$totalRows  =   ($lista)->num_rows-1;
+$totalRows  =   ($lista)->num_rows;
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
