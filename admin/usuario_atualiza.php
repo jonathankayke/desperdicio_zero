@@ -47,12 +47,7 @@
                                                value="">
                                     </div>
 
-                                    <div class="form-group">
-                                        <label for="fone_usuario">Telefone</label>
-                                        <input type="tel" class="form-control" id="fone_usuario" 
-                                               name="fone_usuario"
-                                               value="">
-                                    </div>
+                                   
                                 </div>
 
                                 <div class="col-md-6">
