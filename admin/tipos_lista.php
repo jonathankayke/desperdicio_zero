@@ -45,7 +45,7 @@ $totalRows  =   ($lista)->num_rows;
                     <th>
                         <a 
                             href="tipos_insere.php"
-                            class="btn btn-block btn-primary btn-xs"
+                            class="btn btn-block btn-success btn-xs"
                         >
                             <span class="hidden-xs">ADICIONAR<br></span>
                             <span class="glyphicon glyphicon-plus"></span>
