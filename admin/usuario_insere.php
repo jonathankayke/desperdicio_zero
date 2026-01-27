@@ -189,8 +189,8 @@ if($_POST){
     <script>
         document.getElementById("imagem_produto").onchange = function(){
         var reader = new FileReader();
-        if(this.files[0].size>512000){
-            alert("A imagem deve ter no máximo 500kb.");
+        if(this.files[0].size>5242880){
+            alert("A imagem deve ter no máximo 5MB.");
             $("#imagem").attr("src","blank");
             $("#imagem").hide();
             $("#imagem_produto").wrap('<form>').closest('form').get(0).reset();
