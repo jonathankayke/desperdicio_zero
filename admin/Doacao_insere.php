@@ -6,7 +6,6 @@ if($_POST){
     // Selecionar o banco de dados (USE)
     mysqli_select_db($conn_alimentos, $database_conn);
 
-    // Variáveis para acrescentar dados no banco
     $tabela_insert  =   "tbdoacoes";
     $campos_insert  =   "
                             id_doacao_tipo,
@@ -21,7 +20,7 @@ if($_POST){
                             imagem_doacao
                         ";
 
-    // Guardar o nome da imagem no banco e o arquivo no diretório
+    
     if(isset($_POST['enviar'])){
         $nome_img   =   $_FILES['imagem_doacao']['name'];
         $tmp_img    =   $_FILES['imagem_doacao']['tmp_name'];
@@ -29,7 +28,7 @@ if($_POST){
         move_uploaded_file($tmp_img,$dir_img);
     };
 
-    // Receber os dados do formulário
+
     $id_doacao_tipo     =   $_POST['id_doacao_tipo'];
     $nome_empresa       =   $_POST['nome_empresa'];
     $tipo_instituicao   =   $_POST['tipo_instituicao'];
@@ -40,13 +39,13 @@ if($_POST){
     $endereco_retirada  =   $_POST['endereco_retirada'];
     $imagem_doacao      =   $_FILES['imagem_doacao']['name'];
 
-    // Lógica Extra: Buscar a SIGLA (F, V, G) pois o banco pede id E sigla
+   
     $query_sigla    = "SELECT sigla_tipo FROM tbtipos WHERE id_tipo = $id_doacao_tipo";
     $result_sigla   = $conn_alimentos->query($query_sigla);
     $row_sigla      = $result_sigla->fetch_assoc();
     $tipo_alimento  = $row_sigla['sigla_tipo'];
 
-    // Reunir os valores a serem inseridos
+ 
     $valores_insert =   "
                             '$id_doacao_tipo',
                             '$nome_empresa',
@@ -69,7 +68,7 @@ if($_POST){
                     ";
     $resultado  =   $conn_alimentos->query($insertSQL);
 
-    // Após a ação a página será redirecionada
+ 
     $destino    =   "doacao_lista.php";
     if(mysqli_insert_id($conn_alimentos)){
         header("Location: $destino");
@@ -81,7 +80,7 @@ if($_POST){
 // Selecionar o banco de dados (USE)
 mysqli_select_db($conn_alimentos,$database_conn);
 
-// Selecionar os dados da chave estrangeira (para o Select do formulário)
+
 $tabela_fk      =   "tbtipos";
 $ordenar_por    =   "rotulo_tipo ASC";
 $consulta_fk    =   "
