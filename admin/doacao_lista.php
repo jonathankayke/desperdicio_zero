@@ -37,6 +37,7 @@ $totalRows  =   ($lista)->num_rows-1;
                     <th class="hidden">ID</th>
                     <th>IMAGEM</th>
                     <th>Nome empresa</th>
+                    <th>Categoria</th>
                     <th>Alimento</th>
                     <th>Quantidade</th>
                     <th>Validade</th>
@@ -58,6 +59,7 @@ $totalRows  =   ($lista)->num_rows-1;
                     </td>
                     <td class="hidden"><?php echo $row['id_doacao']; ?></td>
                     <td><?php echo $row['nome_empresa']?></td>
+                    <td><?php echo $row['tipo_alimento']?></td>
                     <td><?php echo $row['nome_alimento']?></td>
                     <td><?php echo $row['quantidade_doacao']?></td>
                     <td><?php echo $row['validade_doacao']?></td>
