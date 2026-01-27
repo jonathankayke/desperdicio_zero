@@ -194,15 +194,39 @@ $totalRows_fk   =   ($lista_fk)->num_rows;
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     
-    <script>
-        document.getElementById("imagem_doacao").onchange = function() {
-            var reader = new FileReader();
-            reader.onload = function(e) {
-                document.getElementById("imagem_preview").src = e.target.result;
-                $("#imagem_preview").show();
-            };
-            reader.readAsDataURL(this.files[0]);
-        };
-    </script>
+   <script>
+document.getElementById("imagem_doacao").onchange = function(){
+    var reader = new FileReader();
+    
+    
+    if(this.files[0].size > 5242880){
+        alert("A imagem deve ter no máximo 5MB."); 
+        
+       
+        $("#imagem").attr("src","blank");
+        $("#imagem").hide();
+        $("#imagem_doacao").wrap('<form>').closest('form').get(0).reset();
+        $("#imagem_doacao").unwrap();
+        return false;
+    }
+    
+    if(this.files[0].type.indexOf("image") == -1){
+        alert("Formato inválido, escolha uma imagem.");
+        $("#imagem").attr("src","blank");
+        $("#imagem").hide();
+        $("#imagem_doacao").wrap('<form>').closest('form').get(0).reset();
+        $("#imagem_doacao").unwrap();
+        return false;
+    }
+    
+    reader.onload = function(e){
+       
+        document.getElementById("imagem").src = e.target.result;
+        $("#imagem").show(); 
+    };
+   
+    reader.readAsDataURL(this.files[0]);
+};
+</script>
 </body>
 </html>
