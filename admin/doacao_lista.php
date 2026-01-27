@@ -35,36 +35,36 @@ $totalRows  =   ($lista)->num_rows-1;
             <thead>
                 <tr>
                     <th class="hidden">ID</th>
+                    <th>IMAGEM</th>
                     <th>Nome empresa</th>
-                    <th>Instituição</th>
+                    <th>Categoria</th>
                     <th>Alimento</th>
                     <th>Quantidade</th>
                     <th>Validade</th>
                     <th>Endereço</th>
-                    <th>IMAGEM</th>
                     <th>
                     <a href="Doacao_insere.php" class="btn btn-block btn-success btn-xs">
                         <span>ADICIONAR<br> </span>
                         <span class="glyphicon glyphicon-plus"></span>
                     </a> 
                     </th>
-
                 </tr>
             </thead>
             <tbody>
                 <!-- abre looping -->
                 <?php while($row = $lista->fetch_assoc()) { ?> 
                 <tr>
+                    <td>
+                        <img src="../imagens/<?php echo $row['imagem_doacao']; ?>" alt="" width="100px">
+                    </td>
                     <td class="hidden"><?php echo $row['id_doacao']; ?></td>
                     <td><?php echo $row['nome_empresa']?></td>
-                    <td><?php echo $row['tipo_instituicao']?></td>
+                    <td><?php echo $row['tipo_alimento']?></td>
                     <td><?php echo $row['nome_alimento']?></td>
                     <td><?php echo $row['quantidade_doacao']?></td>
                     <td><?php echo $row['validade_doacao']?></td>
                     <td><?php echo $row['endereco_retirada']?></td>
-                    <td>
-                        <img src="../imagens/<?php echo $row['imagem_doacao']; ?>" alt="" width="100px">
-                    </td>
+
                     <td>
                         <a href="Doacao_atualiza.php?id_doacao=<?php echo $row['id_doacao']?>" class="btn btn-block btn-warning" target="_self" role="button">
                             <span>ALTERAR<br> </span>
