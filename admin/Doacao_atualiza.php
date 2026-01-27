@@ -1,278 +1,197 @@
 <?php
 // Incluir o arquivo e fazer a conexão
 include("../Connections/conn_alimentos.php");
-// Variáveis Globais
-$tabela         =   "tbdoacoes";
-$campo_filtro   =   "id_doacao";
 
-if($_POST){     // ATUALIZANDO NO BANCO DE DADOS
-    // Selecionar o banco de dados (USE)
-    mysqli_select_db($conn_alimentos,$database_conn);
+// Selecionar banco
+mysqli_select_db($conn_alimentos, $database_conn);
 
-    // Guardar o nome da imagem no banco e o arquivo no diretório
-    if($_FILES['imagem_doacao']['name']){
-        $nome_img   =   $_FILES['imagem_doacao']['name'];
-        $tmp_img    =   $_FILES['imagem_doacao']['tmp_name'];
-        $dir_img    =   "../imagens/".$nome_img;
-        move_uploaded_file($tmp_img,$dir_img);
+// ===============================
+// VALIDAR ID
+// ===============================
+if(!isset($_GET['id_doacao'])){
+    header("Location: doacao_lista.php");
+    exit;
+}
+
+$id_doacao = $_GET['id_doacao'];
+
+// ===============================
+// BUSCAR DADOS DA DOAÇÃO
+// ===============================
+$sql_busca = "SELECT * FROM tbdoacoes WHERE id_doacao = $id_doacao";
+$resultado_busca = $conn_alimentos->query($sql_busca);
+$dados = $resultado_busca->fetch_assoc();
+
+// ===============================
+// ATUALIZAR
+// ===============================
+if(isset($_POST['enviar'])){
+
+    $id_doacao_tipo     = $_POST['id_doacao_tipo'];
+    $nome_empresa       = $_POST['nome_empresa'];
+    $contato_doacao     = $_POST['contato_doacao'];
+    $nome_alimento      = $_POST['nome_alimento'];
+    $quantidade_doacao  = $_POST['quantidade_doacao'];
+    $validade_doacao    = $_POST['validade_doacao'];
+    $endereco_retirada  = $_POST['endereco_retirada'];
+
+    // ===============================
+    // TIPO DE ALIMENTO (SIGLA)
+    // ===============================
+    $query_sigla   = "SELECT sigla_tipo FROM tbtipos WHERE id_tipo = $id_doacao_tipo";
+    $result_sigla  = $conn_alimentos->query($query_sigla);
+    $row_sigla     = $result_sigla->fetch_assoc();
+    $tipo_alimento = $row_sigla['sigla_tipo'];
+
+    // ===============================
+    // IMAGEM
+    // ===============================
+    if(!empty($_FILES['imagem_doacao']['name'])){
+        $imagem_doacao = $_FILES['imagem_doacao']['name'];
+        $tmp_img       = $_FILES['imagem_doacao']['tmp_name'];
+        move_uploaded_file($tmp_img, "../imagens/".$imagem_doacao);
     }else{
-        $nome_img=$_POST['imagem_doacao_atual'];
-    };
+        $imagem_doacao = $dados['imagem_doacao'];
+    }
 
-    // Receber os dados do formulário
-    // Organizar os campos na mesma ordem
-    $id_doacao_tipo    =   $_POST['id_doacao_tipo'];
-    $nome_empresa   =   $_POST['nome_empresa'];
-    $tipo_instituicao     =   $_POST['tipo_instituicao'];
-    $contato_doacao     =   $_POST['contato_doacao'];     
-    $tipo_alimento      =   $_POST['tipo_alimento'];
-    $nome_alimento      =   $_POST['nome_alimento'];
-    $quantidade_doacao  =   $_POST['quantidade_doacao'];
-    $validade_doacao    =   $_POST['validade_doacao'];
-    $endereco_retirada  =   $_POST['endereco_retirada'];
-    $imagem_doacao     =   $nome_img;
+    // ===============================
+    // SQL UPDATE
+    // ===============================
+    $updateSQL = "
+        UPDATE tbdoacoes SET
+            id_doacao_tipo     = '$id_doacao_tipo',
+            nome_empresa       = '$nome_empresa',
+            contato_doacao     = '$contato_doacao',
+            tipo_alimento      = '$tipo_alimento',
+            nome_alimento      = '$nome_alimento',
+            quantidade_doacao  = '$quantidade_doacao',
+            validade_doacao    = '$validade_doacao',
+            endereco_retirada  = '$endereco_retirada',
+            imagem_doacao      = '$imagem_doacao'
+        WHERE id_doacao = $id_doacao
+    ";
 
-    // Campo para filtrar o registro (WHERE)
-    $filtro_update      =   $_POST['id_doacao'];
+    $conn_alimentos->query($updateSQL);
+    header("Location: doacao_lista.php");
+}
 
-    // Consulta SQL para ATUALIZAÇÃO dos dados
-    $updateSQL  =   "
-                    UPDATE ".$tabela."
-                        SET id_doacao_tipo      =   '".$id_doacao_tipo."'  ,
-                            nome_empresa        =   '".$nome_empresa."' ,    
-                            tipo_instituicao    =   '".$tipo_instituicao."'   ,
-                            contato_doacao      =   '".$contato_doacao."'   ,
-                            tipo_alimento       =   '".$tipo_alimento."'    ,
-                            nome_alimento       =   '".$nome_alimento."'    ,
-                            quantidade_doacao   =   '".$quantidade_doacao."'    ,
-                            validade_doacao     =   '".$validade_doacao."'    ,
-                            endereco_retirada   =   '".$endereco_retirada."'    ,
-                            imagem_doacao       =   '".$imagem_doacao."'   
-                    WHERE ".$campo_filtro."     =   '".$filtro_update."';
-                    ";
-    $resultado  =   $conn_alimentos->query($updateSQL);
-
-    // Após a ação a página será redirecionada
-    $destino    =   "doacao_lista.php";
-    if(mysqli_insert_id($conn_alimentos)){
-        header("Location: $destino");
-    }else{
-        header("Location: $destino");
-    };
-};
-
-// Consulta para trazer e filtrar os dados
-// Definir o USE do banco de dados;
-mysqli_select_db($conn_alimentos,$database_conn);
-$filtro_select    =   $_GET['id_doacao'];
-$consulta           =   "
-                    SELECT *
-                    FROM    ".$tabela."
-                    WHERE ".$campo_filtro."=".$filtro_select.";
-                    ";
-$lista          =   $conn_alimentos->query($consulta);
-$row            =   $lista->fetch_assoc();
-$totalRows      =   ($lista)->num_rows;
-
-// Selecionar o banco de dados (USE)
-mysqli_select_db($conn_alimentos,$database_conn);
-
-// Selecionar os dados da chave estrangeira
-$tabela_fk      =   "tbtipos";
-$ordenar_por    =   "rotulo_tipo ASC";
-$consulta_fk    =   "
-                    SELECT *
-                    FROM    ".$tabela_fk."
-                    ORDER BY ".$ordenar_por.";
-                    ";
-$lista_fk       =   $conn_alimentos->query($consulta_fk);
-$row_fk         =   $lista_fk->fetch_assoc();
-$totalRows_fk   =   ($lista_fk)->num_rows;
+// ===============================
+// LISTAR TIPOS
+// ===============================
+$tabela_fk   = "tbtipos";
+$consulta_fk = "SELECT * FROM tbtipos ORDER BY rotulo_tipo ASC";
+$lista_fk    = $conn_alimentos->query($consulta_fk);
+$row_fk      = $lista_fk->fetch_assoc();
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atualizar Doação</title>
-
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/meu_estilo.css">
+<meta charset="UTF-8">
+<title>Atualizar Doação</title>
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/meu_estilo.css">
 </head>
 
-<?php include("menu_adm.php"); ?>
+<?php include("menu_adm.php") ?>
 
 <body class="fundofixo">
 
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-md-10 col-md-offset-1">
+<div class="container">
+<div class="row">
+<div class="col-xs-12 col-md-10 col-md-offset-1">
 
-                <h1 class="text-center"
-                    style="color:white; text-shadow:1px 1px 3px rgba(0,0,0,0.5); margin-bottom:20px;">
-                    Atualização de Doação
-                </h1>
+<h1 class="text-center" style="color:white; margin-bottom:20px;">
+Atualizar Doação
+</h1>
 
-                <div class="thumbnail" style="border:none; background:none; box-shadow:none;">
+<div class="thumbnail" style="border:none; background:none;">
+<div class="alert alert-success">
 
-                    <div class="alert alert-success" role="alert">
+<form method="POST" enctype="multipart/form-data">
 
-                        <form action="processa_atualiza_doacao.php"
-                              method="POST" enctype="multipart/form-data">
+<div class="row">
+<div class="col-md-6">
+<h3 class="secao-titulo">Dados do Doador</h3>
 
-                            <!-- ID DA DOAÇÃO -->
-                            <input type="hidden" name="id_doacao" value="<?=$dados['id_doacao']?>">
+<div class="form-group">
+<label>Nome da Empresa/Doador</label>
+<input type="text" class="form-control" name="nome_empresa"
+value="<?= $dados['nome_empresa']; ?>" required>
+</div>
 
-                            <div class="row">
-                                <div class="col-md-6">
+<div class="form-group">
+<label>Contato (WhatsApp)</label>
+<input type="tel" class="form-control" name="contato_doacao"
+value="<?= $dados['contato_doacao']; ?>" required>
+</div>
 
-                                    <h3 class="secao-titulo">Dados do Doador</h3>
+<div class="form-group">
+<label>Endereço para Retirada</label>
+<input type="text" class="form-control" name="endereco_retirada"
+value="<?= $dados['endereco_retirada']; ?>" required>
+</div>
+</div>
 
-                                    <div class="form-group">
-                                        <label for="nome_doador">Seu Nome/Nome da Empresa</label>
-                                        <input type="text" class="form-control" id="nome_doador"
-                                               name="nome_doador" required
-                                               value="">
-                                    </div>
+<div class="col-md-6">
+<h3 class="secao-titulo">Dados da Doação</h3>
 
-                                    <div class="form-group">
-                                        <label for="tipo_instituicao">Tipo de Instituição</label>
-                                        <input type="text" class="form-control" id="tipo_instituicao"
-                                               name="tipo_instituicao" required
-                                               value="">
-                                    </div>
+<div class="form-group">
+<label>Categoria do Alimento</label>
+<select name="id_doacao_tipo" class="form-control" required>
+<?php do { ?>
+<option value="<?= $row_fk['id_tipo']; ?>"
+<?= ($row_fk['id_tipo']==$dados['id_doacao_tipo'])?'selected':''; ?>>
+<?= $row_fk['rotulo_tipo']; ?>
+</option>
+<?php } while($row_fk = $lista_fk->fetch_assoc()); ?>
+</select>
+</div>
 
-                                    <div class="form-group">
-                                        <label for="whatsapp">Contato (WhatsApp)</label>
-                                        <input type="tel" class="form-control" id="whatsapp" 
-                                               name="whatsapp" required
-                                               value="">
-                                    </div>
-                                </div>
+<div class="form-group">
+<label>Nome do Alimento</label>
+<input type="text" class="form-control" name="nome_alimento"
+value="<?= $dados['nome_alimento']; ?>" required>
+</div>
 
-                                <div class="col-md-6">
+<div class="row">
+<div class="col-md-6 form-group">
+<label>Quantidade</label>
+<input type="text" class="form-control" name="quantidade_doacao"
+value="<?= $dados['quantidade_doacao']; ?>" required>
+</div>
 
-                                    <h3 class="secao-titulo">Dados da Doação</h3>
+<div class="col-md-6 form-group">
+<label>Validade</label>
+<input type="date" class="form-control" name="validade_doacao"
+value="<?= $dados['validade_doacao']; ?>" required>
+</div>
+</div>
 
-                                    <div class="form-group">
-                                        <label for="tipo_alimento">Tipo de Alimento</label>
-                                        <select class="form-select form-control" id="tipo_alimento"
-                                                name="tipo_alimento" required>
-                                            <option value="" disabled>Selecione uma categoria</option>
+<div class="form-group">
+<label>Imagem da Doação</label>
+<input type="file" name="imagem_doacao" id="imagem_doacao" class="form-control">
 
-                                            <!-- Exemplo de categorias -->
-                                            <option value="Frutas">Frutas</option>
-                                            <option value="Verduras" >Verduras</option>
-                                            <option value="Pães" >Pães</option>
-                                            <option value="Cereais" >Cereais</option>
+<img src="../imagens/<?= $dados['imagem_doacao']; ?>"
+class="img-responsive"
+style="max-height:200px; margin-top:10px;">
+</div>
+</div>
+</div>
 
-                                            <!-- Você pode carregar dinamicamente do BD -->
-                                        </select>
-                                    </div>
+<input type="submit" name="enviar"
+value="Atualizar Doação"
+class="btn btn-primary btn-block">
 
-                                    <div class="form-group">
-                                        <label for="alimento_especifico">Alimento Específico</label>
-                                        <input type="text" class="form-control" id="alimento_especifico"
-                                               name="alimento_especifico" required
-                                               value="">
-                                    </div>
+</form>
 
-                                    <div class="row">
-                                        <div class="col-md-6 form-group">
-                                            <label for="quantidade">Quantidade</label>
-                                            <input type="text" class="form-control" id="quantidade"
-                                                   name="quantidade" required
-                                                   value="">
-                                        </div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-                                        <div class="col-md-6 form-group">
-                                            <label for="validade">Validade</label>
-                                            <input type="date" class="form-control" id="validade"
-                                                   name="validade" required
-                                                   value="">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="endereco">Endereço para Retirada</label>
-                                        <input type="text" class="form-control" id="endereco"
-                                               name="endereco" required
-                                               value="">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label>Imagem Atual</label><br>
-
-                                        <img src="../imagens/doacoes/"
-                                             class="img-responsive"
-                                             style="max-height:250px; border:2px solid #ccc;">
-
-                                        <br><br>
-
-                                        <label for="imagem_produto">Nova Imagem (opcional)</label>
-
-                                        <input type="file" name="imagem_produto" id="imagem_produto"
-                                               class="form-control" accept="image/*">
-
-                                        <img id="imagem" src="" alt=""
-                                             class="img-responsive"
-                                             style="max-height:250px; margin-top:10px; display:none;">
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-12 text-center">
-                                    <br>
-                                    <button type="submit" class="btn btn-primary btn-lg btn-block">
-                                        Atualizar Doação
-                                    </button>
-                                </div>
-                            </div>
-
-                        </form>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <?php include("../rodape.php"); ?>
-
-    <!-- Preview da imagem -->
-    <script>
-        document.getElementById("imagem_produto").onchange = function () {
-            var reader = new FileReader();
-
-            if (this.files[0].size > 512000) {
-                alert("A imagem deve ter no máximo 500kb.");
-                $("#imagem").hide().attr("src", "");
-                this.value = "";
-                return false;
-            }
-
-            if (this.files[0].type.indexOf("image") === -1) {
-                alert("Formato inválido, selecione uma imagem.");
-                $("#imagem").hide().attr("src", "");
-                this.value = "";
-                return false;
-            }
-
-            reader.onload = function (e) {
-                document.getElementById("imagem").src = e.target.result;
-                $("#imagem").show();
-            };
-
-            reader.readAsDataURL(this.files[0]);
-        };
-    </script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
 
 </body>
 </html>
