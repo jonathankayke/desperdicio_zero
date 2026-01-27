@@ -48,7 +48,6 @@ if($_POST){
     $valores_insert =   "
                             '$id_doacao_tipo',
                             '$nome_empresa',
-                            '$tipo_instituicao',
                             '$contato_doacao',
                             '$tipo_alimento',
                             '$nome_alimento',
