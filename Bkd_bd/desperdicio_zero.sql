@@ -102,11 +102,13 @@ ALTER TABLE tbdoacoes
 CREATE VIEW vw_doacoes AS
 SELECT  d.id_doacao,
         d.nome_empresa,
+        d.id_doacao_tipo,
         d.nome_alimento,
         d.quantidade_doacao,
         d.validade_doacao,
         d.endereco_retirada,
         d.imagem_doacao,
+        d.contato_doacao,
         t.sigla_tipo,
         t.rotulo_tipo
 FROM    tbdoacoes d LEFT JOIN tbtipos t ON d.id_doacao_tipo = t.id_tipo;
