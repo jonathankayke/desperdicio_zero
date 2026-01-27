@@ -133,9 +133,6 @@
             </div>
         </div>
     </div>
-
-    <?php include("../rodape.php")?>
-
     <!-- Script para a imagem -->
     <script>
         document.getElementById("imagem_produto").onchange = function(){
