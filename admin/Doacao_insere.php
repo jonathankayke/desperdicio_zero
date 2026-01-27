@@ -1,3 +1,86 @@
+<?php 
+include("../Connections/conn_alimentos.php");
+
+if($_POST){
+    // Selecionar o banco de dados (USE)
+    mysqli_select_db($conn_alimentos,$database_conn);
+
+    // Variáveis para acrescentar dados no banco
+    $tabela_insert  =   "tbdoacoes";
+    $campos_insert  =   "
+                            id_doacao_tipo,
+                            nome_empresa,
+                            tipo_instituicao,
+                            contato_doacao,
+                            tipo_alimento,
+                            imagem_produto,
+                            nome_alimento,
+                            quantidade_doacao,
+                            validade_doacao,
+                            endereco_retirada,
+                            imagem_doacao
+                        ";
+
+    // Guardar o nome da imagem no banco e o arquivo no diretório
+    if(isset($_POST['enviar'])){
+        $nome_img   =   $_FILES['imagem_produto']['name'];
+        $tmp_img    =   $_FILES['imagem_produto']['tmp_name'];
+        $dir_img    =   "../imagens/".$nome_img;
+        move_uploaded_file($tmp_img,$dir_img);
+    };
+
+    // Receber os dados do formulário
+    // Organizar os campos na mesma ordem
+    $id_tipo_produto    =   $_POST['id_tipo_produto'];
+    $destaque_produto   =   $_POST['destaque_produto'];
+    $descri_produto     =   $_POST['descri_produto'];
+    $resumo_produto     =   $_POST['resumo_produto'];     
+    $valor_produto      =   $_POST['valor_produto'];
+    $imagem_produto     =   $_FILES['imagem_produto']['name'];
+
+    // Reunir os valores a serem inseridos
+    $valores_insert =   "
+                        '$id_tipo_produto',
+                        '$destaque_produto',
+                        '$descri_produto',
+                        '$resumo_produto',
+                        '$valor_produto',
+                        '$imagem_produto'
+                        ";
+
+    // Consulta SQL para inserção dos dados
+    $insertSQL  =   "
+                    INSERT INTO ".$tabela_insert."
+                        (".$campos_insert.")
+                    VALUES
+                        (".$valores_insert.");
+                    ";
+    $resultado  =   $conn_produtos->query($insertSQL);
+
+    // Após a ação a página será redirecionada
+    $destino    =   "produtos_lista.php";
+    if(mysqli_insert_id($conn_produtos)){
+        header("Location: $destino");
+    }else{
+        header("Location: $destino");
+    };
+};
+
+// Selecionar o banco de dados (USE)
+mysqli_select_db($conn_produtos,$database_conn);
+
+// Selecionar os dados da chave estrangeira
+$tabela_fk      =   "tbtipos";
+$ordenar_por    =   "rotulo_tipo ASC";
+$consulta_fk    =   "
+                    SELECT *
+                    FROM    ".$tabela_fk."
+                    ORDER BY ".$ordenar_por.";
+                    ";
+$lista_fk       =   $conn_produtos->query($consulta_fk);
+$row_fk         =   $lista_fk->fetch_assoc();
+$totalRows_fk   =   ($lista_fk)->num_rows;
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -119,14 +202,13 @@
                                 </div>
                             </div>
 
-                            <div class="row">
-                                <div class="col-md-12 text-center">
-                                    <br>
-                                    <button type="submit" class="btn btn-success btn-lg btn-block">
-                                        Salvar Doação
-                                    </button>
-                                </div>
-                            </div>
+                            <input 
+                            type="submit" 
+                            value="Salvar Doação"
+                            name="enviar"
+                            id="enviar"
+                            class="btn btn-danger btn-block"
+                         >
                         </form>
                     </div>
                 </div>
