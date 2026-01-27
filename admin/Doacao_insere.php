@@ -30,7 +30,7 @@ if($_POST){
 
     $id_doacao_tipo     =   $_POST['id_doacao_tipo'];
     $nome_empresa       =   $_POST['nome_empresa'];
-    $tipo_alimento      =   $_POST['tipo_alimento']
+    $tipo_alimento      =   $_POST['tipo_alimento'];
     $contato_doacao     =   $_POST['contato_doacao'];
     $nome_alimento      =   $_POST['nome_alimento'];
     $quantidade_doacao  =   $_POST['quantidade_doacao'];
