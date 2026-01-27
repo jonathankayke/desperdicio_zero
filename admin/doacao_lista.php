@@ -42,6 +42,7 @@ $totalRows  =   ($lista)->num_rows-1;
                     <th>Quantidade</th>
                     <th>Validade</th>
                     <th>Endereço</th>
+                    <th>Contato</th>
                     <th>
                     <a href="Doacao_insere.php" class="btn btn-block btn-success btn-xs">
                         <span>ADICIONAR<br> </span>
