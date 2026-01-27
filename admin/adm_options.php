@@ -16,7 +16,7 @@
     <!-- ADM Doações -->
     <div class="col-sm-6 col-md-4">
         <div class="thumbnail doacoes-card">
-        <img src="../imagens/Chefe.png" alt="">
+        <img src="../imagens/icon_doacoes.png" alt="">
             <br>
             <div>
                 <!-- botão principal -->
@@ -49,7 +49,7 @@
     <!-- ADM Tipos -->
     <div class="col-sm-6 col-md-4">
         <div class="thumbnail alert-warning">
-            <img src="../imagens/Secretaria.png" alt="">
+            <img src="../imagens/icon_tipos.png" alt="">
             <br>
             <div class="alert-warning">
                 <!-- botão principal -->
@@ -82,7 +82,7 @@
     <!-- ADM Usuarios -->
     <div class="col-sm-6 col-md-4">
         <div class="thumbnail alert-info">
-            <img src="../imagens/Secretario1.png" alt="">
+            <img src="../imagens/icon_usuarios.png" alt="">
             <br>
             <div class="alert-info">
                 <!-- botão principal -->
