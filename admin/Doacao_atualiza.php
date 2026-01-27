@@ -38,8 +38,8 @@ if($_POST){     // ATUALIZANDO NO BANCO DE DADOS
     // Consulta SQL para ATUALIZAÇÃO dos dados
     $updateSQL  =   "
                     UPDATE ".$tabela."
-                        SET id_doacao_tipo      =    '".$id_doacao_tipo."'  ,
-                            nome_empresa        =      '".$nome_empresa."' ,    
+                        SET id_doacao_tipo      =   '".$id_doacao_tipo."'  ,
+                            nome_empresa        =   '".$nome_empresa."' ,    
                             tipo_instituicao    =   '".$tipo_instituicao."'   ,
                             contato_doacao      =   '".$contato_doacao."'   ,
                             tipo_alimento       =   '".$tipo_alimento."'    ,
@@ -70,7 +70,7 @@ $consulta           =   "
                     FROM    ".$tabela."
                     WHERE ".$campo_filtro."=".$filtro_select.";
                     ";
-$lista          =   $conn_produtos->query($consulta);
+$lista          =   $conn_alimentos->query($consulta);
 $row            =   $lista->fetch_assoc();
 $totalRows      =   ($lista)->num_rows;
 

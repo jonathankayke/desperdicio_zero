@@ -24,6 +24,7 @@ USE desperdicio_zero;
 -- Tabela de usuários 
 CREATE TABLE tbusuarios (
     id_usuario INT NOT NULL,
+    login_usuario VARCHAR(150) NOT NULL,
     nome_usuario VARCHAR(150) NOT NULL,
     email_usuario VARCHAR(120) NOT NULL UNIQUE,
     telefone_usuario VARCHAR(150) NULL,
