@@ -23,20 +23,24 @@ if($_POST){
 
     // Guardar o nome da imagem no banco e o arquivo no diretório
     if(isset($_POST['enviar'])){
-        $nome_img   =   $_FILES['imagem_produto']['name'];
-        $tmp_img    =   $_FILES['imagem_produto']['tmp_name'];
+        $nome_img   =   $_FILES['imagem_doacao']['name'];
+        $tmp_img    =   $_FILES['imagem_doacao']['tmp_name'];
         $dir_img    =   "../imagens/".$nome_img;
         move_uploaded_file($tmp_img,$dir_img);
     };
 
     // Receber os dados do formulário
     // Organizar os campos na mesma ordem
-    $id_tipo_produto    =   $_POST['id_tipo_produto'];
-    $destaque_produto   =   $_POST['destaque_produto'];
-    $descri_produto     =   $_POST['descri_produto'];
-    $resumo_produto     =   $_POST['resumo_produto'];     
-    $valor_produto      =   $_POST['valor_produto'];
-    $imagem_produto     =   $_FILES['imagem_produto']['name'];
+    $id_doacao_tipo     =   $_POST['id_doacao_tipo'];
+    $nome_empresa       =   $_POST['nome_empresa'];
+    $tipo_instituicao   =   $_POST['tipo_instituicao'];
+    $contato_doacao     =   $_POST['contato_doacao'];     
+    $tipo_alimento      =   $_POST['tipo_alimento'];
+    $nome_alimento      =   $_POST['nome_alimento'];
+    $quantidade_doacao  =   $_POST['quantidade_doacao'];
+    $validade_doacao    =   $_POST['validade_doacao'];
+    $endereco_retirada  =   $_POST['endereco_retirada'];
+    $imagem_produto     =   $_FILES['imagem_doacao']['name'];
 
     // Reunir os valores a serem inseridos
     $valores_insert =   "
@@ -55,11 +59,11 @@ if($_POST){
                     VALUES
                         (".$valores_insert.");
                     ";
-    $resultado  =   $conn_produtos->query($insertSQL);
+    $resultado  =   $conn_alimentos->query($insertSQL);
 
     // Após a ação a página será redirecionada
     $destino    =   "produtos_lista.php";
-    if(mysqli_insert_id($conn_produtos)){
+    if(mysqli_insert_id($conn_alimentos)){
         header("Location: $destino");
     }else{
         header("Location: $destino");
@@ -67,7 +71,7 @@ if($_POST){
 };
 
 // Selecionar o banco de dados (USE)
-mysqli_select_db($conn_produtos,$database_conn);
+mysqli_select_db($conn_alimentos,$database_conn);
 
 // Selecionar os dados da chave estrangeira
 $tabela_fk      =   "tbtipos";
@@ -77,7 +81,7 @@ $consulta_fk    =   "
                     FROM    ".$tabela_fk."
                     ORDER BY ".$ordenar_por.";
                     ";
-$lista_fk       =   $conn_produtos->query($consulta_fk);
+$lista_fk       =   $conn_alimentos->query($consulta_fk);
 $row_fk         =   $lista_fk->fetch_assoc();
 $totalRows_fk   =   ($lista_fk)->num_rows;
 ?>
@@ -207,7 +211,7 @@ $totalRows_fk   =   ($lista_fk)->num_rows;
                             value="Salvar Doação"
                             name="enviar"
                             id="enviar"
-                            class="btn btn-danger btn-block"
+                            class="btn btn-success btn-block"
                          >
                         </form>
                     </div>
