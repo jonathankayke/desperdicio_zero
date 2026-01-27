@@ -1,3 +1,95 @@
+<?php
+// Incluir o arquivo e fazer a conexão
+Include('../Connections/conn_alimentos.php'); 
+
+// Variáveis Globais
+$tabela         =   "tbdoacoes";
+$campo_filtro   =   "id_doacao";
+
+if($_POST){     // ATUALIZANDO NO BANCO DE DADOS
+    // Selecionar o banco de dados (USE)
+    mysqli_select_db($conn_alimentos,$database_conn);
+
+    // Guardar o nome da imagem no banco e o arquivo no diretório
+    if($_FILES['imagem_doacao']['name']){
+        $nome_img   =   $_FILES['imagem_doacao']['name'];
+        $tmp_img    =   $_FILES['imagem_doacao']['tmp_name'];
+        $dir_img    =   "../imagens/".$nome_img;
+        move_uploaded_file($tmp_img,$dir_img);
+    }else{
+        $nome_img=$_POST['imagem_doacao_atual'];
+    };
+
+    // Receber os dados do formulário
+    // Organizar os campos na mesma ordem
+    $id_doacao_tipo    =   $_POST['id_doacao_tipo'];
+    $nome_empresa   =   $_POST['nome_empresa'];
+    $tipo_instituicao     =   $_POST['tipo_instituicao'];
+    $contato_doacao     =   $_POST['contato_doacao'];     
+    $tipo_alimento      =   $_POST['tipo_alimento'];
+    $nome_alimento      =   $_POST['nome_alimento'];
+    $quantidade_doacao  =   $_POST['quantidade_doacao'];
+    $validade_doacao    =   $_POST['validade_doacao'];
+    $endereco_retirada  =   $_POST['endereco_retirada'];
+    $imagem_doacao     =   $nome_img;
+
+    // Campo para filtrar o registro (WHERE)
+    $filtro_update      =   $_POST['id_doacao'];
+
+    // Consulta SQL para ATUALIZAÇÃO dos dados
+    $updateSQL  =   "
+                    UPDATE ".$tabela."
+                        SET id_doacao_tipo      =    '".$id_doacao_tipo."'  ,
+                            nome_empresa        =      '".$nome_empresa."' ,    
+                            tipo_instituicao    =   '".$tipo_instituicao."'   ,
+                            contato_doacao      =   '".$contato_doacao."'   ,
+                            tipo_alimento       =   '".$tipo_alimento."'    ,
+                            nome_alimento       =   '".$nome_alimento."'    ,
+                            quantidade_doacao   =   '".$quantidade_doacao."'    ,
+                            validade_doacao     =   '".$validade_doacao."'    ,
+                            endereco_retirada   =   '".$endereco_retirada."'    ,
+                            imagem_doacao       =   '".$imagem_doacao."'   
+                    WHERE ".$campo_filtro."     =   '".$filtro_update."';
+                    ";
+    $resultado  =   $conn_alimentos->query($updateSQL);
+
+    // Após a ação a página será redirecionada
+    $destino    =   "produtos_lista.php";
+    if(mysqli_insert_id($conn_alimentos)){
+        header("Location: $destino");
+    }else{
+        header("Location: $destino");
+    };
+};
+
+// Consulta para trazer e filtrar os dados
+// Definir o USE do banco de dados;
+mysqli_select_db($conn_alimentos,$database_conn);
+$filtro_select    =   $_GET['id_doacao'];
+$consulta           =   "
+                    SELECT *
+                    FROM    ".$tabela."
+                    WHERE ".$campo_filtro."=".$filtro_select.";
+                    ";
+$lista          =   $conn_produtos->query($consulta);
+$row            =   $lista->fetch_assoc();
+$totalRows      =   ($lista)->num_rows;
+
+// Selecionar o banco de dados (USE)
+mysqli_select_db($conn_alimentos,$database_conn);
+
+// Selecionar os dados da chave estrangeira
+$tabela_fk      =   "tbtipos";
+$ordenar_por    =   "rotulo_tipo ASC";
+$consulta_fk    =   "
+                    SELECT *
+                    FROM    ".$tabela_fk."
+                    ORDER BY ".$ordenar_por.";
+                    ";
+$lista_fk       =   $conn_alimentos->query($consulta_fk);
+$row_fk         =   $lista_fk->fetch_assoc();
+$totalRows_fk   =   ($lista_fk)->num_rows;
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
