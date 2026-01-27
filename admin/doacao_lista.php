@@ -65,7 +65,7 @@ $totalRows  =   ($lista)->num_rows-1;
                     <td><?php echo $row['quantidade_doacao']?></td>
                     <td><?php echo $row['validade_doacao']?></td>
                     <td><?php echo $row['endereco_retirada']?></td>
-
+                    <td><?php echo $row['contato_doacao']?></td>
                     <td>
                         <a href="Doacao_atualiza.php?id_doacao=<?php echo $row['id_doacao']?>" class="btn btn-block btn-warning" target="_self" role="button">
                             <span>ALTERAR<br> </span>
