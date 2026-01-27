@@ -53,7 +53,7 @@ if($_POST){     // ATUALIZANDO NO BANCO DE DADOS
     $resultado  =   $conn_alimentos->query($updateSQL);
 
     // Após a ação a página será redirecionada
-    $destino    =   "produtos_lista.php";
+    $destino    =   "doacao_lista.php";
     if(mysqli_insert_id($conn_alimentos)){
         header("Location: $destino");
     }else{

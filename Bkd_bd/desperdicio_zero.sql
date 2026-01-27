@@ -36,7 +36,6 @@ CREATE TABLE tbdoacoes (
     id_doacao INT (11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     id_doacao_tipo INT (11) NOT NULL,
     nome_empresa VARCHAR (150) NOT NULL,
-    tipo_instituicao VARCHAR(150) NOT NULL,
     contato_doacao VARCHAR(150) NOT NULL,
     tipo_alimento VARCHAR(150) NOT NULL,
     nome_alimento VARCHAR(150) NOT NULL,
@@ -103,7 +102,6 @@ ALTER TABLE tbdoacoes
 CREATE VIEW vw_doacoes AS
 SELECT  d.id_doacao,
         d.nome_empresa,
-        d.tipo_instituicao,
         d.nome_alimento,
         d.quantidade_doacao,
         d.validade_doacao,
