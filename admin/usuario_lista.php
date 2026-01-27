@@ -47,16 +47,30 @@ $totalRows  =   ($lista)->num_rows;
                 </tr>
             </thead>
             <tbody>
-                <!-- abre looping -->
-                 <?php do{ ?>
-                <tr>
-                    <td><?php echo $row['foto_usuario']?></td>
-                    <td><?php echo $row['nome_usuario']?></td>
-                    <td><?php echo $row['senha_usuario']?></td>
-                    <td><?php echo $row['tipo_usuario']?></td>
-                    <td><?php echo $row['telefone_usuario']?></td>
-                </tr>
-                <?php }while($row = $lista->fetch_assoc()); ?>
+                <?php
+                // O while verifica se existe uma linha antes de tentar imprimir
+                while($row = $lista->fetch_assoc()) { 
+                ?>
+                    <tr>
+                        <td><?php echo $row['foto_usuario']; ?></td>
+                        <td><?php echo $row['nome_usuario']; ?></td>
+                        <td><?php echo $row['senha_usuario']; ?></td>
+                        <td><?php echo $row['tipo_usuario']; ?></td>
+                        <td><?php echo $row['telefone_usuario']; ?></td>
+                        <td>
+                            <a href="usuario_atualiza.php" target="_self" class="btn btn-warning btn-xs btn-block">
+                                <span class="hidden-xs">ALTERAR <br></span>
+                                <span class="glyphicon glyphicon-refresh"></span>
+                            </a>
+                            <button class="btn btn-danger btn-xs btn-block delete">
+                                <span class="hidden-xs">EXCLUIR<br></span>
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </td>
+                    </tr>
+                <?php 
+                } // Fim do loop while
+                ?>
             </tbody>
         </table>
     </main>
