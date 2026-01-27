@@ -26,6 +26,8 @@ CREATE TABLE tbusuarios (
     id_usuario INT NOT NULL,
     nome_usuario VARCHAR(150) NOT NULL,
     email_usuario VARCHAR(120) NOT NULL UNIQUE,
+    telefone_usuario VARCHAR(150) NULL,
+    login_usuario VARCHAR(150) NOT NULL,
     senha_usuario VARCHAR(255) NOT NULL,
     tipo_usuario ENUM('Admin', 'User') DEFAULT 'User',
     foto_usuario VARCHAR(255) NULL

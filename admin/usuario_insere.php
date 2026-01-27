@@ -1,3 +1,69 @@
+<?php
+// Incluir o arquivo e fazer a conexão
+include("../Connections/conn_alimentos.php");
+
+if($_POST){
+    // Selecionar o banco de dados (USE)
+    mysqli_select_db($conn_alimentos,$database_conn);
+
+    // Variáveis para acrescentar dados no banco
+    $tabela_insert  =   "tbusuarios";
+    $campos_insert  =   "
+                            nome_usuario,
+                            email_usuario,
+                            telefone_usuario,
+                            login_usuario,
+                            senha_usuario,
+                            tipo_usuario,
+                            foto_usuario
+                        ";
+
+    // Guardar o nome da imagem no banco e o arquivo no diretório
+    if(isset($_POST['enviar'])){
+        $nome_img   =   $_FILES['imagem_produto']['name'];
+        $tmp_img    =   $_FILES['imagem_produto']['tmp_name'];
+        $dir_img    =   "../imagens/".$nome_img;
+        move_uploaded_file($tmp_img,$dir_img);
+    };
+
+    // Receber os dados do formulário
+    // Organizar os campos na mesma ordem
+    $id_tipo_produto    =   $_POST['id_tipo_produto'];
+    $destaque_produto   =   $_POST['destaque_produto'];
+    $descri_produto     =   $_POST['descri_produto'];
+    $resumo_produto     =   $_POST['resumo_produto'];     
+    $valor_produto      =   $_POST['valor_produto'];
+    $imagem_produto     =   $_FILES['imagem_produto']['name'];
+
+    // Reunir os valores a serem inseridos
+    $valores_insert =   "
+                        '$id_tipo_produto',
+                        '$destaque_produto',
+                        '$descri_produto',
+                        '$resumo_produto',
+                        '$valor_produto',
+                        '$imagem_produto'
+                        ";
+
+    // Consulta SQL para inserção dos dados
+    $insertSQL  =   "
+                    INSERT INTO ".$tabela_insert."
+                        (".$campos_insert.")
+                    VALUES
+                        (".$valores_insert.");
+                    ";
+    $resultado  =   $conn_alimentos->query($insertSQL);
+
+    // Após a ação a página será redirecionada
+    $destino    =   "produtos_lista.php";
+    if(mysqli_insert_id($conn_alimentos)){
+        header("Location: $destino");
+    }else{
+        header("Location: $destino");
+    };
+};
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -37,8 +103,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="email_usuario" class="form-label">E-mail</label>
-                                        <input type="email" class="form-control" id="email_usuario" name="email_usuario"
+                                        <label for="login_usuario" class="form-label">E-mail</label>
+                                        <input type="email" class="form-control" id="login_usuario" name="login_usuario"
                                             placeholder="seuemail@exemplo.com" required>
                                     </div>
                                     
@@ -65,8 +131,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="nivel_usuario" class="form-label">Nível de Acesso</label>
-                                        <select class="form-control" name="nivel_usuario" id="nivel_usuario" required>
+                                        <label for="tipo_usuario" class="form-label">Nível de Acesso</label>
+                                        <select class="form-control" name="tipo_usuario" id="tipo_usuario" required>
                                             <option value="" disabled selected>Selecione o nível</option>
                                             <option value="sup">Supervisor</option>
                                             <option value="com">Comum</option>
@@ -101,9 +167,13 @@
                             <div class="row">
                                 <div class="col-md-12 text-center">
                                     <br>
-                                    <button type="submit" class="btn btn-success btn-lg btn-block">
-                                        <span class="glyphicon glyphicon-save"></span> Cadastrar Usuário
-                                    </button>
+                                    <input 
+                                        type="submit" 
+                                        value="Cadastrar Usuário"
+                                        name="enviar"
+                                        id="enviar"
+                                        class="btn btn-success btn-block"
+                                    >
                                 </div>
                             </div>
 
