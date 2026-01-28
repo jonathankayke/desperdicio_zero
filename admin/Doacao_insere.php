@@ -10,8 +10,8 @@ if($_POST){
     $campos_insert  =   "
                             id_doacao_tipo,
                             nome_empresa,
-                            tipo_alimento,
                             contato_doacao,
+                            tipo_alimento,
                             nome_alimento,
                             quantidade_doacao,
                             validade_doacao,
@@ -30,8 +30,8 @@ if($_POST){
 
     $id_doacao_tipo     =   $_POST['id_doacao_tipo'];
     $nome_empresa       =   $_POST['nome_empresa'];
+     $contato_doacao    =   $_POST['contato_doacao'];
     $tipo_alimento      =   $_POST['tipo_alimento'];
-    $contato_doacao     =   $_POST['contato_doacao'];
     $nome_alimento      =   $_POST['nome_alimento'];
     $quantidade_doacao  =   $_POST['quantidade_doacao'];
     $validade_doacao    =   $_POST['validade_doacao'];
