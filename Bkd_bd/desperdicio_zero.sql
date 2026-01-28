@@ -23,9 +23,10 @@ USE desperdicio_zero;
 
 -- Tabela de usuários 
 CREATE TABLE tbusuarios (
-    id_usuario INT NOT NULL,
+    id_usuario INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nome_usuario VARCHAR(150) NOT NULL,
     email_usuario VARCHAR(120) NOT NULL UNIQUE,
+    login_usuario VARCHAR(100) NOT NULL UNIQUE,
     senha_usuario VARCHAR(255) NOT NULL,
     tipo_usuario ENUM('Admin', 'User') DEFAULT 'User',
     foto_usuario VARCHAR(255) NULL
@@ -33,9 +34,9 @@ CREATE TABLE tbusuarios (
 
 -- Tabela de tbdoações 
 CREATE TABLE tbdoacoes (
-    id_doacao INT (11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    id_doacao_tipo INT (11) NOT NULL,
-    nome_empresa VARCHAR (150) NOT NULL,
+    id_doacao INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    id_doacao_tipo INT(11) NOT NULL,
+    nome_empresa VARCHAR(150) NOT NULL,
     contato_doacao VARCHAR(150) NOT NULL,
     tipo_alimento VARCHAR(150) NOT NULL,
     nome_alimento VARCHAR(150) NOT NULL,
@@ -56,13 +57,12 @@ INSERT INTO tbdoacoes (id_doacao_tipo,nome_empresa,contato_doacao,tipo_alimento,
 
 -- Estrutura da tabela tbtipos    
 CREATE TABLE tbtipos (
-    id_tipo INT (11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    id_tipo INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     sigla_tipo VARCHAR(3) NOT NULL,
     rotulo_tipo VARCHAR(15) NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8;
 
-INSERT INTO
-    tbtipos (sigla_tipo, rotulo_tipo)
+INSERT INTO tbtipos (sigla_tipo, rotulo_tipo)
 VALUES
     ('F', 'Fruta'),
     ('V', 'Verdura'),
@@ -74,19 +74,19 @@ VALUES
     ('S', 'Suco'),
     ('O', 'Outros');
 
+-- Inserindo usuário padrão para teste
+INSERT INTO tbusuarios (nome_usuario, email_usuario, login_usuario, senha_usuario, tipo_usuario, foto_usuario)
+VALUES ('Administrador', 'admin@desperdiciozero.com', 'admin', '123456', 'Admin', 'sem_imagem.jpg');
+
 
 -- ------ CHAVES ------
 ALTER TABLE tbdoacoes
     ADD KEY id_doacao_tipo_fk(id_doacao_tipo);
 
--- Chaves da tabela tbusuarios
-ALTER TABLE tbusuarios
-    ADD PRIMARY KEY (id_usuario),
-    ADD UNIQUE KEY email_usuario_uniq(email_usuario);
-
 -- ----- AUTO INCREMENTS -----
-ALTER TABLE tbdoacoes
-    MODIFY id_doacao INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+ALTER TABLE tbusuarios AUTO_INCREMENT=2;
+ALTER TABLE tbdoacoes MODIFY id_doacao INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+ALTER TABLE tbtipos AUTO_INCREMENT=10;
 
 
 -- ------ CHAVES ESTRANGEIRAS / LIMITADORES ------
