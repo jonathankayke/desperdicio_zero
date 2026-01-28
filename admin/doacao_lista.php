@@ -37,12 +37,12 @@ $totalRows  =   ($lista)->num_rows-1;
                     <th class="hidden">ID</th>
                     <th>IMAGEM</th>
                     <th>Nome empresa</th>
+                    <th>Contato</th>
                     <th>Categoria</th>
-                    <th>Alimento</th>
-                    <th>Quantidade</th>
+                    <th>Nome Alimento</th>
+                    <th>quantidade</th>
                     <th>Validade</th>
                     <th>Endereço</th>
-                    <th>Contato</th>
                     <th>
                     <a href="Doacao_insere.php" class="btn btn-block btn-success btn-xs">
                         <span>ADICIONAR<br> </span>
@@ -60,12 +60,12 @@ $totalRows  =   ($lista)->num_rows-1;
                     </td>
                     <td class="hidden"><?php echo $row['id_doacao']; ?></td>
                     <td><?php echo $row['nome_empresa']?></td>
+                    <td><?php echo $row['contato_doacao']?></td>
                     <td><?php echo $row['rotulo_tipo']?></td>
                     <td><?php echo $row['nome_alimento']?></td>
                     <td><?php echo $row['quantidade_doacao']?></td>
                     <td><?php echo $row['validade_doacao']?></td>
                     <td><?php echo $row['endereco_retirada']?></td>
-                    <td><?php echo $row['contato_doacao']?></td>
                     <td>
                         <a href="Doacao_atualiza.php?id_doacao=<?php echo $row['id_doacao']?>" class="btn btn-block btn-warning" target="_self" role="button">
                             <span>ALTERAR<br> </span>
