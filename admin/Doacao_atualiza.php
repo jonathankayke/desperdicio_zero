@@ -180,7 +180,7 @@ style="max-height:200px; margin-top:10px;">
 
 <input type="submit" name="enviar"
 value="Atualizar Doação"
-class="btn btn-primary btn-block">
+class="btn btn-success btn-block">
 
 </form>
 
