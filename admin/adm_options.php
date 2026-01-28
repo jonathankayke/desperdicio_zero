@@ -98,12 +98,12 @@
                 </div> <!-- fecha btn-group-justified-->
                 <div class="btn-group btn-group-justified" role="group">
                     <div class="btn-group">
-                        <a href="usuarios_lista.php">
+                        <a href="usuario_lista.php">
                             <button class="btn btn-info">Listar</button>
                         </a>
                     </div> <!-- fecha btn-group--->               
                     <div class="btn-group">
-                        <a href="usuarios_insere.php">
+                        <a href="usuario_insere.php">
                             <button class="btn btn-info">Inserir</button>
                         </a>
                     </div> <!-- fecha btn-group inserir--->
