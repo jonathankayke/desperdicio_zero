@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/meu_estilo.css">-->
 </head>
 <body>
-    <nav class="navbar navegacao">
+    <nav class="navbar navbar-inverse">
         <div class="container-fluid">
     
             <div class="navbar-header">
@@ -35,9 +35,9 @@
             <div class="collapse navbar-collapse" id="defaultNavbar">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="index.php">ADMIN</a></li>
-                    <li><a href="">DOAÇÕES</a></li>
-                    <li><a href="">TIPOS</a></li>   
-                    <li><a href="">USUÁRIOS</a></li>
+                    <li><a href="doacao_lista.php">DOAÇÕES</a></li>
+                    <li><a href="tipos_lista.php">TIPOS</a></li>   
+                    <li><a href="usuario_lista.php">USUÁRIOS</a></li>
                     <li class="active">
                         <a href="../index.php">
                             <span class="glyphicon glyphicon-home"></span>
