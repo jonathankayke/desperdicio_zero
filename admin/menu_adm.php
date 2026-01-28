@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Área Administrativa</title>
-    <!-- Link CSS do Bootstrap -->
-     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <!-- Link para CSS Específi -->
-    <link rel="stylesheet" href="../css/meu_estilo.css">
+    <!-- Link CSS do Bootstrap 
+     <link rel="stylesheet" href="../css/bootstrap.min.css">-->
+    <!-- Link para CSS Específi 
+    <link rel="stylesheet" href="../css/meu_estilo.css">-->
 </head>
 <body>
     <nav class="navbar navegacao">
@@ -38,13 +38,19 @@
                     <li><a href="">DOAÇÕES</a></li>
                     <li><a href="">TIPOS</a></li>   
                     <li><a href="">USUÁRIOS</a></li>
+                    <li class="active">
+                        <a href="../index.php">
+                            <span class="glyphicon glyphicon-home"></span>
+                        </a>
+                    </li>
                 </ul>
             </div>
+
         </div>
     </nav>
-</body>  
-<!-- Link arquivos Bootstrap js -->
+
+<!-- Link arquivos Bootstrap js 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script> 
+<script src="../js/bootstrap.min.js"></script>-->
 </body>
 </html>
