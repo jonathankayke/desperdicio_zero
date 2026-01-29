@@ -2,9 +2,6 @@
 // Incluir o arquivo e fazer a conexão
 include("../Connections/conn_alimentos.php");
 
-// Selecionar banco
-mysqli_select_db($conn_alimentos, $database_conn);
-
 // ===============================
 // VALIDAR ID
 // ===============================
@@ -13,7 +10,7 @@ if(!isset($_GET['id_doacao'])){
     exit;
 }
 
-$id_doacao = $_GET['id_doacao'];
+$id_doacao = (int) $_GET['id_doacao'];
 
 // ===============================
 // BUSCAR DADOS DA DOAÇÃO
@@ -22,12 +19,17 @@ $sql_busca = "SELECT * FROM tbdoacoes WHERE id_doacao = $id_doacao";
 $resultado_busca = $conn_alimentos->query($sql_busca);
 $dados = $resultado_busca->fetch_assoc();
 
+if(!$dados){
+    header("Location: doacao_lista.php");
+    exit;
+}
+
 // ===============================
 // ATUALIZAR
 // ===============================
 if(isset($_POST['enviar'])){
 
-    $id_doacao_tipo     = $_POST['id_doacao_tipo'];
+    $id_doacao_tipo     = (int) $_POST['id_doacao_tipo'];
     $nome_empresa       = $_POST['nome_empresa'];
     $contato_doacao     = $_POST['contato_doacao'];
     $nome_alimento      = $_POST['nome_alimento'];
@@ -47,9 +49,12 @@ if(isset($_POST['enviar'])){
     // IMAGEM
     // ===============================
     if(!empty($_FILES['imagem_doacao']['name'])){
+
         $imagem_doacao = $_FILES['imagem_doacao']['name'];
         $tmp_img       = $_FILES['imagem_doacao']['tmp_name'];
+
         move_uploaded_file($tmp_img, "../imagens/".$imagem_doacao);
+
     }else{
         $imagem_doacao = $dados['imagem_doacao'];
     }
@@ -78,7 +83,6 @@ if(isset($_POST['enviar'])){
 // ===============================
 // LISTAR TIPOS
 // ===============================
-$tabela_fk   = "tbtipos";
 $consulta_fk = "SELECT * FROM tbtipos ORDER BY rotulo_tipo ASC";
 $lista_fk    = $conn_alimentos->query($consulta_fk);
 $row_fk      = $lista_fk->fetch_assoc();
@@ -171,10 +175,12 @@ value="<?= $dados['validade_doacao']; ?>" required>
 <label>Imagem da Doação</label>
 <input type="file" name="imagem_doacao" id="imagem_doacao" class="form-control">
 
-<img src="../imagens/<?= $dados['imagem_doacao']; ?>"
-class="img-responsive"
-style="max-height:200px; margin-top:10px;">
+<img id="previewImagem"
+     src="../imagens/<?= $dados['imagem_doacao']; ?>"
+     class="img-responsive"
+     style="max-height:200px; margin-top:10px; border:1px solid #ccc;">
 </div>
+
 </div>
 </div>
 
@@ -192,6 +198,22 @@ class="btn btn-success btn-block">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
+
+<!-- PREVIEW DA IMAGEM -->
+<script>
+document.getElementById('imagem_doacao').addEventListener('change', function(e){
+
+    const file = e.target.files[0];
+
+    if(file){
+        const reader = new FileReader();
+        reader.onload = function(event){
+            document.getElementById('previewImagem').src = event.target.result;
+        }
+        reader.readAsDataURL(file);
+    }
+});
+</script>
 
 </body>
 </html>
