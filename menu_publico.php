@@ -26,5 +26,5 @@ $totalRows_menu =   ($lista_menu)->num_rows;
     <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
 <body>
-    <? include('admin/menu_admin.php'); ?>
+    <?php include('admin/menu_admin.php'); ?>
 </body>
