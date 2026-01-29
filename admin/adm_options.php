@@ -37,7 +37,7 @@
                         </a>
                     </div> <!-- fecha btn-group--->               
                     <div class="btn-group">
-                        <a href="Doacao_insere.php">
+                        <a href="doacao_insere.php">
                             <button class="btn btn-success">Inserir</button>
                         </a>
                     </div> <!-- fecha btn-group inserir--->
