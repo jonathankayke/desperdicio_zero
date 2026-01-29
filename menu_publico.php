@@ -1,7 +1,7 @@
 <?php
 // Incluir o arquivo para fazer a conexão
 include("Connections/conn_alimentos.php");
-
+ 
 // Consulta para trazer os dados
 $tabela_menu    =   "tbtipos";
 $ordernar_menu  =   "rotulo_tipo";
@@ -32,8 +32,8 @@ $totalRows_menu =   ($lista_menu)->num_rows;
                 <a href="index.php" class="navbar-brand">
                     <img src="imagens/Icon_menu.png" alt="">
                 </a>
-                <button 
-                    type="button" 
+                <button
+                    type="button"
                     class="navbar-toggle collapsed"
                     data-toggle="collapse"
                     data-target="#defaultNavbar"
@@ -43,9 +43,9 @@ $totalRows_menu =   ($lista_menu)->num_rows;
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                </button>         
+                </button>        
             </div>
-    
+   
             <div class="collapse navbar-collapse" id="defaultNavbar"> <!-- barra de navegação -->
         <ul class="nav navbar-nav navbar-right">
             <li class="active">
@@ -56,7 +56,7 @@ $totalRows_menu =   ($lista_menu)->num_rows;
             <li><a href="index.php#destaques">DESTAQUES</a></li>
             <li><a href="index.php#produtos">PRODUTOS</a></li>
             <li class="dropdown">
-                <a 
+                <a
                     href="doacao_tipos.php"
                     class="dropdown-toggle"
                     data-toggle="dropdown"
@@ -85,7 +85,7 @@ $totalRows_menu =   ($lista_menu)->num_rows;
             </li> <!-- fecha dropdown -->
             <li><a href="index.php#contato">CONTATO</a></li>
             <!-- Form Busca -->
-            <form 
+            <form
                 action="doacao_busca.php"
                 method="get"
                 name="form_busca"
@@ -95,7 +95,7 @@ $totalRows_menu =   ($lista_menu)->num_rows;
             >
                 <div class="form-group">
                     <div class="input-group">
-                        <input 
+                        <input
                             type="text"
                             class="form-control"
                             placeholder="Busca Doação"
@@ -105,8 +105,8 @@ $totalRows_menu =   ($lista_menu)->num_rows;
                             required
                         >
                         <span class="input-group-btn">
-                            <button 
-                                type="submit" 
+                            <button
+                                type="submit"
                                 class="btn btn-default"
                             >
                                 <span class="glyphicon glyphicon-search"></span>
@@ -121,12 +121,12 @@ $totalRows_menu =   ($lista_menu)->num_rows;
                 </a>
             </li>
         </ul>
-    </div><!-- fecha barra de navegação --> 
+    </div><!-- fecha barra de navegação -->
 </div>
-
+ 
         </div>
     </nav>
-
+ 
 <!-- Link arquivos Bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
