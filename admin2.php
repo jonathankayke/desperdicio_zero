@@ -12,6 +12,11 @@
 
     <main class="container">
         
+        <!-- DOAÇÔES -->
+        <a name="produtos"></a>
+        <hr>
+        <?php include('doacao_geral.php'); ?>
+
         <!-- RODAPÉ -->
         <footer>
             <?php include('rodape.php'); ?>
