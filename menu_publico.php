@@ -1,7 +1,7 @@
 <?php
 // Incluir o arquivo para fazer a conexão
-include("Connections/conn_alimentos.php");
- 
+include("Connections/conn_produtos.php");
+
 // Consulta para trazer os dados
 $tabela_menu    =   "tbtipos";
 $ordernar_menu  =   "rotulo_tipo";
@@ -10,7 +10,7 @@ $consulta_menu  =   "
                     FROM    ".$tabela_menu."
                     ORDER BY ".$ordernar_menu.";
                     ";
-$lista_menu     =   $conn_alimentos->query($consulta_menu);
+$lista_menu     =   $conn_produtos->query($consulta_menu);
 $row_menu       =   $lista_menu->fetch_assoc();
 $totalRows_menu =   ($lista_menu)->num_rows;
 ?>
@@ -19,34 +19,34 @@ $totalRows_menu =   ($lista_menu)->num_rows;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Área Pública</title>
+    <title>Área Administrativa</title>
     <!-- Link CSS do Bootstrap -->
-     <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Link para CSS Específico -->
-    <link rel="stylesheet" href="../css/meu_estilo.css">
+    <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
 <body>
-    <nav class="navbar navegacao">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a href="index.php" class="navbar-brand">
-                    <img src="imagens/Icon_menu.png" alt="">
-                </a>
-                <button
-                    type="button"
-                    class="navbar-toggle collapsed"
-                    data-toggle="collapse"
-                    data-target="#defaultNavbar"
-                    aria-expanded="false"
-                >
-                    <span class="sr-only">Navegação Mobile</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>        
-            </div>
-   
-            <div class="collapse navbar-collapse" id="defaultNavbar"> <!-- barra de navegação -->
+<!-- Abre a barra de navegação -->
+<nav class="navbar navbar-inverse">
+<div class="container-fluid">
+    <div class="navbar-header"><!-- Agrupamento MOBILE -->
+        <a href="index.php" class="navbar-brand">
+            <img src="imagens/logochurrascopequeno.png" alt="">
+        </a>
+        <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#defaultNavbar"
+            aria-expanded="false"
+        >
+            <span class="sr-only">Navegação Mobile</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div><!-- Fecha Agrupamento MOBILE -->
+    <div class="collapse navbar-collapse" id="defaultNavbar"> <!-- barra de navegação -->
         <ul class="nav navbar-nav navbar-right">
             <li class="active">
                 <a href="index.php">
@@ -56,8 +56,8 @@ $totalRows_menu =   ($lista_menu)->num_rows;
             <li><a href="index.php#MaisVendidos">Mais vendidos</a></li>
             <li><a href="index.php#produtos">PRODUTOS</a></li>
             <li class="dropdown">
-                <a
-                    href="doacao_tipos.php"
+                <a 
+                    href="produtos_tipos.php"
                     class="dropdown-toggle"
                     data-toggle="dropdown"
                     role="button"
@@ -69,13 +69,13 @@ $totalRows_menu =   ($lista_menu)->num_rows;
                 </a>
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="doacao_tipos.php">
+                        <a href="produtos_tipos.php">
                             TODOS
                         </a>
                     </li>
                     <?php do{ ?> <!-- abre estrutura de repetição -->
                         <li>
-                            <a href="doacao_por_tipos.php?id_tipo=<?php echo $row_menu['id_tipo']; ?>">
+                            <a href="produtos_por_tipo.php?id_tipo=<?php echo $row_menu['id_tipo']; ?>">
                                 <?php echo $row_menu['rotulo_tipo']; ?>
                             </a>
                         </li>
@@ -85,8 +85,8 @@ $totalRows_menu =   ($lista_menu)->num_rows;
             </li> <!-- fecha dropdown -->
             <li><a href="index.php#contato">CONTATO</a></li>
             <!-- Form Busca -->
-            <form
-                action="doacao_busca.php"
+            <form 
+                action="produtos_busca.php"
                 method="get"
                 name="form_busca"
                 id="form_busca"
@@ -95,18 +95,18 @@ $totalRows_menu =   ($lista_menu)->num_rows;
             >
                 <div class="form-group">
                     <div class="input-group">
-                        <input
+                        <input 
                             type="text"
                             class="form-control"
-                            placeholder="Busca Doação"
+                            placeholder="Busca Produto"
                             name="buscar"
                             id="buscar"
                             size="9"
                             required
                         >
                         <span class="input-group-btn">
-                            <button
-                                type="submit"
+                            <button 
+                                type="submit" 
                                 class="btn btn-default"
                             >
                                 <span class="glyphicon glyphicon-search"></span>
@@ -121,15 +121,14 @@ $totalRows_menu =   ($lista_menu)->num_rows;
                 </a>
             </li>
         </ul>
-    </div><!-- fecha barra de navegação -->
-</div>
- 
-        </div>
-    </nav>
- 
+    </div><!-- fecha barra de navegação --> 
+</div> <!-- fecha container-fluid -->
+</nav>
+<!-- Fecha barra de navegação -->
+
 <!-- Link arquivos Bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
+<script src="js/bootstrap.min.js"></script>    
 </body>
 </html>
 <?php mysqli_free_result($lista_menu); ?>
