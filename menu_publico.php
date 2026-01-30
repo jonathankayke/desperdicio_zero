@@ -19,7 +19,7 @@ $totalRows_menu =   ($lista_menu)->num_rows;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Área Administrativa</title>
+    <title>Área Pública</title>
     <!-- Link CSS do Bootstrap -->
      <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- Link para CSS Específico -->
@@ -53,7 +53,7 @@ $totalRows_menu =   ($lista_menu)->num_rows;
                     <span class="glyphicon glyphicon-home"></span>
                 </a>
             </li>
-            <li><a href="index.php#destaques">DESTAQUES</a></li>
+            <li><a href="index.php#MaisVendidos">Mais vendidos</a></li>
             <li><a href="index.php#produtos">PRODUTOS</a></li>
             <li class="dropdown">
                 <a
