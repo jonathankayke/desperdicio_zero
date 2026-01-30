@@ -47,7 +47,7 @@ $totalRows_menu =   ($lista_menu)->num_rows;
             </div>
    
             <div class="collapse navbar-collapse" id="defaultNavbar"> <!-- barra de navegação -->
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav navbar-center">
             <li class="active">
                 <a href="index.php">
                     <span class="glyphicon glyphicon-home"></span>
