@@ -32,35 +32,42 @@ $totalRows  =   ($lista)->num_rows;
 <div class="row">
     <?php while ($row = $lista->fetch_assoc()) { ?>
     <div class="thumbnail">
-        <div class="row">
+       <div class="row">
+    <?php while ($row = $lista->fetch_assoc()) { ?>
+    <div class="thumbnail">
+        <div class="row" style="display: flex; align-items: center; flex-wrap: wrap;">
 
-            <div class="col-sm-2 text-justify align-items: center">
+            <div class="col-sm-2">
                 <img 
                     src="imagens/<?php echo $row['imagem_doacao']; ?>" 
                     class="img-responsive img-rounded"
-                    style="max-height: 100px; margin: center;"
+                    style="max-height: 100px; margin: 0 auto; display: block;" 
                 >
-            </div>
+                </div>
      
             <div class="col-sm-2">
-                <h4 class="text-danger text-center text-justify">
+                <h4 class="text-danger text-center">
                     <strong><?php echo $row['nome_alimento']; ?></strong>
                 </h4>
             </div>    
-            <div class="col-sm-2">    
-                <p><strong>Tipo:</strong> <?php echo $row['rotulo_tipo']; ?></p>
+
+            <div class="col-sm-2 text-center">    
+                <p><strong>Tipo:</strong><br><?php echo $row['rotulo_tipo']; ?></p>
             </div>
-            <div class="col-sm-2">
-                <p><strong>Quantidade:</strong> <?php echo $row['quantidade_doacao']; ?></p>
+
+            <div class="col-sm-2 text-center">
+                <p><strong>Quantidade:</strong><br><?php echo $row['quantidade_doacao']; ?></p>
             </div>
-            <div class="col-sm-2">
+
+            <div class="col-sm-2 text-center">
                 <p>
-                    <strong>Validade:</strong>
+                    <strong>Validade:</strong><br>
                     <?php echo date('d/m/Y', strtotime($row['validade_doacao'])); ?>
                 </p>
             </div>
-            <div class="col-sm-2">     
-                <p><strong>Empresa:</strong> <?php echo $row['nome_empresa']; ?></p>
+
+            <div class="col-sm-2 text-center">    
+                <p><strong>Empresa:</strong><br><?php echo $row['nome_empresa']; ?></p>
 
                 <a 
                     href="nome_alimento.php?id_doacao=<?php echo $row['id_doacao']; ?>" 
@@ -72,6 +79,8 @@ $totalRows  =   ($lista)->num_rows;
 
         </div>
     </div>
+ 
+</div>
 <?php } ?>
 </div>
 
