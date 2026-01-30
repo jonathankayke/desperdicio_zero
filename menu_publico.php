@@ -53,7 +53,7 @@ $totalRows_menu =   ($lista_menu)->num_rows;
                     <span class="glyphicon glyphicon-home"></span>
                 </a>
             </li>
-            <li><a href="index.php#destaques">Alimentos mais vendidos</a></li>
+            <li><a href="index.php#MaisVendidos">Mais vendidos</a></li>
             <li><a href="index.php#produtos">PRODUTOS</a></li>
             <li class="dropdown">
                 <a
