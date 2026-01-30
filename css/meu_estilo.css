@@ -6,14 +6,14 @@ html, body {
     margin: 0;
 }
 
-/* ------------------------ FUNDO E CENTRALIZAÇÃO ---------------------- */
+/* ------------------------ FUNDO ---------------------- */
 .fundofixo {
     background: url(../imagens/fundosite.jpg) no-repeat fixed;
     background-size: cover;
     -webkit-background-size: cover;
 } 
 
-/* ------------------------ ESTILO DO FORMULÁRIO (CARD) ---------------- */
+/* ------------------------ ESTILO DO FORMULÁRIO ---------------- */
 .alert-success {
     padding: 30px;
     border-radius: 10px;
@@ -37,10 +37,17 @@ html, body {
     font-size: 1.5em;
 }
 
-/* ------------------------ NAVBAR (MENU) ---------------------- */
+/* ------------------------ NAVBAR COMPACTA (60px) ---------------------- */
 .navegacao {
-    background-color: rgba(255, 255, 255, 0.95); /* Deixei um pouco mais sólido para destacar o logo */
-    min-height: 100px; /* Garante altura para o logo grande */
+    background-color: rgba(255, 255, 255, 0.95);
+    min-height: 60px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+.navegacao .container-fluid {
+    position: relative; 
+    height: 60px;
 }
 
 .navegacao a {
@@ -48,52 +55,52 @@ html, body {
     font-weight: bold;
 }
 
-/* --- LOGO AUMENTADO --- */
+/* --- LOGO AJUSTADO --- */
 .navegacao .navbar-brand {
     display: flex;
     align-items: center;
     padding: 5px 15px;
-    height: 100px; /* Ajusta a altura da área do logo */
+    height: 60px;
+    position: relative;
+    z-index: 10; 
 }
 
 .navegacao .navbar-brand img {
-    max-height: 85px;    /* Aumentado de 50px para 85px */
+    max-height: 45px;
     width: auto;
 }
 
-/* --- CENTRALIZAR ITENS DO MENU --- */
-/* Isso centraliza o conteúdo da barra de navegação */
-.navbar-collapse {
-    text-align: center;
+/* --- ALINHAMENTO À DIREITA (ALTERADO AQUI) --- */
+
+/* Regra apenas para Computadores/Tablets */
+@media (min-width: 768px) {
+    .navbar-nav {
+        float: right !important; /* Joga o menu para a direita */
+        margin: 0;
+    }
+
+    .navbar-nav > li {
+        float: left; /* Mantém os itens um ao lado do outro */
+        display: block;
+    }
 }
 
-/* Isso remove o alinhamento à direita/esquerda padrão do Bootstrap */
-.navbar-nav {
-    float: none !important; 
-    display: inline-block;
-    margin-top: 25px; /* Empurra o texto um pouco para baixo para alinhar com o logo grande */
-}
-
-.navbar-nav > li {
-    float: none;
-    display: inline-block;
-}
-
-/* --- EFEITO DE HOVER --- */
+/* --- EFEITO DE HOVER (LINHA VERDE) --- */
 .navbar-nav > li > a {
     position: relative;
     text-decoration: none;
-    padding-bottom: 8px;
+    padding: 20px 15px; /* Mantém o alinhamento vertical na barra de 60px */
     transition: color 0.3s ease;
 }
 
+/* A linha verde */
 .navbar-nav > li > a::after {
     content: '';
     position: absolute;
     width: 0;
     height: 3px;
     display: block;
-    bottom: 0;
+    bottom: 10px; 
     background: #179b12;
     transition: width 0.4s ease;
     left: 0;
@@ -106,10 +113,10 @@ html, body {
 }
 
 .navbar-nav > li > a:hover::after {
-    width: 100%;
+    width: 70%; 
 }
 
-/* -------------------- LISTAS -------------------------- */
+/* -------------------- OUTROS ESTILOS -------------------------- */
 .tbopacidade {
     background-color: #ffffffda;
 }
@@ -119,7 +126,6 @@ html, body {
     font-size: 15px;
 }
 
-/* -------------------- Area Administrativa -------------------------- */
 .tituloadm {
     background-color: rgba(255, 255, 255, 0.63);
 }
@@ -129,7 +135,7 @@ html, body {
     border: none;
 }
 
-/* --- IMAGEM GRANDE --- */
+/* --- IMAGEM GRANDE NO CORPO DO SITE --- */
 .imagem {
     background-color: gray;
     width: 100%;
