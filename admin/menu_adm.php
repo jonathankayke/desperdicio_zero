@@ -28,7 +28,7 @@
                 </button>
     
                 <a href="index.php" class="navbar-brand">
-                    <img src="../imagens/Icon_menu.png" alt="">
+                    <img src="imagens/Icon_menu.png" alt="">
                 </a>
             </div>
     
