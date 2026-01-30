@@ -8,8 +8,7 @@ $consulta   =   "
                 ";
 
 $lista      =   $conn_alimentos->query($consulta);
-$row        =   $lista->fetch_assoc();
-$totalRows  =   ($lista)->num_rows;
+$totalRows  =   $lista->num_rows;
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
