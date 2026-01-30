@@ -12,7 +12,6 @@ html, body {
     background: url(../imagens/fundosite.jpg) no-repeat fixed;
     background-size: cover;
     -webkit-background-size: cover;
-
 } 
 
 /* ------------------------ ESTILO DO FORMULÁRIO (CARD) ---------------- */
@@ -33,10 +32,10 @@ html, body {
 .btn-block {
     margin-top: 10px;
 }
- /* Estilo extra para os subtítulos ficarem bonitos */
- .secao-titulo {
-    color: #3c763d;
-    /* Um verde escuro para combinar */
+
+/* Estilo extra para os subtítulos ficarem bonitos */
+.secao-titulo {
+    color: #3c763d; /* Um verde escuro para combinar */
     border-bottom: 1px solid #d6e9c6;
     padding-bottom: 10px;
     margin-bottom: 20px;
@@ -44,24 +43,59 @@ html, body {
 }
 
 /* ------------------------ NAVBAR ---------------------- */
-.navegacao{
+.navegacao {
     background-color: rgba(255, 255, 255, 0.63); 
 }
+
 .navegacao a {
     color: rgb(0, 0, 0);
     font-weight: bold;
 }
-.navegacao a:hover {
-    color: #179b12 !important;
-}
-.navegacao .navbar-brand img {
-    height: 58px; 
-    width: auto; /* mantém proporção */
-    margin-left: 60px;
-}
+
+/* Configuração para o Logo não ficar gigante */
 .navegacao .navbar-brand {
     display: flex;
     align-items: center; /* centraliza vertical */
+    padding: 5px 15px;   /* Ajuste de espaçamento */
+}
+
+.navegacao .navbar-brand img {
+    max-height: 50px;    /* Limita a altura da imagem */
+    width: auto;         /* Mantém a proporção */
+}
+
+/* --- EFEITO DE HOVER (SUBLINHADO QUE CRESCE) --- */
+
+/* 1. Prepara o link */
+.navbar-nav > li > a {
+    position: relative; /* Necessário para a linha se posicionar */
+    text-decoration: none;
+    padding-bottom: 8px; /* Espaço para a linha */
+    transition: color 0.3s ease; /* Suaviza a mudança de cor da letra */
+}
+
+/* 2. Cria a linha invisível */
+.navbar-nav > li > a::after {
+    content: '';
+    position: absolute;
+    width: 0;          /* Começa invisível */
+    height: 3px;       /* Grossura da linha */
+    display: block;
+    bottom: 0;         /* Fica na parte de baixo */
+    background: #179b12; /* Cor da linha (Verde) */
+    transition: width 0.4s ease; /* Animação do crescimento */
+    left: 0;
+    right: 0;
+    margin: auto;      /* Centraliza o crescimento */
+}
+
+/* 3. Ação ao passar o mouse: Muda cor da letra e cresce a linha */
+.navbar-nav > li > a:hover {
+    color: #179b12 !important; /* Letra fica verde */
+}
+
+.navbar-nav > li > a:hover::after {
+    width: 100%; /* A linha cresce para 100% */
 }
 
 /* -------------------- LISTAS -------------------------- */
@@ -74,10 +108,12 @@ html, body {
     font-family: 'inter', sans-serif;
     font-size: 15px;
 }
+
 /* -------------------- Area Administrativa -------------------------- */
-.tituloadm{
+.tituloadm {
     background-color: rgba(255, 255, 255, 0.63);
 }
+
 .doacoes-card {
     background-color: #dff0d8;  /* mesmo verde do Bootstrap */
     border: none;               /* sem borda externa */
