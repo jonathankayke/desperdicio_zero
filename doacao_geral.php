@@ -37,7 +37,7 @@ $totalRows = ($lista)->num_rows;
                     <img 
                         src="imagens/<?php echo $row['imagem_doacao']; ?>" 
                         class="img-responsive img-rounded"
-                        style="max-height: 100px; margin: 0 auto; display: block;" 
+                        style="max-height: 80px; margin: 0 auto; display: block;" 
                     >
                 </div>
          
@@ -73,7 +73,9 @@ $totalRows = ($lista)->num_rows;
                     </a>
                 </div>
 
-            </div> </div> <?php 
+            </div> 
+        </div> 
+        <?php 
             } // Fim do While
         } else { 
         ?>

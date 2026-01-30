@@ -2,49 +2,45 @@
 
 /* ------------------------ CONFIGURAÇÕES GERAIS ---------------------- */
 html, body {
-    height: 100%; /* Garante que a página ocupe 100% da altura */
+    height: 100%;
     margin: 0;
 }
 
 /* ------------------------ FUNDO E CENTRALIZAÇÃO ---------------------- */
 .fundofixo {
-    /* Imagem de Fundo */
     background: url(../imagens/fundosite.jpg) no-repeat fixed;
     background-size: cover;
     -webkit-background-size: cover;
 } 
 
 /* ------------------------ ESTILO DO FORMULÁRIO (CARD) ---------------- */
-/* Aumenta o espaço interno e melhora o visual do quadrado verde */
 .alert-success {
     padding: 30px;
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    border: none; /* Remove borda padrão se houver */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: none;
 }
 
-/* Espaçamento entre os campos (Substituto do mb-3) */
 .form-group {
     margin-bottom: 20px;
 }
 
-/* Espaço acima do botão */
 .btn-block {
     margin-top: 10px;
 }
 
-/* Estilo extra para os subtítulos ficarem bonitos */
 .secao-titulo {
-    color: #3c763d; /* Um verde escuro para combinar */
+    color: #3c763d;
     border-bottom: 1px solid #d6e9c6;
     padding-bottom: 10px;
     margin-bottom: 20px;
     font-size: 1.5em;
 }
 
-/* ------------------------ NAVBAR ---------------------- */
+/* ------------------------ NAVBAR (MENU) ---------------------- */
 .navegacao {
-    background-color: rgba(255, 255, 255, 0.63); 
+    background-color: rgba(255, 255, 255, 0.95); /* Deixei um pouco mais sólido para destacar o logo */
+    min-height: 100px; /* Garante altura para o logo grande */
 }
 
 .navegacao a {
@@ -52,54 +48,68 @@ html, body {
     font-weight: bold;
 }
 
-/* Configuração para o Logo não ficar gigante */
+/* --- LOGO AUMENTADO --- */
 .navegacao .navbar-brand {
     display: flex;
-    align-items: center; /* centraliza vertical */
-    padding: 5px 15px;   /* Ajuste de espaçamento */
+    align-items: center;
+    padding: 5px 15px;
+    height: 100px; /* Ajusta a altura da área do logo */
 }
 
 .navegacao .navbar-brand img {
-    max-height: 50px;    /* Limita a altura da imagem */
-    width: auto;         /* Mantém a proporção */
+    max-height: 85px;    /* Aumentado de 50px para 85px */
+    width: auto;
 }
 
-/* --- EFEITO DE HOVER (SUBLINHADO QUE CRESCE) --- */
+/* --- CENTRALIZAR ITENS DO MENU --- */
+/* Isso centraliza o conteúdo da barra de navegação */
+.navbar-collapse {
+    text-align: center;
+}
 
-/* 1. Prepara o link */
+/* Isso remove o alinhamento à direita/esquerda padrão do Bootstrap */
+.navbar-nav {
+    float: none !important; 
+    display: inline-block;
+    margin-top: 25px; /* Empurra o texto um pouco para baixo para alinhar com o logo grande */
+}
+
+.navbar-nav > li {
+    float: none;
+    display: inline-block;
+}
+
+/* --- EFEITO DE HOVER --- */
 .navbar-nav > li > a {
-    position: relative; /* Necessário para a linha se posicionar */
+    position: relative;
     text-decoration: none;
-    padding-bottom: 8px; /* Espaço para a linha */
-    transition: color 0.3s ease; /* Suaviza a mudança de cor da letra */
+    padding-bottom: 8px;
+    transition: color 0.3s ease;
 }
 
-/* 2. Cria a linha invisível */
 .navbar-nav > li > a::after {
     content: '';
     position: absolute;
-    width: 0;          /* Começa invisível */
-    height: 3px;       /* Grossura da linha */
+    width: 0;
+    height: 3px;
     display: block;
-    bottom: 0;         /* Fica na parte de baixo */
-    background: #179b12; /* Cor da linha (Verde) */
-    transition: width 0.4s ease; /* Animação do crescimento */
+    bottom: 0;
+    background: #179b12;
+    transition: width 0.4s ease;
     left: 0;
     right: 0;
-    margin: auto;      /* Centraliza o crescimento */
+    margin: auto;
 }
 
-/* 3. Ação ao passar o mouse: Muda cor da letra e cresce a linha */
 .navbar-nav > li > a:hover {
-    color: #179b12 !important; /* Letra fica verde */
+    color: #179b12 !important;
 }
 
 .navbar-nav > li > a:hover::after {
-    width: 100%; /* A linha cresce para 100% */
+    width: 100%;
 }
 
 /* -------------------- LISTAS -------------------------- */
-/* Opacidade das listas */
 .tbopacidade {
     background-color: #ffffffda;
 }
@@ -115,14 +125,15 @@ html, body {
 }
 
 .doacoes-card {
-    background-color: #dff0d8;  /* mesmo verde do Bootstrap */
-    border: none;               /* sem borda externa */
+    background-color: #dff0d8;
+    border: none;
 }
 
+/* --- IMAGEM GRANDE --- */
 .imagem {
     background-color: gray;
     width: 100%;
-    height: 500px;
+    height: 800px; 
     display: flex;
     justify-content: center;
     align-items: center;
