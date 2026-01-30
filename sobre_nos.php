@@ -10,8 +10,11 @@
     <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
 <body class="fundofixo">
+<?php include("menu_publico.php")?>
     <main class="container">
-        
+        <div class="text-center">
+            <h1>QUEM SOMOS?</h1>
+        </div>
     </main>
 <!-- Link arquivos Bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
