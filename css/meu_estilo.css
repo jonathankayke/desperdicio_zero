@@ -55,7 +55,7 @@ html, body {
     font-weight: bold;
 }
 
-/* --- LOGO AJUSTADO --- */
+
 .navegacao .navbar-brand {
     display: flex;
     align-items: center;
@@ -70,17 +70,17 @@ html, body {
     width: auto;
 }
 
-/* --- ALINHAMENTO À DIREITA (ALTERADO AQUI) --- */
+
 
 /* Regra apenas para Computadores/Tablets */
 @media (min-width: 768px) {
     .navbar-nav {
-        float: right !important; /* Joga o menu para a direita */
+        float: right !important; 
         margin: 0;
     }
 
     .navbar-nav > li {
-        float: left; /* Mantém os itens um ao lado do outro */
+        float: left; 
         display: block;
     }
 }
@@ -89,7 +89,7 @@ html, body {
 .navbar-nav > li > a {
     position: relative;
     text-decoration: none;
-    padding: 20px 15px; /* Mantém o alinhamento vertical na barra de 60px */
+    padding: 20px 15px; 
     transition: color 0.3s ease;
 }
 
