@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
 <body class="fundofixo">
-<?php include("admin/menu_adm.php")?>
+<?php include("menu_publico.php")?>
     <main class="container">
         <div class="text-center">
             <h1>QUEM SOMOS?</h1>
