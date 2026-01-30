@@ -16,30 +16,40 @@
         </div>
         <img src="imagens/cooking.png" alt="" class="img-rounded img-responsive">
         <div>
-            <p>O Desperdício Zero nasceu com um propósito simples e urgente: transformar o excesso em esperança. Enquanto toneladas de alimentos ainda próprios para consumo são descartadas todos os dias, milhares de famílias enfrentam a insegurança alimentar. Nós existimos para mudar essa realidade.
-Somos uma iniciativa voltada à doação e reaproveitamento consciente de alimentos, conectando doadores, voluntários e famílias que precisam de apoio. Cada alimento salvo representa menos desperdício e mais dignidade à mesa de quem precisa.</p>
+        <section class="container my-5">
+            <div class="row text-center">
 
-</p>🌱 Nosso Impacto
-Desde o início do projeto, já conseguimos gerar resultados reais:
-+12 toneladas de alimentos resgatados, que iriam para o lixo
-+1.500 famílias atendidas, levando comida de qualidade a quem mais precisa
-+4.000 refeições distribuídas, promovendo segurança alimentar
-Redução significativa do desperdício, contribuindo para um futuro mais sustentável
-(Os números podem ser atualizados conforme o crescimento do projeto)</p>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm h-100 border-0">
+                        <div class="card-body">
+                            <h2 class="fw-bold text-success">+12</h2>
+                            <p class="mb-1">Toneladas de alimentos</p>
+                            <small class="text-muted">resgatados do desperdício</small>
+                        </div>
+                    </div>
+                </div>
 
-</p>🤝 Como Atuamos
-Trabalhamos em parceria com mercados, feiras, restaurantes e doadores individuais para garantir que alimentos em boas condições cheguem rapidamente a instituições e famílias cadastradas. Tudo é feito com responsabilidade, transparência e respeito.</p>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm h-100 border-0">
+                        <div class="card-body">
+                            <h2 class="fw-bold text-success">+1.500</h2>
+                            <p class="mb-1">Famílias atendidas</p>
+                            <small class="text-muted">impactadas diretamente</small>
+                        </div>
+                    </div>
+                </div>
 
-</p>🌍 Nossa Missão
-Combater o desperdício de alimentos e a fome ao mesmo tempo, promovendo:
-Solidariedade
-Consciência ambiental
-Impacto social positivo</p>
-
-</p>💚 Por que “Desperdício Zero”?
-Porque acreditamos que nenhum alimento deveria ser desperdiçado enquanto alguém passa fome. Nosso nome representa nosso compromisso com um mundo mais justo, sustentável e humano.</p>
-        </div>
-    </main>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm h-100 border-0">
+                        <div class="card-body">
+                        <h2 class="fw-bold text-success">+4.000</h2>
+                        <p class="mb-1">Refeições distribuídas</p>
+                        <small class="text-muted">com dignidade e cuidado</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+</main>
 <!-- Link arquivos Bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>    
