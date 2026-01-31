@@ -11,10 +11,14 @@
 </head>
 <body class="fundofixo">
 <?php include("menu_publico.php")?>
-    <main class="container">
-        <div class="text-center">
-            <h1>QUEM SOMOS?</h1>
-        </div>
+
+     <div class="hero-banner">
+    <div class="overlay"></div> 
+    <div class="conteudo-banner">
+        <h1>Título</h1>
+        <a href="...">Botão</a> 
+    </div>
+</div>
     </main>
 <!-- Link arquivos Bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
