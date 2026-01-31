@@ -45,7 +45,7 @@ $totalRows  =   ($lista)->num_rows-1;
                     <th>Endereço</th>
                     <th>
                     <a href="Doacao_insere.php" class="btn btn-block btn-success btn-xs">
-                        <span>ADICIONAR<br> </span>
+                        <span></span>
                         <span class="glyphicon glyphicon-plus"></span>
                     </a> 
                     </th>
@@ -55,8 +55,8 @@ $totalRows  =   ($lista)->num_rows-1;
                 <!-- abre looping -->
                 <?php while($row = $lista->fetch_assoc()) { ?> 
                 <tr>
-                    <td>
-                        <img src="../imagens/<?php echo $row['imagem_doacao']; ?>" alt="" width="100px" style="max-height :70px;">
+                    <td class="">
+                        <img src="../imagens/<?php echo $row['imagem_doacao']; ?>" alt="" width="100px" style="max-height :70px;" class="bordaimagem">
                     </td>
                     <td class="hidden"><?php echo $row['id_doacao']; ?></td>
                     <td><?php echo $row['nome_empresa']?></td>
@@ -68,11 +68,11 @@ $totalRows  =   ($lista)->num_rows-1;
                     <td><?php echo $row['endereco_retirada']?></td>
                     <td>
                         <a href="Doacao_atualiza.php?id_doacao=<?php echo $row['id_doacao']?>" class="btn btn-block btn-warning" target="_self" role="button">
-                            <span>ALTERAR </span>
+                            <span></span>
                             <span class="glyphicon glyphicon-refresh"></span>
                         </a>
                         <button class="btn btn-danger btn-block delete" data-nome="<?php echo $row['nome_alimento']?>" data-id="<?php echo $row['id_doacao']?>">
-                            <span class="">EXCLUIR</span>
+                            <span class=""></span>
                             <span class="glyphicon glyphicon-trash"></span>
                         </button>
                     </td>
