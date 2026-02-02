@@ -34,61 +34,64 @@ $totalRows = ($lista)->num_rows;
                 $collapseID = "detalhes_" . $row['id_doacao'];
                 ?>
 
-                <div class="thumbnail" style="margin-bottom: 20px; padding: 10px;">
-                    <div class="row" style="display: flex; align-items: center; flex-wrap: wrap;">
+                <div class="thumbnail card-doacao">
+    <div class="row" style="display: flex; align-items: center; flex-wrap: wrap;">
 
-                        <div class="col-sm-2">
-                            <img src="imagens/<?php echo $row['imagem_doacao']; ?>" class="img-responsive img-rounded"
-                                style="max-height: 80px; margin: 0 auto; display: block;">
-                        </div>
+        <div class="col-sm-2">
+            <img src="imagens/<?php echo $row['imagem_doacao']; ?>" class="img-responsive img-rounded"
+                 style="max-height: 100px; border: 1px solid #eee; padding: 5px; width: 100%;">
+        </div>
 
-                        <div class="col-sm-2">
-                            <h4 class="text-danger text-center">
-                                <strong><?php echo $row['nome_alimento']; ?></strong>
-                            </h4>
-                        </div>
+        <div class="col-sm-2">
+            <h3 style="color: #c9302c; margin: 0; font-weight: bold;">
+                <?php echo $row['nome_alimento']; ?>
+            </h3>
+        </div>
 
-                        <div class="col-sm-2 text-center">
-                            <p><strong>Tipo:</strong><br><?php echo $row['rotulo_tipo']; ?></p>
-                        </div>
-
-                        <div class="col-sm-2 text-center">
-                            <p><strong>Quantidade:</strong><br><?php echo $row['quantidade_doacao']; ?></p>
-                        </div>
-
-                        <div class="col-sm-2 text-center">
-                            <p>
-                                <strong>Validade:</strong><br>
-                                <?php echo date('d/m/Y', strtotime($row['validade_doacao'])); ?>
-                            </p>
-                        </div>
-
-                        <div class="col-sm-2 text-center">
-                            <p><strong>Empresa:</strong><br><?php echo $row['nome_empresa']; ?></p>
-
-                            <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
-                                data-target="#<?php echo $collapseID; ?>">
-                                Ver detalhes
-                            </button>
-                        </div>
-
-                    </div>
-                    
-                    <div id="<?php echo $collapseID; ?>" class="collapse">
-                        <hr>
-                        <div class="row card" style="padding: 10px; border-radius: 4px; box-shadow: 0 0 15px rgba(0,0,0,0.1) !important;">
-                            <div class="col-sm-4">
-                                <p><strong><i class="glyphicon glyphicon-phone"></i> Contato:</strong><br>
-                                    <?php echo $row['contato_doacao']; ?></p>
-                            </div>
-                            <div class="col-sm-8">
-                                <p><strong><i class="glyphicon glyphicon-map-marker"></i> Endereço de Retirada:</strong><br>
-                                    <?php echo $row['endereco_retirada']; ?></p>
-                            </div>
-                        </div>
-                    </div>
-
+        <div class="col-sm-6">
+            <div class="row">
+                <div class="col-xs-4 text-center">
+                    <span class="label-info-custom">Tipo</span>
+                    <span class="valor-info-custom"><?php echo $row['rotulo_tipo']; ?></span>
                 </div>
+                <div class="col-xs-4 text-center">
+                    <span class="label-info-custom">Qtd</span>
+                    <span class="valor-info-custom"><?php echo $row['quantidade_doacao']; ?></span>
+                </div>
+                <div class="col-xs-4 text-center">
+                    <span class="label-info-custom">Validade</span>
+                    <span class="valor-info-custom"><?php echo date('d/m/Y', strtotime($row['validade_doacao'])); ?></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-2 text-right">
+            <p style="font-size: 0.9em; margin-bottom: 10px;">
+                <i class="glyphicon glyphicon-briefcase"></i> <?php echo $row['nome_empresa']; ?>
+            </p>
+            <button type="button" class="btn btn-success btn-block shadow-sm" data-toggle="collapse"
+                    data-target="#<?php echo $collapseID; ?>">
+                Ver detalhes
+            </button>
+        </div>
+
+    </div>
+    
+    <div id="<?php echo $collapseID; ?>" class="collapse">
+        <div class="detalhes-container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <p><strong><i class="glyphicon glyphicon-phone text-success"></i> Contato:</strong> 
+                    <?php echo $row['contato_doacao']; ?></p>
+                </div>
+                <div class="col-sm-6">
+                    <p><strong><i class="glyphicon glyphicon-map-marker text-success"></i> Retirada:</strong> 
+                    <?php echo $row['endereco_retirada']; ?></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
             <?php
             } // Fim do While
         } else {
