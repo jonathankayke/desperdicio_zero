@@ -67,7 +67,7 @@ $totalRows = ($lista)->num_rows;
 
                     <a 
                         href="nome_alimento.php?id_doacao=<?php echo $row['id_doacao']; ?>" 
-                        class="btn btn-success btn-sm"
+                        class="btn btn-success btn-sm dro"
                     >
                         Ver detalhes
                     </a>

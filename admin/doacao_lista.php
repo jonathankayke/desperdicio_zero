@@ -8,8 +8,7 @@ $consulta   =   "
                 ";
 
 $lista      =   $conn_alimentos->query($consulta);
-$row        =   $lista->fetch_assoc();
-$totalRows  =   ($lista)->num_rows-1;
+$totalRows  =   $lista->num_rows;
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -53,7 +52,7 @@ $totalRows  =   ($lista)->num_rows-1;
             </thead>
             <tbody>
                 <!-- abre looping -->
-                <?php while($row = $lista->fetch_assoc()) { ?> 
+                <?php while($row = $lista->fetch_assoc()) { ?>
                 <tr>
                     <td class="">
                         <img src="../imagens/<?php echo $row['imagem_doacao']; ?>" alt="" width="100px" style="max-height :70px;" class="bordaimagem">
@@ -77,6 +76,7 @@ $totalRows  =   ($lista)->num_rows-1;
                         </button>
                     </td>
                 </tr>
+                
                 <?php } ?>
                 <!-- fecha looping -->
             </tbody>
