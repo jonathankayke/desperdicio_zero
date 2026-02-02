@@ -27,8 +27,8 @@
                     <span class="icon-bar"></span>
                 </button>
     
-                <a href="admin2.php" class="navbar-brand">
-                    <img src="imagens/Icon_menu.png" alt="">
+                <a href="../admin2.php" class="navbar-brand">
+                    <img src="../imagens/Icon_menu.png" alt="">
                 </a>
             </div>
     
@@ -38,7 +38,7 @@
                     <li><a href="tipos_lista.php">TIPOS</a></li>   
                     <li><a href="usuario_lista.php">USUÁRIOS</a></li>
                     <li class="active">
-                        <a href="admin2.php">
+                        <a href="../admin2.php">
                             <span class="glyphicon glyphicon-home"></span>
                         </a>
                     </li>
