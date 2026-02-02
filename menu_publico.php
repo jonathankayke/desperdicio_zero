@@ -39,8 +39,8 @@
                     <li><a href="#">TIPOS</a></li>   
                     <li><a href="#">USUÁRIOS</a></li>
                     <li class="active">
-                        <a href="admin2.php">
-                            <span class="glyphicon glyphicon-home"></span>
+                        <a href="admin/admin.php">
+                            <span class="glyphicon glyphicon-user"></span>
                         </a>
                     </li>
                 </ul>

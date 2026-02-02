@@ -34,9 +34,9 @@
     
             <div class="collapse navbar-collapse" id="defaultNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">DOAÇÕES</a></li>
-                    <li><a href="#">TIPOS</a></li>   
-                    <li><a href="#">USUÁRIOS</a></li>
+                    <li><a href="doacao_lista.php">DOAÇÕES</a></li>
+                    <li><a href="tipos_lista.php">TIPOS</a></li>   
+                    <li><a href="usuario_lista.php">USUÁRIOS</a></li>
                     <li class="active">
                         <a href="admin2.php">
                             <span class="glyphicon glyphicon-home"></span>
