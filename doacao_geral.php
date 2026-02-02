@@ -21,7 +21,9 @@ $totalRows = ($lista)->num_rows;
 </head>
 <body class="container">
     
-    <h2 class="breadcrumb alert-success">Doações</h2>
+
+<!-- Doaçoes -->
+    <h2 class="breadcrumb alert-success" id="doacoes">Doações</h2>
     
     <div class="row">
         <?php 

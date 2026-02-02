@@ -35,8 +35,8 @@
             <div class="collapse navbar-collapse" id="defaultNavbar">
                 <ul class="nav navbar-nav navbar-right">
 
-                    <li><a href="#">DOAÇÕES</a></li>
-                    <li><a href="#">TIPOS</a></li>   
+                    <li><a href="#doacoes">DOAÇÕES</a></li>
+                    <li><a href="">TIPOS</a></li>   
                     <li><a href="#">USUÁRIOS</a></li>
                     <li class="active">
                         <a href="admin/admin.php">
