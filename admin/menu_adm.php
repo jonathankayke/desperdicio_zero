@@ -27,18 +27,18 @@
                     <span class="icon-bar"></span>
                 </button>
     
-                <a href="admin2.php" class="navbar-brand">
-                    <img src="imagens/Icon_menu.png" alt="">
+                <a href="../admin2.php" class="navbar-brand">
+                    <img src="../imagens/Icon_menu.png" alt="">
                 </a>
             </div>
     
             <div class="collapse navbar-collapse" id="defaultNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">DOAÇÕES</a></li>
-                    <li><a href="#">TIPOS</a></li>   
-                    <li><a href="#">USUÁRIOS</a></li>
+                    <li><a href="doacao_lista.php">DOAÇÕES</a></li>
+                    <li><a href="tipos_lista.php">TIPOS</a></li>   
+                    <li><a href="usuario_lista.php">USUÁRIOS</a></li>
                     <li class="active">
-                        <a href="admin2.php">
+                        <a href="../admin2.php">
                             <span class="glyphicon glyphicon-home"></span>
                         </a>
                     </li>
