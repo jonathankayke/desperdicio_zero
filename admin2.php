@@ -16,15 +16,7 @@
         <!-- RODAPÉ -->
         <footer>
             <?php include('rodape.php'); ?>
-        </footer>
-
-
-
-
-
-
-
-        
+        </footer>     
     </main>
 </body>
 </html>
