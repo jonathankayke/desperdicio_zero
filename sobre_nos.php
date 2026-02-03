@@ -22,7 +22,7 @@
             <h1>NOSSA HISTORIA!!</h1>
         </div>
     </section>
-    <section class="success">
+    <section class="hero">
         <div class="container container-config text-center">
             <h2>Desperdício Zero</h2>
             <p>O Desperdício Zero é uma plataforma dedicada a combater o desperdício de alimentos, conectando doadores e beneficiários de forma eficiente e sustentável. Nossa missão é reduzir o impacto ambiental do desperdício alimentar, promovendo a solidariedade e o acesso a alimentos para aqueles que mais precisam. Através de parcerias com supermercados, restaurantes e agricultores, facilitamos a doação de alimentos que ainda estão em boas condições, garantindo que eles cheguem às mãos certas. Junte-se a nós nessa causa nobre e ajude a construir um futuro mais sustentável e justo para todos.</p>
