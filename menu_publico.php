@@ -2,15 +2,15 @@
 // Incluir o arquivo para fazer a conexão e buscar os tipos para o menu
 include("Connections/conn_alimentos.php");
 
-$tabela_menu    =   "tbtipos";
-$ordernar_menu  =   "rotulo_tipo";
-$consulta_menu  =   "
+$tabela_menu = "tbtipos";
+$ordernar_menu = "rotulo_tipo";
+$consulta_menu = "
                     SELECT  *
-                    FROM    ".$tabela_menu."\n                    ORDER BY ".$ordernar_menu.";
+                    FROM    " . $tabela_menu . "\n                    ORDER BY " . $ordernar_menu . ";
                     ";
-$lista_menu     =   $conn_alimentos->query($consulta_menu);
-$row_menu       =   $lista_menu->fetch_assoc();
-$totalRows_menu =   ($lista_menu)->num_rows;
+$lista_menu = $conn_alimentos->query($consulta_menu);
+$row_menu = $lista_menu->fetch_assoc();
+$totalRows_menu = ($lista_menu)->num_rows;
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -56,13 +56,13 @@ $totalRows_menu =   ($lista_menu)->num_rows;
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="#">
+                                <a href="doacao_por_tipo.php">
                                     TODOS
                                 </a>
                             </li>
-                            <?php do { ?> <!-- abre estrutura de repetição -->
+                            <?php do { ?>
                                 <li>
-                                    <a href="?id_tipo=<?php echo $row_menu['id_tipo']; ?>">
+                                    <a href="doacao_por_tipo.php?id_tipo=<?php echo $row_menu['id_tipo']; ?>">
                                         <?php echo $row_menu['rotulo_tipo']; ?>
                                     </a>
                                 </li>
