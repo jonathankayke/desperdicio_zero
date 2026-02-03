@@ -20,6 +20,7 @@ $totalRows = ($lista)->num_rows;
 
 <body class="container">
     
+
 <!-- Doaçoes -->
     <h2 class="breadcrumb alert-success" id="doacoes">Doações</h2>
     
