@@ -26,22 +26,29 @@ $totalRows_menu = ($lista_menu)->num_rows;
 </head>
 
 <body>
+    <!-- Abre a barra de navegação -->
     <nav class="navbar navegacao">
-        <div class="container-fluid">
-
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#defaultNavbar" aria-expanded="false">
-                    <span class="sr-only">Navegação Mobile</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-
-                <a href="admin2.php" class="navbar-brand">
-                    <img src="imagens/Icon_menu.png" alt="">
+    <div class="container-fluid">
+    <div class="navbar-header"><!-- Agrupamento MOBILE -->
+        <a href="admin.php" class="navbar-brand">
+             <img src="imagens/Icon_menu.png" alt="">
                 </a>
-            </div>
+        <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#defaultNavbar"
+            aria-expanded="false"
+        >
+            <span class="sr-only">Navegação Mobile</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+
+    </div><!-- Fecha Agrupamento MOBILE -->
+
+                
 
             <div class="collapse navbar-collapse" id="defaultNavbar">
                 <ul class="nav navbar-nav navbar-right">
@@ -49,8 +56,14 @@ $totalRows_menu = ($lista_menu)->num_rows;
                     <li><a href="#doacoes">DOAÇÕES</a></li>
 
                     <li class="dropdown">
-                        <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                            aria-expanded="false">
+                        <a 
+                        href="doacao_por_tipo.php"
+                        class="dropdown-toggle"
+                        data-toggle="dropdown"
+                        role="button"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                        >
                             TIPOS
                             <span class="caret"></span>
                         </a>
