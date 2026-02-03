@@ -34,6 +34,7 @@
     
             <div class="collapse navbar-collapse" id="defaultNavbar">
                 <ul class="nav navbar-nav navbar-right">
+                    <li><a href="admin.php">ADMIN</a></li>
                     <li><a href="doacao_lista.php">DOAÇÕES</a></li>
                     <li><a href="tipos_lista.php">TIPOS</a></li>   
                     <li><a href="usuario_lista.php">USUÁRIOS</a></li>
