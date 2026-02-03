@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,34 +10,53 @@
     <!-- Link para CSS Específi 
     <link rel="stylesheet" href="../css/meu_estilo.css">-->
 </head>
+
 <body>
     <nav class="navbar navegacao">
         <div class="container-fluid">
-    
+
             <div class="navbar-header">
-                <button 
-                    type="button" 
-                    class="navbar-toggle collapsed"
-                    data-toggle="collapse"
-                    data-target="#defaultNavbar"
-                    aria-expanded="false"
-                >
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#defaultNavbar" aria-expanded="false">
                     <span class="sr-only">Navegação Mobile</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-    
+
                 <a href="admin2.php" class="navbar-brand">
                     <img src="imagens/Icon_menu.png" alt="">
                 </a>
             </div>
-    
+
             <div class="collapse navbar-collapse" id="defaultNavbar">
                 <ul class="nav navbar-nav navbar-right">
 
                     <li><a href="#doacoes">DOAÇÕES</a></li>
-                    <li><a href="">TIPOS</a></li>   
+
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false">
+                            TIPOS
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">
+                                    TODOS
+                                </a>
+                            </li>
+                            <?php do { ?> <!-- abre estrutura de repetição -->
+                                <li>
+                                    <a href="?id_tipo=<?php echo $row_menu['id_tipo']; ?>">
+                                        <?php echo $row_menu['rotulo_tipo']; ?>
+                                    </a>
+                                </li>
+                            <?php } while ($row_menu = $lista_menu->fetch_assoc()); ?>
+                            <!-- Fecha estrutura de repetição -->
+                        </ul>
+                    </li>
+
                     <li><a href="#">USUÁRIOS</a></li>
                     <li class="active">
                         <a href="admin/admin.php">
@@ -49,8 +69,9 @@
         </div>
     </nav>
 
-<!-- Link arquivos Bootstrap js 
+    <!-- Link arquivos Bootstrap js 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>-->
 </body>
+
 </html>

@@ -5,9 +5,6 @@ include("Connections/conn_alimentos.php");
 // Consulta para trazer os dados
 $consulta = "SELECT * FROM vw_doacoes ORDER BY nome_alimento ASC";
 $lista = $conn_alimentos->query($consulta);
-
-// Retirei o '$row = ...' daqui para não pular o primeiro item da lista.
-// O 'fetch_assoc' será feito direto no while lá embaixo.
 $totalRows = ($lista)->num_rows;
 ?>
 <!DOCTYPE html>
