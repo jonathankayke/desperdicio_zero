@@ -10,6 +10,8 @@
 <body class="fundofixo">
 
     <main class="container">
+        <!-- CARROUSSEL -->
+        <?php include('carroussel.php'); ?>
         <!-- DOAÇÔES -->
         <hr>
         <?php include('doacao_geral.php'); ?>
