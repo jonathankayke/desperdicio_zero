@@ -46,7 +46,9 @@ html, body {
     margin-bottom: 0; /* Remove a margem de baixo que o Bootstrap coloca */
 }
 
-
+.blacks a {
+    color: black !important;
+}
 .navegacao .container-fluid {
     position: relative; 
     height: 60px;
