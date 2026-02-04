@@ -82,7 +82,7 @@ $ordenar_por    = "rotulo_tipo ASC";
 $consulta_fk    = "
                     SELECT *
                     FROM    ".$tabela_fk."
-                    ORDER BY ".$ordenar_por.";
+                    ORDER BY ".$ordenar_por."; 
                     ";
 $lista_fk       = $conn_alimentos->query($consulta_fk);
 $row_fk         = $lista_fk->fetch_assoc();

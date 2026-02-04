@@ -31,10 +31,6 @@ $totalRows  =   ($lista)->num_rows;
     <main class="container">
         <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3"> <!-- dimensionamento -->
             <h1 class="breadcrumb alert-success text-center">Lista dos Tipos</h1>
-            <div class="btn btn-success disabled">
-                Total de tipos:
-                <small class="badge"><?php echo $totalRows; ?></small>
-            </div>
             <!-- table>thead>tr>th*8 -->
             <table class="table table-hover table-condensed tbopacidade" >
                 <thead>
