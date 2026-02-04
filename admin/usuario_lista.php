@@ -26,10 +26,6 @@ $totalRows  =   $lista->num_rows;
 <body class="fundofixo">
     <main class="container">
         <h1 class="breadcrumb alert-success text-center">Lista de Usuários</h1>
-        <div class="btn btn-success disabled">
-            Total de Usuários:
-            <small class="badge"><?php echo $totalRows; ?></small>
-        </div>
         <table class="table table-hover table-condensed tbopacidade fontelista">
             <thead>
                 <tr>

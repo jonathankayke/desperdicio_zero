@@ -260,6 +260,6 @@ body {
 
 .collapse.detalhes-container.in,
 .collapse.detalhes-container.show { /* .in para BS3, .show para BS4+ */
-    max-height: 500px; /* altura máxima suficiente para o conteúdo */
+    max-height: 175px; /* altura máxima suficiente para o conteúdo */
     opacity: 1;
 }

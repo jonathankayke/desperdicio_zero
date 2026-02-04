@@ -26,10 +26,6 @@ $totalRows  =   $lista->num_rows;
 <?php include('menu_adm.php'); ?>
     <main class="container">
         <h1 class="breadcrumb alert-success text-center">Lista de Doações</h1>
-        <div class="btn btn-success disabled">
-            Total de Produtos:
-            <small class="badge"><?php echo $totalRows; ?></small>
-        </div>
         <div class="table-responsive">
             <table class="table table-hover table-condensed tbopacidade fontelista">
                 <thead>
