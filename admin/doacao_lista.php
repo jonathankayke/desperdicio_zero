@@ -30,7 +30,7 @@ $totalRows  =   $lista->num_rows;
             Total de Produtos:
             <small class="badge"><?php echo $totalRows; ?></small>
         </div>
-        <table class="table table-hover table-condensed tbopacidade fontelista">
+        <table class="table table-hover table-condensed tbopacidade fontelista ">
             <thead>
                 <tr>
                     <th class="hidden">ID</th>
