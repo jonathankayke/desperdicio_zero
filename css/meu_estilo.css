@@ -39,11 +39,13 @@ html, body {
 
 /* ------------------------ NAVBAR COMPACTA (60px) ---------------------- */
 .navegacao {
-    background-color: rgba(255, 255, 255, 0.95);
     min-height: 60px;
     border-bottom: 1px solid #ddd;
     position: relative;
+    border-radius: 0; /* Remove as bordas arredondadas padrão do Bootstrap */
+    margin-bottom: 0; /* Remove a margem de baixo que o Bootstrap coloca */
 }
+
 
 .navegacao .container-fluid {
     position: relative; 
