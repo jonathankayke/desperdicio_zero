@@ -59,7 +59,7 @@ $totalRows_menu = ($lista_menu)->num_rows;
                             <?php } while ($row_menu = $lista_menu->fetch_assoc()); ?>
                         </ul>
                     </li>
-                    <li><a href="#">CONTATO</a></li>
+                    <li><a href="#contato">CONTATO</a></li>
                     <li class="active">
                         <a href="admin/admin.php">
                             <span class="glyphicon glyphicon-user"></span>

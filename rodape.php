@@ -79,7 +79,7 @@
 </div> <!-- fecha dimencionamento/area -->
 
 <!-- Area de Contato -->
-<div class="col-sm-6 col-md-4">
+<div class="col-sm-6 col-md-4" id="contato">
     <div class="panel-footer" style="background:none; margin-top: 40px; ">
         <h4>CONTATO</h4>
         <form 
