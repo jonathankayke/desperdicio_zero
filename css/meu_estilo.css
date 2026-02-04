@@ -167,8 +167,11 @@ html, body {
     background-repeat: no-repeat;
 }
 .hero{
-    height: 500px;
+    min-height: 400px;
+    padding-top: 50px;
+    margin: 50px;
 }
+
 .hero-branco {
     background-color: #ffffff;
     width: 100%;
@@ -180,6 +183,46 @@ html, body {
     box-shadow: 0px -10px 30px rgba(0, 0, 0, 0.3); 
 }
 
+.hero-verde {
+    background-color: #37752e;
+    width: 100%;
+    padding: 60px 0;
+    position: relative; 
+    z-index: 10; 
+    margin-top: -50px;
+}
+
+.thumbnail {
+    height: 100%;
+    border-radius: 8px;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.row-eq-height {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.thumbnail-col {
+    margin-bottom: 30px;
+}
+
+.thumb-equal {
+    height: 100%;
+}
+
+.thumb-title {
+    min-height: 45px;
+}
+
+.txt-historia {
+    font-size: 20px;
+}
 
 .container-config {
     padding: 0 20px;
