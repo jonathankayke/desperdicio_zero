@@ -30,57 +30,80 @@ $totalRows  =   $lista->num_rows;
             Total de Produtos:
             <small class="badge"><?php echo $totalRows; ?></small>
         </div>
-        <table class="table table-hover table-condensed tbopacidade fontelista">
-            <thead>
-                <tr>
-                    <th class="hidden">ID</th>
-                    <th>IMAGEM</th>
-                    <th>Nome empresa</th>
-                    <th>Contato</th>
-                    <th>Categoria</th>
-                    <th>Nome Alimento</th>
-                    <th>quantidade</th>
-                    <th>Validade</th>
-                    <th>Endereço</th>
-                    <th>
-                    <a href="Doacao_insere.php" class="btn btn-block btn-success btn-xs">
-                        <span></span>
-                        <span class="glyphicon glyphicon-plus"></span>
-                    </a> 
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- abre looping -->
-                <?php while($row = $lista->fetch_assoc()) { ?>
-                <tr>
-                    <td class="">
-                        <img src="../imagens/<?php echo $row['imagem_doacao']; ?>" alt="" width="100px" style="max-height :70px;" class="bordaimagem">
-                    </td>
-                    <td class="hidden"><?php echo $row['id_doacao']; ?></td>
-                    <td><?php echo $row['nome_empresa']?></td>
-                    <td><?php echo $row['contato_doacao']?></td>
-                    <td><?php echo $row['rotulo_tipo']?></td>
-                    <td><?php echo $row['nome_alimento']?></td>
-                    <td><?php echo $row['quantidade_doacao']?></td>
-                    <td><?php echo $row['validade_doacao']?></td>
-                    <td><?php echo $row['endereco_retirada']?></td>
-                    <td>
-                        <a href="Doacao_atualiza.php?id_doacao=<?php echo $row['id_doacao']?>" class="btn btn-block btn-warning" target="_self" role="button">
+        <div class="table-responsive">
+            <table class="table table-hover table-condensed tbopacidade fontelista">
+                <thead>
+                    <tr>
+                        <th class="hidden">ID</th>
+                        <th>IMAGEM</th>
+                        <th class="hidden-xs">Empresa</th>
+                        <th class="hidden-xs">Contato</th>
+                        <th class="hidden-xs">Categoria</th>
+                        <th>Nome Alimento</th>
+                        <th class="hidden-xs">Quantidade</th>
+                        <th class="hidden-xs">Validade</th>
+                        <th class="hidden-xs">Endereço</th>
+                        <th class="visible-xs"></th>
+                        <th>
+                        <a href="Doacao_insere.php" class="btn btn-block btn-success btn-xs">
                             <span></span>
-                            <span class="glyphicon glyphicon-refresh"></span>
-                        </a>
-                        <button class="btn btn-danger btn-block delete" data-nome="<?php echo $row['nome_alimento']?>" data-id="<?php echo $row['id_doacao']?>">
-                            <span class=""></span>
-                            <span class="glyphicon glyphicon-trash"></span>
-                        </button>
-                    </td>
-                </tr>
-                
-                <?php } ?>
-                <!-- fecha looping -->
-            </tbody>
-        </table>
+                            <span class="glyphicon glyphicon-plus"></span>
+                        </a> 
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- abre looping -->
+                    <?php while($row = $lista->fetch_assoc()) { ?>
+                    <tr>
+                        <td class="">
+                            <img src="../imagens/<?php echo $row['imagem_doacao']; ?>" alt="" width="100px" style="max-height :70px;" class="bordaimagem">
+                        </td>
+                        <td class="hidden"><?php echo $row['id_doacao']; ?></td>
+                        <td class="hidden-xs"><?php echo $row['nome_empresa']?></td>
+                        <td class="hidden-xs"><?php echo $row['contato_doacao']?></td>
+                        <td class="hidden-xs"><?php echo $row['rotulo_tipo']?></td>
+                        <td><?php echo $row['nome_alimento']?></td>
+                        <td class="hidden-xs"><?php echo $row['quantidade_doacao']?></td>
+                        <td class="hidden-xs"><?php echo $row['validade_doacao']?></td>
+                        <td class="hidden-xs"><?php echo $row['endereco_retirada']?></td>
+                        <td class="visible-xs">
+                            <button 
+                                class="btn btn-info btn-xs btn-block btn-detalhe"
+                                data-toggle="collapse"
+                                data-target="#detalhe<?php echo $row['id_doacao']; ?>"
+                            >
+                                Ver detalhes
+                            </button>
+                        </td>
+                        <td>
+                            <a href="Doacao_atualiza.php?id_doacao=<?php echo $row['id_doacao']?>" class="btn btn-block btn-warning" target="_self" role="button">
+                                <span></span>
+                                <span class="glyphicon glyphicon-refresh"></span>
+                            </a>
+                            <button class="btn btn-danger btn-block delete" data-nome="<?php echo $row['nome_alimento']?>" data-id="<?php echo $row['id_doacao']?>">
+                                <span class=""></span>
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr class="visible-xs">
+                        <td colspan="10" style="padding:0">
+                            <div id="detalhe<?php echo $row['id_doacao']; ?>" class="collapse detalhes-container">
+                                <strong>Empresa:</strong> <?php echo $row['nome_empresa']; ?><br>
+                                <strong>Contato:</strong> <?php echo $row['contato_doacao']; ?><br>
+                                <strong>Categoria:</strong> <?php echo $row['rotulo_tipo']; ?><br>
+                                <strong>Quantidade:</strong> <?php echo $row['quantidade_doacao']; ?><br>
+                                <strong>Validade:</strong> <?php echo $row['validade_doacao']; ?><br>
+                                <strong>Endereço:</strong> <?php echo $row['endereco_retirada']; ?>
+                            </div>
+                        </td>
+                    </tr>              
+                    <?php } ?>
+                    <!-- fecha looping -->
+                </tbody>
+            </table>
+        </div>
     </main>
 
     <!-- Modal -->

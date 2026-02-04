@@ -36,9 +36,9 @@ $totalRows  =   $lista->num_rows;
                     <th>Foto</th>
                     <th>Nome</th>
                     <th>Senha</th> <!-- ocultar -->
-                    <th>Tipo</th>
-                    <th>Email</th>
-                    <th>Login</th>
+                    <th class="hidden-xs">Tipo</th>
+                    <th class="hidden-xs">Email</th>
+                    <th class="hidden-xs">Login</th>
                     <th>
                         <a href="usuario_insere.php" class="btn btn-success btn-block btn-xs">
                             <span>ADICIONAR<br> </span>
@@ -57,10 +57,18 @@ $totalRows  =   $lista->num_rows;
                             <img src="../imagens/<?php echo $row['foto_usuario']; ?>" alt="<?php echo $row['nome_usuario']; ?>" class="img-responsive img-thumbnail" style="max-width: 80px;">
                         <td><?php echo $row['nome_usuario']; ?></td>
                         <td><?php echo $row['senha_usuario']; ?></td>
-                        <td><?php echo $row['tipo_usuario']; ?></td>
-                        <td><?php echo $row['email_usuario']; ?></td>
-                        <td><?php echo $row['login_usuario']; ?></td>
-
+                        <td class="hidden-xs"><?php echo $row['tipo_usuario']; ?></td>
+                        <td class="hidden-xs"><?php echo $row['email_usuario']; ?></td>
+                        <td class="hidden-xs"><?php echo $row['login_usuario']; ?></td>
+                        <td class="visible-xs">
+                            <button 
+                                class="btn btn-info btn-xs btn-block btn-detalhe"
+                                data-toggle="collapse"
+                                data-target="#detalhe<?php echo $row['id_usuario']; ?>"
+                            >
+                                Ver detalhes
+                            </button>
+                        </td>
                         <td>
                             <a href="usuario_atualiza.php?id_usuario=<?php echo $row['id_usuario']; ?>"
                                 class="btn btn-warning btn-xs btn-block">
@@ -77,6 +85,15 @@ $totalRows  =   $lista->num_rows;
                             </button>
                         </td>
                     </tr>
+                    <tr class="visible-xs">
+                        <td colspan="10" style="padding:0">
+                            <div id="detalhe<?php echo $row['id_usuario']; ?>" class="collapse detalhes-container">
+                                <strong>Tipo:</strong> <?php echo $row['tipo_usuario']; ?><br>
+                                <strong>Email:</strong> <?php echo $row['email_usuario']; ?><br>
+                                <strong>Login:</strong> <?php echo $row['login_usuario']; ?><br>                               
+                            </div>
+                        </td>
+                    </tr> 
                 <?php 
                 } // Fim do loop while
                 ?>
