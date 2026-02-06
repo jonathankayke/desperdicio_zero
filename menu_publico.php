@@ -59,7 +59,37 @@ $totalRows_menu = ($lista_menu)->num_rows;
                             <?php } while ($row_menu = $lista_menu->fetch_assoc()); ?>
                         </ul>
                     </li>
-                    <li><a href="#">CONTATO</a></li>
+                    <li><a href="#contato">CONTATO</a></li>
+                    <form 
+                        action="doacao_busca.php"
+                        method="get"
+                        name="form_busca"
+                        id="form_busca"
+                        class="navbar-form navbar-left"
+                        role="search"
+                    >
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input 
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="PEsquisar Doação"
+                                    name="buscar"
+                                    id="buscar"
+                                    size="9"
+                                    required
+                                >
+                                <span class="input-group-btn">
+                                    <button 
+                                        type="submit" 
+                                        class="btn btn-default"
+                                    >
+                                        <span class="glyphicon glyphicon-search"></span>
+                                    </button>
+                                </span>
+                            </div> <!-- fecha input-group -->
+                        </div> <!-- fecha form-group -->
+                    </form>
                     <li class="active">
                         <a href="admin/admin.php">
                             <span class="glyphicon glyphicon-user"></span>

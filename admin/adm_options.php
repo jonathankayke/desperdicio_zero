@@ -8,6 +8,41 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="../css/meu_estilo.css">
+    <style>
+    .fundo-branco {
+        background-color: #fff !important;
+        border-radius: 2px;
+        text-align: center;
+        font-size: large;
+        font-weight: bold;
+    }
+    .verde-escuro {
+        background-color: #28A745 !important;
+        border-color: #28A745 !important;
+        color: white;
+        font-weight: bold;
+        font-size: 15px;
+        letter-spacing: 2px;
+        padding: 14px 0;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+    .botao {
+        border-radius: 5px;
+        text-align: center;
+        width: 100%;
+    }
+    .botao:hover {
+        background-color: #218838 !important;
+        border-color: #1E7E34 !important;
+        color: white;
+        font-weight: bold;
+        font-size: 15px;
+        letter-spacing: 2px;
+        padding: 14px 0;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+    
+    </style>
 </head>
 <body class="fundofixo">
 <main class="container">
@@ -16,29 +51,28 @@
     <!-- ADM Doações -->
     <div class="col-sm-6 col-md-4">
         <div class="thumbnail doacoes-card">
-        <img src="../imagens/icon_doacoes.png" alt="">
+            <!-- fonte awesome -->
+             <i class="#"></i>
             <br>
             <div>
                 <!-- botão principal -->
                 <div class="btn-group btn-group-justified" role="group">
                     <div class="btn-group">
-                        <button 
-                            class="btn btn-default disabled"
-                            style="cursor: default;"
-                        >
-                            DOAÇÕES
-                        </button>
+                        <div class="fundo-branco">
+                        <span>DOAÇÕES</span>
+                        </div>
+                    
                     </div> <!-- fecha btn-group--->
                 </div> <!-- fecha btn-group-justified-->
                 <div class="btn-group btn-group-justified" role="group">
                     <div class="btn-group">
                         <a href="doacao_lista.php">
-                            <button class="btn btn-success">Listar</button>
+                            <button class="botao verde-escuro botao">Listar</button>
                         </a>
                     </div> <!-- fecha btn-group--->               
                     <div class="btn-group">
                         <a href="doacao_insere.php">
-                            <button class="btn btn-success">Inserir</button>
+                            <button class="verde-escuro botao">Inserir</button>
                         </a>
                     </div> <!-- fecha btn-group inserir--->
                 </div> <!-- fecha btn-group-justified-->
@@ -48,19 +82,16 @@
 
     <!-- ADM Tipos -->
     <div class="col-sm-6 col-md-4">
-        <div class="thumbnail alert-warning">
-            <img src="../imagens/icon_tipos.png" alt="">
+        <div class="thumbnail" style="background-color: #FCF8E3;">
+            <!-- fonte awesome -->
+             <i class="#"></i>
             <br>
-            <div class="alert-warning">
                 <!-- botão principal -->
                 <div class="btn-group btn-group-justified" role="group">
                     <div class="btn-group">
-                        <button 
-                            class="btn btn-default disabled"
-                            style="cursor: default;"
-                        >
-                            TIPOS
-                        </button>
+                        <div class="fundo-branco">
+                        <span>TIPOS</span>
+                        </div>
                     </div> <!-- fecha btn-group--->
                 </div> <!-- fecha btn-group-justified-->
                 <div class="btn-group btn-group-justified" role="group">
@@ -75,7 +106,7 @@
                         </a>
                     </div> <!-- fecha btn-group inserir--->
                 </div> <!-- fecha btn-group-justified-->
-            </div> <!-- fecha alert-warning-->
+           
         </div> <!-- fecha thumbnail-->
     </div><!-- fecha dimensionamento-->
 
