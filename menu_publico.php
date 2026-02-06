@@ -65,7 +65,7 @@ $totalRows_menu = ($lista_menu)->num_rows;
                         method="get"
                         name="form_busca"
                         id="form_busca"
-                        class="navbar-form navbar-left"
+                        class="navbar-form navbar-left form_busca"
                         role="search"
                     >
                         <div class="form-group">
@@ -73,7 +73,7 @@ $totalRows_menu = ($lista_menu)->num_rows;
                                 <input 
                                     type="text"
                                     class="form-control"
-                                    placeholder="PEsquisar Doação"
+                                    placeholder="Pesquisar Doação"
                                     name="buscar"
                                     id="buscar"
                                     size="9"

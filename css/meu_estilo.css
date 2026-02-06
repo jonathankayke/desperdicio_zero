@@ -306,3 +306,10 @@ body {
     max-height: 175px; /* altura máxima suficiente para o conteúdo */
     opacity: 1;
 }
+#form_busca {
+    float: none !important;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+}
