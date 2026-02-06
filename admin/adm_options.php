@@ -8,41 +8,6 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="../css/meu_estilo.css">
-    <style>
-    .fundo-branco {
-        background-color: #fff !important;
-        border-radius: 2px;
-        text-align: center;
-        font-size: large;
-        font-weight: bold;
-    }
-    .verde-escuro {
-        background-color: #28A745 !important;
-        border-color: #28A745 !important;
-        color: white;
-        font-weight: bold;
-        font-size: 15px;
-        letter-spacing: 2px;
-        padding: 14px 0;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    }
-    .botao {
-        border-radius: 5px;
-        text-align: center;
-        width: 100%;
-    }
-    .botao:hover {
-        background-color: #218838 !important;
-        border-color: #1E7E34 !important;
-        color: white;
-        font-weight: bold;
-        font-size: 15px;
-        letter-spacing: 2px;
-        padding: 14px 0;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    }
-    
-    </style>
 </head>
 <body class="fundofixo">
 <main class="container">
