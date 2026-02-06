@@ -13,7 +13,7 @@ if ($_POST){
     $row_session = $lista_session->fetch_assoc();
     $totalRows_session = mysqli_num_rows($lista_session);
     
-    if (!issset($_SESSION)) {
+    if (!isset($_SESSION)) {
         $sessao_antiga = session_name('chuletaaa');
         session_start();
         $session_name_new = session_name(); //recupero o nome da atual sessão
