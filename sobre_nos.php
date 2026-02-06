@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre nós - Desperdício Zero</title>
+    <script src="https://kit.fontawesome.com/9ee3096070.js" crossorigin="anonymous"></script>
     <!-- Link CSS do Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Link para CSS Específico -->
@@ -32,11 +33,11 @@
         <div class="container container-config">
             <div class="row row-eq-height">
                 <div class="col-xs-12 col-md-4 thumbnail-col">
-                    <div class="thumbnail thumb-equal">
-                        <img src="imagens/alface.png">
+                    <div class="thumbnail thumb-equal text-center">
+                        <i class="fa-solid fa-bullseye fa-10x"></i>
                         <div class="caption">
-                            <h3 class="thumb-title">🍉 Missão</h3>
-                            <p>
+                            <h3 class="thumb-title">Missão</h3>
+                            <p style="font-size: 15px;">
                                 Promover a redução do desperdício de alimentos por meio da conexão
                                 entre doadores e beneficiários, incentivando a solidariedade,
                                 a sustentabilidade e o acesso justo à alimentação para todos que precisam.
@@ -45,11 +46,11 @@
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-4 thumbnail-col">
-                    <div class="thumbnail thumb-equal">
-                        <img src="imagens/alface.png">
+                    <div class="thumbnail thumb-equal text-center">
+                        <i class="fa-solid fa-eye fa-10x"></i>
                         <div class="caption">
-                            <h3 class="thumb-title">🌍 Visão</h3>
-                            <p>
+                            <h3 class="thumb-title">Visão</h3>
+                            <p style="font-size: 15px;">
                                 Ser uma plataforma de referência no combate ao desperdício de alimentos,
                                 contribuindo para um futuro mais sustentável, onde recursos sejam melhor
                                 aproveitados e nenhuma comida em boas condições seja descartada.
@@ -58,11 +59,11 @@
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-4 thumbnail-col">
-                    <div class="thumbnail thumb-equal">
-                        <img src="imagens/alface.png">
+                    <div class="thumbnail thumb-equal text-center">
+                        <i class="fa-solid fa-hand-holding-heart fa-10x"></i>
                         <div class="caption">
-                            <h3 class="thumb-title">🍎 Valores</h3>
-                            <p>
+                            <h3 class="thumb-title">Valores</h3>
+                            <p style="font-size: 15px;">
                                 Solidariedade, responsabilidade social, sustentabilidade,
                                 respeito ao meio ambiente e compromisso com a transparência
                                 e a dignidade de todas as pessoas envolvidas.
@@ -74,8 +75,9 @@
         </div>
     </section>
     <section class="hero max-width">
-        <div class="container container-config">
-
+        <div class="container container-config text-center">
+            <h2>Nosso impacto</h2>
+            <p class="txt-historia">Resultados concretos no combate ao desperdício de alimentos</p>
         </div>
     </section>
 <!-- Link arquivos Bootstrap js -->
