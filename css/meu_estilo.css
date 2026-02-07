@@ -185,6 +185,7 @@ html, body {
     margin-top: -50px;
     border-radius: 30px 30px 0 0; 
     box-shadow: 0px -10px 30px rgba(0, 0, 0, 0.3); 
+    border-bottom:dotted green;
 }
 
 .hero-verde {
@@ -230,6 +231,30 @@ html, body {
 
 .container-config {
     padding: 0 20px;
+}
+
+.card-stat {
+    color: #2e2e2e;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    text-align: center;
+    padding: 50px;
+    width: 250px;
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-stat:hover {
+    transform: scale(1.1);
+}
+
+.hero-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    animation
 }
 
 .navbar {
