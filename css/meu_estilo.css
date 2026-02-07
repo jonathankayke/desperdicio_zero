@@ -257,6 +257,8 @@ html, body {
     margin-bottom: 0;
 }
 
+
+ /* Fundo da página para dar contraste aos cards brancos */
 body {
     background-color: #f4f7f6;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
