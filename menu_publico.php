@@ -76,7 +76,7 @@ $totalRows_menu = ($lista_menu)->num_rows;
                                     placeholder="Pesquisar Doação"
                                     name="buscar"
                                     id="buscar"
-                                    size="9"
+                                    size="13"
                                     required
                                 >
                                 <span class="input-group-btn">

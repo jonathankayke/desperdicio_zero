@@ -307,11 +307,8 @@ body {
     opacity: 1;
 }
 #form_busca {
-    float: none !important;
-    position: absolute;
-    left: 50%;
-    top: 40%;
-    transform: translate(-50%, -50%);
+    float: left !important;
+    margin-left: 1px;
 }
 
 .fundo-branco {
