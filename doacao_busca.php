@@ -3,10 +3,10 @@
 include("Connections/conn_alimentos.php");
 
 // Configurações da consulta
-$tabela         = "vw_doacoes";
-$campo_filtro   = "nome_alimento";
-$ordenar_por    = "nome_alimento ASC";
-$filtro_select  = $_GET['buscar'] ?? '';
+$tabela = "vw_doacoes";
+$campo_filtro = "nome_alimento";
+$ordenar_por = "nome_alimento ASC";
+$filtro_select = $_GET['buscar'] ?? '';
 
 // Consulta
 $consulta = "
@@ -16,12 +16,13 @@ $consulta = "
     ORDER BY $ordenar_por
 ";
 
-$lista     = $conn_alimentos->query($consulta);
-$row       = $lista->fetch_assoc();
+$lista = $conn_alimentos->query($consulta);
+$row = $lista->fetch_assoc();
 $totalRows = $lista->num_rows;
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>Doações Disponíveis</title>
@@ -29,80 +30,108 @@ $totalRows = $lista->num_rows;
     <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
 
-<body class="container">
+<body class="fundofixo">
+<?php include("menu_publico.php"); ?>
+    <!-- Quando NÃO encontrar registros -->
+    <div class="container">    
+        <?php if ($totalRows == 0) { ?>
+            <h2 class="breadcrumb alert-danger">
+                <a href="javascript:window.history.go(-1)" class="btn btn-danger">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                Você pesquisou:
+                "<strong><?php echo $filtro_select; ?></strong>"
+                <br>
+                Nenhuma doação encontrada no momento 😔
+            </h2>
+        <?php } 
+            $collapseID = "detalhes_" . $row['id_doacao'];
+        ?>
 
-<!-- Quando NÃO encontrar registros -->
-<?php if ($totalRows == 0) { ?>
-    <h2 class="breadcrumb alert-danger">
-        <a href="javascript:window.history.go(-1)" class="btn btn-danger">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-        </a>
-        Você pesquisou:
-        "<strong><?php echo $filtro_select; ?></strong>"
-        <br>
-        Nenhuma doação encontrada no momento 😔
-    </h2>
-<?php } ?>
+        <!-- Quando encontrar registros -->
+        <?php if ($totalRows > 0) { ?>
+            <h2 class="breadcrumb alert-success">
+                <a href="javascript:window.history.go(-1)" class="btn btn-success">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                Você pesquisou:
+                "<strong><?php echo $filtro_select; ?></strong>"
+            </h2>
 
-<!-- Quando encontrar registros -->
-<?php if ($totalRows > 0) { ?>
-<h2 class="breadcrumb alert-success">
-    <a href="javascript:window.history.go(-1)" class="btn btn-success">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-    </a>
-    Você pesquisou:
-    "<strong><?php echo $filtro_select; ?></strong>"
-</h2>
+            <div class="row">
 
-<div class="row">
+                <?php do { ?>
+                    <div>
+                        <div class="thumbnail card-doacao">
+                            <div class="row" style="display: flex; align-items: center; flex-wrap: wrap;">
 
-<?php do { ?>
-    <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
+                                <div class="col-sm-2">
+                                    <img src="imagens/<?php echo $row['imagem_doacao']; ?>" class="img-responsive img-rounded"
+                                        style="max-height: 100px; border: 1px solid #eee; padding: 5px; width: 100%;">
+                                </div>
 
-            <img 
-                src="imagens/<?php echo $row['imagem_doacao']; ?>" 
-                class="img-responsive img-rounded"
-                style="height: 20em;"
-                alt="Imagem da doação"
-            >
+                                <div class="col-sm-2">
+                                    <h3 style="color: #c9302c; margin: 0; font-weight: bold;">
+                                        <?php echo $row['nome_alimento']; ?>
+                                    </h3>
+                                </div>
 
-            <div class="caption text-right">
-                <h3 class="text-danger">
-                    <strong><?php echo $row['nome_alimento']; ?></strong>
-                </h3>
+                                <div class="col-sm-6">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-center">
+                                            <span class="label-info-custom">Tipo</span>
+                                            <span class="valor-info-custom"><?php echo $row['rotulo_tipo']; ?></span>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <span class="label-info-custom">Qtd</span>
+                                            <span class="valor-info-custom"><?php echo $row['quantidade_doacao']; ?></span>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <span class="label-info-custom">Validade</span>
+                                            <span
+                                                class="valor-info-custom"><?php echo date('d/m/Y', strtotime($row['validade_doacao'])); ?></span>
+                                        </div>
+                                    </div>
+                                </div>
 
-                <p class="text-warning">
-                    <strong><?php echo $row['rotulo_tipo']; ?></strong>
-                </p>
+                                <div class="col-sm-2 text-right">
+                                    <p style="font-size: 0.9em; margin-bottom: 10px;">
+                                        <i class="glyphicon glyphicon-briefcase"></i> <?php echo $row['nome_empresa']; ?>
+                                    </p>
+                                    <button type="button" class="btn btn-success btn-block shadow-sm" data-toggle="collapse"
+                                        data-target="#<?php echo $collapseID; ?>">
+                                        Ver detalhes
+                                    </button>
+                                </div>
 
-                <p class="text-left">
-                    Empresa: <?php echo $row['nome_empresa']; ?><br>
-                    Quantidade: <?php echo $row['quantidade_doacao']; ?><br>
-                    Validade: <?php echo date('d/m/Y', strtotime($row['validade_doacao'])); ?>
-                </p>
+                            </div>
 
-                <p>
-                    <a 
-                        href="doacao_detalhe.php?id_doacao=<?php echo $row['id_doacao']; ?>" 
-                        class="btn btn-danger"
-                    >
-                        <span class="hidden-xs">Ver detalhes</span>
-                        <span class="visible-xs glyphicon glyphicon-eye-open"></span>
-                    </a>
-                </p>
+                            <div id="<?php echo $collapseID; ?>" class="collapse">
+                                <div class="detalhes-container">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <p><strong><i class="glyphicon glyphicon-phone text-success"></i> Contato:</strong>
+                                                <?php echo $row['contato_doacao']; ?></p>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <p><strong><i class="glyphicon glyphicon-map-marker text-success"></i>
+                                                    Retirada:</strong>
+                                                <?php echo $row['endereco_retirada']; ?></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php } while ($row = $lista->fetch_assoc()); ?>
+
             </div>
-
-        </div>
-    </div>
-<?php } while ($row = $lista->fetch_assoc()); ?>
-
-</div>
-<?php } ?>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+        <?php } ?>
+    </div>                
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
+
 </html>
 
 <?php mysqli_free_result($lista); ?>

@@ -34,7 +34,7 @@ $totalRows_menu = ($lista_menu)->num_rows;
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="admin2.php" class="navbar-brand">
+                <a href="indexfake.php" class="navbar-brand">
                     <img src="imagens/Icon_menu.png" alt="">
                 </a>
             </div>
@@ -65,7 +65,7 @@ $totalRows_menu = ($lista_menu)->num_rows;
                         method="get"
                         name="form_busca"
                         id="form_busca"
-                        class="navbar-form navbar-left"
+                        class="navbar-form navbar-left form_busca"
                         role="search"
                     >
                         <div class="form-group">
@@ -73,10 +73,10 @@ $totalRows_menu = ($lista_menu)->num_rows;
                                 <input 
                                     type="text"
                                     class="form-control"
-                                    placeholder="PEsquisar Doação"
+                                    placeholder="Pesquisar Doação"
                                     name="buscar"
                                     id="buscar"
-                                    size="9"
+                                    size="13"
                                     required
                                 >
                                 <span class="input-group-btn">
@@ -91,7 +91,7 @@ $totalRows_menu = ($lista_menu)->num_rows;
                         </div> <!-- fecha form-group -->
                     </form>
                     <li class="active">
-                        <a href="admin/admin.php">
+                        <a href="admin/indexadmin.php">
                             <span class="glyphicon glyphicon-user"></span>
                         </a>
                     </li>
