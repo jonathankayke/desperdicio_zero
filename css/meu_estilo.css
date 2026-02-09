@@ -256,6 +256,11 @@ html, body {
     padding: 50px;
 }
 
+.navbar {
+    margin-bottom: 0px;
+}
+
+
  /* Fundo da página para dar contraste aos cards brancos */
 body {
     background-color: #f4f7f6;
