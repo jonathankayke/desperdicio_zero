@@ -65,7 +65,7 @@
             </div>
 
             <div class="col-sm-6 col-md-4">
-                <div class="thumbnail alert-info">
+                <div class="thumbnail " style="background-color: #c9e9f8ff;">
                     <br>
                     <div class="btn-group btn-group-justified" role="group">
                         <div class="btn-group">
