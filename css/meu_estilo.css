@@ -254,13 +254,7 @@ html, body {
     align-items: center;
     justify-content: space-between;
     padding: 50px;
-    animation
 }
-
-.navbar {
-    margin-bottom: 0;
-}
-
 
  /* Fundo da página para dar contraste aos cards brancos */
 body {
