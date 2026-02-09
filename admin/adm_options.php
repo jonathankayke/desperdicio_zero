@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Área Administrativa</title>
+    <script src="https://kit.fontawesome.com/9ee3096070.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/meu_estilo.css">
 </head>
@@ -15,7 +16,7 @@
         <div class="row">
             
             <div class="col-sm-6 col-md-4">
-                <div class="thumbnail doacoes-card">
+                <div class="thumbnail doacoes-card fa">
                     <br>
                     <div class="btn-group btn-group-justified" role="group">
                         <div class="btn-group">

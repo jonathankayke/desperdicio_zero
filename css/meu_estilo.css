@@ -377,7 +377,7 @@ body {
 /* -- Estilos LARANJA -- */
 .laranja-escuro {
     background-color: #ffab45 !important;
-    border-color: #c4710c !important;
+    border-color: #ffab45 !important;
     color: white;
     font-weight: bold;
     font-size: 15px;
@@ -407,7 +407,7 @@ body {
 /* -- Estilos AZUL (Novo) -- */
 .azul-escuro {
     background-color: #17a2b8 !important;
-    border-color: #117a8b !important;
+    border-color: #17a2b8 !important;
     color: white;
     font-weight: bold;
     font-size: 15px;
