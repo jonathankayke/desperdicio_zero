@@ -45,32 +45,22 @@
         <h4>LINKS</h4>
         <ul class="nav nav-pills nav-stacked">
             <li>
-                <a href="index.php#home" class="text-success">
+                <a href="indexfake.php#home" class="text-success">
                     <span class="glyphicon glyphicon-home">&nbsp;HOME</span>
                 </a>
             </li>
             <li>
-                <a href="index.php#destaques" class="text-success">
-                    <span class="glyphicon glyphicon-fire">&nbsp;DESTAQUES</span>
-                </a>
-            </li>
-            <li>
-                <a href="index.php#doaçoes" class="text-success">
+                <a href="indexfake.php#doacoes" class="text-success">
                     <span class="glyphicon glyphicon-globe">&nbsp;DOAÇÕES</span>
                 </a>
             </li>
             <li>
-                <a href="produtos_tipos.php" class="text-success">
-                    <span class="glyphicon glyphicon-tasks">&nbsp;TIPOS</span>
-                </a>
-            </li>
-            <li>
-                <a href="index.php#contato" class="text-success">
+                <a href="indexfake.php#contato" class="text-success">
                     <span class="glyphicon glyphicon-send">&nbsp;CONTATO</span>
                 </a>
             </li>
             <li>
-                <a href="admin/index.php" class="text-success">
+                <a href="admin/indexadmin.php" class="text-success">
                     <span class="glyphicon glyphicon-user">&nbsp;ADMINISTRAÇÂO</span>
                 </a>
             </li>
