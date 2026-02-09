@@ -234,18 +234,21 @@ html, body {
 }
 
 .card-stat {
-    color: #37752e;
+    color: #444444;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
     text-align: center;
     padding: 50px;
     width: 250px;
     display: inline-block;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                color 0.3s ease;
 }
 
 .card-stat:hover {
     transform: scale(1.1);
+    color: #37752e;
 }
 
 .hero-card {
