@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modelo</title>
-    <!-- Link CSS do Bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Link para CSS Específico-->
-    <link rel="stylesheet" href="css/meu_estilo.css"> 
+    <!-- Link CSS do Bootstrap 
+    <link rel="stylesheet" href="css/bootstrap.min.css">-->
+    <!-- Link para CSS Específico
+    <link rel="stylesheet" href="css/meu_estilo.css"> -->
 </head>
 <body class="fundofixo">
 <div class="row panel-footer" style="background-color: rgba(255, 255, 255, 0.6);" > <!-- abre painel do rodapé -->
@@ -120,8 +120,8 @@
                         <span class="glyphicon glyphicon-pencil"></span>
                     </span>
                     <textarea 
-                        name="comentario_contato" 
-                        id="comentario_contato"
+                        name="comentarios_contato" 
+                        id="comentarios_contato"
                         placeholder="Comentários, dúvidas e/ou sugestões."
                         cols="30"
                         rows="8"
@@ -154,7 +154,7 @@
 </div> <!-- fecha dimencionamento/area -->
 
 <!-- Link arquivos Bootstrap js --> 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>   
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script> -->   
 </body>
 </html>                 
