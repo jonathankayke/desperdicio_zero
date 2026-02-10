@@ -15,7 +15,6 @@
   </head>
   <body>
     <?php include('menu_publico.php')?>
-
     <section class="hero-com-foto">
       <div class="container container-config"></div>
     </section>
@@ -133,5 +132,6 @@
     <!-- Link arquivos Bootstrap js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <?php include('rodape.php')?>
   </body>
 </html>
