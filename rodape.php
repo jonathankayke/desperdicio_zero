@@ -9,7 +9,7 @@
     <!-- Link para CSS Específico
     <link rel="stylesheet" href="css/meu_estilo.css"> -->
 </head>
-<body class="fundofixo">
+<body>
 <div class="row panel-footer" style="background-color: rgba(255, 255, 255, 0.6);" > <!-- abre painel do rodapé -->
 <!-- Area de localização -->
 <div class="col-sm-6 col-md-4">
