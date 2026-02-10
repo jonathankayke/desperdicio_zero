@@ -21,11 +21,13 @@ $totalRows  =   $lista->num_rows;
     <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="../css/meu_estilo.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    
 </head>
 <body class="fundofixo">
 <?php include('menu_adm.php'); ?>
-    <main class="container">
-        <h1 class="breadcrumb alert-success text-center">Lista de Doações</h1>
+    <main class="container font">
+        <h1 class="breadcrumb text-success text-center">Lista de Doações</h1>
         <div class="table-responsive">
             <table class="table table-hover table-condensed tbopacidade fontelista">
                 <thead>
@@ -42,7 +44,6 @@ $totalRows  =   $lista->num_rows;
                         <th class="visible-xs"></th>
                         <th>
                         <a href="Doacao_insere.php" class="btn btn-block btn-success btn-xs">
-                            <span></span>
                             <span class="glyphicon glyphicon-plus"></span>
                         </a> 
                         </th>
@@ -74,11 +75,9 @@ $totalRows  =   $lista->num_rows;
                         </td>
                         <td>
                             <a href="Doacao_atualiza.php?id_doacao=<?php echo $row['id_doacao']?>" class="btn btn-block btn-warning" target="_self" role="button">
-                                <span></span>
                                 <span class="glyphicon glyphicon-refresh"></span>
                             </a>
                             <button class="btn btn-danger btn-block delete" data-nome="<?php echo $row['nome_alimento']?>" data-id="<?php echo $row['id_doacao']?>">
-                                <span class=""></span>
                                 <span class="glyphicon glyphicon-trash"></span>
                             </button>
                         </td>

@@ -30,7 +30,7 @@ $totalRows  =   ($lista)->num_rows;
     <!-- main>h1 -->
     <main class="container">
         <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3"> <!-- dimensionamento -->
-            <h1 class="breadcrumb alert-success text-center">Lista dos Tipos</h1>
+            <h1 class="breadcrumb text-success text-center">Lista dos Tipos</h1>
             <!-- table>thead>tr>th*8 -->
             <table class="table table-hover table-condensed tbopacidade" >
                 <thead>
@@ -43,7 +43,7 @@ $totalRows  =   ($lista)->num_rows;
                             href="tipos_insere.php"
                             class="btn btn-block btn-success btn-xs"
                         >
-                            <span class="hidden-xs">ADICIONAR<br></span>
+                            <span class="hidden-xs"></span>
                             <span class="glyphicon glyphicon-plus"></span>
                         </a>
                     </th>
@@ -59,19 +59,19 @@ $totalRows  =   ($lista)->num_rows;
                     <td>
                         <a 
                             href="tipos_atualiza.php?id_tipo=<?php echo $row['id_tipo']; ?>"
-                            class="btn btn-block btn-warning btn-xs"
+                            class="btn btn-block btn-warning"
                             target="_self"
                             role="button"
                         >
-                            <span class="hidden-xs">ALTERAR<br></span>
+                            <span class="hidden-xs"></span>
                             <span class="glyphicon glyphicon-refresh"></span>
                         </a>
                         <button
                         data-id="<?php echo $row['id_tipo']; ?>"
                         data-nome="<?php echo $row['rotulo_tipo']; ?>"                        
-                        class="btn btn-danger btn-xs btn-block delete"
-                    >
-                        <span class="hidden-xs">EXCLUIR<br></span>
+                        class="btn btn-danger btn-block delete"
+                        >   
+                        <span class="hidden-xs"></span>
                         <span class="glyphicon glyphicon-trash"></span>
                     </button>
                 </td>
