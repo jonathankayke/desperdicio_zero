@@ -15,7 +15,6 @@
   </head>
   <body>
     <?php include('menu_publico.php')?>
-
     <section class="hero-com-foto">
       <div class="container container-config"></div>
     </section>
@@ -95,30 +94,44 @@
         </p>
       </div>
       <div class="container-fluid hero-card">
-        <div class="card-stat">
-          <i class="fa-solid fa-utensils fa-3x"></i>
-          <h2 style="font-weight: bolder">+12t</h2>
-          <p style="font-size: 17px">Alimentos Reaproveitados.</p>
-        </div>
-        <div class="card-stat">
-          <i class="fa-solid fa-users fa-3x"></i>
-          <h2 style="font-weight: bolder">+8.000</h2>
-          <p style="font-size: 17px">Famílias Beneficiadas.</p>
-        </div>
-        <div class="card-stat">
-          <i class="fa-solid fa-store fa-3x"></i>
-          <h2 style="font-weight: bolder">120</h2>
-          <p style="font-size: 17px">Colaboradores Ativos.</p>
-        </div>
-        <div class="card-stat">
-          <i class="fa-solid fa-recycle fa-3x"></i>
-          <h2 style="font-weight: bolder">65%</h2>
-          <p style="font-size: 17px">Redução do Desperdício.</p>
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="card-stat">
+              <i class="fa-solid fa-utensils fa-3x"></i>
+              <h3 style="font-weight: bolder">+12t</h3>
+              <p style="font-size: 17px">Alimentos Reaproveitados.</p>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="card-stat">
+              <i class="fa-solid fa-users fa-3x"></i>
+              <h3 style="font-weight: bolder">+8.000</h3>
+              <p style="font-size: 17px">Famílias Beneficiadas.</p>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="card-stat">
+              <i class="fa-solid fa-store fa-3x"></i>
+              <h3 style="font-weight: bolder">120</h3>
+              <p style="font-size: 17px">Colaboradores Ativos.</p>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="card-stat">
+              <i class="fa-solid fa-recycle fa-3x"></i>
+              <h3 style="font-weight: bolder">65%</h3>
+              <p style="font-size: 17px">Redução do Desperdício.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
     <!-- Link arquivos Bootstrap js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <?php include('rodape.php')?>
   </body>
 </html>

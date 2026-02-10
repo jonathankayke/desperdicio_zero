@@ -185,7 +185,7 @@ html, body {
     margin-top: -50px;
     border-radius: 30px 30px 0 0; 
     box-shadow: 0px -10px 30px rgba(0, 0, 0, 0.3); 
-    border-bottom:  #37752e 5px s;
+    border-bottom: 5px solid #37752e;
 }
 
 .hero-verde {
@@ -234,29 +234,40 @@ html, body {
 }
 
 .card-stat {
+    box-sizing: border-box;
+    width: 100%;
     color: #444444;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
     text-align: center;
-    padding: 50px;
-    width: 250px;
-    display: inline-block;
+    padding: 40px 20px;
+    margin-bottom: 30px;
     transition: transform 0.3s ease,
                 box-shadow 0.3s ease,
                 color 0.3s ease;
+    background-color: #ffffff;
 }
 
-.card-stat:hover {  
-    transform: scale(1.1);
+.card-stat:hover {
+    transform: scale(1.08);
     color: #37752e;
 }
 
+@media (min-width: 768px) {
+    .hero-card .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+    
+    .hero-card [class*="col-"] {
+        display: flex;
+    }
+}
+
 .hero-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px;
+    padding: 50px 20px;
 }
 
 .navbar {
