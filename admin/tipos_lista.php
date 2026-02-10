@@ -1,4 +1,7 @@
 <?php
+// Incluindo o Sistema de autenticação
+include("acesso_com.php");
+
 // Incluir o arquivo e fazer a conexão
 include("../Connections/conn_alimentos.php");
 // Selecionar os dados
