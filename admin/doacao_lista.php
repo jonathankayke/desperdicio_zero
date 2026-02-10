@@ -75,7 +75,7 @@ $totalRows = $lista->num_rows;
                             </td>
                             <td>
                                 <a href="Doacao_atualiza.php?id_doacao=<?php echo $row['id_doacao'] ?>"
-                                    class="btn btn-block btn-warning borda-" target="_self" role="button">
+                                    class="btn btn-block btn-warning borda-btn" target="_self" role="button">
                                     <span class="glyphicon glyphicon-refresh"></span>
                                 </a>
                                 <button class="btn btn-danger btn-block delete borda-btn"
