@@ -35,6 +35,7 @@ $totalRows = ($lista)->num_rows;
             <!-- dimensionamento -->
             <h1 class="breadcrumb text-success text-center">Lista dos Tipos</h1>
             <!-- table>thead>tr>th*8 -->
+        <div class="lista-wrapper">
             <table class="table table-hover table-condensed tbopacidade">
                 <thead>
                     <tr>
@@ -73,7 +74,7 @@ $totalRows = ($lista)->num_rows;
                     <!-- Fechar a estrutura de repetição -->
                 </tbody>
             </table>
-    </main>
+       </div> </main>
 
     <!-- Modal -->
     <div id="myModal" class="modal fade" role="dialog">

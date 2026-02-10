@@ -7,11 +7,17 @@ html, body {
 }
 
 /* ------------------------ FUNDO ---------------------- */
-.fundofixo {
+/* .fundofixo {
     background: url(../imagens/fundosite.jpg) no-repeat fixed;
     background-size: cover;
     -webkit-background-size: cover;
-} 
+    
+} */
+body.fundofixo {
+            /* Cor cinza bem claro, padrão de dashboards modernos */
+            background-color: #f4f6f9; 
+            background-image: none; /* Garante que não tenha imagem */
+        }
 
 /* ------------------------ ESTILO DO FORMULÁRIO ---------------- */
 .alert-success {
@@ -465,3 +471,14 @@ body {
     justify-content: center;
     gap: 8px;
 }
+.lista-wrapper {
+            background-color: #ffffff; 
+            padding: 20px;             
+            border-radius: 10px;       
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+            margin-top: 20px;
+            border: 1px solid #ddd;    
+        }
+.table > tbody > tr > td {
+            vertical-align: middle;
+        }
