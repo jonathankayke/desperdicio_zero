@@ -126,7 +126,7 @@ html, body {
 }
 
 .fontelista {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 15px;
 }
 
@@ -234,18 +234,21 @@ html, body {
 }
 
 .card-stat {
-    color: #37752e;
+    color: #444444;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
     text-align: center;
     padding: 50px;
     width: 250px;
     display: inline-block;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                color 0.3s ease;
 }
 
-.card-stat:hover {
+.card-stat:hover {  
     transform: scale(1.1);
+    color: #37752e;
 }
 
 .hero-card {
@@ -329,4 +332,120 @@ body {
 .collapse.detalhes-container.show { /* .in para BS3, .show para BS4+ */
     max-height: 175px; /* altura máxima suficiente para o conteúdo */
     opacity: 1;
+}
+
+/* ---------------- PAGINA ADM_OPTIONS (BOTÕES) ---------------- */
+
+.fundo-branco {
+    background-color: #fff !important;
+    border-radius: 2px;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+}
+
+/* -- Estilos VERDE -- */
+.verde-escuro {
+    background-color: #28A745 !important;
+    border-color: #28A745 !important;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 2px;
+    padding: 14px 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.botao-verde {
+    border-radius: 5px;
+    text-align: center;
+    width: 100%;
+}
+
+.botao-verde:hover {
+    background-color: #218838 !important;
+    border-color: #1E7E34 !important;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    transform: scale(1.05) translateY(-2px);
+    letter-spacing: 2px;
+    padding: 14px 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}  
+
+/* -- Estilos LARANJA -- */
+.laranja-escuro {
+    background-color: #ffab45 !important;
+    border-color: #ffab45 !important;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 2px;
+    padding: 14px 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.botao-laranja {
+    border-radius: 5px;
+    text-align: center;
+    width: 100%;
+}
+
+.botao-laranja:hover {
+    background-color: #db9239 !important;
+    border-color: #c4710c !important;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    transform: scale(1.05) translateY(-2px);
+    letter-spacing: 2px;
+    padding: 14px 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* -- Estilos AZUL (Novo) -- */
+.azul-escuro {
+    background-color: #007BFF !important;
+    border-color: #007BFF !important;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 2px;
+    padding: 14px 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.botao-azul {
+    border-radius: 5px;
+    text-align: center;
+    width: 100%;
+}
+
+.botao-azul:hover {
+    background-color: #138496 !important;
+    border-color: #117a8b !important;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    transform: scale(1.05) translateY(-2px);
+    letter-spacing: 2px;
+    padding: 14px 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+.borda-btn {
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+   
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+.borda-btn:hover {
+   color: white;
+    font-weight: bold;
+    font-size: 15px;
+    transform: scale(1.05) translateY(-2px);
+   
+   
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
