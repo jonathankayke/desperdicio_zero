@@ -43,7 +43,7 @@ $totalRows  =   $lista->num_rows;
                         <th class="hidden-xs">Endereço</th>
                         <th class="visible-xs"></th>
                         <th>
-                        <a href="Doacao_insere.php" class="btn btn-block btn-success btn-xs">
+                        <a href="Doacao_insere.php" class="btn btn-block btn-success btn-xs borda-btn">
                             <span class="glyphicon glyphicon-plus"></span>
                         </a> 
                         </th>
