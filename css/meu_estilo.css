@@ -95,7 +95,12 @@
         }
     }
 
-    /* --- EFEITO DE HOVER (LINHA VERDE) --- */
+   /* --- fundo do hover --- */
+    .navbar-nav > li > a:hover {
+        background-color: #37752e;
+    }
+
+     /* --- EFEITO DE HOVER (LINHA VERDE) --- */
     .navbar-nav > li > a {
         position: relative;
         text-decoration: none;
@@ -119,11 +124,11 @@
     }
 
     /* =========================================
-    LINK 1: DOAÇÕES (Verde)
+   DOAÇÕES (Verde)
     ========================================= */
-    #menu-doacoes:hover {
-        color: #28A745 !important; /* Texto Verde */
-    }
+    /* #menu-doacoes:hover {
+        color: #28A745 !important; 
+    } */
     #menu-doacoes:hover::after {
         background-color: #28A745; /* Linha Verde */
         
@@ -131,29 +136,27 @@
     }
 
     /* =========================================
-    LINK 2: TIPOS (Laranja)
+     TIPOS (Laranja)
     ========================================= */
-    #menu-tipos:hover {
-        color: #ffab45 !important; /* Texto Laranja */
-    }
+    /* #menu-tipos:hover {
+        color: #ffab45 !important;
+    } */
     #menu-tipos:hover::after {
         background-color: #ffab45; /* Linha Laranja */
         width: 70%;
     }
 
     /* =========================================
-    LINK 3: USUÁRIOS (Azul)
+     USUÁRIOS (Azul)
     ========================================= */
-    #menu-usuarios:hover {
-        color: #007BFF !important; /* Texto Azul */
-    }
+        /* #menu-usuarios:hover {
+            color: #007BFF !important; 
+        } */
     #menu-usuarios:hover::after {
         background-color: #007BFF; /* Linha Azul */
         width: 70%;
     }
-    #menu-admin:hover {
-        color: #007BFF; /* Linha Azul */
-    }
+
     #menu-admin:hover::after {
         
         background:linear-gradient(to right, #28A745, #ffab45, #007BFF) !important; /* Gradiente Verde-Laranja-Azul */

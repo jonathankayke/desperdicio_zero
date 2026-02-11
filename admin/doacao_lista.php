@@ -33,7 +33,7 @@ $totalRows = $lista->num_rows;
                     <thead>
                         <tr>
                             <th class="hidden">ID</th>
-                            <th>IMAGEM</th>
+                            <th>Imagem</th>
                             <th class="hidden-xs">Empresa</th>
                             <th class="hidden-xs">Contato</th>
                             <th class="hidden-xs">Categoria</th>
