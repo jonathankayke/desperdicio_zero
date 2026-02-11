@@ -26,7 +26,7 @@ $totalRows  =   $lista->num_rows;
 
 <body class="fundofixo">
     <main class="container">
-        <h1 class="breadcrumb text-info text-center">Lista de Usuários</h1>
+        <h1 class="text-info text-center">Lista de Usuários</h1>
         
         <div class="lista-wrapper borda-azul">
             <table class="table table-hover table-condensed tbopacidade fontelista">

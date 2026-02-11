@@ -33,7 +33,7 @@ $totalRows = ($lista)->num_rows;
     <main class="container">
         <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
             <!-- dimensionamento -->
-            <h1 class="breadcrumb text-warning text-center">Lista dos Tipos</h1>
+            <h1 class="text-warning text-center">Lista dos Tipos</h1>
             <!-- table>thead>tr>th*8 -->
         <div class="lista-wrapper borda-laranja">
             <table class="table table-hover table-condensed tbopacidade">
