@@ -1,7 +1,4 @@
 <?php
-// Incluindo o Sistema de autenticação
-include("acesso_com.php");
-
 include('../Connections/conn_alimentos.php');
 
 $consulta   =   "
@@ -23,25 +20,13 @@ $totalRows  =   $lista->num_rows;
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/meu_estilo.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-    <style>
-        /* --- ESTILO DE FUNDO SÓLIDO --- */
-        body.fundofixo {
-            /* Cor cinza bem claro, padrão de dashboards modernos */
-            background-color: #f4f6f9; 
-            background-image: none; /* Garante que não tenha imagem */
-        }
-
-        /* Ajuste para centralizar verticalmente o conteúdo da tabela */
-        
-    </style>
 </head>
 
 <?php include("menu_adm.php") ?>
 
 <body class="fundofixo">
     <main class="container">
-        <h1 class="breadcrumb text-success text-center">Lista de Usuários</h1>
+        <h1 class="breadcrumb text-info text-center">Lista de Usuários</h1>
         
         <div class="lista-wrapper borda-azul">
             <table class="table table-hover table-condensed tbopacidade fontelista">

@@ -7,17 +7,17 @@
     }
 
     /* ------------------------ FUNDO ---------------------- */
-    /* .fundofixo {
-        background: url(../imagens/fundosite.jpg) no-repeat fixed;
+    .fundofixo {
+        background: url(../imagens/fundofixo.png) no-repeat fixed;
         background-size: cover;
         -webkit-background-size: cover;
         
-    } */
-    body.fundofixo {
-                /* Cor cinza bem claro, padrão de dashboards modernos */
+    }
+    /* body.fundofixo {
+            
                 background-color: #f4f6f9; 
-                background-image: none; /* Garante que não tenha imagem */
-            }
+                background-image: none;
+            } */
 
     /* ------------------------ ESTILO DO FORMULÁRIO ---------------- */
     .alert-success {
