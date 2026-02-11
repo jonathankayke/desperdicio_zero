@@ -20,7 +20,6 @@ $totalRows = ($lista)->num_rows;
 
 <body class="container">
 
-
     <!-- Doaçoes -->
     <h2 class="breadcrumb alert-success" id="doacoes">Doações</h2>
 
@@ -32,8 +31,7 @@ $totalRows = ($lista)->num_rows;
                 // Gerar um ID único para cada item da lista
                 $collapseID = "detalhes_" . $row['id_doacao'];
         ?>
-
-                <div class="thumbnail card-doacao">
+                <div class="thumbnail card-doacao" data-link="detalhe_doacao.php?id=<?php echo $row['id_doacao']; ?>" >
                     <div class="row" style="display: flex; align-items: center; flex-wrap: wrap;">
 
                         <div class="col-sm-2">
@@ -69,8 +67,11 @@ $totalRows = ($lista)->num_rows;
                             <p style="font-size: 0.9em; margin-bottom: 10px;">
                                 <i class="glyphicon glyphicon-briefcase"></i> <?php echo $row['nome_empresa']; ?>
                             </p>
-                            <button type="button" class="btn btn-success btn-block shadow-sm" data-toggle="collapse"
-                                data-target="#<?php echo $collapseID; ?>">
+                            <button type="button"
+                                    class="btn btn-success btn-block shadow-sm"
+                                    data-toggle="collapse"
+                                    data-target="#<?php echo $collapseID; ?>"
+                                >
                                 Ver detalhes
                             </button>
                         </div>
@@ -99,6 +100,19 @@ $totalRows = ($lista)->num_rows;
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
+    <script>
+    $('.doacao-click').on('click', function (e) {
+
+        // se o clique foi em um botão ou dentro dele, não faz nada
+        if ($(e.target).closest('button').length) {
+            return;
+        }
+
+        window.location.href = $(this).data('link');
+    });
+    </script>
+
 </body>
 
 </html>
