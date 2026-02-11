@@ -1,0 +1,10 @@
+<?php
+session_name('desperdiciooo');
+session_start();
+// Destrói a sessão limpando todos os dados
+session_destroy();
+// Após a ação a página será redirecionada
+$destino    =   "../indexadmin.php";
+header("Location: $destino");
+exit;
+?>
