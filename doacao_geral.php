@@ -20,9 +20,8 @@ $totalRows = ($lista)->num_rows;
 
 <body class="container">
 
-
     <!-- Doaçoes -->
-    <h2 class="breadcrumb alert-success" id="doacoes">Doações</h2>
+    <h1 class="breadcrumb text-success text-center">Lista de Doações</h1>
 
     <div class="row">
         <?php
@@ -42,7 +41,7 @@ $totalRows = ($lista)->num_rows;
                         </div>
 
                         <div class="col-sm-2">
-                            <h3 style="color: #c9302c; margin: 0; font-weight: bold;">
+                            <h3 style="color: #2cc960ff; margin: 0; font-weight: bold;">
                                 <?php echo $row['nome_alimento']; ?>
                             </h3>
                         </div>
@@ -69,8 +68,11 @@ $totalRows = ($lista)->num_rows;
                             <p style="font-size: 0.9em; margin-bottom: 10px;">
                                 <i class="glyphicon glyphicon-briefcase"></i> <?php echo $row['nome_empresa']; ?>
                             </p>
-                            <button type="button" class="btn btn-success btn-block shadow-sm" data-toggle="collapse"
-                                data-target="#<?php echo $collapseID; ?>">
+                            <button type="button"
+                                    class="btn btn-success btn-block shadow-sm"
+                                    data-toggle="collapse"
+                                    data-target="#<?php echo $collapseID; ?>"
+                                >
                                 Ver detalhes
                             </button>
                         </div>
@@ -99,6 +101,19 @@ $totalRows = ($lista)->num_rows;
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
+    <script>
+    $('.doacao-click').on('click', function (e) {
+
+        // se o clique foi em um botão ou dentro dele, não faz nada
+        if ($(e.target).closest('button').length) {
+            return;
+        }
+
+        window.location.href = $(this).data('link');
+    });
+    </script>
+
 </body>
 
 </html>

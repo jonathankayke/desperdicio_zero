@@ -111,19 +111,53 @@ body.fundofixo {
     height: 3px;
     display: block;
     bottom: 10px; 
-    background: #179b12;
+    background-color: black;
     transition: width 0.4s ease;
     left: 0;
     right: 0;
     margin: auto;
 }
 
-.navbar-nav > li > a:hover {
-    color: #179b12 !important;
+/* =========================================
+   LINK 1: DOAÇÕES (Verde)
+   ========================================= */
+#menu-doacoes:hover {
+    color: #28A745 !important; /* Texto Verde */
+}
+#menu-doacoes:hover::after {
+    background-color: #28A745; /* Linha Verde */
+    
+    width: 70%;
 }
 
-.navbar-nav > li > a:hover::after {
-    width: 70%; 
+/* =========================================
+   LINK 2: TIPOS (Laranja)
+   ========================================= */
+#menu-tipos:hover {
+    color: #ffab45 !important; /* Texto Laranja */
+}
+#menu-tipos:hover::after {
+    background-color: #ffab45; /* Linha Laranja */
+    width: 70%;
+}
+
+/* =========================================
+   LINK 3: USUÁRIOS (Azul)
+   ========================================= */
+#menu-usuarios:hover {
+    color: #007BFF !important; /* Texto Azul */
+}
+#menu-usuarios:hover::after {
+    background-color: #007BFF; /* Linha Azul */
+    width: 70%;
+}
+#menu-admin:hover {
+    color: #007BFF; /* Linha Azul */
+}
+#menu-admin:hover::after {
+    
+    background:linear-gradient(to right, #28A745, #ffab45, #007BFF) !important; /* Gradiente Verde-Laranja-Azul */
+    width: 70%;
 }
 
 /* -------------------- OUTROS ESTILOS -------------------------- */
@@ -461,8 +495,8 @@ body {
 }
 
 .botao-azul:hover {
-    background-color: #138496 !important;
-    border-color: #117a8b !important;
+    background-color: #0058b6 !important;
+    border-color: #0058b6 !important;
     color: white;
     font-weight: bold;
     font-size: 15px;
@@ -503,3 +537,16 @@ body {
 .table > tbody > tr > td {
             vertical-align: middle;
         }
+
+.borda-verde{
+    border-left: 5px solid #28A745;
+}
+.borda-azul{
+    border-left: 5px solid #007BFF;
+}
+.borda-laranja{
+    border-left: 5px solid #ffab45;
+}
+.texto-gradiente {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) ;
+}

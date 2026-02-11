@@ -1,36 +1,45 @@
-<?php 
-include("../Connections/conn_produtos.php");
-if ($_POST){
-    mysqli_select_db($conn_produtos,$database_conn);
+<?php
+// Incluir o arquivo e fazer a conexão
+include("../Connections/conn_alimentos.php");
 
-    // verificar senha e ousuario recebidos
-    $login_usuario=$_POST["login_usuario"];
-    $senha_usuario=$_POST["senha_usuario"];
-    $verificaSQL = "SELECT * FROM tbusuarios WHERE login_usuario = '$login_usuario' AND senha_usuario = '$senha_usuario' ";
+// Iniciar a verificação do login
+if($_POST){
+    // Definir o USE do banco de dados
+    mysqli_select_db($conn_alimentos,$database_conn);
 
-    // carregar dados e verificar linhas
-    $lista_session = mysqli_query($conn_produtos,$verificaSQL);
-    $row_session = $lista_session->fetch_assoc();
-    $totalRows_session = mysqli_num_rows($lista_session);
-    
-    if (!isset($_SESSION)) {
-        $sessao_antiga = session_name('chuletaaa');
+    // Verificar o login e a senha recebidos
+    $login_usuario  =   $_POST['login_usuario'];
+    $senha_usuario  =   $_POST['senha_usuario'];
+
+    $verificaSQL    =   "
+                        SELECT  *
+                        FROM    tbusuarios
+                        WHERE   login_usuario='$login_usuario'
+                                AND senha_usuario='$senha_usuario';
+                        ";
+    // Carregar os dados e verificar as linhas
+    $lista_session      =   mysqli_query($conn_alimentos,$verificaSQL);
+    $row_session        =   $lista_session->fetch_assoc();
+    $totalRows_session  =   mysqli_num_rows($lista_session);
+
+    // Se a sessão não existir, inicia uma
+    if(!isset($_SESSION)){
+        $sessao_antiga  =   session_name("desperdiciooo");
         session_start();
-        $session_name_new = session_name(); //recupero o nome da atual sessão
+        $session_name_new   =   session_name(); // recupero o nome da atual sessão
     };
 
-    // carregar informações na sessão
-    if($totalRows_session > 0){
-        $_SESSION['login_usuario'] = $login_usuario;
-        $_SESSION['nivel_usuario'] = $row_session['nivel_usuario'];
-        $_SESSION['nome_da_sessao'] = session_name();
-       echo "<script>window.open('index.php','_self')</script>";
-    } else {
-        // mensagem de erro
+    // Carregar informações em uma sessão
+    if($totalRows_session>0){
+        $_SESSION['login_usuario']  =   $login_usuario;
+        $_SESSION['nivel_usuario']  =   $row_session['nivel_usuario'];
+        $_SESSION['nome_da_sessao'] =   session_name();
+        echo "<script>window.open('indexadmin.php','_self')</script>";
+    }else{
         echo "<script>window.open('invasor.php','_self')</script>";
     };
-};
 
+};
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

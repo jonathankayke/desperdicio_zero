@@ -1,4 +1,7 @@
 <?php
+// Incluindo o Sistema de autenticação
+include("acesso_com.php");
+
 include("../Connections/conn_alimentos.php");
 
 $consulta = "
@@ -27,7 +30,7 @@ $totalRows = $lista->num_rows;
     <main class="container font">
         <h1 class="breadcrumb text-success text-center">Lista de Doações</h1>
         
-        <div class="lista-wrapper">
+        <div class="lista-wrapper borda-verde">
             <div class="table-responsive">
                 <table class="table table-hover table-condensed tbopacidade fontelista">
                     <thead>

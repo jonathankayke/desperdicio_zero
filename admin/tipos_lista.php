@@ -1,4 +1,7 @@
 <?php
+// Incluindo o Sistema de autenticação
+include("acesso_com.php");
+
 // Incluir o arquivo e fazer a conexão
 include("../Connections/conn_alimentos.php");
 // Selecionar os dados
@@ -35,7 +38,7 @@ $totalRows = ($lista)->num_rows;
             <!-- dimensionamento -->
             <h1 class="breadcrumb text-success text-center">Lista dos Tipos</h1>
             <!-- table>thead>tr>th*8 -->
-        <div class="lista-wrapper">
+        <div class="lista-wrapper borda-laranja">
             <table class="table table-hover table-condensed tbopacidade">
                 <thead>
                     <tr>
