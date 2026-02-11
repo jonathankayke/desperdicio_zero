@@ -21,7 +21,7 @@ $totalRows = ($lista)->num_rows;
 <body class="container">
 
     <!-- Doaçoes -->
-    <h2 class="breadcrumb alert-success" id="doacoes">Doações</h2>
+    <h1 class="breadcrumb text-success text-center">Lista de Doações</h1>
 
     <div class="row">
         <?php
@@ -31,7 +31,8 @@ $totalRows = ($lista)->num_rows;
                 // Gerar um ID único para cada item da lista
                 $collapseID = "detalhes_" . $row['id_doacao'];
         ?>
-                <div class="thumbnail card-doacao" data-link="detalhe_doacao.php?id=<?php echo $row['id_doacao']; ?>" >
+
+                <div class="thumbnail card-doacao">
                     <div class="row" style="display: flex; align-items: center; flex-wrap: wrap;">
 
                         <div class="col-sm-2">
@@ -40,7 +41,7 @@ $totalRows = ($lista)->num_rows;
                         </div>
 
                         <div class="col-sm-2">
-                            <h3 style="color: #c9302c; margin: 0; font-weight: bold;">
+                            <h3 style="color: #2cc960ff; margin: 0; font-weight: bold;">
                                 <?php echo $row['nome_alimento']; ?>
                             </h3>
                         </div>
