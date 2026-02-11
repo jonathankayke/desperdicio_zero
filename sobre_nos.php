@@ -27,15 +27,10 @@
       <div class="container container-config text-center">
         <h2>Desperdício Zero</h2>
         <p class="txt-historia">
-          O Desperdício Zero é uma plataforma dedicada a combater o desperdício
-          de alimentos, conectando doadores e beneficiários de forma eficiente e
-          sustentável. Nossa missão é reduzir o impacto ambiental do desperdício
-          alimentar, promovendo a solidariedade e o acesso a alimentos para
-          aqueles que mais precisam. Através de parcerias com supermercados,
-          restaurantes e agricultores, facilitamos a doação de alimentos que
-          ainda estão em boas condições, garantindo que eles cheguem às mãos
-          certas. Junte-se a nós nessa causa nobre e ajude a construir um futuro
-          mais sustentável e justo para todos.
+          O Desperdício Zero não nasceu apenas como uma plataforma, mas como uma resposta a um contraste inaceitável: toneladas de alimentos perfeitamente bons sendo descartados enquanto milhares de famílias lutam diariamente para ter o que comer.
+          Nossa história começou ao observarmos o final do expediente em feiras e restaurantes locais. Percebemos que o problema não era a falta de comida, mas a falha na conexão. A comida existia, mas o caminho até quem precisava estava quebrado.
+          Hoje, somos a ponte que une a abundância de supermercados, restaurantes e produtores agrícolas à necessidade urgente de instituições e beneficiários. Através de uma logística inteligente e parcerias sólidas, garantimos que cada doação chegue ao destino certo com rapidez e dignidade.
+          Mais do que reduzir o impacto ambiental do desperdício, nossa missão é alimentar a esperança. Acreditamos que um futuro sustentável se constrói com solidariedade e ação prática. Junte-se a nós para transformar o descarte em oportunidade e a fome em sorrisos.
         </p>
       </div>
     </section>
@@ -128,6 +123,9 @@
           </div>
         </div>
       </div>
+    </section>
+    <section class="divisor-opaco">
+      
     </section>
     <!-- Link arquivos Bootstrap js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

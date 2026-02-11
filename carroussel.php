@@ -18,17 +18,9 @@
     <!-- imagens -->
     <div class="carousel-inner" role="listbox">
         <div class="item active">
-            <img src="imagens/banner_1.png" alt="" class="center-block">
-        </div> <!-- fecha item -->
-        <div class="item">
             <img src="imagens/banner_2.png" alt="" class="center-block">
         </div> <!-- fecha item -->
-        <div class="item">
-            <img src="imagens/banner_3.png" alt="" class="center-block">
-        </div> <!-- fecha item -->
-        <div class="item">
-            <img src="imagens/banner_4.png" alt="" class="center-block">
-        </div> <!-- fecha item -->
+       
 
         <!-- botões de navegação -->
         <a 
