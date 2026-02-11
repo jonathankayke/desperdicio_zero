@@ -25,7 +25,7 @@ $totalRows_menu = ($lista_menu)->num_rows;
 
 <body>
     <nav class="navbar navbar-default">
-        
+
         <div class="container-fluid">
 
             <div class="navbar-header navegacao">
@@ -62,6 +62,7 @@ $totalRows_menu = ($lista_menu)->num_rows;
                             <?php } while ($row_menu = $lista_menu->fetch_assoc()); ?>
                         </ul>
                     </li>
+                    <li><a href="#">SOBRE NÓS</a></li>
                     <li><a href="#contato">CONTATO</a></li>
 
                     <form action="doacao_busca.php" method="get" name="form_busca" id="form_busca"
@@ -75,25 +76,21 @@ $totalRows_menu = ($lista_menu)->num_rows;
                                         <span class="glyphicon glyphicon-search"></span>
                                     </button>
                                 </span>
-                                
-                            </div> <!-- fecha input-group -->
-                            
-                        </div> <!-- fecha form-group -->
-                        
-                    </form>
-                    
 
-                
-                        
-                    
+                            </div> <!-- fecha input-group -->
+
+                        </div> <!-- fecha form-group -->
+
+                    </form>
+
                     <li>
                         <a href="admin/indexadmin.php">
                             <span class="glyphicon glyphicon-user"></span>
                         </a>
-                   </li>    
-                
-                </ul> 
-                
+                    </li>
+
+                </ul>
+
             </div>
         </div>
 
