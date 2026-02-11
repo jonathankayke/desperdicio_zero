@@ -16,17 +16,29 @@
     <div class="col-xs-12 col-sm-6 col-md-3">
         <div class="card-doacao-moderno">
             <div class="card-img-wrapper">
-                <span class="card-badge badge-verde">Frutas</span>
-                <img src="https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=500&q=60" alt="Maçã">
+                <span class="card-badge badge-verde"> 
+                    <?php echo $row['categoria']; ?>
+                    <!-- nome da categoria -->
+                </span>
+                <!-- coloque o php da imagem -->
+                <!-- <img src="https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=500&q=60" alt="Maçã"> -->
             </div>
             <div class="card-content">
-                <h4 class="card-title">Maçãs Fuji</h4>
+                <h4 class="card-title">
+                    <!-- nome do alimento -->
+                    <?php echo $row['nome_alimento']; ?>
+                </h4>
                 <p class="card-info">
-                    <i class="fa-solid fa-weight-hanging"></i> 5 kg <br>
-                    <i class="fa-solid fa-calendar-days"></i> Val: 20/10
+                    <i class="fa-solid fa-weight-hanging"></i>
+                     <?php echo $row['quantidade']; ?> kg
+                     <br>
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <?php echo date('d/m/Y', strtotime($row['data_validade'])); ?>
                 </p>
                 <div class="card-footer-custom">
+                    <div class="text-center">
                     <span class="status-dot status-livre"></span> Disponível
+                    </div>
                 </div>
             </div>
         </div>
