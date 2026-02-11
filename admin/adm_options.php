@@ -13,7 +13,11 @@
 
 <body class="fundofixo">
     <main class="container">
-        <h1 class="breadcrumb text-success text-center">Área Administrativa</h1>
+        <div class="text-center">
+    <h1 class="texto-gradiente" style="font-size: 40px; margin-bottom: 20px;">
+        Área Administrativa
+    </h1>
+</div>
         <div class="row">
             
             <div class="col-sm-6 col-md-4">

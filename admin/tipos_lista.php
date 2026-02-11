@@ -35,7 +35,7 @@ $totalRows = ($lista)->num_rows;
             <!-- dimensionamento -->
             <h1 class="breadcrumb text-success text-center">Lista dos Tipos</h1>
             <!-- table>thead>tr>th*8 -->
-        <div class="lista-wrapper">
+        <div class="lista-wrapper borda-laranja">
             <table class="table table-hover table-condensed tbopacidade">
                 <thead>
                     <tr>

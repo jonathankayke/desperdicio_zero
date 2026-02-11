@@ -40,7 +40,7 @@ $totalRows  =   $lista->num_rows;
     <main class="container">
         <h1 class="breadcrumb text-success text-center">Lista de Usuários</h1>
         
-        <div class="lista-wrapper">
+        <div class="lista-wrapper borda-azul">
             <table class="table table-hover table-condensed tbopacidade fontelista">
                 <thead>
                     <tr>
