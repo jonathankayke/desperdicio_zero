@@ -69,9 +69,9 @@
     .navbar-custom {
         background-color: #ffffff;
         border: none;
-        border-bottom: 3px solid #8BC34A;
+        border-bottom: 3px solid #28a745;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        padding: 10px 0;
+        padding: 5px 0;
         margin-bottom: 0;
     }
 
@@ -631,3 +631,140 @@
 
         transform: scale(1.2);
     }
+
+    /* cards doacao cards */
+
+/* --- CARD DE DOAÇÃO MODERNO --- */
+.card-doacao-moderno {
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden; /* Garante que a imagem não saia das bordas arredondadas */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+    border: 1px solid #eee;
+    position: relative;
+}
+
+/* Efeito Hover no Card Inteiro */
+.card-doacao-moderno:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+    border-color: #28A745; /* Borda verde suave ao passar o mouse */
+}
+
+/* Área da Imagem */
+.card-img-wrapper {
+    height: 180px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem preencher sem esticar */
+    transition: transform 0.5s ease;
+}
+
+/* Zoom na imagem ao passar o mouse */
+.card-doacao-moderno:hover .card-img-wrapper img {
+    transform: scale(1.1);
+}
+
+/* Badges (Etiquetas de Categoria) */
+.card-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 2;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.badge-verde { background-color: #28A745; }
+.badge-laranja { background-color: #ffab45; }
+.badge-azul { background-color: #007BFF; }
+.badge-padrao { background-color: #6c757d; }
+
+/* Conteúdo do Card */
+.card-content {
+    padding: 15px;
+}
+
+.card-title {
+    margin: 0 0 10px 0;
+    font-weight: 700;
+    font-size: 18px;
+    color: #333;
+}
+
+.card-info {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.card-info i {
+    width: 20px;
+    color: #28A745; /* Ícones verdes */
+    text-align: center;
+}
+
+/* Rodapé do Card com Status e Botões */
+.card-footer-custom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #555;
+}
+
+/* Bolinha de Status */
+.status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.status-livre { background-color: #28A745; box-shadow: 0 0 5px #28A745;}
+.status-reservado { background-color: #ffab45; }
+
+/* Botões de Ação (Lápis e Lixeira) */
+.action-buttons {
+    opacity: 0.3; /* Meio transparente quando não está com mouse */
+    transition: opacity 0.3s;
+}
+
+.card-doacao-moderno:hover .action-buttons {
+    opacity: 1; /* Aparece total ao passar o mouse */
+}
+
+.btn-icon {
+    display: inline-block;
+    padding: 5px;
+    color: #888;
+    transition: color 0.2s;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.btn-icon:hover {
+    color: #007BFF;
+    transform: scale(1.2);
+}
+
+.btn-icon.btn-delete:hover {
+    color: #dc3545; /* Vermelho para excluir */
+}

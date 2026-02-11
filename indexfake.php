@@ -17,7 +17,7 @@
         <!-- DOAÇÔES -->
         <hr>
         <a name="doacoes"></a>
-        <?php include('doacao_geral.php'); ?>
+        <?php include('doacao_cards.php'); ?>
         <!-- RODAPÉ -->
         <footer>
             <?php include('rodape.php'); ?>
