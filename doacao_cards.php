@@ -27,15 +27,11 @@
                 </p>
                 <div class="card-footer-custom">
                     <span class="status-dot status-livre"></span> Disponível
-                    <div class="action-buttons">
-                        <a href="#" class="btn-icon"><i class="fa-solid fa-pen"></i></a>
-                        <a href="#" class="btn-icon btn-delete"><i class="fa-solid fa-trash"></i></a>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
-    
+
 </div>
 
     </div>
