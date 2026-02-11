@@ -32,7 +32,7 @@ $totalRows = ($lista)->num_rows;
                 $collapseID = "detalhes_" . $row['id_doacao'];
         ?>
 
-                <div class="thumbnail card-doacao">
+                <div class="lista-wrapper borda-verde">
                     <div class="row" style="display: flex; align-items: center; flex-wrap: wrap;">
 
                         <div class="col-sm-2">

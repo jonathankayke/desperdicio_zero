@@ -25,10 +25,12 @@ $totalRows_menu = ($lista_menu)->num_rows;
 
 <body>
     <nav class="navbar navbar-default">
+        
         <div class="container-fluid">
 
             <div class="navbar-header navegacao">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#defaultNavbar" aria-expanded="false">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#defaultNavbar" aria-expanded="false">
                     <span class="sr-only">Navegação Mobile</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -44,7 +46,8 @@ $totalRows_menu = ($lista_menu)->num_rows;
                     <li><a href="#doacoes">DOAÇÕES</a></li>
 
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false">
                             TIPOS
                             <span class="caret"></span>
                         </a>
@@ -60,50 +63,46 @@ $totalRows_menu = ($lista_menu)->num_rows;
                         </ul>
                     </li>
                     <li><a href="#contato">CONTATO</a></li>
-                    <form 
-                        action="doacao_busca.php"
-                        method="get"
-                        name="form_busca"
-                        id="form_busca"
-                        class="navbar-form navbar-left form_busca"
-                        role="search"
-                    >
-                        <div class="form-group">
+
+                    <form action="doacao_busca.php" method="get" name="form_busca" id="form_busca"
+                        class="navbar-form navbar-left form_busca" role="search">
+                        <div class="form-group" style="margin-top: 4px;">
                             <div class="input-group">
-                                <input 
-                                    type="text"
-                                    class="form-control"
-                                    placeholder="Pesquisar Doação"
-                                    name="buscar"
-                                    id="buscar"
-                                    size="13"
-                                    required
-                                >
+                                <input type="text" class="form-control" placeholder="Pesquisar Doação" name="buscar"
+                                    id="buscar" size="13" required>
                                 <span class="input-group-btn">
-                                    <button 
-                                        type="submit" 
-                                        class="btn btn-default"
-                                    >
+                                    <button type="submit" class="btn btn-default">
                                         <span class="glyphicon glyphicon-search"></span>
                                     </button>
                                 </span>
+                                
                             </div> <!-- fecha input-group -->
+                            
                         </div> <!-- fecha form-group -->
+                        
                     </form>
-                    <li class="active">
+                    
+
+                
+                        
+                    
+                    <li>
                         <a href="admin/indexadmin.php">
                             <span class="glyphicon glyphicon-user"></span>
                         </a>
-                    </li>
-                </ul>
+                   </li>    
+                
+                </ul> 
+                
             </div>
-
         </div>
+
     </nav>
 
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
 
 </body>
+
 </html>
 <?php mysqli_free_result($lista_menu); ?>
