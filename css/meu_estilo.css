@@ -770,3 +770,41 @@
     text-decoration: none;
     color: #fff;
 }
+.banner {
+    height: 80vh; /* Ocupa 80% da altura da tela */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                      url(../imagens/banner.jpg); /* Camada escura + imagem */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+}
+
+.banner-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.banner-content p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.btn-banner {
+    padding: 12px 30px;
+    background-color: #28A745;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-banner:hover {
+    background-color: #1a8633;
+    transform: scale(1.05);
+}

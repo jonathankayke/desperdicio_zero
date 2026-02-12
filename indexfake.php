@@ -9,11 +9,15 @@
 <!-- MENU -->
 <a name="home"></a>
 <?php include('menu_publico.php'); ?>
+<section class="banner">
+    <div class="banner-content">
+        <h1>Desperdicio Zero</h1>
+        <p>Compartilhe o que sobra. Alimente quem precisa.</p>
+        <a href="sobre_nos.php" class="btn-banner">Saiba Mais</a>
+    </div>
+</section>
 <body class="fundofixo">
-
     <main class="container">
-        <!-- CARROUSSEL -->
-        <?php include('carroussel.php'); ?>
         <!-- DOAÇÔES -->
         <hr>
         <a name="doacoes"></a>
