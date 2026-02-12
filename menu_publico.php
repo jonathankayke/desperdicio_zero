@@ -4,10 +4,7 @@ include("Connections/conn_alimentos.php");
 
 $tabela_menu = "tbtipos";
 $ordernar_menu = "rotulo_tipo";
-$consulta_menu = "
-                    SELECT  *
-                    FROM    " . $tabela_menu . "\n                    ORDER BY " . $ordernar_menu . ";
-                    ";
+$consulta_menu = "SELECT * FROM " . $tabela_menu . " ORDER BY " . $ordernar_menu . ";";
 $lista_menu = $conn_alimentos->query($consulta_menu);
 $row_menu = $lista_menu->fetch_assoc();
 $totalRows_menu = ($lista_menu)->num_rows;
@@ -18,14 +15,12 @@ $totalRows_menu = ($lista_menu)->num_rows;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Área Administrativa</title>
-    <!-- <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/meu_estilo.css"> -->
-</head>
+    <title>Desperdício Zero</title>
+    </head>
 
 <body>
-    <nav class="navbar navbar-default">
-
+    
+    <nav class="navbar navbar-custom">
         <div class="container-fluid">
 
             <div class="navbar-header navegacao">
@@ -37,19 +32,19 @@ $totalRows_menu = ($lista_menu)->num_rows;
                     <span class="icon-bar"></span>
                 </button>
                 <a href="indexfake.php" class="navbar-brand">
-                    <img src="imagens/Icon_menu.png" alt="">
+                    <img src="imagens/Icon_menu.png" alt="Logo" class="imagem-logo">
                 </a>
             </div>
 
             <div class="collapse navbar-collapse" id="defaultNavbar">
-                <ul class="nav navbar-nav navbar-right blacks">
+                <ul class="nav navbar-nav navbar-right borda-preta">
+                    
                     <li><a href="#doacoes">DOAÇÕES</a></li>
 
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                             aria-expanded="false">
-                            TIPOS
-                            <span class="caret"></span>
+                            TIPOS <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="doacao_por_tipo.php">TODOS</a></li>
@@ -62,44 +57,35 @@ $totalRows_menu = ($lista_menu)->num_rows;
                             <?php } while ($row_menu = $lista_menu->fetch_assoc()); ?>
                         </ul>
                     </li>
-                    <li><a href="#">SOBRE NÓS</a></li>
+
+                    <li><a href="sobre_nos.php">SOBRE NÓS</a></li>
                     <li><a href="#contato">CONTATO</a></li>
 
                     <form action="doacao_busca.php" method="get" name="form_busca" id="form_busca"
-                        class="navbar-form navbar-left form_busca" role="search">
-                        <div class="form-group" style="margin-top: 4px;">
+                        class="navbar-form navbar-left form_busca" role="search" style="margin-top: 12px;">
+                        <div class="form-group">
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Pesquisar Doação" name="buscar"
-                                    id="buscar" size="13" required>
+                                <input type="text" class="form-control" placeholder="Pesquisar..." name="buscar"
+                                    id="buscar" size="15" required>
                                 <span class="input-group-btn">
                                     <button type="submit" class="btn btn-default">
                                         <span class="glyphicon glyphicon-search"></span>
                                     </button>
                                 </span>
-
-                            </div> <!-- fecha input-group -->
-
-                        </div> <!-- fecha form-group -->
-
+                            </div>
+                        </div>
                     </form>
 
-                    <li>
-                        <a href="admin/indexadmin.php">
+                    <li class="btn-home">
+                        <a href="admin/indexadmin.php" title="Acesso Administrativo">
                             <span class="glyphicon glyphicon-user"></span>
                         </a>
                     </li>
 
                 </ul>
-
             </div>
         </div>
-
     </nav>
-
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
-
-</body>
-
+    </body>
 </html>
 <?php mysqli_free_result($lista_menu); ?>

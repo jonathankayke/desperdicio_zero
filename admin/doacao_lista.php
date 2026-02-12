@@ -1,5 +1,8 @@
 <?php
+<<<<<<< HEAD
 
+=======
+>>>>>>> b0d91b0663b420eca26a8689e6ed31cc54c6488f
 include("../Connections/conn_alimentos.php");
 
 $consulta = "
@@ -26,7 +29,7 @@ $totalRows = $lista->num_rows;
 <body class="fundofixo">
     <?php include('menu_adm.php'); ?>
     <main class="container font">
-        <h1 class="breadcrumb text-success text-center">Lista de Doações</h1>
+        <h1 class="text-success text-center">Lista de Doações</h1>
         
         <div class="lista-wrapper borda-verde">
             <div class="table-responsive">
@@ -34,7 +37,7 @@ $totalRows = $lista->num_rows;
                     <thead>
                         <tr>
                             <th class="hidden">ID</th>
-                            <th>IMAGEM</th>
+                            <th>Imagem</th>
                             <th class="hidden-xs">Empresa</th>
                             <th class="hidden-xs">Contato</th>
                             <th class="hidden-xs">Categoria</th>

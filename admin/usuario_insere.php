@@ -60,10 +60,10 @@ if(isset($_POST['enviar'])){
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-md-10 col-md-offset-1">
-                <h1 class="text-center" style="color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.5); margin-bottom: 20px;">
+                <h1 class="text-center text-shadow">
                     Cadastro de Usuários
                 </h1>
-                <div class="thumbnail" style="border: none; background: none;">
+                <div class="thumbnail">
                     <div class="alert alert-success" role="alert">
                         <form action="" method="POST" enctype="multipart/form-data" name="form_usuario" id="form_usuario">
                             <div class="row">

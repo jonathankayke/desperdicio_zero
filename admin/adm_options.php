@@ -14,14 +14,14 @@
 <body class="fundofixo">
     <main class="container">
         <div class="text-center">
-    <h1 class="texto-gradiente" style="font-size: 40px; margin-bottom: 20px;">
+    <h1 class="texto-shadow" style="font-size: 40px; margin-bottom: 20px;">
         Área Administrativa
     </h1>
         </div>
         <div class="row">
             
             <div class="col-sm-6 col-md-4">
-                <div class="thumbnail doacoes-card text-center">
+                <div class="thumbnail text-center borda-verde">
                   <span class="fa-7x">
                     <i class="fa-solid fa-bag-shopping" style="color: #28A745;"></i>
                   </span>
@@ -51,7 +51,7 @@
             </div>
 
             <div class="col-sm-6 col-md-4">
-                <div class="thumbnail text-center" style="background-color: #FCF8E3;">
+                <div class="thumbnail text-center borda-laranja">
                     <span class="fa-7x">
                         <i class="fa-solid fa-layer-group" style="color: #ffab45;"></i>
                     </span>
@@ -81,7 +81,7 @@
             </div>
 
             <div class="col-sm-6 col-md-4">
-                <div class="thumbnail text-center" style="background-color: #c9e9f8ff;">
+                <div class="thumbnail text-center borda-azul">
                     <span class="fa-7x">
                         <i class="fa-solid fa-user-pen" style="color: #007BFF;"></i>
                     </span>

@@ -1,23 +1,25 @@
     @charset "utf-8";
 
     /* ------------------------ CONFIGURAÇÕES GERAIS ---------------------- */
-    html, body {
+    html,
+    body {
         height: 100%;
         margin: 0;
     }
 
     /* ------------------------ FUNDO ---------------------- */
-    /* .fundofixo {
-        background: url(../imagens/fundosite.jpg) no-repeat fixed;
+    .fundofixo {
+        background: url(../imagens/fundofixo.png) no-repeat fixed;
         background-size: cover;
         -webkit-background-size: cover;
-        
-    } */
-    body.fundofixo {
-                /* Cor cinza bem claro, padrão de dashboards modernos */
+
+    }
+
+    /* body.fundofixo {
+            
                 background-color: #f4f6f9; 
-                background-image: none; /* Garante que não tenha imagem */
-            }
+                background-image: none;
+            } */
 
     /* ------------------------ ESTILO DO FORMULÁRIO ---------------- */
     .alert-success {
@@ -36,7 +38,7 @@
     }
 
     .secao-titulo {
-        color: #3c763d;
+        color: #4CAF50;
         border-bottom: 1px solid #d6e9c6;
         padding-bottom: 10px;
         margin-bottom: 20px;
@@ -44,19 +46,42 @@
     }
 
     /* ------------------------ NAVBAR COMPACTA (60px) ---------------------- */
-    .navegacao {
-        min-height: 60px;
-        border-bottom: 1px solid #ddd;
-        position: relative;
-        border-radius: 0; /* Remove as bordas arredondadas padrão do Bootstrap */
-        margin-bottom: 0; /* Remove a margem de baixo que o Bootstrap coloca */
+
+    .imagem-logo {
+
+        height: 50px;
+        width: auto;
+
     }
 
-    .blacks a {
-        color: black !important;
+    /* navbar mobile */
+
+    .navbar-toggle {
+        background-color: #28A745;
+        border: none;
     }
+
+    .navbar-toggle .icon-bar {
+        background-color: #fff;
+    }
+
+
+    .navbar-custom {
+        background-color: #ffffff;
+        border: none;
+        border-bottom: 3px solid #4CAF50;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 5px 0;
+        margin-bottom: 0;
+    }
+
+    navbar-header {
+        display: flex;
+        align-items: center;
+    }
+
     .navegacao .container-fluid {
-        position: relative; 
+        position: relative;
         height: 60px;
     }
 
@@ -72,7 +97,7 @@
         padding: 5px 15px;
         height: 60px;
         position: relative;
-        z-index: 10; 
+        z-index: 10;
     }
 
     .navegacao .navbar-brand img {
@@ -85,82 +110,83 @@
     /* Regra apenas para Computadores/Tablets */
     @media (min-width: 768px) {
         .navbar-nav {
-            float: right !important; 
+            float: right !important;
             margin: 0;
         }
 
-        .navbar-nav > li {
-            float: left; 
+        .navbar-nav>li {
+            float: left;
             display: block;
         }
     }
 
-    /* --- EFEITO DE HOVER (LINHA VERDE) --- */
-    .navbar-nav > li > a {
-        position: relative;
-        text-decoration: none;
-        padding: 20px 15px; 
-        transition: color 0.3s ease;
+    /* links da navbar */
+    .navbar-nav>li>a {
+        color: #000000 !important;
+        font-weight: 600;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        margin: 0 5px;
+        border-radius: 5px;
     }
 
-    /* A linha verde */
-    .navbar-nav > li > a::after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 3px;
-        display: block;
-        bottom: 10px; 
-        background-color: black;
-        transition: width 0.4s ease;
-        left: 0;
-        right: 0;
-        margin: auto;
+    /* Efeito ao passar o mouse nos links */
+    .navbar-nav>li>a:hover {
+        color: #4CAF50 !important;
+        background-color: #f1f8e9 !important;
     }
 
-    /* =========================================
-    LINK 1: DOAÇÕES (Verde)
-    ========================================= */
-    #menu-doacoes:hover {
-        color: #28A745 !important; /* Texto Verde */
-    }
-    #menu-doacoes:hover::after {
-        background-color: #28A745; /* Linha Verde */
-        
-        width: 70%;
-    }
-
-    /* =========================================
-    LINK 2: TIPOS (Laranja)
-    ========================================= */
-    #menu-tipos:hover {
-        color: #ffab45 !important; /* Texto Laranja */
-    }
-    #menu-tipos:hover::after {
-        background-color: #ffab45; /* Linha Laranja */
-        width: 70%;
+    /* botao home */
+    .navbar-nav>li.btn-home>a {
+        background-color: #FF9800 !important;
+        color: #fff !important;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        padding: 0 !important;
+        margin-top: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
 
-    /* =========================================
-    LINK 3: USUÁRIOS (Azul)
-    ========================================= */
-    #menu-usuarios:hover {
-        color: #007BFF !important; /* Texto Azul */
+    .navbar-nav>li.btn-home>a span {
+        font-size: 20px;
+        top: 0;
+        margin-left: -1px;
     }
-    #menu-usuarios:hover::after {
-        background-color: #007BFF; /* Linha Azul */
-        width: 70%;
+
+    .navbar-nav>li.btn-home>a:hover {
+        background-color: #F57C00 !important;
+        transform: scale(1.1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
-    #menu-admin:hover {
-        color: #007BFF; /* Linha Azul */
+
+    /* imagem hover */
+    .navbar-brand img:hover {
+        transform: scale(1.05);
     }
-    #menu-admin:hover::after {
-        
-        background:linear-gradient(to right, #28A745, #ffab45, #007BFF) !important; /* Gradiente Verde-Laranja-Azul */
-        width: 70%;
-    }
+
 
     /* -------------------- OUTROS ESTILOS -------------------------- */
+    /* area administrativa */
+    .thumbnail.text-center:hover {
+        transform: scale(1.05) translateY(-5px);
+        /* Sobe um pouco mais para dar destaque */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* Garante que o thumbnail tenha uma transição suave mesmo quando não está com o mouse em cima */
+    .thumbnail.text-center {
+        transition: all 0.3s ease-in-out;
+        will-change: transform;
+        /* Otimização de performance para a animação */
+    }
+
     .tbopacidade {
         background-color: #ffffff;
     }
@@ -183,7 +209,8 @@
         background-color: #d6e9c6;
     }
 
-    .table td, .table th {
+    .table td,
+    .table th {
         vertical-align: middle !important;
     }
 
@@ -196,7 +223,7 @@
     }
 
     .header-sobrenos {
-        background-color: #316432;
+        background-color: #28A745;
         box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
         padding: 20px;
     }
@@ -210,7 +237,8 @@
         background-attachment: fixed;
         background-repeat: no-repeat;
     }
-    .hero{
+
+    .hero {
         min-height: 400px;
         padding-top: 50px;
         margin: 50px;
@@ -220,24 +248,26 @@
         background-color: #ffffff;
         width: 100%;
         padding: 60px 0;
-        position: relative; 
-        z-index: 10; 
+        position: relative;
+        z-index: 10;
         margin-top: -50px;
-        border-radius: 30px 30px 0 0; 
-        box-shadow: 0px -10px 30px rgba(0, 0, 0, 0.3); 
-        border-bottom: 5px solid #37752e;
+        border-radius: 30px 30px 0 0;
+        box-shadow: 0px -10px 30px rgba(0, 0, 0, 0.3);
+        border-bottom: 5px solid #4CAF50;
     }
 
     .hero-verde {
-        background-color: #37752e;
+        background-color: #28A745;
         width: 100%;
         padding: 60px 0;
-        position: relative; 
-        z-index: 10; 
+        position: relative;
+        z-index: 10;
         margin-top: -50px;
     }
 
-    .thumbnail {
+
+
+    /* .thumbnail {
         height: 100%;
         border-radius: 8px;
     }
@@ -246,7 +276,7 @@
         width: 100%;
         height: 180px;
         object-fit: cover;
-    }
+    } */
 
     .row-eq-height {
         display: flex;
@@ -283,14 +313,14 @@
         padding: 40px 20px;
         margin-bottom: 30px;
         transition: transform 0.3s ease,
-                    box-shadow 0.3s ease,
-                    color 0.3s ease;
+            box-shadow 0.3s ease,
+            color 0.3s ease;
         background-color: #ffffff;
     }
 
     .card-stat:hover {
         transform: scale(1.08);
-        color: #37752e;
+        color: #4CAF50;
     }
 
     @media (min-width: 768px) {
@@ -300,36 +330,37 @@
             justify-content: flex-start;
             align-items: stretch;
         }
-        
+
         .hero-card [class*="col-"] {
             display: flex;
         }
     }
 
-.hero-card {
-    padding: 50px 20px;
-}
+    .hero-card {
+        padding: 50px 20px;
+    }
 
-.divisor-opaco {
-    width: 100%;
-    height: 50%;
-    position: relative;
-    background-color: #fff;
-    overflow: hidden;
-}
+    .divisor-opaco {
+        width: 100%;
+        height: 50%;
+        position: relative;
+        background-color: #fff;
+        overflow: hidden;
+    }
 
-.divisor-opaco::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(../imagens/cooking.png);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
+    .divisor-opaco::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(../imagens/cooking.png);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
     .hero-card {
         padding: 50px 20px;
     }
@@ -347,12 +378,12 @@
 
     /* Título estilizado */
     .breadcrumb.alert-success {
-        background-color: #28a745;
+        background-color: #28A745;
         color: white;
         border: none;
         border-radius: 8px;
         padding: 20px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     /* O CARD PRINCIPAL */
@@ -361,14 +392,14 @@
         border-radius: 12px !important;
         background-color: #fff !important;
         padding: 20px !important;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.05) !important;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05) !important;
         transition: all 0.3s ease;
         margin-bottom: 25px;
     }
 
     /* Efeito Hover no Card Inteiro */
     .thumbnail.card-doacao:hover {
-        box-shadow: 0 8px 15px rgba(0,0,0,0.1) !important;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1) !important;
         transform: translateY(-2px);
     }
 
@@ -378,7 +409,8 @@
         border-radius: 8px;
         padding: 15px;
         margin-top: 15px;
-        border-top: 2px solid #28a745; /* Linha verde no topo do detalhe */
+        border-top: 2px solid #28A745;
+        /* Linha verde no topo do detalhe */
     }
 
     /* Labels de destaque */
@@ -395,6 +427,7 @@
         color: #333;
         font-size: 1.1em;
     }
+
     /* Transição suave para detalhes colapsáveis */
     .collapse.detalhes-container {
         max-height: 0;
@@ -404,8 +437,10 @@
     }
 
     .collapse.detalhes-container.in,
-    .collapse.detalhes-container.show { /* .in para BS3, .show para BS4+ */
-        max-height: 175px; /* altura máxima suficiente para o conteúdo */
+    .collapse.detalhes-container.show {
+        /* .in para BS3, .show para BS4+ */
+        max-height: 175px;
+        /* altura máxima suficiente para o conteúdo */
         opacity: 1;
     }
 
@@ -418,6 +453,20 @@
         font-size: large;
         font-weight: bold;
     }
+
+    /* Dá um espacinho entre os botões se eles estiverem lado a lado */
+    .btn-group-justified .btn-group {
+        padding: 0 2px;
+
+    }
+
+    .botao-verde,
+    .botao-laranja,
+    .botao-azul {
+        border-radius: 10px !important;
+    }
+
+
 
     /* -- Estilos VERDE -- */
     .verde-escuro {
@@ -438,8 +487,8 @@
     }
 
     .botao-verde:hover {
-        background-color: #218838 !important;
-        border-color: #1E7E34 !important;
+        background-color: #238d3c !important;
+        border-color: #238d3c !important;
         color: white;
         font-weight: bold;
         font-size: 15px;
@@ -447,7 +496,7 @@
         letter-spacing: 2px;
         padding: 14px 0;
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    }  
+    }
 
     /* -- Estilos LARANJA -- */
     .laranja-escuro {
@@ -506,50 +555,211 @@
         transform: scale(1.05) translateY(-2px);
         letter-spacing: 2px;
         padding: 14px 0;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-}
-.borda-btn {
-    color: white;
-    font-weight: bold;
-    font-size: 15px;
-   
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-}
-.borda-btn:hover {
-   color: white;
-    font-weight: bold;
-    font-size: 15px;
-    transform: scale(1.05) translateY(-2px);
-   
-   
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-}
-.acoes-container {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-}
-.lista-wrapper {
-            background-color: #ffffff; 
-            padding: 20px;             
-            border-radius: 10px;       
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
-            margin-top: 20px;
-            border: 1px solid #ddd;    
-        }
-.table > tbody > tr > td {
-            vertical-align: middle;
-        }
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
 
-.borda-verde{
-    border-left: 5px solid #28A745;
+    .borda-btn {
+        color: white;
+        font-weight: bold;
+        font-size: 15px;
+
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    .borda-btn:hover {
+        color: white;
+        font-weight: bold;
+        font-size: 15px;
+        transform: scale(1.05) translateY(-2px);
+
+
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    .acoes-container {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .lista-wrapper {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+        border: 1px solid #ddd;
+    }
+
+    .table>tbody>tr>td {
+        vertical-align: middle;
+    }
+
+    .borda-verde {
+        border-left: 5px solid #28A745;
+    }
+
+    .borda-azul {
+        border-left: 5px solid #007BFF;
+    }
+
+    .borda-laranja {
+        border-left: 5px solid #ffab45;
+    }
+
+    .borda-preta {
+        border-left: 5px solid #000000;
+        box-shadow: 0 0px 5px rgba(0, 0, 0, 0.1);
+    }
+    .texto-shadow {
+        color: #2c3e50;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-shadow: 2px 2px 0px rgba(255, 255, 255, 1);
+    }
+
+    .fa-solid {
+        transition: all 0.3s ease;
+    }
+
+    .fa-solid:hover {
+
+        transform: scale(1.2);
+    }
+
+    /* cards doacao cards */
+
+/* --- CARD DE DOAÇÃO MODERNO --- */
+.card-doacao-moderno {
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden; /* Garante que a imagem não saia das bordas arredondadas */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+    border: 1px solid #eee;
+    position: relative;
 }
-.borda-azul{
-    border-left: 5px solid #007BFF;
+
+/* Efeito Hover no Card Inteiro */
+.card-doacao-moderno:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+    border-color: #28A745; /* Borda verde suave ao passar o mouse */
 }
-.borda-laranja{
-    border-left: 5px solid #ffab45;
+
+/* Área da Imagem */
+.card-img-wrapper {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
 }
-.texto-gradiente {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) ;
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem preencher sem esticar */
+    transition: transform 0.5s ease;
+    border-radius: 10%;
+}
+
+/* Zoom na imagem ao passar o mouse */
+.card-doacao-moderno:hover .card-img-wrapper img {
+    transform: scale(1.1);
+}
+
+/* Badges (Etiquetas de Categoria) */
+.card-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 2;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.badge-verde { background-color: #28A745; }
+.badge-laranja { background-color: #ffab45; }
+.badge-azul { background-color: #007BFF; }
+.badge-padrao { background-color: #6c757d; }
+
+/* Conteúdo do Card */
+.card-content {
+    padding: 20px;
+}
+
+.card-title {
+    margin: 0 0 10px 0;
+    font-weight: 700;
+    font-size: 18px;
+    color: #333;
+}
+
+.card-info {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.card-info i {
+    width: 20px;
+    color: #28A745; /* Ícones verdes */
+    text-align: center;
+}
+
+/* Rodapé do Card com Status e Botões */
+.card-footer-custom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #555;
+}
+
+
+.btn-icon {
+    display: inline-block;
+    padding: 5px;
+    color: #888;
+    transition: color 0.2s;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.btn-icon:hover {
+    color: #007BFF;
+    transform: scale(1.2);
+}
+
+.btn-icon.btn-delete:hover {
+    color: #dc3545; /* Vermelho para excluir */
+}
+
+.ver-todos-link {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #28A745;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.ver-todos-link:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    text-decoration: none;
+    color: #fff;
 }
