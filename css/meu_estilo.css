@@ -267,16 +267,17 @@
 
 
 
-    /* .thumbnail {
+   .thumbnail-sobrenos {
         height: 100%;
         border-radius: 8px;
+        background-color: #fff;
     }
 
-    .thumbnail img {
+    .thumbnail-sobrenos img {
         width: 100%;
         height: 180px;
         object-fit: cover;
-    } */
+    }
 
     .row-eq-height {
         display: flex;
