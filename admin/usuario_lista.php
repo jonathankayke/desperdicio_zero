@@ -1,6 +1,5 @@
 <?php
-// Incluindo o Sistema de autenticação
-include("acesso_com.php");
+
 
 include('../Connections/conn_alimentos.php');
 
