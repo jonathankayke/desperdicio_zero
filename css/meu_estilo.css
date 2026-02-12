@@ -619,15 +619,16 @@
         text-shadow: 2px 2px 0px rgba(255, 255, 255, 1);
     }
 
-    .fa-solid {
-        transition: all 0.3s ease;
-    }
+   .thumbnail.adm .fa-solid {
+    display: inline-block; /* Transforma em bloco para aceitar animação */
+    transition: transform 0.3s ease; /* Suavidade na ida e volta */
+    cursor: pointer;
+}
 
-    .fa-solid:hover {
-
-        transform: scale(1.2);
-    }
-
+/* Aplica o zoom apenas quando passar o mouse NESTE ícone específico */
+.thumbnail.adm .fa-solid:hover {
+    transform: scale(1.2); /* Aumenta o tamanho */
+}
     /* cards doacao cards */
 
 /* --- CARD DE DOAÇÃO MODERNO --- */
