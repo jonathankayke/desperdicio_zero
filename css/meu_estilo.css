@@ -22,18 +22,6 @@
         color: white !important;
     }
 
-
-    /* ------------------------ TIPOS DE TEXTOS ---------------------- */
-
-    .subtitulos p,
-    h1,
-    a {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        color: white;
-        text-shadow: #d3d3d3cb 1px 1px 2px;
-        letter-spacing: 3px;
-    }
-
     /* texto-shadow para fundos claros */
     .texto-shadow {
         color: #2c3e50;
