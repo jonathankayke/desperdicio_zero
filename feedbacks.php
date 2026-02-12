@@ -11,7 +11,7 @@
 </head>
 <body>
     <section class="feedbacks">
-    <h2>O que nossos parceiros dizem</h2>
+    <h2 class="texto-shadow-light">O que nossos parceiros dizem</h2>
     
     <div class="feedback-container">
         <div class="feedback-card">

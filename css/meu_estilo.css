@@ -15,11 +15,40 @@
 
     }
 
-    /* body.fundofixo {
-            
-                background-color: #f4f6f9; 
-                background-image: none;
-            } */
+    /* ------------------------ backgrounds ---------------------- */
+
+    .fundoverde-padrao {
+        background-color: #28A745;
+        color: white !important;
+    }
+
+
+    /* ------------------------ TIPOS DE TEXTOS ---------------------- */
+
+    .subtitulos p,
+    h1,
+    a {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+        text-shadow: #d3d3d3cb 1px 1px 2px;
+        letter-spacing: 3px;
+    }
+
+    /* texto-shadow para fundos claros */
+    .texto-shadow {
+        color: #2c3e50;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-shadow: 2px 2px 0px rgba(255, 255, 255, 1);
+    }
+
+    /* texto-shadow para fundos escuros */
+    .texto-shadow-light {
+        color: #ffffff;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-shadow: 2px 2px 0px rgb(92, 92, 92);
+    }
 
     /* ------------------------ ESTILO DO FORMULÁRIO ---------------- */
     .alert-success {
@@ -172,6 +201,8 @@
 
 
     /* -------------------- OUTROS ESTILOS -------------------------- */
+
+
     /* area administrativa */
     .thumbnail.adm.text-center:hover {
         transform: scale(1.05) translateY(-5px);
@@ -267,7 +298,7 @@
 
 
 
-   .thumbnail-sobrenos {
+    .thumbnail-sobrenos {
         padding: 20px;
         height: 100%;
         border-radius: 8px;
@@ -618,249 +649,274 @@
         border-left: 5px solid #000000;
         box-shadow: 0 0px 5px rgba(0, 0, 0, 0.1);
     }
-    .texto-shadow {
-        color: #2c3e50;
-        font-weight: 700;
-        letter-spacing: 1px;
-        text-shadow: 2px 2px 0px rgba(255, 255, 255, 1);
+
+    .thumbnail.adm .fa-solid {
+        display: inline-block;
+        /* Transforma em bloco para aceitar animação */
+        transition: transform 0.3s ease;
+        /* Suavidade na ida e volta */
+        cursor: pointer;
     }
 
-   .thumbnail.adm .fa-solid {
-    display: inline-block; /* Transforma em bloco para aceitar animação */
-    transition: transform 0.3s ease; /* Suavidade na ida e volta */
-    cursor: pointer;
-}
+    /* Aplica o zoom apenas quando passar o mouse NESTE ícone específico */
+    .thumbnail.adm .fa-solid:hover {
+        transform: scale(1.2);
+        /* Aumenta o tamanho */
+    }
 
-/* Aplica o zoom apenas quando passar o mouse NESTE ícone específico */
-.thumbnail.adm .fa-solid:hover {
-    transform: scale(1.2); /* Aumenta o tamanho */
-}
     /* cards doacao cards */
 
-/* --- CARD DE DOAÇÃO MODERNO --- */
-.card-doacao-moderno {
-    background-color: #fff;
-    border-radius: 15px;
-    overflow: hidden; /* Garante que a imagem não saia das bordas arredondadas */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    transition: all 0.3s ease;
-    margin-bottom: 30px;
-    border: 1px solid #eee;
-    position: relative;
-}
-/* Efeito Hover no Card Inteiro */
-.card-doacao-moderno:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 25px rgba(0,0,0,0.15);
-    border-color: #28A745; /* Borda verde suave ao passar o mouse */
-}
+    /* --- CARD DE DOAÇÃO MODERNO --- */
+    .card-doacao-moderno {
+        background-color: #fff;
+        border-radius: 15px;
+        overflow: hidden;
+        /* Garante que a imagem não saia das bordas arredondadas */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        margin-bottom: 30px;
+        border: 1px solid #eee;
+        position: relative;
+    }
 
-/* Área da Imagem */
-.card-img-wrapper {
-    height: 180px;
-    overflow: hidden;
-    position: relative;
-}
+    /* Efeito Hover no Card Inteiro */
+    .card-doacao-moderno:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+        border-color: #28A745;
+        /* Borda verde suave ao passar o mouse */
+    }
 
-.card-img-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Faz a imagem preencher sem esticar */
-    transition: transform 0.5s ease;
-    border-radius: 10%;
-}
+    /* Área da Imagem */
+    .card-img-wrapper {
+        height: 180px;
+        overflow: hidden;
+        position: relative;
+    }
 
-/* Zoom na imagem ao passar o mouse */
-.card-doacao-moderno:hover .card-img-wrapper img {
-    transform: scale(1.1);
-}
+    .card-img-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* Faz a imagem preencher sem esticar */
+        transition: transform 0.5s ease;
+        border-radius: 10%;
+    }
 
-/* Badges (Etiquetas de Categoria) */
-.card-badge {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    padding: 5px 12px;
-    border-radius: 20px;
-    color: white;
-    font-size: 11px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    z-index: 2;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
+    /* Zoom na imagem ao passar o mouse */
+    .card-doacao-moderno:hover .card-img-wrapper img {
+        transform: scale(1.1);
+    }
 
-.badge-verde { background-color: #28A745; }
-.badge-laranja { background-color: #ffab45; }
-.badge-azul { background-color: #007BFF; }
-.badge-padrao { background-color: #6c757d; }
+    /* Badges (Etiquetas de Categoria) */
+    .card-badge {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        padding: 5px 12px;
+        border-radius: 20px;
+        color: white;
+        font-size: 11px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        z-index: 2;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
 
-/* Conteúdo do Card */
-.card-content {
-    padding: 20px;
-}
+    .badge-verde {
+        background-color: #28A745;
+    }
 
-.card-title {
-    margin: 0 0 10px 0;
-    font-weight: 700;
-    font-size: 18px;
-    color: #333;
-}
+    .badge-laranja {
+        background-color: #ffab45;
+    }
 
-.card-info {
-    font-size: 13px;
-    color: #666;
-    margin-bottom: 15px;
-    line-height: 1.6;
-}
+    .badge-azul {
+        background-color: #007BFF;
+    }
 
-.card-info i {
-    width: 20px;
-    color: #28A745; /* Ícones verdes */
-    text-align: center;
-}
+    .badge-padrao {
+        background-color: #6c757d;
+    }
 
-/* Rodapé do Card com Status e Botões */
-.card-footer-custom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid #f0f0f0;
-    padding-top: 10px;
-    font-size: 12px;
-    font-weight: 600;
-    color: #555;
-}
+    /* Conteúdo do Card */
+    .card-content {
+        padding: 20px;
+    }
+
+    .card-title {
+        margin: 0 0 10px 0;
+        font-weight: 700;
+        font-size: 18px;
+        color: #333;
+    }
+
+    .card-info {
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 15px;
+        line-height: 1.6;
+    }
+
+    .card-info i {
+        width: 20px;
+        color: #28A745;
+        /* Ícones verdes */
+        text-align: center;
+    }
+
+    /* Rodapé do Card com Status e Botões */
+    .card-footer-custom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #f0f0f0;
+        padding-top: 10px;
+        font-size: 12px;
+        font-weight: 600;
+        color: #555;
+    }
 
 
-.btn-icon {
-    display: inline-block;
-    padding: 5px;
-    color: #888;
-    transition: color 0.2s;
-    font-size: 14px;
-    margin-left: 5px;
-}
+    .btn-icon {
+        display: inline-block;
+        padding: 5px;
+        color: #888;
+        transition: color 0.2s;
+        font-size: 14px;
+        margin-left: 5px;
+    }
 
-.btn-icon:hover {
-    color: #007BFF;
-    transform: scale(1.2);
-}
+    .btn-icon:hover {
+        color: #007BFF;
+        transform: scale(1.2);
+    }
 
-.btn-icon.btn-delete:hover {
-    color: #dc3545; /* Vermelho para excluir */
-}
+    .btn-icon.btn-delete:hover {
+        color: #dc3545;
+        /* Vermelho para excluir */
+    }
 
-.ver-todos-link {
-    display: inline-block;
-    padding: 10px 25px;
-    background-color: #28A745;
-    color: #fff;
-    font-weight: bold;
-    border-radius: 30px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
+    .ver-todos-link {
+        display: inline-block;
+        padding: 10px 25px;
+        background-color: #28A745;
+        color: #fff;
+        font-weight: bold;
+        border-radius: 30px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
 
-.ver-todos-link:hover {
-    background-color: #218838;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    text-decoration: none;
-    color: #fff;
-}
-.banner {
-    height: 80vh; /* Ocupa 80% da altura da tela */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                      url(../imagens/banner.png); /* Camada escura + imagem */
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
-    text-align: center;
-    color: white;
-    font-family: sans-serif;
-}
+    .ver-todos-link:hover {
+        background-color: #218838;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        text-decoration: none;
+        color: #fff;
+    }
 
-.banner-content h1 {
-    font-size: 3.5rem;
-    margin-bottom: 10px;
-}
+    .banner {
+        height: 80vh;
+        /* Ocupa 80% da altura da tela */
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+            url(../imagens/banner.png);
+        /* Camada escura + imagem */
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        /* Centraliza verticalmente */
+        justify-content: center;
+        /* Centraliza horizontalmente */
+        text-align: center;
+        color: white;
+        font-family: sans-serif;
+    }
 
-.banner-content p {
-    font-size: 1.2rem;
-    margin-bottom: 25px;
-}
+    .banner-content h1 {
+        font-size: 3.5rem;
+        margin-bottom: 10px;
+    }
 
-.btn-banner {
-    padding: 12px 30px;
-    background-color: #28A745;
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-    transition: 0.3s;
-}
+    .banner-content p {
+        font-size: 1.2rem;
+        margin-bottom: 25px;
+    }
 
-.btn-banner:hover {
-    background-color: #1a8633;
-    transform: scale(1.05);
-}
-.feedbacks {
-    padding: 60px 20px;
-    background-color: #28A745;
-    text-align: center;
-    font-family: 'Segoe UI', sans-serif;
-}
+    .btn-banner {
+        padding: 12px 30px;
+        background-color: #28A745;
+        color: white;
+        text-decoration: none;
+        border-radius: 30px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
 
-.feedbacks h2 {
-    margin-bottom: 40px;
-    color: #333;
-}
+    .btn-banner:hover {
+        background-color: #1a8633;
+        transform: scale(1.05);
+    }
 
-.feedback-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap; /* Faz os cards quebrarem de linha no celular */
-}
+    .feedbacks {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 60px 20px;
+        background-color: #28A745;
+        text-align: center;
+        font-family: 'Segoe UI', sans-serif;
+    }
 
-.feedback-card {
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-    max-width: 300px;
-    transition: transform 0.3s ease;
-}
+    .feedbacks h2 {
+        margin-bottom: 40px;
+    }
 
-.feedback-card:hover {
-    transform: translateY(-10px); /* Efeito de flutuar ao passar o mouse */
-}
+    .feedback-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        /* Faz os cards quebrarem de linha no celular */
+    }
 
-.feedback-card img {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-    border: 3px solid #eb971a;
-}
+    .feedback-card {
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        max-width: 300px;
+        transition: transform 0.3s ease;
+    }
 
-.feedback-card p {
-    font-style: italic;
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
+    .feedback-card:hover {
+        transform: translateY(-10px);
+        /* Efeito de flutuar ao passar o mouse */
+    }
 
-.feedback-card h4 {
-    margin: 0;
-    color: #333;
-}
+    .feedback-card img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        margin-bottom: 15px;
+        border: 3px solid #eb971a;
+    }
 
-.feedback-card span {
-    font-size: 0.8rem;
-    color: #999;
-}
+    .feedback-card p {
+        font-style: italic;
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .feedback-card h4 {
+        margin: 0;
+        color: #333;
+    }
+
+    .feedback-card span {
+        font-size: 0.8rem;
+        color: #999;
+    }

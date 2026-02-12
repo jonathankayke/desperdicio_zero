@@ -60,7 +60,7 @@ $totalRows = ($lista)->num_rows;
                             <?php echo date('d/m/Y', strtotime($row['validade_doacao'])); ?>
                         </p>
                         <button type="button"
-                                    class="btn btn-success btn-block shadow-sm" style="border-radius: 15px; font-weight: 600; letter-spacing: 0.5px;" 
+                                    class="btn btn-block shadow-sm fundoverde-padrao" style="border-radius: 15px; font-weight: 600; letter-spacing: 0.5px;" 
                                 >
                                 Ver detalhes
                         </button>

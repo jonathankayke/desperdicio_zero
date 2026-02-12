@@ -10,20 +10,20 @@
 <a name="home"></a>
 <?php include('menu_publico.php'); ?>
 <?php include('banner.php'); ?>
+
 <body class="fundofixo">
-    <main class="container">
-        <!-- DOAÇÔES -->
-        <hr>
-        <a name="doacoes"></a>
-        <?php include('doacao_cards.php'); ?>
-        <br>
-        <br>
-        <!-- FEEDBACKS -->
-        <?php include('feedbacks.php');?>
-        <!-- RODAPÉ -->
-        <footer>
-            <?php include('rodape.php'); ?>
-        </footer>
+
+    <main>
+        <div class="container-fluid">
+            <!-- DOAÇÔES -->
+            <?php include('doacao_cards.php'); ?>
+            <!-- FEEDBACKS -->
+            <?php include('feedbacks.php'); ?>
+            <!-- RODAPÉ -->
+            <footer>
+                <?php include('rodape.php'); ?>
+            </footer>
+        </div>
     </main>
 </body>
 
