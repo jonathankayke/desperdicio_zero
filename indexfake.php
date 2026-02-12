@@ -12,9 +12,8 @@
 <?php include('banner.php'); ?>
 
 <body class="fundofixo">
-
     <main>
-        <div class="container-fluid">
+        <div class="container">
             <!-- DOAÇÔES -->
             <?php include('doacao_cards.php'); ?>
             <!-- FEEDBACKS -->
