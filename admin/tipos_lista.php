@@ -1,8 +1,4 @@
 <?php
-<<<<<<< HEAD
-
-=======
->>>>>>> b0d91b0663b420eca26a8689e6ed31cc54c6488f
 // Incluir o arquivo e fazer a conexão
 include("../Connections/conn_alimentos.php");
 // Selecionar os dados
