@@ -1,9 +1,5 @@
 <?php
-<<<<<<< HEAD
 
-
-=======
->>>>>>> b0d91b0663b420eca26a8689e6ed31cc54c6488f
 include('../Connections/conn_alimentos.php');
 
 $consulta   =   "

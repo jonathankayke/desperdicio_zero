@@ -46,14 +46,14 @@ CREATE TABLE tbdoacoes (
     imagem_doacao VARCHAR(150) NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO tbdoacoes (id_doacao_tipo,nome_empresa,contato_doacao,tipo_alimento,nome_alimento,quantidade_doacao,validade_doacao,endereco_retirada)
- VALUES (1,'Doação de Frutas','1111-1111','F','Maçã','10 kg','2025-12-15','Rua A, 123'),
-  (2,'Doação de Verduras','2222-2222','V','Alface','5 kg','2025-12-12','Rua B, 456'),
-  (3,'Doação de Grãos','3333-3333','G', 'Feijão','20 kg','2026-01-05','Rua C, 789'),
-  (4,'Doação de Proteína','4444-4444','P','Frango','15 kg','2025-12-20','Rua D, 101'),
-  (5,'Doação de Laticínios','5555-5555','L','Leite','30 litros','2025-12-18','Rua E, 202'),
-  (6,'Doação de Bebidas','6666-6666','B','Suco de Laranja','25 litros','2025-12-22','Rua F, 303'),
-  (7,'Doação de Conservas','3333-3333','C','Milho enlatado','50 unidades','2026-01-10','Rua C, 789');
+INSERT INTO tbdoacoes (id_doacao_tipo,nome_empresa,contato_doacao,tipo_alimento,nome_alimento,quantidade_doacao,validade_doacao,endereco_retirada,imagem_doacao)
+ VALUES (1,'Doação de Frutas','1111-1111','F','Maçã','10 kg','2025-12-15','Rua A, 123','macas.png'),
+  (2,'Doação de Verduras','2222-2222','V','Alface','5 kg','2025-12-12','Rua B, 456','alface.png'),
+  (3,'Doação de Grãos','3333-3333','G', 'Feijão','20 kg','2026-01-05','Rua C, 789','feijao.jpg'),
+  (4,'Doação de Proteína','4444-4444','P','Frango','15 kg','2025-12-20','Rua D, 101','frango.png'),
+  (5,'Doação de Laticínios','5555-5555','L','Leite','30 litros','2025-12-18','Rua E, 202','leite.png'),
+  (6,'Doação de Bebidas','6666-6666','B','Suco de Laranja','25 litros','2025-12-22','Rua F, 303','suco_de_laranja.png'),
+  (7,'Doação de Conservas','3333-3333','C','Milho enlatado','50 unidades','2026-01-10','Rua C, 789','milho_enlatado.png');
 
 -- Estrutura da tabela tbtipos    
 CREATE TABLE tbtipos (
