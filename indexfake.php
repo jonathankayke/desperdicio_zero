@@ -14,7 +14,6 @@
 <body class="fundofixo">
     <main>
 
-
             <?php include('banner.php'); ?>
             <!-- DOAÇÔES -->
             <?php include('doacao_cards.php'); ?>
@@ -24,8 +23,7 @@
             <footer>
                 <?php include('rodape.php'); ?>
             </footer>
-            
-        
+
     </main>
 </body>
 
