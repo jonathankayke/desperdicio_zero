@@ -773,7 +773,7 @@
 .banner {
     height: 80vh; /* Ocupa 80% da altura da tela */
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                      url(../imagens/banner.jpg); /* Camada escura + imagem */
+                      url(../imagens/banner.png); /* Camada escura + imagem */
     background-size: cover;
     background-position: center;
     display: flex;
