@@ -58,7 +58,7 @@ $totalRows_menu = ($lista_menu)->num_rows;
                         </ul>
                     </li>
 
-                    <li><a href="#sobrenos">SOBRE NÓS</a></li>
+                    <li><a href="sobre_nos.php">SOBRE NÓS</a></li>
                     <li><a href="#contato">CONTATO</a></li>
 
                     <form action="doacao_busca.php" method="get" name="form_busca" id="form_busca"
