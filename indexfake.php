@@ -9,19 +9,17 @@
 <!-- MENU -->
 <a name="home"></a>
 <?php include('menu_publico.php'); ?>
-<section class="banner">
-    <div class="banner-content">
-        <h1>Desperdicio Zero</h1>
-        <p>Compartilhe o que sobra. Alimente quem precisa.</p>
-        <a href="sobre_nos.php" class="btn-banner">Saiba Mais</a>
-    </div>
-</section>
+<?php include('banner.php'); ?>
 <body class="fundofixo">
     <main class="container">
         <!-- DOAÇÔES -->
         <hr>
         <a name="doacoes"></a>
         <?php include('doacao_cards.php'); ?>
+        <br>
+        <br>
+        <!-- FEEDBACKS -->
+        <?php include('feedbacks.php');?>
         <!-- RODAPÉ -->
         <footer>
             <?php include('rodape.php'); ?>
