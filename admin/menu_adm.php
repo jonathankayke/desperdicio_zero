@@ -40,6 +40,11 @@
                         <span class="glyphicon glyphicon-home"></span>
                     </a>
                     </li>
+                    <li>
+                        <a href="logout.php">
+                            <span class="glyphicon glyphicon-log-out"></span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>

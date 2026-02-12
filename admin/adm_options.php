@@ -10,22 +10,23 @@
     <link rel="stylesheet" href="../css/meu_estilo.css">
   
 </head>
-
+    
 <body class="fundofixo">
     <main class="container">
         <div class="text-center">
     <h1 class="texto-shadow" style="font-size: 40px; margin-bottom: 20px;">
         Área Administrativa
     </h1>
-</div>
+        </div>
         <div class="row">
             
             <div class="col-sm-6 col-md-4">
-                <div class="thumbnail text-center borda-verde">
+                <div class="thumbnail adm text-center borda-verde">
                   <span class="fa-7x">
                     <i class="fa-solid fa-bag-shopping" style="color: #28A745;"></i>
                   </span>
-            
+
+                  
                     <br>
                     <div class="btn-group btn-group-justified" role="group">
                         <div class="btn-group">
@@ -50,7 +51,7 @@
             </div>
 
             <div class="col-sm-6 col-md-4">
-                <div class="thumbnail text-center borda-laranja">
+                <div class="thumbnail adm text-center borda-laranja">
                     <span class="fa-7x">
                         <i class="fa-solid fa-layer-group" style="color: #ffab45;"></i>
                     </span>
@@ -80,7 +81,7 @@
             </div>
 
             <div class="col-sm-6 col-md-4">
-                <div class="thumbnail text-center borda-azul">
+                <div class="thumbnail adm text-center borda-azul">
                     <span class="fa-7x">
                         <i class="fa-solid fa-user-pen" style="color: #007BFF;"></i>
                     </span>
@@ -105,7 +106,11 @@
                         </div> 
                     </div> 
                 </div> 
+        
             </div>
+
+                
+
 
         </div> </main>
 
