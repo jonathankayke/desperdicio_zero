@@ -1,5 +1,15 @@
+<?php
+// Incluir o arquivo para fazer a conexão
+include("Connections/conn_alimentos.php");
+
+// Consulta para trazer os dados
+$consulta = "SELECT * FROM vw_doacoes ORDER BY nome_alimento ASC LIMIT 4";
+$lista = $conn_alimentos->query($consulta);
+$totalRows = ($lista)->num_rows;
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,47 +19,66 @@
     <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
-<body class="fundofixo">
-    <div class="lista-wrapper">
-       <div class="row">
 
-    <div class="col-xs-12 col-sm-6 col-md-3">
-        <div class="card-doacao-moderno">
-            <div class="card-img-wrapper">
-                <span class="card-badge badge-verde"> 
-                    <?php echo $row['categoria']; ?>
-                    <!-- nome da categoria -->
-                </span>
-                <!-- coloque o php da imagem -->
-                <!-- <img src="https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=500&q=60" alt="Maçã"> -->
-            </div>
-            <div class="card-content">
-                <h4 class="card-title">
-                    <!-- nome do alimento -->
-                    <?php echo $row['nome_alimento']; ?>
-                </h4>
-                <p class="card-info">
-                    <i class="fa-solid fa-weight-hanging"></i>
-                     <?php echo $row['quantidade']; ?> kg
-                     <br>
-                    <i class="fa-solid fa-calendar-days"></i>
-                    <?php echo date('d/m/Y', strtotime($row['data_validade'])); ?>
-                </p>
-                <div class="card-footer-custom">
-                    <div class="text-center">
-                    <span class="status-dot status-livre"></span> Disponível
+<body class="fundofixo">
+        <div class="lista-wrapper">
+            <div class="text-center" style="margin-top: 20px;">
+                <a href="doacao_geral.php" class="ver-todos-link">
+            Ver todos →
+            </a>
+        </div>
+        <div class="row">
+        <?php
+        // Verifica se tem produtos antes de começar o loop
+        if ($totalRows > 0) {
+            while ($row = $lista->fetch_assoc()) 
+        {;
+        ?>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="card-doacao-moderno">
+                    <div class="card-img-wrapper">
+                        <span class="card-badge badge-verde">
+                            <?php echo $row['rotulo_tipo']; ?>
+                            <!-- nome da categoria -->
+                        </span>
+                        <!-- coloque o php da imagem -->
+                        <div class="">
+                            <img src="imagens/<?php echo $row['imagem_doacao']; ?>" class="img-responsive img-rounded"
+                                style="max-height: 140px; border: 1px solid #eee; padding: 5px; width: 100%;">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-title">
+                            <!-- nome do alimento -->
+                            <?php echo $row['nome_alimento']; ?>
+                        </h4>
+                        <p class="card-info">
+                            <i class="fa-solid fa-weight-hanging"></i>
+                            <?php echo $row['quantidade_doacao']; ?> kg
+                            <br>
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <?php echo date('d/m/Y', strtotime($row['validade_doacao'])); ?>
+                        </p>
+                        <div class="card-footer-custom">
+                            <div class="text-center">
+                                <span class="status-dot status-livre"></span> Disponível
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        <?php
+            } // Fim do While
+        } else {
+            ?>
+            <div class="alert alert-warning">Nenhuma doação encontrada.</div>
+        <?php } ?>
         </div>
-    </div>
-
-</div>
 
     </div>
 
-<!-- Link arquivos Bootstrap js -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>    
+    <!-- Link arquivos Bootstrap js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
