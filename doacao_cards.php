@@ -22,11 +22,11 @@ $totalRows = ($lista)->num_rows;
 
 <body class="fundofixo">
         <div class="lista-wrapper">
-            <div class="text-center" style="margin-top: 20px;">
+            <div class="text-right" style="top: 10px; padding: 4px; margin-bottom: 10px; letter-spacing: 1px; " >
                 <a href="doacao_geral.php" class="ver-todos-link">
-            Ver todos →
-            </a>
-        </div>
+                    Ver todos →
+                </a>
+            </div>
         <div class="row">
         <?php
         // Verifica se tem produtos antes de começar o loop
@@ -59,11 +59,11 @@ $totalRows = ($lista)->num_rows;
                             <i class="fa-solid fa-calendar-days"></i>
                             <?php echo date('d/m/Y', strtotime($row['validade_doacao'])); ?>
                         </p>
-                        <div class="card-footer-custom">
-                            <div class="text-center">
-                                <span class="status-dot status-livre"></span> Disponível
-                            </div>
-                        </div>
+                        <button type="button"
+                                    class="btn btn-success btn-block shadow-sm" style="border-radius: 15px; font-weight: 600; letter-spacing: 0.5px;" 
+                                >
+                                Ver detalhes
+                        </button>
                     </div>
                 </div>
             </div>
