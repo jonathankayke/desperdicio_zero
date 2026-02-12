@@ -21,7 +21,7 @@
         <div class="row">
             
             <div class="col-sm-6 col-md-4">
-                <div class="thumbnail text-center borda-verde">
+                <div class="thumbnail adm text-center borda-verde">
                   <span class="fa-7x">
                     <i class="fa-solid fa-bag-shopping" style="color: #28A745;"></i>
                   </span>
@@ -51,7 +51,7 @@
             </div>
 
             <div class="col-sm-6 col-md-4">
-                <div class="thumbnail text-center borda-laranja">
+                <div class="thumbnail adm text-center borda-laranja">
                     <span class="fa-7x">
                         <i class="fa-solid fa-layer-group" style="color: #ffab45;"></i>
                     </span>
@@ -81,7 +81,7 @@
             </div>
 
             <div class="col-sm-6 col-md-4">
-                <div class="thumbnail text-center borda-azul">
+                <div class="thumbnail adm text-center borda-azul">
                     <span class="fa-7x">
                         <i class="fa-solid fa-user-pen" style="color: #007BFF;"></i>
                     </span>

@@ -173,7 +173,7 @@
 
     /* -------------------- OUTROS ESTILOS -------------------------- */
     /* area administrativa */
-    .thumbnail.text-center:hover {
+    .thumbnail.adm.text-center:hover {
         transform: scale(1.05) translateY(-5px);
         /* Sobe um pouco mais para dar destaque */
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
@@ -181,7 +181,7 @@
     }
 
     /* Garante que o thumbnail tenha uma transição suave mesmo quando não está com o mouse em cima */
-    .thumbnail.text-center {
+    .thumbnail.adm.text-center {
         transition: all 0.3s ease-in-out;
         will-change: transform;
         /* Otimização de performance para a animação */
@@ -267,16 +267,17 @@
 
 
 
-    /* .thumbnail {
+   .thumbnail-sobrenos {
         height: 100%;
         border-radius: 8px;
+        background-color: #fff;
     }
 
-    .thumbnail img {
+    .thumbnail-sobrenos img {
         width: 100%;
         height: 180px;
         object-fit: cover;
-    } */
+    }
 
     .row-eq-height {
         display: flex;

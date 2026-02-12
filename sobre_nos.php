@@ -38,7 +38,7 @@
       <div class="container container-config">
         <div class="row row-eq-height">
           <div class="col-xs-12 col-md-4 thumbnail-col">
-            <div class="thumbnail thumb-equal text-center">
+            <div class="thumbnail-sobrenos thumb-equal text-center">
               <i class="fa-solid fa-bullseye fa-10x"></i>
               <div class="caption">
                 <h3 class="thumb-title">Missão</h3>
@@ -52,7 +52,7 @@
             </div>
           </div>
           <div class="col-xs-12 col-md-4 thumbnail-col">
-            <div class="thumbnail thumb-equal text-center">
+            <div class="thumbnail-sobrenos thumb-equal text-center ">
               <i class="fa-solid fa-eye fa-10x"></i>
               <div class="caption">
                 <h3 class="thumb-title">Visão</h3>
@@ -66,7 +66,7 @@
             </div>
           </div>
           <div class="col-xs-12 col-md-4 thumbnail-col">
-            <div class="thumbnail thumb-equal text-center">
+            <div class="thumbnail-sobrenos thumb-equal text-center">
               <i class="fa-solid fa-hand-holding-heart fa-10x"></i>
               <div class="caption">
                 <h3 class="thumb-title">Valores</h3>
