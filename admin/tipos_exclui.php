@@ -1,6 +1,6 @@
 <?php
 // Incluindo o Sistema de autenticação
-include("acesso_admin.php");
+include("acesso_Admin.php");
 
 // Incluir o arquivo e fazer a conexão
 include("../Connections/conn_alimentos.php");
