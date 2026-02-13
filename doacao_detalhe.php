@@ -90,10 +90,6 @@ $totalRows = $lista->num_rows;
 
                                         <br>
 
-                                        <a href="#" class="btn btn-success btn-block">
-                                            Quero Retirar
-                                        </a>
-
                                     </div>
 
                                 </div>
