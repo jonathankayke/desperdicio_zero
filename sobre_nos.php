@@ -219,7 +219,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <div class="fundofixo">
-    <?php include('rodape.php')?>
+      <?php include('rodape.php')?>
     </div>
   </body>
 </html>
