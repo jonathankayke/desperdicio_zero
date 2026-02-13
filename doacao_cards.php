@@ -3,7 +3,7 @@
 include("Connections/conn_alimentos.php");
 
 // Consulta para trazer os dados
-$consulta = "SELECT * FROM vw_doacoes ORDER BY nome_alimento ASC LIMIT 4";
+$consulta = "SELECT * FROM vw_doacoes ORDER BY nome_alimento ASC LIMIT 8";
 $lista = $conn_alimentos->query($consulta);
 $totalRows = ($lista)->num_rows;
 ?>
@@ -54,16 +54,18 @@ $totalRows = ($lista)->num_rows;
                         </h4>
                         <p class="card-info">
                             <i class="fa-solid fa-weight-hanging"></i>
-                            <?php echo $row['quantidade_doacao']; ?> kg
+                            <?php echo $row['quantidade_doacao']; ?> 
                             <br>
                             <i class="fa-solid fa-calendar-days"></i>
                             <?php echo date('d/m/Y', strtotime($row['validade_doacao'])); ?>
                         </p>
-                        <button type="button"
-                                    class="btn btn-block shadow-sm fundoverde-padrao" style="border-radius: 15px; font-weight: 600; letter-spacing: 0.5px;" 
-                                >
-                                Ver detalhes
-                        </button>
+                        <a href="doacao_detalhe.php?id_doacao=<?php echo $row['id_doacao']; ?>">   
+                            <button type="button"
+                                        class="btn btn-block shadow-sm fundoverde-padrao" style="border-radius: 15px; font-weight: 600; letter-spacing: 0.5px;" 
+                                    >
+                                    Ver detalhes
+                            </button>
+                        </a> 
                     </div>
                 </div>
             </div>

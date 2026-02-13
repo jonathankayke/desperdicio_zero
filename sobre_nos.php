@@ -110,21 +110,21 @@
             </div>
           </div>
 
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="card-stat">
-              <i class="fa-solid fa-users fa-3x"></i>
-              <h3 style="font-weight: bolder">+8.000</h3>
-              <p style="font-size: 17px">Famílias Beneficiadas.</p>
-            </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="card-stat">
+            <i class="fa-solid fa-users fa-3x"></i>
+            <h3 style="font-weight: bolder">+8.000</h3>
+            <p style="font-size: 17px">Famílias Beneficiadas.</p>
           </div>
+        </div>
 
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="card-stat">
-              <i class="fa-solid fa-store fa-3x"></i>
-              <h3 style="font-weight: bolder">120</h3>
-              <p style="font-size: 17px">Colaboradores Ativos.</p>
-            </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="card-stat">
+            <i class="fa-solid fa-store fa-3x"></i>
+            <h3 style="font-weight: bolder">120</h3>
+            <p style="font-size: 17px">Colaboradores Ativos.</p>
           </div>
+        </div>
 
           <div class="col-xs-12 col-sm-6 col-md-3">
             <div class="card-stat">
