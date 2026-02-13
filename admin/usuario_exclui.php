@@ -1,4 +1,7 @@
 <?php
+// Incluindo o Sistema de autenticação
+include("acesso_Admin.php");
+
 Include('../Connections/conn_alimentos.php'); 
 
 mysqli_select_db($conn_alimentos,$database_conn);
