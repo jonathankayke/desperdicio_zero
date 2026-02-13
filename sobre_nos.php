@@ -27,10 +27,22 @@
       <div class="container container-config text-center">
         <h2>Desperdício Zero</h2>
         <p class="txt-historia">
-          O Desperdício Zero não nasceu apenas como uma plataforma, mas como uma resposta a um contraste inaceitável: toneladas de alimentos perfeitamente bons sendo descartados enquanto milhares de famílias lutam diariamente para ter o que comer.
-          Nossa história começou ao observarmos o final do expediente em feiras e restaurantes locais. Percebemos que o problema não era a falta de comida, mas a falha na conexão. A comida existia, mas o caminho até quem precisava estava quebrado.
-          Hoje, somos a ponte que une a abundância de supermercados, restaurantes e produtores agrícolas à necessidade urgente de instituições e beneficiários. Através de uma logística inteligente e parcerias sólidas, garantimos que cada doação chegue ao destino certo com rapidez e dignidade.
-          Mais do que reduzir o impacto ambiental do desperdício, nossa missão é alimentar a esperança. Acreditamos que um futuro sustentável se constrói com solidariedade e ação prática. Junte-se a nós para transformar o descarte em oportunidade e a fome em sorrisos.
+          O Desperdício Zero não nasceu apenas como uma plataforma, mas como uma
+          resposta a um contraste inaceitável: toneladas de alimentos
+          perfeitamente bons sendo descartados enquanto milhares de famílias
+          lutam diariamente para ter o que comer. Nossa história começou ao
+          observarmos o final do expediente em feiras e restaurantes locais.
+          Percebemos que o problema não era a falta de comida, mas a falha na
+          conexão. A comida existia, mas o caminho até quem precisava estava
+          quebrado. Hoje, somos a ponte que une a abundância de supermercados,
+          restaurantes e produtores agrícolas à necessidade urgente de
+          instituições e beneficiários. Através de uma logística inteligente e
+          parcerias sólidas, garantimos que cada doação chegue ao destino certo
+          com rapidez e dignidade. Mais do que reduzir o impacto ambiental do
+          desperdício, nossa missão é alimentar a esperança. Acreditamos que um
+          futuro sustentável se constrói com solidariedade e ação prática.
+          Junte-se a nós para transformar o descarte em oportunidade e a fome em
+          sorrisos.
         </p>
       </div>
     </section>
@@ -52,7 +64,7 @@
             </div>
           </div>
           <div class="col-xs-12 col-md-4 thumbnail-col">
-            <div class="thumbnail-sobrenos thumb-equal text-center ">
+            <div class="thumbnail-sobrenos thumb-equal text-center">
               <i class="fa-solid fa-eye fa-10x"></i>
               <div class="caption">
                 <h3 class="thumb-title">Visão</h3>
@@ -124,8 +136,84 @@
         </div>
       </div>
     </section>
-    <section class="divisor-opaco">
-      
+    <section class="hero-card">
+      <div class="team-container">
+        <div class="team-card">
+          <div class="image-wrapper">
+            <img src="https://via.placeholder.com/150" alt="" />
+          </div>
+          <div class="card-content">
+            <h3>Matheus</h3>
+            <span> # </span>
+            <p>#</p>
+          </div>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="image-wrapper">
+            <img src="https://via.placeholder.com/150" alt="" />
+          </div>
+          <div class="card-content">
+            <h3>Mateus</h3>
+            <span> # </span>
+            <p>#</p>
+          </div>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="image-wrapper">
+            <img src="https://via.placeholder.com/150" alt="" />
+          </div>
+          <div class="card-content">
+            <h3>Jonathan</h3>
+            <span> # </span>
+            <p>#</p>
+          </div>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="image-wrapper">
+            <img src="https://via.placeholder.com/150" alt="" />
+          </div>
+          <div class="card-content">
+            <h3>Vinicius</h3>
+            <span> # </span>
+            <p>#</p>
+          </div>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="image-wrapper">
+            <img src="https://via.placeholder.com/150" alt="" />
+          </div>
+          <div class="card-content">
+            <h3>Gustavo</h3>
+            <span> # </span>
+            <p>#</p>
+          </div>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- Link arquivos Bootstrap js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
