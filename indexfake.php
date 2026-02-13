@@ -9,11 +9,11 @@
 <!-- MENU -->
 <a name="home"></a>
 <?php include('menu_publico.php'); ?>
-<?php include('banner.php'); ?>
+
 
 <body class="fundofixo">
     <main>
-        <div class="container">
+            <?php include('banner.php'); ?>
             <!-- DOAÇÔES -->
             <?php include('doacao_cards.php'); ?>
             <!-- FEEDBACKS -->
@@ -22,7 +22,6 @@
             <footer>
                 <?php include('rodape.php'); ?>
             </footer>
-        </div>
     </main>
 </body>
 
