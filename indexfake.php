@@ -9,17 +9,19 @@
 <!-- MENU -->
 <a name="home"></a>
 <?php include('menu_publico.php'); ?>
+
+
 <body class="fundofixo">
-<img src="imagens/banner.jpg" alt="">
-    <main class="container">
-        <!-- DOAÇÔES -->
-        <hr>
-        <a name="doacoes"></a>
-        <?php include('doacao_cards.php'); ?>
-        <!-- RODAPÉ -->
-        <footer>
-            <?php include('rodape.php'); ?>
-        </footer>
+    <main>
+            <?php include('banner.php'); ?>
+            <!-- DOAÇÔES -->
+            <?php include('doacao_cards.php'); ?>
+            <!-- FEEDBACKS -->
+            <?php include('feedbacks.php'); ?>
+            <!-- RODAPÉ -->
+            <footer>
+                <?php include('rodape.php'); ?>
+            </footer>
     </main>
 </body>
 
