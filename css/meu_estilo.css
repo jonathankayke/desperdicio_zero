@@ -272,6 +272,14 @@ navbar-header {
     z-index: 10;
     margin-top: -50px;
 }
+    .hero-verde {
+        background-color: #28A745;
+        width: 100%;
+        padding: 60px 0;
+        position: relative;
+        z-index: 10;
+        margin-top: -50px;
+    }
 
 .thumbnail-sobrenos {
     padding: 20px;
@@ -373,10 +381,82 @@ navbar-header {
     background-attachment: fixed;
     opacity: 0.5;
 }
+    .team-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-items: space-between;
+        gap: 30px;
+    }
+
+    .team-card {
+        width: 250px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 30px 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .team-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .image-wrapper {
+        background-color: #f4f4f4;
+        padding-top: 20px;
+    }
+
+    .team-card img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 15px;
+    }
+
+    .card-content {
+        padding: 20px;
+    }
+
+    .card-content h3 {
+        margin: 10px 0 5px;
+        color: #333;
+    }
+
+    .card-content span {
+        color: #000000;
+        font-weight: bold;
+        font-size: 0.9rem;
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .card-content p {
+        font-size: 0.85rem;
+        color: #666;
+        line-height: 1.5;
+    }
 
 .hero-card {
     padding: 50px 20px;
 }
+    .social-links {
+        margin-top: 15px;
+    }
+
+    .social-links a {
+        color: #28A745;
+        margin: 0 8px;
+        font-size: 1.2rem;
+        transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+        color: #1e7e34;
+    }
 
 .navbar {
     margin-bottom: 0px;
