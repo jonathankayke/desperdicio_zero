@@ -10,10 +10,8 @@
 <a name="home"></a>
 <?php include('menu_publico.php'); ?>
 <body class="fundofixo">
-
+<img src="imagens/banner.jpg" alt="">
     <main class="container">
-        <!-- CARROUSSEL -->
-        <?php include('carroussel.php'); ?>
         <!-- DOAÇÔES -->
         <hr>
         <a name="doacoes"></a>
