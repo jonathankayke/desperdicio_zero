@@ -1,160 +1,109 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo</title>
-    <!-- Link CSS do Bootstrap 
-    <link rel="stylesheet" href="css/bootstrap.min.css">-->
-    <!-- Link para CSS Específico
-    <link rel="stylesheet" href="css/meu_estilo.css"> -->
+    <title>Rodapé Desperdício Zero</title>
+
 </head>
+
 <body>
-<div class="row panel-footer" style="background-color: rgba(255, 255, 255, 0.6);" > <!-- abre painel do rodapé -->
-<!-- Area de localização -->
-<div class="col-sm-6 col-md-4">
-    <div class="panel-footer rodape" style="background:none; margin-top: 40px; "> <!-- fecha panel footer -->
-            <!--  <img src="imagens/icon_rodape.png" alt="" style="height: 140px; margin-top: -20px;">-->
-        <br>
-        <address>
-            <i>Pr. Gaspar Ricardo, 1 - Centro, Itapetininga - SP, 18200-202</i>
-            <br>
-            <span class="glyphicon glyphicon-phone-alt"></span>
-            &nbsp;Fone: (15) 4002 8922
-            <br>
-            <span class="glyphicon glyphicon-envelope"></span>
-            &nbsp;E-mail:
-            <a 
-                href=""
-            >
-                contato@desperdiciozero.com.br
-            </a>
-            <div class="embed-responsive embed-responsive-16by9"> <!-- mapa -->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2174.2119879253696!2d-48.047933714033505!3d-23.58373390642377!2m3!1
-                f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c5cc8d18eaea31%3A0x1817097d7b57d444!2sFundo%20Social%20de%20Itapetininga!5e0!3m2!1spt-BR!2sbr!4v1764723473171!5m2!1spt-BR!2sbr" 
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-            </div> <!-- fecha mapa -->
-        </address>
-    </div> <!-- fecha panel footer -->
-</div> <!-- fecha dimencionamento/area -->
 
-<!-- Area de Navegação -->
-<div class="col-sm-6 col-md-4">
-    <div class="panel-footer" style="background:none; margin-top: 40px; ">
-        <h4>LINKS</h4>
-        <ul class="nav nav-pills nav-stacked">
-            <li>
-                <a href="indexfake.php#home" class="text-success">
-                    <span class="glyphicon glyphicon-home">&nbsp;HOME</span>
-                </a>
-            </li>
-            <li>
-                <a href="indexfake.php#doacoes" class="text-success">
-                    <span class="glyphicon glyphicon-globe">&nbsp;DOAÇÕES</span>
-                </a>
-            </li>
-            <li>
-                <a href="indexfake.php#contato" class="text-success">
-                    <span class="glyphicon glyphicon-send">&nbsp;CONTATO</span>
-                </a>
-            </li>
-            <li>
-                <a href="admin/indexadmin.php" class="text-success">
-                    <span class="glyphicon glyphicon-user">&nbsp;ADMINISTRAÇÂO</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-</div> <!-- fecha dimencionamento/area -->
-
-<!-- Area de Contato -->
-<div class="col-sm-6 col-md-4" id="contato">
-    <div class="panel-footer" style="background:none; margin-top: 40px; ">
-        <h4>CONTATO</h4>
-        <form 
-            action="rodape_contato_envia.php"
-            name="form_contato"
-            id="form_contato"
-            method="post"
-        >
-            <!-- input group HOME -->
-            <p>
-                <div class="input-group">
-                    <span class="input-group-addon" id="basic-addon1">
-                        <span class="glyphicon glyphicon-user"></span>
-                    </span>
-                    <input 
-                        type="text"
-                        name="nome_contato"
-                        id="nome_contato"
-                        placeholder="Digite seu nome"
-                        aria-describedby="basic-addon1"
-                        required
-                        class="form-control"
-                    >
+    <footer class="rodape-full">
+        <div class="container">
+            <div class="row">
+                <br><br>
+                <div class="col-sm-6 col-md-4">
+                    <h4 class="text-success">LOCALIZAÇÃO</h4>
+                    <address>
+                        <strong>Fundo Social de Itapetininga</strong><br>
+                        <i>Pr. Gaspar Ricardo, 1 - Centro<br>
+                        Itapetininga - SP, 18200-202</i>
+                        <br><br>
+                        <span class="glyphicon glyphicon-phone-alt"></span> (15) 4002-8922<br>
+                        <span class="glyphicon glyphicon-envelope"></span> contato@desperdiciozero.com.br
+                    </address>
+                    
+                    <div class="mapa-responsivo">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.025464890077!2d-48.05523848502346!3d-23.590494084668332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c5cc8d18eaea31%3A0x1817097d7b57d444!2sFundo%20Social%20de%20Itapetininga!5e0!3m2!1spt-BR!2sbr!4v1707780000000!5m2!1spt-BR!2sbr" 
+                            style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
                 </div>
-            </p>
 
-            <!-- construa o input group email use glyphicon-envelope -->
-            <p>
-                <div class="input-group">
-                    <span class="input-group-addon" id="basic-addon2">
-                        <span class="glyphicon glyphicon-envelope"></span>
-                    </span>
-                    <input 
-                        type="email"
-                        name="email_contato"
-                        id="email_contato"
-                        placeholder="Digite seu Email"
-                        aria-describedby="basic-addon2"
-                        required
-                        class="form-control"
-                    >
+                <div class="col-sm-6 col-md-4">
+                    <h4 class="text-success">NAVEGAÇÃO</h4>
+                    <ul class="nav nav-pills nav-stacked">
+                        <li>
+                            <a href="indexfake.php#home" class="text-success">
+                                <span class="glyphicon glyphicon-home"></span> HOME
+                            </a>
+                        </li>
+                        <li>
+                            <a href="indexfake.php#doacoes" class="text-success">
+                                <span class="glyphicon glyphicon-globe"></span> DOAÇÕES
+                            </a>
+                        </li>
+                        <li>
+                            <a href="indexfake.php#contato" class="text-success">
+                                <span class="glyphicon glyphicon-send"></span> CONTATO
+                            </a>
+                        </li>
+                        <li>
+                            <a href="admin/indexadmin.php" class="text-success">
+                                <span class="glyphicon glyphicon-user"></span> ÁREA ADMINISTRATIVA
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-            </p>
-            <!-- construa o textarea comentarios use glyphicon-pencil -->
-            <p>
-                <div class="input-group">
-                    <span class="input-group-addon" id="basic-addon3">
-                        <span class="glyphicon glyphicon-pencil"></span>
-                    </span>
-                    <textarea 
-                        name="comentarios_contato" 
-                        id="comentarios_contato"
-                        placeholder="Comentários, dúvidas e/ou sugestões."
-                        cols="30"
-                        rows="8"
-                        aria-describedby="basic-addon3"
-                        class="form-control"
-                    ></textarea>
+
+                <div class="col-sm-6 col-md-4" id="contato" >
+                    <h4 class="text-success">FALE CONOSCO</h4>
+                    <form action="rodape_contato_envia.php" name="form_contato" id="form_contato" method="post">
+                        
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                                <input type="text" name="nome_contato" class="form-control" placeholder="Seu nome" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                                <input type="email" name="email_contato" class="form-control" placeholder="Seu e-mail" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></span>
+                                <textarea name="comentarios_contato" class="form-control" rows="4" placeholder="Sua mensagem..." required></textarea>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-success btn-block">
+                            Enviar Mensagem <span class="glyphicon glyphicon-send"></span>
+                        </button>
+                    </form>
                 </div>
-            </p>
-            <!-- construa o botão enviar use glyphicon-send -->
-            <p>      
-                <button class="btn btn-success btn-block" aria-label="Enviar">
-                    Enviar
-                    <span class="glyphicon glyphicon-send"></span>
-                </button> 
-            </p>                    
-        </form>
-    </div>
-</div> <!-- fecha dimencionamento/area -->
-<div class="col-sm-12">
-    <div class="panel-footer" style="background:none; text-align: center;">
-        <img src="imagens/icon_rodape.png" alt="" style="height: 200px; ">
-    </div> <!-- fecha panel footer -->
-    <h6 class="text-center">
-            Developed by Os Mamaco&trade; 2025
-            <br>
-            <a href="">
 
-            </a>
-        </h6>
-</div> <!-- fecha dimencionamento/area -->
+            </div> <hr style="border-color: #ccc;">
 
-<!-- Link arquivos Bootstrap js --> 
-<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script> -->   
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <img src="imagens/icon_rodape.png" alt="Desperdício Zero" style="height: 120px; margin-bottom: 10px;">
+                    <h6 style="color: #555;">
+                        Developed by <strong>Os Mamaco™</strong> 2025 &copy; Todos os direitos reservados.
+                    </h6>
+                </div>
+            </div>
+
+        </div> </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 </body>
-</html>                 
+</html>
