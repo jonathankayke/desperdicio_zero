@@ -25,7 +25,7 @@ $tipo_acesso=  'Admin';
 // VERIFICAR o nível de acesso
 if(!isset($_SESSION['login_usuario'])OR($_SESSION['tipo_usuario']!=$tipo_acesso)){
     // Redireciona para página de autorização]
-    header("Location: invasor_user.php"); exit;
+    header("Location: invasor_User.php"); exit;
 };
 
 // Verificar se o login é valido
