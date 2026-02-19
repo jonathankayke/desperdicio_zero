@@ -110,21 +110,21 @@
             </div>
           </div>
 
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <div class="card-stat">
-            <i class="fa-solid fa-users fa-3x"></i>
-            <h3 style="font-weight: bolder">+8.000</h3>
-            <p style="font-size: 17px">Famílias Beneficiadas.</p>
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="card-stat">
+              <i class="fa-solid fa-users fa-3x"></i>
+              <h3 style="font-weight: bolder">+8.000</h3>
+              <p style="font-size: 17px">Famílias Beneficiadas.</p>
+            </div>
           </div>
-        </div>
 
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <div class="card-stat">
-            <i class="fa-solid fa-store fa-3x"></i>
-            <h3 style="font-weight: bolder">120</h3>
-            <p style="font-size: 17px">Colaboradores Ativos.</p>
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="card-stat">
+              <i class="fa-solid fa-store fa-3x"></i>
+              <h3 style="font-weight: bolder">120</h3>
+              <p style="font-size: 17px">Colaboradores Ativos.</p>
+            </div>
           </div>
-        </div>
 
           <div class="col-xs-12 col-sm-6 col-md-3">
             <div class="card-stat">
@@ -137,7 +137,11 @@
       </div>
     </section>
     <section class="hero-card">
-      <div class="team-container">
+      <div class="container text-center" style="margin-bottom: 30px">
+        <h2 style="color: #333; font-weight: bold;">Criadores do Site</h2>
+      </div>
+
+      <div class="team-container" style="padding-top: 50px;">
         <div class="team-card">
           <div class="image-wrapper">
             <img src="https://via.placeholder.com/150" alt="" />
@@ -218,8 +222,6 @@
     <!-- Link arquivos Bootstrap js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <div class="fundofixo">
-      <?php include('rodape.php')?>
-    </div>
+    <div class="fundofixo"><?php include('rodape.php')?></div>
   </body>
 </html>
