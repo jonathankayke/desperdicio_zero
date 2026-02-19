@@ -5,6 +5,8 @@ html,
 body {
     height: 100%;
     margin: 0;
+    background-color: #f4f7f6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* ------------------------ FUNDO ---------------------- */
@@ -15,7 +17,6 @@ body {
 }
 
 /* ------------------------ backgrounds ---------------------- */
-
 .fundoverde-padrao {
     background-color: #28A745;
     color: white !important;
@@ -61,15 +62,13 @@ body {
     font-size: 1.5em;
 }
 
-/* ------------------------ NAVBAR COMPACTA (60px) ---------------------- */
-
+/* ------------------------ NAVBAR COMPACTA ---------------------- */
 .imagem-logo {
     height: 50px;
     width: auto;
 }
 
 /* navbar mobile */
-
 .navbar-toggle {
     background-color: #28A745;
     border: none;
@@ -88,7 +87,7 @@ body {
     margin-bottom: 0;
 }
 
-navbar-header {
+.navbar-header {
     display: flex;
     align-items: center;
 }
@@ -115,19 +114,6 @@ navbar-header {
 .navegacao .navbar-brand img {
     max-height: 45px;
     width: auto;
-}
-
-/* Regra apenas para Computadores/Tablets */
-@media (min-width: 768px) {
-    .navbar-nav {
-        float: right !important;
-        margin: 0;
-    }
-
-    .navbar-nav>li {
-        float: left;
-        display: block;
-    }
 }
 
 /* links da navbar */
@@ -178,6 +164,78 @@ navbar-header {
 /* imagem hover */
 .navbar-brand img:hover {
     transform: scale(1.05);
+}
+
+/* =========================================================
+   AJUSTES FINOS DA NAVBAR (PESQUISA E ALINHAMENTO)
+   ========================================================= */
+
+/* Regras apenas para Telas Grandes (PC/Tablet) */
+@media (min-width: 768px) {
+    .navbar-custom .navbar-nav {
+        display: flex;
+        align-items: center;
+        height: 60px;
+        float: right !important;
+        margin: 0;
+    }
+    .navbar-custom .navbar-nav > li {
+        display: block;
+        float: none; /* Remove o comportamento antigo do Bootstrap */
+    }
+    .navbar-nav > li.btn-home > a {
+        margin-top: 0 !important; 
+    }
+}
+
+.navbar-custom .navbar-form {
+    margin: 0; 
+    padding: 0 10px; 
+}
+
+/* --- FORÇANDO O ALINHAMENTO PERFEITO COM FLEXBOX --- */
+.navbar-custom .input-busca-moderno {
+    display: flex !important;
+    align-items: stretch !important; /* Faz o input e o botão terem a mesma altura */
+    height: 36px; /* Altura fixa do grupo */
+}
+
+/* O Input de Texto */
+.navbar-custom .input-busca-moderno .form-control {
+    height: 100% !important; /* Pega os 36px do pai */
+    border-radius: 20px 0 0 20px !important; 
+    border: 1px solid #ccc;
+    border-right: none !important; /* Tira a borda dupla no meio */
+    box-shadow: none;
+    font-size: 13px;
+    margin: 0 !important;
+}
+
+/* O "Pai" do Botão */
+.navbar-custom .input-busca-moderno .input-group-btn {
+    display: flex !important;
+    width: auto !important;
+}
+
+/* O Botão da Lupa */
+.navbar-custom .input-busca-moderno .btn {
+    height: 100% !important; /* Pega os 36px do pai */
+    border-radius: 0 20px 20px 0 !important; 
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    margin: 0 !important;
+    padding: 0 15px; /* Espaço nas laterais da lupa */
+    display: flex !important;
+    align-items: center;      /* Centraliza a lupa verticalmente */
+    justify-content: center;  /* Centraliza a lupa horizontalmente */
+    color: #666;
+    transition: background-color 0.2s;
+}
+
+/* Hover da Lupa */
+.navbar-custom .input-busca-moderno .btn:hover {
+    background-color: #e2e6ea;
+    color: #28A745;
 }
 
 /* -------------------- OUTROS ESTILOS -------------------------- */
@@ -272,14 +330,6 @@ navbar-header {
     z-index: 10;
     margin-top: -50px;
 }
-    .hero-verde {
-        background-color: #28A745;
-        width: 100%;
-        padding: 60px 0;
-        position: relative;
-        z-index: 10;
-        margin-top: -50px;
-    }
 
 .thumbnail-sobrenos {
     padding: 20px;
@@ -343,23 +393,6 @@ navbar-header {
     color: #4CAF50;
 }
 
-@media (min-width: 768px) {
-    .hero-card .row {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: stretch;
-    }
-
-    .hero-card [class*="col-"] {
-        display: flex;
-    }
-}
-
-.hero-card {
-    padding: 50px 20px;
-}
-
 .divisor-opaco {
     width: 100%;
     height: 50%;
@@ -381,91 +414,87 @@ navbar-header {
     background-attachment: fixed;
     opacity: 0.5;
 }
-    .team-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        justify-items: space-between;
-        gap: 30px;
-    }
 
-    .team-card {
-        width: 250px;
-        background-color: #ffffff;
-        border-radius: 10px;
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        padding: 30px 20px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+.team-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: space-between;
+    gap: 30px;
+}
 
-    .team-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-    }
+.team-card {
+    width: 250px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 30px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    .image-wrapper {
-        background-color: #f4f4f4;
-        padding-top: 20px;
-    }
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
 
-    .team-card img {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-bottom: 15px;
-    }
+.image-wrapper {
+    background-color: #f4f4f4;
+    padding-top: 20px;
+}
 
-    .card-content {
-        padding: 20px;
-    }
+.team-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
 
-    .card-content h3 {
-        margin: 10px 0 5px;
-        color: #333;
-    }
+.card-content {
+    padding: 20px;
+}
 
-    .card-content span {
-        color: #000000;
-        font-weight: bold;
-        font-size: 0.9rem;
-        display: block;
-        margin-bottom: 15px;
-    }
+.card-content h3 {
+    margin: 10px 0 5px;
+    color: #333;
+}
 
-    .card-content p {
-        font-size: 0.85rem;
-        color: #666;
-        line-height: 1.5;
-    }
+.card-content span {
+    color: #000000;
+    font-weight: bold;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.card-content p {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.5;
+}
 
 .hero-card {
     padding: 50px 20px;
 }
-    .social-links {
-        margin-top: 15px;
-    }
 
-    .social-links a {
-        color: #28A745;
-        margin: 0 8px;
-        font-size: 1.2rem;
-        transition: color 0.3s ease;
-    }
+.social-links {
+    margin-top: 15px;
+}
 
-    .social-links a:hover {
-        color: #1e7e34;
-    }
+.social-links a {
+    color: #28A745;
+    margin: 0 8px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #1e7e34;
+}
 
 .navbar {
     margin-bottom: 0px;
-}
-
-/* Fundo da página para dar contraste aos cards brancos */
-body {
-    background-color: #f4f7f6;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Título estilizado */
@@ -534,7 +563,6 @@ body {
 }
 
 /* ---------------- PAGINA ADM_OPTIONS (BOTÕES) ---------------- */
-
 .fundo-branco {
     background-color: #fff !important;
     border-radius: 2px;
@@ -706,8 +734,6 @@ body {
     transform: scale(1.2);
 }
 
-/* cards doacao cards */
-
 /* --- CARD DE DOAÇÃO MODERNO --- */
 .card-doacao-moderno {
     background-color: #fff;
@@ -720,14 +746,12 @@ body {
     position: relative;
 }
 
-/* Efeito Hover no Card Inteiro */
 .card-doacao-moderno:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
     border-color: #28A745;
 }
 
-/* Área da Imagem */
 .card-img-wrapper {
     height: 180px;
     overflow: hidden;
@@ -742,7 +766,6 @@ body {
     border-radius: 10%;
 }
 
-/* Zoom na imagem ao passar o mouse */
 .card-doacao-moderno:hover .card-img-wrapper img {
     transform: scale(1.1);
 }
@@ -763,23 +786,11 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.badge-verde {
-    background-color: #28A745;
-}
+.badge-verde { background-color: #28A745; }
+.badge-laranja { background-color: #ffab45; }
+.badge-azul { background-color: #007BFF; }
+.badge-padrao { background-color: #6c757d; }
 
-.badge-laranja {
-    background-color: #ffab45;
-}
-
-.badge-azul {
-    background-color: #007BFF;
-}
-
-.badge-padrao {
-    background-color: #6c757d;
-}
-
-/* Conteúdo do Card */
 .card-content {
     padding: 20px;
 }
@@ -1015,11 +1026,6 @@ body {
     border: none;
 }
 
-.form-control {
-    height: 45px;
-    border-radius: 5px;
-}
-
 .btn-salvar-laranja {
     background-color: #ff9800;
     border-color: #f57c00;
@@ -1051,11 +1057,6 @@ body {
     border: none;
 }
 
-.form-control {
-    height: 45px;
-    border-radius: 5px;
-}
-
 .input-group-addon {
     background-color: #f0fdf4;
     color: #28A745;
@@ -1076,12 +1077,4 @@ body {
     color: white;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.secao-form {
-    color: #28A745;
-    border-bottom: 2px solid #e9ecef;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-    font-weight: 600;
 }
