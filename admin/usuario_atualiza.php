@@ -123,7 +123,7 @@ if (isset($_POST['enviar'])) {
                                     <div class="form-group">
                                         <label>Nome Completo</label>
                                         <div class="input-group">
-                                            <span class="input-group-addon"><i class="fa-solid fa-user"></i></span>
+                                            <span class="input-group-addon"><i class="fa-solid fa-user text-info"></i></span>
                                             <input type="text" class="form-control" name="nome_usuario" value="<?php echo htmlspecialchars($row['nome_usuario']); ?>" required>
                                         </div>
                                     </div>
@@ -131,7 +131,7 @@ if (isset($_POST['enviar'])) {
                                     <div class="form-group">
                                         <label>E-mail</label>
                                         <div class="input-group">
-                                            <span class="input-group-addon"><i class="fa-solid fa-envelope"></i></span>
+                                            <span class="input-group-addon"><i class="fa-solid fa-envelope text-info"></i></span>
                                             <input type="email" class="form-control" name="email_usuario" value="<?php echo htmlspecialchars($row['email_usuario']); ?>" required>
                                         </div>
                                     </div>
@@ -156,7 +156,7 @@ if (isset($_POST['enviar'])) {
                                     <div class="form-group">
                                         <label>Login (Usuário)</label>
                                         <div class="input-group">
-                                            <span class="input-group-addon"><i class="fa-solid fa-arrow-right-to-bracket"></i></span>
+                                            <span class="input-group-addon"><i class="fa-solid fa-arrow-right-to-bracket text-info"></i></span>
                                             <input type="text" class="form-control" name="login_usuario" value="<?php echo htmlspecialchars($row['login_usuario']); ?>" required>
                                         </div>
                                     </div>
@@ -164,7 +164,7 @@ if (isset($_POST['enviar'])) {
                                     <div class="form-group">
                                         <label>Senha</label>
                                         <div class="input-group">
-                                            <span class="input-group-addon"><i class="fa-solid fa-lock"></i></span>
+                                            <span class="input-group-addon"><i class="fa-solid fa-lock text-info"></i></span>
                                             <input type="text" class="form-control" name="senha_usuario" value="<?php echo htmlspecialchars($row['senha_usuario']); ?>" required>
                                         </div>
                                     </div>
@@ -172,7 +172,7 @@ if (isset($_POST['enviar'])) {
                                     <div class="form-group">
                                         <label>Nível de Acesso</label>
                                         <div class="input-group">
-                                            <span class="input-group-addon"><i class="fa-solid fa-shield-halved"></i></span>
+                                            <span class="input-group-addon"><i class="fa-solid fa-shield-halved text-info"></i></span>
                                             <select class="form-control" name="tipo_usuario" required>
                                                 <option value="Admin" <?php if($row['tipo_usuario'] == 'Admin'){ echo 'selected'; } ?>>Administrador (Total)</option>
                                                 <option value="User" <?php if($row['tipo_usuario'] == 'User'){ echo 'selected'; } ?>>Usuário Padrão</option>
