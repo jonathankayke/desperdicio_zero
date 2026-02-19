@@ -4,17 +4,13 @@ include("acesso_user.php");
 
 // Incluir o arquivo e fazer a conexão
 include("../Connections/conn_alimentos.php");
+
 // Selecionar os dados
-$consulta = "
-                SELECT  *
-                FROM    tbtipos
-                ORDER BY rotulo_tipo ASC;
-                ";
+$consulta = "SELECT * FROM tbtipos ORDER BY rotulo_tipo ASC;";
+
 // Fazer uma lista completa dos dados
 $lista = $conn_alimentos->query($consulta);
-// Separar os dados em linhas (row)
 $row = $lista->fetch_assoc();
-// Contar o total de linhas
 $totalRows = ($lista)->num_rows;
 ?>
 <!DOCTYPE html>
@@ -24,108 +20,118 @@ $totalRows = ($lista)->num_rows;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tipos - Lista</title>
-    <!-- Link CSS do Bootstrap -->
+    <script src="https://kit.fontawesome.com/9ee3096070.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="../css/meu_estilo.css">
 </head>
 
 <body class="fundofixo">
     <?php include("menu_adm.php"); ?>
-    <!-- main>h1 -->
-    <main class="container">
-        <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-            <!-- dimensionamento -->
-            <h1 class="text-warning text-center">Lista dos Tipos</h1>
-            <!-- table>thead>tr>th*8 -->
-        <div class="lista-wrapper borda-laranja">
-            <table class="table table-hover table-condensed tbopacidade">
-                <thead>
-                    <tr>
-                        <th class="hidden">ID</th>
-                        <th>SIGLA</th>
-                        <th>RÓTULO</th>
-                        <th>
-                            <a href="tipos_insere.php" class="btn btn-block btn-success btn-xs borda-btn">
-                                <span class="hidden-xs"></span>
-                                <span class="glyphicon glyphicon-plus"></span>
-                            </a>
-                        </th>
-                    </tr>
-                </thead>
-                <!-- tbody>tr>td*4 -->
-                <tbody>
-                    <?php do { ?><!-- Abre a estrutura de repetição -->
-                        <tr>
-                            <td class="hidden"><?php echo $row['id_tipo']; ?></td>
-                            <td><?php echo $row['sigla_tipo']; ?></td>
-                            <td><?php echo $row['rotulo_tipo']; ?></td>
-                            <td>
-                                <a href="tipos_atualiza.php?id_tipo=<?php echo $row['id_tipo']; ?>"
-                                    class="btn btn-block btn-warning borda-btn" target="_self" role="button">
-                                    <span class="hidden-xs"></span>
-                                    <span class="glyphicon glyphicon-refresh"></span>
-                                </a>
-                                <button data-id="<?php echo $row['id_tipo']; ?>"
-                                    data-nome="<?php echo $row['rotulo_tipo']; ?>" class="btn btn-danger borda-btn btn-block delete">
-                                    <span class="hidden-xs"></span>
-                                    <span class="glyphicon glyphicon-trash"></span>
+    
+    <main class="container" style="margin-top: 30px; margin-bottom: 50px;">
+        <div class="row">
+            <div class="col-xs-12 col-md-8 col-md-offset-2">
+                
+                <h1 class="text-center" style="color: #ffab45; text-shadow: 1px 1px 3px rgba(0,0,0,0.2); margin-bottom: 20px;">
+                    <i class="fa-solid fa-layer-group"></i> Lista de Tipos
+                </h1>
+                
+                <div class="lista-wrapper borda-laranja">
+                    <table class="table table-hover table-condensed tbopacidade">
+                        <thead>
+                            <tr>
+                                <th class="hidden">ID</th>
+                                <th>SIGLA</th>
+                                <th>RÓTULO</th>
+                                <th class="text-center" style="width: 25%;">AÇÕES</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php if ($totalRows > 0) { do { ?>
+                                <tr>
+                                    <td class="hidden"><?php echo $row['id_tipo']; ?></td>
+                                    <td><strong><?php echo $row['sigla_tipo']; ?></strong></td>
+                                    <td><?php echo $row['rotulo_tipo']; ?></td>
+                                    <td>
+                                        <div class="acoes-container">
+                                            <a href="tipos_atualiza.php?id_tipo=<?php echo $row['id_tipo']; ?>" class="btn botao-laranja laranja-escuro" style="padding: 5px 10px; font-size: 13px;" title="Editar">
+                                                <i class="fa-solid fa-pen"></i>
+                                            </a>
+                                            
+                                            <button data-id="<?php echo $row['id_tipo']; ?>" data-nome="<?php echo $row['rotulo_tipo']; ?>" class="btn btn-danger delete" style="border-radius: 5px; transition: transform 0.3s;" title="Excluir">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            <?php } while ($row = $lista->fetch_assoc()); } else { ?>
+                                <tr>
+                                    <td colspan="3" class="text-center">Nenhum tipo cadastrado.</td>
+                                </tr>
+                            <?php } ?>
+                        </tbody>
+                    </table>
+                    
+                    <hr>
+                    
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <a href="tipos_insere.php" style="text-decoration: none;">
+                                <button class="btn botao-laranja laranja-escuro btn-block" style="padding: 12px; font-size: 16px;">
+                                    <i class="fa-solid fa-plus"></i> Inserir Novo Tipo
                                 </button>
-                            </td>
-                        </tr>
-                    <?php } while ($row = $lista->fetch_assoc()); ?>
-                    <!-- Fechar a estrutura de repetição -->
-                </tbody>
-            </table>
-       </div> </main>
+                            </a>
+                        </div>
+                    </div>
 
-    <!-- Modal -->
+                </div> </div>
+        </div>
+    </main>
+
     <div id="myModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">
-                        &times;
-                    </button>
-                    <h4 class="modal-title text-danger">ATENÇÃO!</h4>
-                </div> <!-- fecha modal-header -->
-                <div class="modal-body">
-                    Deseja mesmo EXCLUIR o item?
-                    <h4><span class="nome text-danger"></span></h4>
-                </div> <!-- fecha modal-body -->
-                <div class="modal-footer">
-                    <a href="#" type="button" class="btn btn-danger delete-yes">
-                        Confirmar
-                    </a>
-                    <button class="btn btn-success" data-dismiss="modal">
+        <div class="modal-dialog modal-sm"> <div class="modal-content" style="border-radius: 10px; overflow: hidden;">
+                <div class="modal-header" style="background-color: #dc3545; color: white; border: none;">
+                    <button type="button" class="close" data-dismiss="modal" style="color: white; opacity: 1;">&times;</button>
+                    <h4 class="modal-title"><i class="fa-solid fa-triangle-exclamation"></i> ATENÇÃO!</h4>
+                </div>
+                <div class="modal-body text-center" style="padding: 30px;">
+                    <p style="font-size: 16px;">Deseja mesmo <strong>EXCLUIR</strong> o item?</p>
+                    <h3 class="nome text-danger" style="margin-top: 10px; font-weight: bold;"></h3>
+                </div>
+                <div class="modal-footer" style="border: none; text-align: center; padding-bottom: 20px;">
+                    <button class="btn btn-default" data-dismiss="modal" style="border-radius: 5px; margin-right: 10px;">
                         Cancelar
                     </button>
-                </div> <!-- fecha modal-footer -->
-            </div> <!-- fecha modal-content -->
-        </div> <!-- fecha modal-dialog -->
-    </div> <!-- fecha modal -->
+                    <a href="#" class="btn btn-danger delete-yes" style="border-radius: 5px;">
+                        <i class="fa-solid fa-trash"></i> Sim, Excluir
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <!-- Link arquivos Bootstrap js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
 
-    <!-- Script para o Modal -->
     <script type="text/javascript">
-        $('.delete').on('click', function () {
-            var nome = $(this).data('nome');
-            // buscar o valor do atributo data-nome
-            var id = $(this).data('id');
-            // buscar o valor do atributo data-id
-            $('span.nome').text(nome);
-            // Inserir o nome do item na pergunta de confirmação
-            $('a.delete-yes').attr('href', 'tipos_exclui.php?id_tipo=' + id);
-            // mudar dinamicamente o id do link no botão confirmar
-            $('#myModal').modal('show'); // abre modal
+        $(document).ready(function(){
+            // Animação leve no botão de excluir ao passar o mouse
+            $('.btn-danger.delete').hover(
+                function() { $(this).css('transform', 'scale(1.1)'); },
+                function() { $(this).css('transform', 'scale(1)'); }
+            );
+
+            // Abre o modal de excluir
+            $('.delete').on('click', function () {
+                var nome = $(this).data('nome');
+                var id = $(this).data('id');
+                $('h3.nome').text(nome); // Coloca o nome no H3 do modal
+                $('a.delete-yes').attr('href', 'tipos_exclui.php?id_tipo=' + id);
+                $('#myModal').modal('show');
+            });
         });
     </script>
 
-
 </body>
-
 </html>
 <?php mysqli_free_result($lista); ?>
