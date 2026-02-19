@@ -70,7 +70,7 @@ if($_POST){
                         <div class="form-group">
                             <label for="rotulo_tipo">Rótulo (Nome do Tipo)</label>
                             <div class="input-group">
-                                <span class="input-group-addon"><i class="fa-solid fa-tag"></i></span>
+                                <span class="input-group-addon"><i class="fa-solid fa-tag text-warning"></i></span>
                                 <input type="text" name="rotulo_tipo" id="rotulo_tipo" class="form-control" autofocus maxlength="15" required placeholder="Ex: Legumes, Frutas, Grãos...">
                             </div>
                         </div>
@@ -78,7 +78,7 @@ if($_POST){
                         <div class="form-group">
                             <label for="sigla_tipo">Sigla (Abreviação)</label>
                             <div class="input-group">
-                                <span class="input-group-addon"><i class="fa-solid fa-font"></i></span>
+                                <span class="input-group-addon"><i class="fa-solid fa-font text-warning"></i></span>
                                 <input type="text" name="sigla_tipo" id="sigla_tipo" class="form-control" maxlength="3" required placeholder="Ex: LEG, FRU, GRA..." style="text-transform: uppercase;">
                             </div>
                             <small class="text-muted">Máximo de 3 caracteres.</small>

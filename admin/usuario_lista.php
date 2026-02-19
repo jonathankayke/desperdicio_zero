@@ -149,13 +149,6 @@ $totalRows  =   $lista->num_rows;
 
     <script type="text/javascript">
         $(document).ready(function(){
-            // Efeito Hover suave no botão vermelho
-            $('.btn-danger.delete').hover(
-                function() { $(this).css('transform', 'scale(1.1)'); },
-                function() { $(this).css('transform', 'scale(1)'); }
-            );
-
-            // Passar os dados para o Modal
             $('.delete').on('click', function() {
                 var nome = $(this).data('nome');
                 var id = $(this).data('id');
