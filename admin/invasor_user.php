@@ -31,7 +31,7 @@
                             NÃO AUTORIZADO!
                             <br>
                             <br>
-                            Solicite acesso ao Supervisor
+                            Solicite acesso ao Administrador
                             <br>
                         </h4>
                         <p class="text-danger">

@@ -1,5 +1,6 @@
 <?php
 // Incluindo o Sistema de autenticação
+include("acesso_User.php");
 ?>
 <!DOCTYPE html>
 <html lang="pt.br">

@@ -1,4 +1,6 @@
 <?php
+// Incluindo o Sistema de autenticação
+include("acesso_admin.php");
 
 include('../Connections/conn_alimentos.php');
 
@@ -47,11 +49,13 @@ $totalRows  =   $lista->num_rows;
                     </tr>
                 </thead>
                 <tbody>
+                
                     <?php
                     // O while verifica se existe uma linha antes de tentar imprimir
-                    while ($row = $lista->fetch_assoc()) {
+                    while ($row = $lista->fetch_assoc()) {;
                     ?>
                         <tr>
+                        
                             <td>
                                 <img src="../imagens/<?php echo $row['foto_usuario']; ?>" alt="<?php echo $row['nome_usuario']; ?>" class="img-responsive img-thumbnail" style="max-width: 80px;">
                             </td> <td><?php echo $row['nome_usuario']; ?></td>

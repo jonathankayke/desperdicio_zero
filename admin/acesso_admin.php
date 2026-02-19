@@ -21,11 +21,11 @@ if(!isset($_SESSION['nome_da_sessao'])OR($_SESSION['nome_da_sessao']!=$nome_da_s
 };
 
 // Determinar o nível de acesso
-$nivel_acesso=  'sup';
+$tipo_acesso=  'Admin';
 // VERIFICAR o nível de acesso
-if(!isset($_SESSION['login_usuario'])OR($_SESSION['nivel_usuario']!=$nivel_acesso)){
+if(!isset($_SESSION['login_usuario'])OR($_SESSION['tipo_usuario']!=$tipo_acesso)){
     // Redireciona para página de autorização]
-    header("Location: invasor_user.php"); exit;
+    header("Location: invasor_User.php"); exit;
 };
 
 // Verificar se o login é valido

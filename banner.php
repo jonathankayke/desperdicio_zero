@@ -10,7 +10,7 @@
     <div class="banner-content subtitulos">
         <h1>Desperdicio Zero</h1>
         <p>Compartilhe o que sobra. Alimente quem precisa.</p>
-        <a href="sobre_nos.php" class="btn-banner">Saiba Mais</a>
+        <a href="sobre_nos.php" class="btn-banner" style="color: white; text-decoration: none;">Saiba Mais</a>
     </div>
 </section>
 </body>

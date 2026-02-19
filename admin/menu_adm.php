@@ -30,7 +30,14 @@
             </div>
 
             <div class="collapse navbar-collapse" id="defaultNavbar">
-                <ul class="nav navbar-nav navbar-right borda-preta">
+            <ul class="nav navbar-nav navbar-right borda-preta">
+
+                <li>
+                    <button type="button" class="btn btn-danger navbar-btn disabled">
+                        Olá, <?php echo($_SESSION['login_usuario']); ?>
+                    </button>
+                </li>
+
                     <li ><a href="indexadmin.php" id="menu-admin">ADMIN</a></li>
                     <li><a href="doacao_lista.php" id="menu-doacoes">DOAÇÕES</a></li>
                     <li><a href="tipos_lista.php" id="menu-tipos">TIPOS</a></li>
