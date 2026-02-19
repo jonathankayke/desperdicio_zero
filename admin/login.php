@@ -32,7 +32,7 @@ if($_POST){
     // Carregar informações em uma sessão
     if($totalRows_session>0){
         $_SESSION['login_usuario']  =   $login_usuario;
-        $_SESSION['nivel_usuario']  =   $row_session['nivel_usuario'];
+        $_SESSION['tipo_usuario']  =   $row_session['tipo_usuario'];
         $_SESSION['nome_da_sessao'] =   session_name();
         echo "<script>window.open('indexadmin.php','_self')</script>";
     }else{
