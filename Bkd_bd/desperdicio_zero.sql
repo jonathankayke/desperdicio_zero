@@ -81,8 +81,8 @@ VALUES
 
 -- Inserindo usuário padrão para teste
 INSERT INTO tbusuarios (nome_usuario, email_usuario, login_usuario, senha_usuario, tipo_usuario, foto_usuario)
-VALUES ('Administrador', 'admin@desperdiciozero.com', 'admin', '123456', 'Admin', 'sem_imagem.jpg'),
-       ('Usuário', 'usuario@desperdiciozero.com', 'user', '123', 'User', 'sem_imagem.jpg');
+VALUES ('Administrador', 'admin@desperdiciozero.com', 'admin', '123456', 'Admin', 'Chefe.png'),
+       ('Usuário', 'usuario@desperdiciozero.com', 'user', '123', 'User', 'Secretaria.png');
 
 -- ------ CHAVES ------
 ALTER TABLE tbdoacoes
