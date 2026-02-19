@@ -90,98 +90,145 @@ if (isset($_POST['enviar'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atualizar Usuário</title>
+    <title>Atualizar Usuário - Área Admin</title>
+    <script src="https://kit.fontawesome.com/9ee3096070.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/meu_estilo.css">
 </head>
 
 <body class="fundofixo">
-<?php include("menu_adm.php"); ?>
+    
+    <?php include("menu_adm.php"); ?>
+    
+    <div class="container" style="margin-top: 30px; margin-bottom: 50px;">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                
+                <div class="panel panel-default panel-custom">
+                    
+                    <div class="panel-heading panel-heading-custom text-center">
+                        <h3 style="margin: 0; font-weight: bold;">
+                            <i class="fa-solid fa-user-pen"></i> Atualizar Usuário
+                        </h3>
+                    </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-xs-12 col-md-10 col-md-offset-1">
-            <h1 class="text-center" style="color:white;">Atualizar Usuário</h1>
+                    <div class="panel-body" style="padding: 30px;">
+                        
+                        <form action="" method="POST" enctype="multipart/form-data" name="form_usuario" id="form_usuario">
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h4 class="secao-form">Dados Pessoais</h4>
+                                    
+                                    <div class="form-group">
+                                        <label>Nome Completo</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa-solid fa-user"></i></span>
+                                            <input type="text" class="form-control" name="nome_usuario" value="<?php echo htmlspecialchars($row['nome_usuario']); ?>" required>
+                                        </div>
+                                    </div>
 
-            <div class="thumbnail" style="border:none; background:none;">
-                <div class="alert alert-success">
+                                    <div class="form-group">
+                                        <label>E-mail</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa-solid fa-envelope"></i></span>
+                                            <input type="email" class="form-control" name="email_usuario" value="<?php echo htmlspecialchars($row['email_usuario']); ?>" required>
+                                        </div>
+                                    </div>
 
-                    <form action="" method="POST" enctype="multipart/form-data">
-
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h3 class="secao-titulo">Dados Pessoais</h3>
-
-                                <div class="form-group">
-                                    <label>Nome Completo</label>
-                                    <input type="text" name="nome_usuario"
-                                           class="form-control"
-                                           value="<?php echo $row['nome_usuario']; ?>" required>
+                                    <div class="form-group">
+                                        <label>Foto do Perfil</label>
+                                        <div class="well text-center" style="margin-bottom: 0;">
+                                            <?php 
+                                                $foto_atual = ($row['foto_usuario'] != '') ? $row['foto_usuario'] : 'sem_imagem.jpg';
+                                            ?>
+                                            <img src="../imagens/<?php echo $foto_atual; ?>" id="imagem" class="img-circle" style="width: 120px; height: 120px; object-fit: cover; border: 3px solid #ddd; margin-bottom: 10px;">
+                                            
+                                            <input type="file" name="foto_usuario" id="foto_usuario" class="form-control" accept="image/*" style="padding-top: 10px;">
+                                            <small class="text-muted">Apenas envie uma nova foto se quiser alterar a atual.</small>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <div class="form-group">
-                                    <label>E-mail</label>
-                                    <input type="email" name="email_usuario"
-                                           class="form-control"
-                                           value="<?php echo $row['email_usuario']; ?>" required>
-                                </div>
+                                <div class="col-md-6">
+                                    <h4 class="secao-form">Dados de Acesso</h4>
 
-                                <div class="form-group">
-                                    <label>Foto do usuário</label>
-                                    <input type="file" name="foto_usuario" class="form-control">
-                                    <br>
-                                    <img src="../imagens/<?php echo $row['foto_usuario']; ?>"
-                                         class="img-responsive img-thumbnail"
-                                         style="max-height:200px;">
+                                    <div class="form-group">
+                                        <label>Login (Usuário)</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa-solid fa-arrow-right-to-bracket"></i></span>
+                                            <input type="text" class="form-control" name="login_usuario" value="<?php echo htmlspecialchars($row['login_usuario']); ?>" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Senha</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa-solid fa-lock"></i></span>
+                                            <input type="text" class="form-control" name="senha_usuario" value="<?php echo htmlspecialchars($row['senha_usuario']); ?>" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Nível de Acesso</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa-solid fa-shield-halved"></i></span>
+                                            <select class="form-control" name="tipo_usuario" required>
+                                                <option value="Admin" <?php if($row['tipo_usuario'] == 'Admin'){ echo 'selected'; } ?>>Administrador (Total)</option>
+                                                <option value="User" <?php if($row['tipo_usuario'] == 'User'){ echo 'selected'; } ?>>Usuário Padrão</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
 
-                            <div class="col-md-6">
-                                <h3 class="secao-titulo">Dados de Acesso</h3>
+                            <hr>
 
-                                <div class="form-group">
-                                    <label>Login</label>
-                                    <input type="text" name="login_usuario"
-                                           class="form-control"
-                                           value="<?php echo $row['login_usuario']; ?>" required>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <a href="usuario_lista.php" class="btn btn-default btn-block btn-lg" style="margin-bottom: 10px;">
+                                        <i class="fa-solid fa-arrow-left"></i> Cancelar
+                                    </a>
                                 </div>
-
-                                <div class="form-group">
-                                    <label>Senha</label>
-                                    <input type="text" name="senha_usuario"
-                                           class="form-control"
-                                           value="<?php echo $row['senha_usuario']; ?>" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label>Nível de Acesso</label>
-                                    <select name="tipo_usuario" class="form-control" required>
-                                        <option value="Admin" <?php if($row['tipo_usuario']=="Admin") echo "selected"; ?>>Admin</option>
-                                        <option value="User"  <?php if($row['tipo_usuario']=="User")  echo "selected"; ?>>User</option>
-                                    </select>
+                                <div class="col-xs-6">
+                                    <button type="submit" name="enviar" class="btn btn-cadastrar btn-block btn-lg" style="background-color: #007BFF; border-color: #007BFF;">
+                                        <i class="fa-solid fa-floppy-disk"></i> Atualizar
+                                    </button>
                                 </div>
                             </div>
-                        </div>
 
-                        <br>
-
-                        <input type="submit" name="enviar"
-                               value="Atualizar Usuário"
-                               class="btn btn-success btn-block">
-
-                        <a href="usuario_lista.php" class="btn btn-default btn-block">
-                            Cancelar
-                        </a>
-
-                    </form>
-
-                </div>
-            </div>
+                        </form>
+                    </div> </div> </div>
         </div>
     </div>
-</div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+    <script>
+        document.getElementById("foto_usuario").onchange = function(){
+            var reader = new FileReader();
+            
+            if(this.files[0].size > 5242880){
+                alert("A imagem é muito grande! Máximo de 5MB.");
+                $(this).val(''); 
+                return false;
+            }
+            
+            if(this.files[0].type.indexOf("image") == -1){
+                alert("Arquivo inválido. Por favor envie uma imagem.");
+                $(this).val('');
+                return false;
+            }
+
+            reader.onload = function(e){
+                document.getElementById("imagem").src = e.target.result;
+            };
+            
+            reader.readAsDataURL(this.files[0]);
+        };
+    </script>
+
 </body>
 </html>

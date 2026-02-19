@@ -15,7 +15,6 @@ if($_POST){
     mysqli_select_db($conn_alimentos,$database_conn);
 
     // Receber os dados do formulário
-    // Organizar os campos na mesma ordem
     $rotulo_tipo    =   $_POST['rotulo_tipo'];
     $sigla_tipo     =   $_POST['sigla_tipo'];
 
@@ -41,7 +40,6 @@ if($_POST){
 };
 
 // Consulta para trazer e filtrar os dados
-// Definir o USE do banco de dados
 mysqli_select_db($conn_alimentos,$database_conn);
 $filtro_select  =   $_GET['id_tipo'];
 $consulta       =   "
@@ -59,106 +57,70 @@ $totalRows      =   ($lista)->num_rows;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tipos - Atualiza</title>
-    <!-- Link CSS do Bootstrap -->
+    <title>Atualizar Tipo - Área Admin</title>
+    <script src="https://kit.fontawesome.com/9ee3096070.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="../css/meu_estilo.css">
 </head>
+
 <body class="fundofixo">
+
 <?php include("menu_adm.php"); ?>
-<main class="container">
+
+<main class="container" style="margin-top: 50px;">
     <div class="row">
-        <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4" > <!-- abre dimensionamento -->
-            <h2 class="breadcrumb text-success
-            ">
-                <a href="tipos_lista.php">
-                    <button class="btn btn-success
-                    ">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                    </button>
-                </a>
-                Atualiza Tipo
-            </h2>
-            <div class="thumbnail">
-                <div class="alert alert-success
-                ">
-                    <form 
-                        action="tipos_atualiza.php"
-                        enctype="multipart/form-data"
-                        method="post"
-                        id="form_atualiza_tipo"
-                        name="form_atualiza_tipo"
-                    >
-                        <!-- Inserir campo id_tipo OCULTO para uso em filtro -->
-                        <input 
-                            type="hidden"
-                            name="id_tipo"
-                            id="id_tipo"
-                            value="<?php echo $row['id_tipo']; ?>"
-                        >
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3"> 
+            
+            <div class="panel panel-default panel-custom-laranja">
+                
+                <div class="panel-heading panel-heading-laranja text-center">
+                    <h3 style="margin: 0; font-weight: bold;">
+                        <i class="fa-solid fa-layer-group"></i> Atualizar Tipo
+                    </h3>
+                </div>
 
-                        <!-- text rotulo_tipo -->
-                        <label for="rotulo_tipo">Rótulo:</label>
-                        <div class="input-group">
-                            <span class="input-group-addon">
-                                <span class="glyphicon glyphicon-apple"></span>
-                            </span>
-                            <input 
-                                type="text" 
-                                name="rotulo_tipo" 
-                                id="rotulo_tipo"
-                                class="form-control"
-                                autofocus
-                                maxlength="15"
-                                required
-                                placeholder="Digite o rótulo do tipo."
-                                value="<?php echo $row['rotulo_tipo']; ?>"
-                            >
-                        </div> <!-- fecha input-group -->
-                        <!-- fecha text rotulo_tipo -->
-                        <br>
+                <div class="panel-body" style="padding: 30px;">
+                    <form action="tipos_atualiza.php" enctype="multipart/form-data" method="post" id="form_atualiza_tipo" name="form_atualiza_tipo">
+                        
+                        <input type="hidden" name="id_tipo" id="id_tipo" value="<?php echo $row['id_tipo']; ?>">
 
-                        <!-- text sigla_tipo -->
-                        <label for="sigla_tipo">Sigla:</label>
-                        <div class="input-group">
-                            <span class="input-group-addon">
-                                <span class="glyphicon glyphicon-th-list"></span>
-                            </span>
-                            <input 
-                                type="text" 
-                                name="sigla_tipo" 
-                                id="sigla_tipo"
-                                class="form-control"
-                                maxlength="3"
-                                required
-                                placeholder="Digite a sigla do tipo."
-                                value="<?php echo $row['sigla_tipo']; ?>"
-                            >
-                        </div> <!-- fecha input-group -->
-                        <!-- fecha text sigla_tipo -->
-                        <br>
+                        <div class="form-group">
+                            <label for="rotulo_tipo">Rótulo (Nome do Tipo)</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa-solid fa-tag"></i></span>
+                                <input type="text" name="rotulo_tipo" id="rotulo_tipo" class="form-control" autofocus maxlength="15" required placeholder="Ex: Legumes, Frutas..." value="<?php echo htmlspecialchars($row['rotulo_tipo']); ?>">
+                            </div>
+                        </div>
 
-                        <!-- btn enviar -->
-                        <input 
-                            type="submit" 
-                            value="Atualizar"
-                            name="enviar"
-                            id="enviar"
-                            role="button"
-                            class="btn btn-success
-                             btn-block"
-                        >
+                        <div class="form-group">
+                            <label for="sigla_tipo">Sigla (Abreviação)</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa-solid fa-font"></i></span>
+                                <input type="text" name="sigla_tipo" id="sigla_tipo" class="form-control" maxlength="3" required placeholder="Ex: LEG, FRU..." style="text-transform: uppercase;" value="<?php echo htmlspecialchars($row['sigla_tipo']); ?>">
+                            </div>
+                            <small class="text-muted">Máximo de 3 caracteres.</small>
+                        </div>
+
+                        <hr>
+
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <a href="tipos_lista.php" class="btn btn-default btn-block btn-lg">
+                                    <i class="fa-solid fa-arrow-left"></i> Cancelar
+                                </a>
+                            </div>
+                            <div class="col-xs-6">
+                                <button type="submit" name="enviar" class="btn btn-salvar-laranja btn-block btn-lg">
+                                    <i class="fa-solid fa-floppy-disk"></i> Atualizar
+                                </button>
+                            </div>
+                        </div>
+
                     </form>
-                </div> <!-- fecha alert alert-warning  -->
-            </div> <!-- thumbnail -->
-        </div> <!-- dimensionamento -->
-    </div> <!-- fecha row -->
+                </div> </div> </div> 
+    </div> 
 </main>
 
-
-
-<!-- Link arquivos Bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>    
 </body>
