@@ -46,25 +46,25 @@
 
                         <li><a href="doacao_geral.php">DOAÇÕES</a></li>
 
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                aria-expanded="false">
-                                TIPOS <span class="caret"></span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="doacao_por_tipo.php">TODOS</a></li>
-                                <?php do { ?>
-                                    <li>
-                                        <a href="doacao_por_tipo.php?id_tipo=<?php echo $row_menu['id_tipo']; ?>">
-                                            <?php echo $row_menu['rotulo_tipo']; ?>
-                                        </a>
-                                    </li>
-                                <?php } while ($row_menu = $lista_menu->fetch_assoc()); ?>
-                            </ul>
-                        </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false">
+                            TIPOS <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="doacao_tipo.php">TODOS</a></li>
+                            <?php do { ?>
+                                <li>
+                                    <a href="doacao_por_tipo.php?id_tipo=<?php echo $row_menu['id_tipo']; ?>">
+                                        <?php echo $row_menu['rotulo_tipo']; ?>
+                                    </a>
+                                </li>
+                            <?php } while ($row_menu = $lista_menu->fetch_assoc()); ?>
+                        </ul>
+                    </li>
 
                         <li><a href="sobre_nos.php">SOBRE NÓS</a></li>
-                        <li><a href="#contato">CONTATO</a></li>
+                        <li><a href="index.php#contato">CONTATO</a></li>
                         
 
                         <li class="li-busca">

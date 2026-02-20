@@ -31,7 +31,15 @@ $totalRows  =   $lista->num_rows;
                 <h1 class="text-center" style="color: #007BFF; text-shadow: 1px 1px 3px rgba(0,0,0,0.2); margin-bottom: 20px;">
                     <i class="fa-solid fa-users-gear"></i> Lista de Usuários
                 </h1>
-                
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6 col-md-offset-3">
+                            <a href="usuario_insere.php" style="text-decoration: none;">
+                                <button class="btn botao-azul azul-escuro btn-block" style="padding: 12px; font-size: 16px;">
+                                    <i class="fa-solid fa-user-plus"></i> Inserir Novo Usuário
+                                </button>
+                            </a>
+                        </div>
+                    </div>
                 <div class="lista-wrapper borda-azul">
                     <div class="table-responsive">
                         <table class="table table-hover table-condensed tbopacidade fontelista">
@@ -105,16 +113,6 @@ $totalRows  =   $lista->num_rows;
                                 <?php } ?>
                             </tbody>
                         </table>
-                    </div> <hr>
-                    
-                    <div class="row">
-                        <div class="col-xs-12 col-md-6 col-md-offset-3">
-                            <a href="usuario_insere.php" style="text-decoration: none;">
-                                <button class="btn botao-azul azul-escuro btn-block" style="padding: 12px; font-size: 16px;">
-                                    <i class="fa-solid fa-user-plus"></i> Inserir Novo Usuário
-                                </button>
-                            </a>
-                        </div>
                     </div>
 
                 </div> </div>
