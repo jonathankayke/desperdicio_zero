@@ -21,7 +21,7 @@ if(!isset($_SESSION['nome_da_sessao'])OR($_SESSION['nome_da_sessao']!=$nome_da_s
 };
 
 // Determinar o nível de acesso
-$tipo_acesso=  'admin';
+$tipo_acesso=  'Admin';
 // VERIFICAR o nível de acesso
 if(!isset($_SESSION['login_usuario'])OR($_SESSION['tipo_usuario']!=$tipo_acesso)){
     // Redireciona para página de autorização]
