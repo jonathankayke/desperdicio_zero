@@ -18,12 +18,12 @@ $totalRows = ($lista)->num_rows;
     <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
 
-<body class="container">
-
+<body class="fundofixo">
+<?php include('menu_publico.php')?>
     <!-- Doaçoes -->
     <h1 class=" text-success text-center">Lista de Doações</h1>
 
-    <div class="row">
+    <div class="container">
         <?php
         // Verifica se tem produtos antes de começar o loop
         if ($totalRows > 0) {
