@@ -92,7 +92,7 @@ if(isset($_POST['enviar'])){
                                     <div class="form-group">
                                         <label>Nome Completo</label>
                                         <div class="input-group">
-                                            <span class="input-group-addon"><i class="fa-solid fa-user"></i></span>
+                                            <span class="input-group-addon"><i class="fa-solid fa-user text-info"></i></span>
                                             <input type="text" class="form-control" name="nome_usuario" placeholder="Digite o nome completo" required>
                                         </div>
                                     </div>
