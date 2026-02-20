@@ -423,13 +423,13 @@ body {
 }
 
 .team-card {
-    width: 250px;
-    background-color: #ffffff;
+    width: 100%; 
+    max-width: 250px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 30px 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .team-card:hover {
@@ -437,9 +437,10 @@ body {
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
 
-.image-wrapper {
-    background-color: #f4f4f4;
-    padding-top: 20px;
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
 }
 
 .team-card img {
@@ -448,6 +449,13 @@ body {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 15px;
+}
+
+@media (min-width: 1200px) {
+    .col-lg-2-custom {
+        width: 20%;
+        float: left;
+    }
 }
 
 .card-content {
