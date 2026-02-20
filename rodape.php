@@ -96,7 +96,7 @@
                 <div class="col-xs-12 text-center">
                     <img src="imagens/icon_rodape.png" alt="Desperdício Zero" style="height: 120px; margin-bottom: 10px;">
                     <h6 style="color: #555;">
-                        Developed by <strong>Os Mamaco™</strong> 2025 &copy; Todos os direitos reservados.
+                        Developed by <strong>Ti19™</strong> 2025 &copy; Todos os direitos reservados.
                     </h6>
                 </div>
             </div>
