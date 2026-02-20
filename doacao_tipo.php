@@ -38,7 +38,7 @@ $totalRows = ($lista)->num_rows;
             <a href="javascript:window.history.go(-1)" class="btn btn-success">
                 <span class="glyphicon glyphicon-chevron-left"></span>
             </a>
-            Produtos por Tipo
+            Todos
         </h2>
 
         <?php
@@ -54,7 +54,7 @@ $totalRows = ($lista)->num_rows;
                     }
                     // Atualizar $tipo_atual e exibe o novo cabeçalho do grupo
                     $tipo_atual = $row['id_doacao_tipo'];
-                    echo '<h2 class="breadcrumb alert-warning">' . $row['rotulo_tipo'] . '</h2>';
+                    echo '<h2 class="tipo">' . $row['rotulo_tipo'] . '</h2>';
                     // Abre uma nova div row para os produtos deste grupo
                     echo '<div class="row"> <!-- manter os elementos na linha (poliça) -->';
                 }
