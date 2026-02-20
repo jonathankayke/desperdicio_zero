@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Refresh" content="15;URL=../indexadmin.php" >
+    <meta http-equiv="Refresh" content="15;URL=../index.php" >
     <title>Invasor</title>
     <script src="https://kit.fontawesome.com/2495680ceb.js" crossorigin="anonymous"></script>
     <!-- Link CSS do Bootstrap -->
@@ -33,7 +33,7 @@
                             <br><br>
                             Tentar <br> novamente
                         </a>
-                        <a href="../indexadmin.php" class="btn btn-success">
+                        <a href="../index.php" class="btn btn-success">
                             <i class="fas fa-home fa-3x"></i>
                             <br><br>
                             Voltar <br> Área Pública

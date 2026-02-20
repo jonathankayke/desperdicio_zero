@@ -31,7 +31,7 @@ $totalRows_menu = ($lista_menu)->num_rows;
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="indexfake.php" class="navbar-brand">
+                <a href="index.php" class="navbar-brand">
                     <img src="imagens/Icon_menu.png" alt="Logo" class="imagem-logo">
                 </a>
             </div>
@@ -75,7 +75,7 @@ $totalRows_menu = ($lista_menu)->num_rows;
                     </li>
 
                     <li class="btn-home">
-                        <a href="admin/indexadmin.php" title="Acesso Administrativo">
+                        <a href="admin/index.php" title="Acesso Administrativo">
                             <span class="glyphicon glyphicon-user"></span>
                         </a>
                     </li>

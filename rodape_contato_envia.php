@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Redireciona após 15 segundos -->
-    <meta http-equiv="refresh" content="15;URL=indexfake.php">
+    <meta http-equiv="refresh" content="15;URL=index.php">
     <title>Contato - Desperdício Zero</title>
 
     <!-- Bootstrap -->

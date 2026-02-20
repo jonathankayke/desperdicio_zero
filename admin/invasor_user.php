@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Refresh" content="15;URL=../indexadmin.php">
+    <meta http-equiv="Refresh" content="15;URL=../index.php">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Não autorizado</title>
     <!-- Link arquivos Bootstrap -->
@@ -35,13 +35,13 @@
                             <br>
                         </h4>
                         <p class="text-danger">
-                            <a href="indexadmin.php" class="btn btn-danger">
+                            <a href="index.php" class="btn btn-danger">
                                 <i class="fas fa-external-link-alt fa-3x fa-rotate-270"></i>
                                 <br>
                                 <br>
                                 Voltar <br> Área Admin
                             </a>
-                            <a href="../indexadmin.php" class="btn btn-success">
+                            <a href="../index.php" class="btn btn-success">
                                 <i class="fas fa-home fa-3x"></i>
                                 <br>
                                 <br>

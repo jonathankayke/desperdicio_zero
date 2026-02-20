@@ -37,22 +37,22 @@
                     <h4 class="text-success">NAVEGAÇÃO</h4>
                     <ul class="nav nav-pills nav-stacked">
                         <li>
-                            <a href="indexfake.php#home" class="text-success">
+                            <a href="index.php#home" class="text-success">
                                 <span class="glyphicon glyphicon-home"></span> HOME
                             </a>
                         </li>
                         <li>
-                            <a href="indexfake.php#doacoes" class="text-success">
+                            <a href="index.php#doacoes" class="text-success">
                                 <span class="glyphicon glyphicon-globe"></span> DOAÇÕES
                             </a>
                         </li>
                         <li>
-                            <a href="indexfake.php#contato" class="text-success">
+                            <a href="index.php#contato" class="text-success">
                                 <span class="glyphicon glyphicon-send"></span> CONTATO
                             </a>
                         </li>
                         <li>
-                            <a href="admin/indexadmin.php" class="text-success">
+                            <a href="admin/index.php" class="text-success">
                                 <span class="glyphicon glyphicon-user"></span> ÁREA ADMINISTRATIVA
                             </a>
                         </li>
