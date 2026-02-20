@@ -35,7 +35,15 @@ $totalRows = ($lista)->num_rows;
                 <h1 class="text-center" style="color: #ffab45; text-shadow: 1px 1px 3px rgba(0,0,0,0.2); margin-bottom: 20px;">
                     <i class="fa-solid fa-layer-group"></i> Lista de Tipos
                 </h1>
-                
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6 col-md-offset-3">
+                            <a href="tipos_insere.php" style="text-decoration: none;">
+                                <button class="btn botao-laranja laranja-escuro btn-block" style="padding: 12px; font-size: 16px;">
+                                    <i class="fa-solid fa-plus"></i> Inserir Novo Tipo
+                                </button>
+                            </a>
+                        </div>
+                    </div>
                 <div class="lista-wrapper borda-laranja">
                     <table class="table table-hover table-condensed tbopacidade">
                         <thead>
@@ -73,16 +81,6 @@ $totalRows = ($lista)->num_rows;
                     </table>
                     
                     <hr>
-                    
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <a href="tipos_insere.php" style="text-decoration: none;">
-                                <button class="btn botao-laranja laranja-escuro btn-block" style="padding: 12px; font-size: 16px;">
-                                    <i class="fa-solid fa-plus"></i> Inserir Novo Tipo
-                                </button>
-                            </a>
-                        </div>
-                    </div>
 
                 </div> </div>
         </div>
