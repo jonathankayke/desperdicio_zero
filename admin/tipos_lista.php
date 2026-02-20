@@ -79,8 +79,6 @@ $totalRows = ($lista)->num_rows;
                             <?php } ?>
                         </tbody>
                     </table>
-                    
-                    <hr>
 
                 </div> </div>
         </div>

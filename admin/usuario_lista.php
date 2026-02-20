@@ -113,7 +113,7 @@ $totalRows  =   $lista->num_rows;
                                 <?php } ?>
                             </tbody>
                         </table>
-                    </div> <hr>
+                    </div>
 
                 </div> </div>
         </div>
