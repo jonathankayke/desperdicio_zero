@@ -44,7 +44,7 @@ $totalRows_menu = ($lista_menu)->num_rows;
             <div class="collapse navbar-collapse" id="defaultNavbar">
                 <ul class="nav navbar-nav navbar-right">
 
-                    <li><a href="doacoes_geral.php">DOAÇÕES</a></li>
+                    <li><a href="doacao_geral.php">DOAÇÕES</a></li>
 
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
