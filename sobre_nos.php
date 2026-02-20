@@ -13,7 +13,7 @@
     <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="css/meu_estilo.css" />
   </head>
-  
+
   <body>
     <?php include('menu_publico.php')?>
     <section class="hero-com-foto">
@@ -137,85 +137,124 @@
         </div>
       </div>
     </section>
-    <section class="hero-card">
-      <div class="container text-center" style="margin-bottom: 30px">
-        <h2 style="color: #333; font-weight: bold;">Criadores do Site</h2>
-      </div>
+    <section class="hero-card py-5">
+      <div class="container text-center">
+        <h2 style="color: #333; font-weight: bold; margin-bottom: 40px">
+          Criadores do Site
+        </h2>
 
-      <div class="team-container" style="padding-top: 50px;">
-        <div class="team-card">
-          <div class="image-wrapper">
-            <img src="https://via.placeholder.com/150" alt="" />
+        <div class="row justify-content-center">
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2-custom mb-4">
+            <div class="team-card">
+              <div class="image-wrapper">
+                <img
+                  src="https://via.placeholder.com/150"
+                  class="img-responsive"
+                  alt=""
+                />
+              </div>
+              <div class="card-content">
+                <h3>Mateus</h3>
+                <span>Líder Técnico & Full Stack</span>
+                <p>#</p>
+              </div>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
           </div>
-          <div class="card-content">
-            <h3>Matheus</h3>
-            <span> # </span>
-            <p>#</p>
+
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2-custom mb-4">
+            <div class="team-card">
+              <div class="image-wrapper">
+                <img
+                  src="https://via.placeholder.com/150"
+                  class="img-responsive"
+                  alt=""
+                />
+              </div>
+              <div class="card-content">
+                <h3>Matheus</h3>
+                <span>Desenvolvedor Front-end</span>
+                <p>#</p>
+              </div>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
           </div>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+                  <div class="row justify-content-center">
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2-custom mb-4">
+            <div class="team-card">
+              <div class="image-wrapper">
+                <img
+                  src="https://via.placeholder.com/150"
+                  class="img-responsive"
+                  alt=""
+                />
+              </div>
+              <div class="card-content">
+                <h3>Jonathan</h3>
+                <span>Scrum Master</span>
+                <p>#</p>
+              </div>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="team-card">
-          <div class="image-wrapper">
-            <img src="https://via.placeholder.com/150" alt="" />
+
+                  <div class="row justify-content-center">
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2-custom mb-4">
+            <div class="team-card">
+              <div class="image-wrapper">
+                <img
+                  src="https://via.placeholder.com/150"
+                  class="img-responsive"
+                  alt=""
+                />
+              </div>
+              <div class="card-content">
+                <h3>Gustavo</h3>
+                <span>Desenvolvedor Back-end</span>
+                <p>#</p>
+              </div>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
           </div>
-          <div class="card-content">
-            <h3>Mateus</h3>
-            <span> # </span>
-            <p>#</p>
-          </div>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          </div>
-        </div>
-        <div class="team-card">
-          <div class="image-wrapper">
-            <img src="https://via.placeholder.com/150" alt="" />
-          </div>
-          <div class="card-content">
-            <h3>Jonathan</h3>
-            <span> # </span>
-            <p>#</p>
-          </div>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          </div>
-        </div>
-        <div class="team-card">
-          <div class="image-wrapper">
-            <img src="https://via.placeholder.com/150" alt="" />
-          </div>
-          <div class="card-content">
-            <h3>Vinicius</h3>
-            <span> # </span>
-            <p>#</p>
-          </div>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          </div>
-        </div>
-        <div class="team-card">
-          <div class="image-wrapper">
-            <img src="https://via.placeholder.com/150" alt="" />
-          </div>
-          <div class="card-content">
-            <h3>Gustavo</h3>
-            <span> # </span>
-            <p>#</p>
-          </div>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+                  <div class="row justify-content-center">
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2-custom mb-4">
+            <div class="team-card">
+              <div class="image-wrapper">
+                <img
+                  src="https://via.placeholder.com/150"
+                  class="img-responsive"
+                  alt=""
+                />
+              </div>
+              <div class="card-content">
+                <h3>Vinicius</h3>
+                <span>Desenvolvedor Full Stack & QA</span>
+                <p>#</p>
+              </div>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
