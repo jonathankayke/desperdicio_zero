@@ -13,6 +13,7 @@
     <!-- Link para CSS Específico -->
     <link rel="stylesheet" href="css/meu_estilo.css" />
   </head>
+  
   <body>
     <?php include('menu_publico.php')?>
     <section class="hero-com-foto">

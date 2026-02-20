@@ -765,10 +765,6 @@ body {
     border-radius: 10%;
 }
 
-.card-doacao-moderno:hover .card-img-wrapper img {
-    transform: scale(1.1);
-}
-
 /* Badges (Etiquetas de Categoria) */
 .card-badge {
     position: absolute;
