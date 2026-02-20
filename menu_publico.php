@@ -1,7 +1,12 @@
 <?php
-// Incluir o arquivo para fazer a conexão e buscar os tipos para o menu
-include("Connections/conn_alimentos.php");
+// Verifica se a sessão já foi iniciada, se não, ele inicia.
+if(!isset($_SESSION)){
+    session_start();
+}
 
+// Seu include do banco de dados...
+include("Connections/conn_alimentos.php");
+// ... resto do seu código PHP
 $tabela_menu = "tbtipos";
 $ordernar_menu = "rotulo_tipo";
 $consulta_menu = "SELECT * FROM " . $tabela_menu . " ORDER BY " . $ordernar_menu . ";";
@@ -16,11 +21,11 @@ $totalRows_menu = ($lista_menu)->num_rows;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desperdício Zero</title>
-    </head>
+</head>
 
 <body>
-    
-   <nav class="navbar navbar-custom">
+
+    <nav class="navbar navbar-custom">
         <div class="container-fluid">
 
             <div class="navbar-header navegacao">
@@ -38,7 +43,7 @@ $totalRows_menu = ($lista_menu)->num_rows;
 
             <div class="collapse navbar-collapse" id="defaultNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    
+
                     <li><a href="#doacoes">DOAÇÕES</a></li>
 
                     <li class="dropdown">
@@ -60,11 +65,14 @@ $totalRows_menu = ($lista_menu)->num_rows;
 
                     <li><a href="sobre_nos.php">SOBRE NÓS</a></li>
                     <li><a href="#contato">CONTATO</a></li>
+                    
 
                     <li class="li-busca">
-                        <form action="doacao_busca.php" method="get" name="form_busca" class="navbar-form form_busca" role="search">
+                        <form action="doacao_busca.php" method="get" name="form_busca" class="navbar-form form_busca"
+                            role="search">
                             <div class="input-group input-busca-moderno">
-                                <input type="text" class="form-control" placeholder="Pesquisar..." name="buscar" id="buscar" required>
+                                <input type="text" class="form-control" placeholder="Pesquisar..." name="buscar"
+                                    id="buscar" required>
                                 <span class="input-group-btn">
                                     <button type="submit" class="btn btn-default">
                                         <span class="glyphicon glyphicon-search"></span>
@@ -84,6 +92,7 @@ $totalRows_menu = ($lista_menu)->num_rows;
             </div>
         </div>
     </nav>
-    </body>
+</body>
+
 </html>
 <?php mysqli_free_result($lista_menu); ?>

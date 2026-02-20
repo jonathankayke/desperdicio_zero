@@ -115,13 +115,7 @@ $totalRows = ($lista)->num_rows;
 
     <script type="text/javascript">
         $(document).ready(function(){
-            // Animação leve no botão de excluir ao passar o mouse
-            $('.btn-danger.delete').hover(
-                function() { $(this).css('transform', 'scale(1.1)'); },
-                function() { $(this).css('transform', 'scale(1)'); }
-            );
-
-            // Abre o modal de excluir
+           
             $('.delete').on('click', function () {
                 var nome = $(this).data('nome');
                 var id = $(this).data('id');

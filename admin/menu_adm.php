@@ -33,8 +33,8 @@
             <ul class="nav navbar-nav navbar-right borda-preta">
 
                 <li>
-                    <button type="button" class="btn btn-danger navbar-btn disabled">
-                        Olá, <?php echo($_SESSION['login_usuario']); ?>
+                    <button type="button" class="btn btn-secondary navbar-btn disabled">
+                        <span>Olá, <?php echo($_SESSION['login_usuario']); ?></span>
                     </button>
                 </li>
 
@@ -47,11 +47,11 @@
                         <span class="glyphicon glyphicon-home"></span>
                     </a>
                     </li>
-                    <li>
-                        <a href="logout.php">
-                            <span class="glyphicon glyphicon-log-out"></span>
-                        </a>
-                    </li>
+                      <li>
+                    <a href="logout.php">
+                        <span class="glyphicon glyphicon-log-out"></span>
+                    </a>
+                </li>
                 </ul>
             </div>
         </div>
