@@ -20,7 +20,7 @@ $totalRows_menu = ($lista_menu)->num_rows;
 
 <body>
     
-    <nav class="navbar navbar-custom">
+   <nav class="navbar navbar-custom">
         <div class="container-fluid">
 
             <div class="navbar-header navegacao">
@@ -37,7 +37,7 @@ $totalRows_menu = ($lista_menu)->num_rows;
             </div>
 
             <div class="collapse navbar-collapse" id="defaultNavbar">
-                <ul class="nav navbar-nav navbar-right borda-preta">
+                <ul class="nav navbar-nav navbar-right">
                     
                     <li><a href="#doacoes">DOAÇÕES</a></li>
 
@@ -61,20 +61,18 @@ $totalRows_menu = ($lista_menu)->num_rows;
                     <li><a href="sobre_nos.php">SOBRE NÓS</a></li>
                     <li><a href="#contato">CONTATO</a></li>
 
-                    <form action="doacao_busca.php" method="get" name="form_busca" id="form_busca"
-                        class="navbar-form navbar-left form_busca" role="search" style="margin-top: 12px;">
-                        <div class="form-group">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Pesquisar..." name="buscar"
-                                    id="buscar" size="15" required>
+                    <li class="li-busca">
+                        <form action="doacao_busca.php" method="get" name="form_busca" class="navbar-form form_busca" role="search">
+                            <div class="input-group input-busca-moderno">
+                                <input type="text" class="form-control" placeholder="Pesquisar..." name="buscar" id="buscar" required>
                                 <span class="input-group-btn">
                                     <button type="submit" class="btn btn-default">
                                         <span class="glyphicon glyphicon-search"></span>
                                     </button>
                                 </span>
                             </div>
-                        </div>
-                    </form>
+                        </form>
+                    </li>
 
                     <li class="btn-home">
                         <a href="admin/indexadmin.php" title="Acesso Administrativo">
