@@ -68,29 +68,15 @@ $totalRows = ($lista)->num_rows;
                             <p style="font-size: 0.9em; margin-bottom: 10px;">
                                 <i class="glyphicon glyphicon-briefcase"></i> <?php echo $row['nome_empresa']; ?>
                             </p>
+                            <a href="doacao_detalhe.php?id_doacao=<?php echo $row['id_doacao']; ?>">   
                             <button type="button"
-                                    class="btn btn-success btn-block shadow-sm"
-                                    data-toggle="collapse"
-                                    data-target="#<?php echo $collapseID; ?>"
-                                >
-                                Ver detalhes
+                                        class="btn btn-block shadow-sm fundoverde-padrao" style="border-radius: 15px; font-weight: 600; letter-spacing: 0.5px;" 
+                                    >
+                                    Ver detalhes
                             </button>
+                        </a>
                         </div>
-                    </div>
-                    <div id="<?php echo $collapseID; ?>" class="collapse">
-                        <div class="detalhes-container">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <p><strong><i class="glyphicon glyphicon-phone text-success"></i> Contato:</strong>
-                                        <?php echo $row['contato_doacao']; ?></p>
-                                </div>
-                                <div class="col-sm-6">
-                                    <p><strong><i class="glyphicon glyphicon-map-marker text-success"></i> Retirada:</strong>
-                                        <?php echo $row['endereco_retirada']; ?></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </div>           
                 </div>
         <?php
             } // Fim do While

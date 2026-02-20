@@ -64,7 +64,7 @@
                     </li>
 
                         <li><a href="sobre_nos.php">SOBRE NÓS</a></li>
-                        <li><a href="#contato">CONTATO</a></li>
+                        <li><a href="index.php#contato">CONTATO</a></li>
                         
 
                         <li class="li-busca">
