@@ -18,7 +18,7 @@
 
 <main class="container">
     <section>
-        <div class="jumbotron alert-success">
+        <div class="jumbotron alert-success text-center">
             <h1>Agradecemos seu contato!</h1>
 
             <?php
