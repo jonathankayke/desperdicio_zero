@@ -24,7 +24,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="indexadmin.php" class="navbar-brand">
+            <a href="index.php" class="navbar-brand">
                 <img class="imagem-logo" src="../imagens/Icon_menu.png" alt="" />
             </a>
             </div>
@@ -38,12 +38,12 @@
                     </button>
                 </li>
 
-                    <li ><a href="indexadmin.php" id="menu-admin">ADMIN</a></li>
+                    <li ><a href="index.php" id="menu-admin">ADMIN</a></li>
                     <li><a href="doacao_lista.php" id="menu-doacoes">DOAÇÕES</a></li>
                     <li><a href="tipos_lista.php" id="menu-tipos">TIPOS</a></li>
                     <li><a href="usuario_lista.php" id="menu-usuarios">USUÁRIOS</a></li>
                     <li class="btn-home">
-                    <a href="../indexfake.php">
+                    <a href="../index.php">
                         <span class="glyphicon glyphicon-home"></span>
                     </a>
                     </li>

@@ -34,7 +34,7 @@ if($_POST){
         $_SESSION['login_usuario']  =   $login_usuario;
         $_SESSION['tipo_usuario']  =   $row_session['tipo_usuario'];
         $_SESSION['nome_da_sessao'] =   session_name();
-        echo "<script>window.open('indexadmin.php','_self')</script>";
+        echo "<script>window.open('index.php','_self')</script>";
     }else{
         echo "<script>window.open('invasor.php','_self')</script>";
     };

@@ -39,17 +39,17 @@ $totalRows = ($lista)->num_rows;
                     <span class="valor-info-custom"><?php echo $row['rotulo_tipo']; ?></span>
                 </li>
                 <li>
-                    <a href="indexfake.php#doacoes" class="text-success">
+                    <a href="index.php#doacoes" class="text-success">
                         <span class="glyphicon glyphicon-globe">&nbsp;DOAÇÕES</span>
                     </a>
                 </li>
                 <li>
-                    <a href="indexfake.php#contato" class="text-success">
+                    <a href="index.php#contato" class="text-success">
                         <span class="glyphicon glyphicon-send">&nbsp;CONTATO</span>
                     </a>
                 </li>
                 <li>
-                    <a href="admin/indexadmin.php" class="text-success">
+                    <a href="admin/index.php" class="text-success">
                         <span class="glyphicon glyphicon-user">&nbsp;ADMINISTRAÇÂO</span>
                     </a>
                 </li>
