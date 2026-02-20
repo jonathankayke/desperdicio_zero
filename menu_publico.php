@@ -52,7 +52,7 @@ $totalRows_menu = ($lista_menu)->num_rows;
                             TIPOS <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="doacao_por_tipo.php">TODOS</a></li>
+                            <li><a href="doacao_tipo.php">TODOS</a></li>
                             <?php do { ?>
                                 <li>
                                     <a href="doacao_por_tipo.php?id_tipo=<?php echo $row_menu['id_tipo']; ?>">
