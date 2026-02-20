@@ -100,7 +100,7 @@ if(isset($_POST['enviar'])){
                                     <div class="form-group">
                                         <label>E-mail</label>
                                         <div class="input-group">
-                                            <span class="input-group-addon"><i class="fa-solid fa-envelope"></i></span>
+                                            <span class="input-group-addon"><i class="fa-solid fa-envelope text-info"></i></span>
                                             <input type="email" class="form-control" name="email_usuario" placeholder="email@exemplo.com" required>
                                         </div>
                                     </div>
@@ -122,7 +122,7 @@ if(isset($_POST['enviar'])){
                                     <div class="form-group">
                                         <label>Login (Usuário)</label>
                                         <div class="input-group">
-                                            <span class="input-group-addon"><i class="fa-solid fa-arrow-right-to-bracket"></i></span>
+                                            <span class="input-group-addon"><i class="fa-solid fa-arrow-right-to-bracket text-info"></i></span>
                                             <input type="text" class="form-control" name="login_usuario" placeholder="Ex: admin.sistema" required>
                                         </div>
                                     </div>
@@ -130,7 +130,7 @@ if(isset($_POST['enviar'])){
                                     <div class="form-group">
                                         <label>Senha</label>
                                         <div class="input-group">
-                                            <span class="input-group-addon"><i class="fa-solid fa-lock"></i></span>
+                                            <span class="input-group-addon"><i class="fa-solid fa-lock text-info"></i></span>
                                             <input type="password" class="form-control" name="senha_usuario" placeholder="Crie uma senha segura" required>
                                         </div>
                                     </div>
@@ -138,7 +138,7 @@ if(isset($_POST['enviar'])){
                                     <div class="form-group">
                                         <label>Nível de Acesso</label>
                                         <div class="input-group">
-                                            <span class="input-group-addon"><i class="fa-solid fa-shield-halved"></i></span>
+                                            <span class="input-group-addon"><i class="fa-solid fa-shield-halved text-info"></i></span>
                                             <select class="form-control" name="tipo_usuario" required>
                                                 <option value="" disabled selected>Selecione o nível...</option>
                                                 <option value="Admin">Administrador (Total)</option>
