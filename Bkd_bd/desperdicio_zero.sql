@@ -51,8 +51,7 @@ VALUES
 ('B','Bebida'),
 ('C','Conserva'),
 ('S','Suco'),
-('M','Massa'),
-('O','Outros');
+('M','Massa');
 
 -- Tabela de tbdoações 
 CREATE TABLE tbdoacoes (
@@ -94,7 +93,7 @@ VALUES ('Administrador', 'admin@desperdiciozero.com', 'admin', '123456', 'Admin'
 -- ----- AUTO INCREMENTS -----
 ALTER TABLE tbusuarios AUTO_INCREMENT=3;
 ALTER TABLE tbdoacoes MODIFY id_doacao INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-ALTER TABLE tbtipos AUTO_INCREMENT=13;
+ALTER TABLE tbtipos AUTO_INCREMENT=10;
 
 
 -- -------- VIEW -------- -- Criando a view vw_tbdoacoes 
