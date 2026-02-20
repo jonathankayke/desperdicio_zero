@@ -50,7 +50,6 @@ VALUES
 ('L','Laticínio'),
 ('B','Bebida'),
 ('C','Conserva'),
-('S','Suco'),
 ('M','Massa');
 
 -- Tabela de tbdoações 
@@ -83,7 +82,7 @@ INSERT INTO tbdoacoes (id_doacao_tipo,nome_empresa,contato_doacao,tipo_alimento,
   (7,'Doação de Conservas','3333-3333','C','Milho enlatado','50 unidades','2026-01-10','Rua C, 789','milho.jpg'),
   (1,'Doação de Frutas','7777-7777','F','Tomate','10 kg','2026-04-10','Rua B, 189','tomate.jpg'),
   (3,'Doação de Grãos','8888-8888','G','Arroz','15 kg','2026-08-12','Rua O, 1449','arroz.jpg'),
-  (9,'Doação de Massas','9999-9999','M','Macarrão','12 kg','2026-06-23','Rua F, 144','macarrao.jpg');
+  (8,'Doação de Massas','9999-9999','M','Macarrão','12 kg','2026-06-23','Rua F, 144','macarrao.jpg');
 
 -- Inserindo usuário padrão para teste
 INSERT INTO tbusuarios (nome_usuario, email_usuario, login_usuario, senha_usuario, tipo_usuario, foto_usuario)
