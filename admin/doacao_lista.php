@@ -47,9 +47,10 @@ $totalRows = $lista->num_rows;
                                     <th class="hidden">ID</th>
                                     <th>Imagem</th>
                                     <th class="hidden-xs">Empresa</th>
-                                    <th class="hidden-xs">Contato</th>
+                                    <th class="hidden-xs hidden-md hidden-sm">Contato</th>
                                     <th class="hidden-xs">Categoria</th>
-                                    <th>Nome Alimento</th>
+                                    <th class="hidden-xs hidden-md hidden-sm">Nome Alimento</th>
+                                    <th class="hidden-lg">Alimento</th>
                                     <th class="hidden-xs">Quantidade</th>
                                     <th class="hidden-xs">Validade</th>
                                     <th class="hidden-xs">Endereço</th>
@@ -66,9 +67,10 @@ $totalRows = $lista->num_rows;
                                         
                                         <td class="hidden"><?php echo $row['id_doacao']; ?></td>
                                         <td class="hidden-xs"><?php echo $row['nome_empresa'] ?></td>
-                                        <td class="hidden-xs"><?php echo $row['contato_doacao'] ?></td>
+                                        <td class="hidden-xs hidden-md hidden-sm"><?php echo $row['contato_doacao'] ?></td>
                                         <td class="hidden-xs"><span class="label label-success"><?php echo $row['rotulo_tipo'] ?></span></td>
-                                        <td><strong><?php echo $row['nome_alimento'] ?></strong></td>
+                                        <td class="hidden-xs hidden-md hidden-sm"><strong><?php echo $row['nome_alimento'] ?></strong></td>
+                                        <td class="hidden-lg"><strong><?php echo $row['nome_alimento'] ?></strong></td>
                                         <td class="hidden-xs"><?php echo $row['quantidade_doacao'] ?></td>
                                         <td class="hidden-xs"><?php echo date('d/m/Y', strtotime($row['validade_doacao'])); ?></td>
                                         <td class="hidden-xs"><?php echo $row['endereco_retirada'] ?></td>
