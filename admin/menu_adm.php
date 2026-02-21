@@ -24,7 +24,7 @@
                 <div style="float: right; display: flex; align-items: center; margin-top: 8px; padding-left: 10cap;">
                     
                     <a href="../index.php" title="Ir para o Site Público" style="margin-right: 15px; text-decoration: none;">
-                        <span class="hidden-lg" style="display: flex; align-items: center; justify-content: center; width: 35px; height: 35px; border-radius: 50%; background-color: #00A650; color: white; font-size: 16px;">
+                        <span class="hidden-lg hidden-md hidden-sm" style="display: flex; align-items: center; justify-content: center; width: 35px; height: 35px; border-radius: 50%; background-color: #00A650; color: white; font-size: 16px;">
                             <span class="glyphicon glyphicon-home"></span>
                         </span>
                     </a>
@@ -52,7 +52,11 @@
                     <li><a href="doacao_lista.php" id="menu-doacoes">DOAÇÕES</a></li>
                     <li><a href="tipos_lista.php" id="menu-tipos">TIPOS</a></li>
                     <li><a href="usuario_lista.php" id="menu-usuarios">USUÁRIOS</a></li>
-
+                    <li class="btn-home">
+                    <a href="../index.php">
+                        <span class="glyphicon glyphicon-home"></span>
+                    </a>
+                    </li>
                     <li>
                         <a href="logout.php" title="Sair do Sistema">
                             <span class="glyphicon glyphicon-log-out"></span> Sair
