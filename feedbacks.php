@@ -15,24 +15,24 @@
     
     <div class="feedback-container">
         <div class="feedback-card">
-            <img src="https://i.pravatar.cc/80?img=1" alt="Foto do Cliente">
-            <p>"O serviço foi excepcional! Superou todas as minhas expectativas em design e agilidade."</p>
-            <h4>Ana Silva</h4>
-            <span>CEO na TechFlow</span>
+            <img src="imagens/feed1.jpg"alt="Foto do José Roberto">
+            <p>"O site é simples! Superou todas as minhas expectativas em facilidade e contato."</p>
+            <h4>José Roberto</h4>
+            <h5>Morador do Jardim Maricotá</h5>
         </div>
 
         <div class="feedback-card">
-            <img src="https://i.pravatar.cc/80?img=2" alt="Foto do Cliente">
-            <p>"Suporte incrível e código muito limpo. Com certeza voltaremos a fazer negócio."</p>
+            <img src="imagens/feed2.jpg" alt="Foto do Marcos Oliveira">
+            <p>"Suporte incrível e design muito limpo. Com certeza voltaremos a anunciar doações."</p>
             <h4>Marcos Oliveira</h4>
-            <span>Designer Freelancer</span>
+            <h5>Dono de Restaurante</h5>
         </div>
 
         <div class="feedback-card">
-            <img src="https://i.pravatar.cc/80?img=3" alt="Foto do Cliente">
-            <p>"A melhor decisão que tomamos para o nosso site este ano. Prático e intuitivo."</p>
+            <img src="imagens/feed3.jpg" alt="Foto da Carla Souza">
+            <p>"A melhor decisão que tomamos para o nosso comércio este ano. Prático e intuitivo."</p>
             <h4>Carla Souza</h4>
-            <span>Gerente de Marketing</span>
+            <h5>Gerente de Varejo</h5>
         </div>
     </div>
 </section>
