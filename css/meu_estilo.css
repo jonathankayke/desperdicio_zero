@@ -67,10 +67,12 @@ body {
     width: auto;
 }
 
+
 /* navbar mobile */
 .navbar-toggle {
     background-color: #28A745;
     border: none;
+    margin-left: auto;
 }
 
 .navbar-toggle .icon-bar {
