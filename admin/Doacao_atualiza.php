@@ -213,7 +213,7 @@ $totalRows_fk   = ($lista_fk)->num_rows;
                                 </div>
                                 <div class="col-xs-6">
                                     <button type="submit" name="enviar" class="btn btn-salvar-verde btn-block btn-lg">
-                                        <i class="fa-solid fa-floppy-disk"></i> Atualizar Doação
+                                        <i class="fa-solid fa-floppy-disk"></i> Atualizar
                                     </button>
                                 </div>
                             </div>
