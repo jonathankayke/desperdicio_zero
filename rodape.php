@@ -14,32 +14,76 @@
         <div class="container">
             <div class="row">
                 <br><br>
-                <div class="col-sm-6 col-md-4">
+                <!-- Celular -->
+                <div class="col-sm-6 col-md-4 hidden-lg hidden-md hidden-sm text-center">
                     <h4 class="text-success">LOCALIZAÇÃO</h4>
                     <address>
-                        <strong>Senac Itapetininga</strong><br>
-                        <i>R. Dom Joaquim, 495 - Centro<br>
-                        Itapetininga - SP, 18200-090</i>
+                        <strong>Fundo Social de Itapetininga</strong><br>
+                        <i>Pr. Gaspar Ricardo, 1 - Centro<br>
+                        Itapetininga - SP, 18200-202</i>
                         <br><br>
                         <span class="glyphicon glyphicon-phone-alt"></span> (15) 4002-8922<br>
                         <span class="glyphicon glyphicon-envelope"></span> contato@desperdiciozero.com.br
                     </address>
                     
                     <div class="mapa-responsivo">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.3526033163657!2d-48.05545982387317!3d-23.591684078778982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c5cc93b46246ed%3A0x6ec0870ce87bb6fd!2sSenac%20Itapetininga!5e0!3m2!1spt-BR!2sbr!4v1771630611190!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.025464890077!2d-48.05523848502346!3d-23.590494084668332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c5cc8d18eaea31%3A0x1817097d7b57d444!2sFundo%20Social%20de%20Itapetininga!5e0!3m2!1spt-BR!2sbr!4v1707780000000!5m2!1spt-BR!2sbr" 
+                            style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
                     </div>
                 </div>
-
-                <div class="col-sm-6 col-md-4">
-                    <h4 class="text-success">NAVEGAÇÃO</h4>
+                <!-- Computador -->
+                <div class="col-sm-6 col-md-4 hidden-xs">
+                    <h4 class="text-success">LOCALIZAÇÃO</h4>
+                    <address>
+                        <strong>Fundo Social de Itapetininga</strong><br>
+                        <i>Pr. Gaspar Ricardo, 1 - Centro<br>
+                        Itapetininga - SP, 18200-202</i>
+                        <br><br>
+                        <span class="glyphicon glyphicon-phone-alt"></span> (15) 4002-8922<br>
+                        <span class="glyphicon glyphicon-envelope"></span> contato@desperdiciozero.com.br
+                    </address>
+                    
+                    <div class="mapa-responsivo">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.025464890077!2d-48.05523848502346!3d-23.590494084668332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c5cc8d18eaea31%3A0x1817097d7b57d444!2sFundo%20Social%20de%20Itapetininga!5e0!3m2!1spt-BR!2sbr!4v1707780000000!5m2!1spt-BR!2sbr" 
+                            style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+                <!-- Celular -->
+                <div class="col-sm-6 col-md-4 ">            
+                <h4 class="text-success hidden-lg hidden-md hidden-sm text-center ">NAVEGAÇÃO</h4>
                     <ul class="nav nav-pills nav-stacked">
                         <li>
-                            <a href="index.php#home" class="text-success">
+                            <a href="index.php#home" class="text-success text-center">
                                 <span class="glyphicon glyphicon-home"></span> HOME
                             </a>
                         </li>
                         <li>
-                            <a href="doacao_geral.php" class="text-success">
+                            <a href="index.php#doacoes" class="text-success text-center">
+                                <span class="glyphicon glyphicon-globe"></span> DOAÇÕES
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.php#contato" class="text-success text-center">
+                                <span class="glyphicon glyphicon-send"></span> CONTATO
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Computador -->
+                <div class="col-sm-6 col-md-4 hidden-xs"> 
+                    <h4 class="text-success">NAVEGAÇÃO</h4>
+                    <ul class="nav nav-pills nav-stacked">                    
+                        <li>
+                            <a href="index.php#home" class="text-success">
+                                <span class="glyphicon glyphicon-home"></span> HOME
+                            </a>
+                        </li>    
+                        <li>
+                            <a href="index.php#doacoes" class="text-success">
                                 <span class="glyphicon glyphicon-globe"></span> DOAÇÕES
                             </a>
                         </li>
@@ -52,7 +96,8 @@
                 </div>
 
                 <div class="col-sm-6 col-md-4" id="contato" >
-                    <h4 class="text-success">FALE CONOSCO</h4>
+                    <h4 class="text-success hidden-lg hidden-md hidden-sm text-center ">FALE CONOSCO</h4>
+                    <h4 class="text-success hidden-xs">FALE CONOSCO</h4>
                     <form action="rodape_contato_envia.php" name="form_contato" id="form_contato" method="post">
                         
                         <div class="form-group">
