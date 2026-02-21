@@ -48,15 +48,15 @@ $totalRows = ($lista)->num_rows;
 
                         <div class="col-sm-6">
                             <div class="row">
-                                <div class="col-xs-4 text-center">
+                                <div class="col-xs-4 text-center hidden-xs">
                                     <span class="label-info-custom">Tipo</span>
                                     <span class="valor-info-custom"><?php echo $row['rotulo_tipo']; ?></span>
                                 </div>
-                                <div class="col-xs-4 text-center">
+                                <div class="col-xs-4 text-center hidden-xs">
                                     <span class="label-info-custom">Qtd</span>
                                     <span class="valor-info-custom"><?php echo $row['quantidade_doacao']; ?></span>
                                 </div>
-                                <div class="col-xs-4 text-center">
+                                <div class="col-xs-4 text-center hidden-xs">
                                     <span class="label-info-custom">Validade</span>
                                     <span
                                         class="valor-info-custom"><?php echo date('d/m/Y', strtotime($row['validade_doacao'])); ?></span>

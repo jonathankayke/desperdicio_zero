@@ -47,7 +47,7 @@ $totalRows  =   $lista->num_rows;
                                 <tr>
                                     <th>Foto</th>
                                     <th>Nome</th>
-                                    <th>Senha</th>
+                                    <th class="hidden-xs">Senha</th>
                                     <th class="hidden-xs">Tipo</th>
                                     <th class="hidden-xs">Email</th>
                                     <th class="hidden-xs">Login</th>
@@ -66,7 +66,7 @@ $totalRows  =   $lista->num_rows;
                                         </td>
                                         
                                         <td><strong><?php echo $row['nome_usuario']; ?></strong></td>
-                                        <td><?php echo str_repeat('*', strlen($row['senha_usuario'])); ?> </td>
+                                        <td class="hidden-xs"><?php echo str_repeat('*', strlen($row['senha_usuario'])); ?> </td>
                                         
                                         <td class="hidden-xs">
                                             <?php if($row['tipo_usuario'] == 'Admin'){ ?>
