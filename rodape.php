@@ -53,8 +53,8 @@
                     </div>
                 </div>
                 <!-- Celular -->
-                <div class="col-sm-6 col-md-4 ">            
-                <h4 class="text-success hidden-lg hidden-md hidden-sm text-center ">NAVEGAÇÃO</h4>
+                <div class="col-sm-6 col-md-4 hidden-lg hidden-md hidden-sm text-center ">            
+                <h4 class="text-success ">NAVEGAÇÃO</h4>
                     <ul class="nav nav-pills nav-stacked">
                         <li>
                             <a href="index.php#home" class="text-success text-center">
@@ -74,7 +74,7 @@
                     </ul>
                 </div>
                 <!-- Computador -->
-                <div class="col-sm-6 col-md-4 hidden-xs"> 
+                <div class="col-sm-6 col-md-4"> 
                     <h4 class="text-success">NAVEGAÇÃO</h4>
                     <ul class="nav nav-pills nav-stacked">                    
                         <li>
