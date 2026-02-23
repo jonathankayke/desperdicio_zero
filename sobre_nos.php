@@ -137,109 +137,12 @@
       </div>
     </div>
   </section>
-  <section class="hero-card py-5">
-    <div class="container text-center">
-      <h2 style="color: #333; font-weight: bold; margin-bottom: 40px">
-        Criadores do Site
-      </h2>
+  <div class="fundofixo">
+    <?php include('rodape.php') ?>
+  </div>
 
-      <div class="row justify-content-center team-row">
-
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2-custom mb-4">
-          <div class="team-card">
-            <div class="image-wrapper">
-              <img src="" class="img-responsive center-block" alt=""/>
-            </div>
-            <div class="card-content">
-              <h3>Mateus</h3>
-              <span>Líder Técnico & Full Stack</span>
-              <p>#</p>
-            </div>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2-custom mb-4">
-          <div class="team-card">
-            <div class="image-wrapper">
-              <img src="https://via.placeholder.com/150" class="img-responsive center-block" alt="" />
-            </div>
-            <div class="card-content">
-              <h3>Matheus</h3>
-              <span>Desenvolvedor Front-end</span>
-              <p>#</p>
-            </div>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2-custom mb-4">
-          <div class="team-card">
-            <div class="image-wrapper">
-              <img src="https://via.placeholder.com/150" class="img-responsive center-block" alt="" />
-            </div>
-            <div class="card-content">
-              <h3>Jonathan</h3>
-              <span>Scrum Master</span>
-              <p>#</p>
-            </div>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2-custom mb-4">
-          <div class="team-card">
-            <div class="image-wrapper">
-              <img src="https://via.placeholder.com/150" class="img-responsive center-block" alt="" />
-            </div>
-            <div class="card-content">
-              <h3>Gustavo</h3>
-              <span>Desenvolvedor Back-end</span>
-              <p>#</p>
-            </div>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2-custom mb-4">
-          <div class="team-card">
-            <div class="image-wrapper">
-              <img src="https://via.placeholder.com/150" class="img-responsive center-block" alt="" />
-            </div>
-            <div class="card-content">
-              <h3>Vinicius</h3>
-              <span>Full Stack & QA</span>
-              <p>#</p>
-            </div>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
   <!-- Link arquivos Bootstrap js -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
 </body>
-
 </html>
