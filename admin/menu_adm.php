@@ -52,7 +52,7 @@
                     <li><a href="usuario_lista.php" id="menu-usuarios">USUÁRIOS</a></li>
                     <li class="btn-home">
                     <a href="../index.php">
-                        <span class="glyphicon glyphicon-home"></span>
+                        <span class ="glyphicon glyphicon-home"></span>
                     </a>
                     </li>
                     <li>
