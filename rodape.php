@@ -96,7 +96,7 @@
                 </div>
 
                 <div class="col-sm-6 col-md-4" id="contato" >
-                    <h4 class="text-success ">FALE CONOSCO</h4>
+                    <h4 class="text-success hidden-lg hidden-md hidden-sm text-center">FALE CONOSCO</h4>
                     <h4 class="text-success hidden-xs">FALE CONOSCO</h4>
                     <form action="rodape_contato_envia.php" name="form_contato" id="form_contato" method="post">
                         
