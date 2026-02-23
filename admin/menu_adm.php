@@ -51,8 +51,8 @@
                     <li><a href="tipos_lista.php" id="menu-tipos">TIPOS</a></li>
                     <li><a href="usuario_lista.php" id="menu-usuarios">USUÁRIOS</a></li>
                     <li class="btn-home">
-                    <a href="../index.php">
-                        <span class="glyphicon glyphicon-home"></span>
+                    <a class ="hidden-xs" href="../index.php">
+                        <span class="glyphicon glyphicon-home "></span>
                     </a>
                     </li>
                     <li>
