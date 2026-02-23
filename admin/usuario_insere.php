@@ -87,7 +87,7 @@ if(isset($_POST['enviar'])){
                             
                             <div class="row">
                                 <div class="col-md-6">
-                                    <h4 class="secao-form">Dados Pessoais</h4>
+                                    <h4 class="secao-form-user">Dados Pessoais</h4>
                                     
                                     <div class="form-group">
                                         <label>Nome Completo</label>
@@ -117,7 +117,7 @@ if(isset($_POST['enviar'])){
                                 </div>
 
                                 <div class="col-md-6">
-                                    <h4 class="secao-form">Dados de Acesso</h4>
+                                    <h4 class="secao-form-user">Dados de Acesso</h4>
 
                                     <div class="form-group">
                                         <label>Login (Usuário)</label>
@@ -164,7 +164,7 @@ if(isset($_POST['enviar'])){
                                     </a>
                                 </div>
                                 <div class="col-md-6">
-                                    <button type="submit" name="enviar" class="btn btn-cadastrar btn-block btn-lg">
+                                    <button type="submit" name="enviar" class="btn btn-cadastrar-user btn-block btn-lg">
                                         <i class="fa-solid fa-check"></i> Salvar Cadastro
                                     </button>
                                 </div>
