@@ -21,16 +21,14 @@
                     <img src="../imagens/Icon_menu.png" alt="Logo" class="imagem-logo">
                 </a>
 
-                <div style="float: right; display: flex; align-items: center; margin-top: 8px; padding-left: 11cap;">
-                    
-                    <a href="../index.php" title="Ir para o Site Público" style="margin-right: 15px; text-decoration: none;">
-                        <span class="hidden-lg hidden-md hidden-sm" style="display: flex; align-items: center; justify-content: center; width: 35px; height: 35px; border-radius: 50%; background-color: #00A650; color: white; font-size: 16px;">
-                            <span class="glyphicon glyphicon-home"></span>
-                        </span>
+                <div class="navbar-toggle">
+                    <a href="../index.php" title="Acesso Administrativo"
+                        style="color: #ffffffff; font-size: 22px; margin-right: 15px; text-decoration: none;">
+                        <span class="glyphicon glyphicon-home"></span>
                     </a>
 
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                        data-target="#defaultNavbar" aria-expanded="false" style="margin: 0; margin-right: 15px; float: none;">
+                        data-target="#defaultNavbar" aria-expanded="false" style="margin: 0; float: none;">
                         <span class="sr-only">Navegação Mobile</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
