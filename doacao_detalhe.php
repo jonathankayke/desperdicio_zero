@@ -31,7 +31,7 @@ $totalRows = $lista->num_rows;
     <!-- Link para CSS Específico-->
     <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
-
+<?php include("menu_publico.php"); ?>   
 <body class="fundofixo">
 
     <div class="container" style="margin-top:150px;">
@@ -113,6 +113,6 @@ $totalRows = $lista->num_rows;
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
 </body>
-
+ 
 </html>
 <?php mysqli_free_result($lista); ?>
