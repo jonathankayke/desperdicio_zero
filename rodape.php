@@ -37,19 +37,16 @@
                 <div class="col-sm-6 col-md-4 hidden-xs">
                     <h4 class="text-success">LOCALIZAÇÃO</h4>
                     <address>
-                        <strong>Fundo Social de Itapetininga</strong><br>
-                        <i>Pr. Gaspar Ricardo, 1 - Centro<br>
-                        Itapetininga - SP, 18200-202</i>
+                        <strong>Senac Itapetininga</strong><br>
+                        <i>R. Dom Joaquim, 495 - Centro<br>
+                        Itapetininga - SP, 18200-090</i>
                         <br><br>
                         <span class="glyphicon glyphicon-phone-alt"></span> (15) 4002-8922<br>
                         <span class="glyphicon glyphicon-envelope"></span> contato@desperdiciozero.com.br
                     </address>
                     
                     <div class="mapa-responsivo">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.025464890077!2d-48.05523848502346!3d-23.590494084668332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c5cc8d18eaea31%3A0x1817097d7b57d444!2sFundo%20Social%20de%20Itapetininga!5e0!3m2!1spt-BR!2sbr!4v1707780000000!5m2!1spt-BR!2sbr" 
-                            style="border:0;" allowfullscreen="" loading="lazy">
-                        </iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.3526033163653!2d-48.05545982387314!3d-23.59168407877899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c5cc93b46246ed%3A0x6ec0870ce87bb6fd!2sSenac%20Itapetininga!5e0!3m2!1spt-BR!2sbr!4v1771889936931!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
                 <!-- Celular -->
