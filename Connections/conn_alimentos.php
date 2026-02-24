@@ -1,8 +1,8 @@
 <?php
 // Definindo variáveis para conexão
 $hostname_conn  =   "localhost";
-$database_conn  =   "desperdicio_zero";
-$username_conn  =   "desperdicio_zero";
+$database_conn  =   "iwanez83_desperdicio_zero";
+$username_conn  =   "iwanez83_desperdicio_zero";
 $password_conn  =   "senacti19";
 $charset_conn   =   "utf8";
 
