@@ -77,7 +77,7 @@
                             </a>
                         </li>    
                         <li>
-                            <a href="index.php#doacoes" class="text-success">
+                            <a href="doacao_geral.php" class="text-success">
                                 <span class="glyphicon glyphicon-globe"></span> DOAÇÕES
                             </a>
                         </li>
