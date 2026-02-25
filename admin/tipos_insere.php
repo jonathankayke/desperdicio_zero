@@ -88,7 +88,7 @@ if($_POST){
 
                         <div class="row">
                             <div class="col-xs-6">
-                                <a href="tipos_lista.php" class="btn btn-default btn-block btn-lg">
+                                <a href="index.php" class="btn btn-default btn-block btn-lg">
                                     <i class="fa-solid fa-arrow-left"></i> Voltar
                                 </a>
                             </div>
