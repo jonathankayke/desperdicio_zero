@@ -11,7 +11,7 @@
 
 
 <body class="fundofixo">
-    <main>
+    <main id="home">
             <?php include('banner.php'); ?>
             <!-- DOAÇÔES -->
             <?php include('doacao_cards.php'); ?>

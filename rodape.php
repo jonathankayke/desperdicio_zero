@@ -56,12 +56,12 @@
                             </a>
                         </li>
                         <li>
-                            <a href="index.php#doacoes" class="text-success text-center">
+                            <a href="doacao_geral.php" class="text-success text-center">
                                 <span class="glyphicon glyphicon-globe"></span> DOAÇÕES
                             </a>
                         </li>
                         <li>
-                            <a href="index.php#contato" class="text-success text-center">
+                            <a href="#" class="text-success text-center">
                                 <span class="glyphicon glyphicon-send"></span> CONTATO
                             </a>
                         </li>
