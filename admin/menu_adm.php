@@ -50,7 +50,7 @@
                     <li><a href="doacao_lista.php" id="menu-doacoes">DOAÇÕES</a></li>
                     <li><a href="tipos_lista.php" id="menu-tipos">TIPOS</a></li>
                     <li><a href="usuario_lista.php" id="menu-usuarios">USUÁRIOS</a></li>
-                    <li class="btn-home">
+                    <li class="btn-home hidden-xs">
                     <a href="../index.php">
                         <span class ="glyphicon glyphicon-home"></span>
                     </a>
