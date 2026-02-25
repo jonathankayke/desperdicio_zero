@@ -711,6 +711,10 @@ width: 120px;
     border: 1px solid #ddd;
 }
 
+.container-lista {
+    padding: 0 0 25% 0;
+}
+
 .table>tbody>tr>td {
     vertical-align: middle;
 }
