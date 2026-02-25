@@ -82,7 +82,7 @@ $totalRows_menu = ($lista_menu)->num_rows;
                         </ul>
                     </li>
                     <li><a href="sobre_nos.php">SOBRE NÓS</a></li>
-
+                    <li><a href="contato.php">CONTATO</a></li>            
                     <li class="btn-home hidden-xs">
                         <a href="admin/index.php" title="Acesso Administrativo">
                             <span class="glyphicon glyphicon-user"></span>
