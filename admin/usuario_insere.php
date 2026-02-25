@@ -159,7 +159,7 @@ if(isset($_POST['enviar'])){
 
                             <div class="row">
                                 <div class="col-md-6">
-                                    <a href="usuario_lista.php" class="btn btn-default btn-block btn-lg" style="margin-bottom: 10px;">
+                                    <a href="index.php" class="btn btn-default btn-block btn-lg" style="margin-bottom: 10px;">
                                         <i class="fa-solid fa-arrow-left"></i> Voltar
                                     </a>
                                 </div>
