@@ -19,7 +19,7 @@ $totalRows = ($lista)->num_rows;
 </head>
 
 <body class="fundofixo">
-<?php include('menu_publico.php')?>
+    <?php include('menu_publico.php') ?>
     <!-- Doaçoes -->
     <h1 class=" text-success text-center">Lista de Doações</h1>
 
@@ -68,17 +68,16 @@ $totalRows = ($lista)->num_rows;
                             <p style="font-size: 0.9em; margin-bottom: 10px;">
                                 <i class="glyphicon glyphicon-briefcase"></i> <?php echo $row['nome_empresa']; ?>
                             </p>
-                            <a href="doacao_detalhe.php?id_doacao=<?php echo $row['id_doacao']; ?>">   
-                            <button type="button"
-                                        class="btn btn-block shadow-sm fundoverde-padrao" style="border-radius: 15px; font-weight: 600; letter-spacing: 0.5px;" 
-                                    >
+                            <a href="doacao_detalhe.php?id_doacao=<?php echo $row['id_doacao']; ?>">
+                                <button type="button"
+                                    class="btn btn-block shadow-sm fundoverde-padrao" style="border-radius: 15px; font-weight: 600; letter-spacing: 0.5px;">
                                     Ver detalhes
-                            </button>
-                        </a>
+                                </button>
+                            </a>
                         </div>
-                    </div>           
+                    </div>
                 </div>
-        <?php
+            <?php
             } // Fim do While
         } else {
             ?>
@@ -89,18 +88,18 @@ $totalRows = ($lista)->num_rows;
     <script src="js/bootstrap.min.js"></script>
 
     <script>
-    $('.doacao-click').on('click', function (e) {
+        $('.doacao-click').on('click', function(e) {
 
-        // se o clique foi em um botão ou dentro dele, não faz nada
-        if ($(e.target).closest('button').length) {
-            return;
-        }
+            // se o clique foi em um botão ou dentro dele, não faz nada
+            if ($(e.target).closest('button').length) {
+                return;
+            }
 
-        window.location.href = $(this).data('link');
-    });
+            window.location.href = $(this).data('link');
+        });
     </script>
 
 </body>
-
+<?php include('rodape.php') ?>
 </html>
 <?php mysqli_free_result($lista); ?>
