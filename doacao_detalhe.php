@@ -31,10 +31,11 @@ $totalRows = $lista->num_rows;
     <!-- Link para CSS Específico-->
     <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
-<?php include("menu_publico.php"); ?>   
+<?php include("menu_publico.php"); ?>
+
 <body class="fundofixo">
 
-    <div class="container" style="margin-top:150px;">
+    <div class="container" style="margin-top:150px; padding: 0 0 50px 0;">
 
         <?php if ($totalRows > 0) { ?>
 
@@ -107,12 +108,14 @@ $totalRows = $lista->num_rows;
                 </div>
 
             <?php } ?>
-
-        </div>
-        <!-- Link arquivos Bootstrap js -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+            </div>
+    </div>
+    <!-- Link arquivos Bootstrap js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+<?php include("rodape.php"); ?>
 </body>
- 
+
+
 </html>
 <?php mysqli_free_result($lista); ?>
