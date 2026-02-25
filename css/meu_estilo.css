@@ -10,7 +10,7 @@ body {
 
 /* ------------------------ FUNDO ---------------------- */
 .fundofixo {
-    background: url(../imagens/fundofixo.png) no-repeat fixed;
+    background: url(../imagens/fundofixo.webp) no-repeat fixed;
     background-size: cover;
     -webkit-background-size: cover;
 }
@@ -297,7 +297,7 @@ body {
 
 .hero-com-foto {
     min-height: 500px;
-    background-image: url('../imagens/cooking.png');
+    background-image: url('../imagens/cooking.webp');
     background-size: cover;
     background-position: top;
     max-height: 100%;
@@ -711,6 +711,10 @@ width: 120px;
     border: 1px solid #ddd;
 }
 
+.container-lista {
+    padding: 0 0 25% 0;
+}
+
 .table>tbody>tr>td {
     vertical-align: middle;
 }
@@ -872,7 +876,7 @@ width: 120px;
 .banner {
     height: 80vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(../imagens/banner.png);
+        url(../imagens/banner.webp);
     background-size: cover;
     background-position: center;
     display: flex;

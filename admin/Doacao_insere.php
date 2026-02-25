@@ -186,7 +186,7 @@ $totalRows_fk   =   ($lista_fk)->num_rows;
 
                         <div class="row">
                             <div class="col-xs-6">
-                                <a href="doacao_lista.php" class="btn btn-default btn-block btn-lg">
+                                <a href="index.php" class="btn btn-default btn-block btn-lg">
                                     <i class="fa-solid fa-arrow-left"></i> Voltar
                                 </a>
                             </div>

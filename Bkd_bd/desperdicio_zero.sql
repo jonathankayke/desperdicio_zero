@@ -73,21 +73,21 @@ CREATE TABLE tbdoacoes (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO tbdoacoes (id_doacao_tipo,nome_empresa,contato_doacao,tipo_alimento,nome_alimento,quantidade_doacao,validade_doacao,endereco_retirada,imagem_doacao)
- VALUES (1,'Boa Vista Frutas','1111-1111','F','Maçã','10 kg','2026-03-15','Rua A, 123','macas.jpg'),
-  (2,'Venduras Do Jaime','2222-2222','V','Alface','5 kg','2026-03-01','Rua B, 456','alface.jpg'),
-  (3,'Cirilo Atacadista','3333-3333','G', 'Feijão','20 kg','2026-05-05','Rua C, 789','feijao.jpg'),
-  (4,'Açougue da Familia','4444-4444','P','Frango','15 kg','2026-03-05','Rua D, 101','frango.jpg'),
-  (5,'Mercado Lobinho','5555-5555','L','Leite','30 litros','2026-04-18','Rua E, 202','leite.jpg'),
-  (6,'Atacado das Bebidas','6666-6666','B','Suco de Laranja','25 litros','2026-03-22','Rua F, 303','suco_de_laranja.png'),
-  (7,'Paulo Pizzaria','3333-3333','C','Milho Enlatado','50 unidades','2026-06-10','Rua C, 789','milho.jpg'),
-  (1,'Boa Vista Frutas','7777-7777','F','Tomate','10 kg','2026-02-28','Rua B, 189','tomate.jpg'),
-  (3,'Cirilo Atacadista','8888-8888','G','Arroz','15 kg','2026-05-12','Rua O, 1449','arroz.jpg'),
-  (8,'Italian Restaurant','9999-9999','M','Macarrão','12 kg','2026-04-23','Rua F, 144','macarrao.jpg');
+ VALUES (1,'Boa Vista Frutas','1111-1111','F','Maçã','10 kg','2026-03-15','Rua A, 123','macas.webp'),
+  (2,'Venduras Do Jaime','2222-2222','V','Alface','5 kg','2026-03-01','Rua B, 456','alface.webp'),
+  (3,'Cirilo Atacadista','3333-3333','G', 'Feijão','20 kg','2026-05-05','Rua C, 789','feijao.webp'),
+  (4,'Açougue da Familia','4444-4444','P','Frango','15 kg','2026-03-05','Rua D, 101','frango.webp'),
+  (5,'Mercado Lobinho','5555-5555','L','Leite','30 litros','2026-04-18','Rua E, 202','leite.webp'),
+  (6,'Atacado das Bebidas','6666-6666','B','Suco de Laranja','25 litros','2026-03-22','Rua F, 303','suco_de_laranja.webp'),
+  (7,'Paulo Pizzaria','3333-3333','C','Milho Enlatado','50 unidades','2026-06-10','Rua C, 789','milho.webp'),
+  (1,'Boa Vista Frutas','7777-7777','F','Tomate','10 kg','2026-02-28','Rua B, 189','tomate.webp'),
+  (3,'Cirilo Atacadista','8888-8888','G','Arroz','15 kg','2026-05-12','Rua O, 1449','arroz.webp'),
+  (8,'Italian Restaurant','9999-9999','M','Macarrão','12 kg','2026-04-23','Rua F, 144','macarrao.webp');
 
 -- Inserindo usuário padrão para teste
 INSERT INTO tbusuarios (nome_usuario, email_usuario, login_usuario, senha_usuario, tipo_usuario, foto_usuario)
-VALUES ('Administrador', 'admin@desperdiciozero.com', 'admin', '123456', 'Admin', 'Chefe.png'),
-       ('Usuário', 'usuario@desperdiciozero.com', 'user', '123', 'User', 'Secretaria.png');
+VALUES ('Administrador', 'admin@desperdiciozero.com', 'admin', '123456', 'Admin', 'Chefe.webp'),
+       ('Usuário', 'usuario@desperdiciozero.com', 'user', '123', 'User', 'Secretaria.webp');
 
 -- ----- AUTO INCREMENTS -----
 ALTER TABLE tbusuarios AUTO_INCREMENT=3;
