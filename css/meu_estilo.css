@@ -20,6 +20,10 @@ body {
     background-color: #28A745;
     color: white !important;
 }
+.fundoverde-claro {
+    background-color: #dff0d8;
+    color: #333 !important;
+}
 
 /* texto-shadow para fundos claros */
 .texto-shadow {

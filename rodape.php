@@ -82,7 +82,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="index.php#contato" class="text-success">
+                            <a href="contato.php" class="text-success">
                                 <span class="glyphicon glyphicon-send"></span> CONTATO
                             </a>
                         </li>
