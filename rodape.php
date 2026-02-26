@@ -61,7 +61,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="text-success text-center">
+                            <a href="contato.php" class="text-success text-center">
                                 <span class="glyphicon glyphicon-send"></span> CONTATO
                             </a>
                         </li>
