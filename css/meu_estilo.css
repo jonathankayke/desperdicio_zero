@@ -316,7 +316,7 @@ body {
 
 .hero {
     min-height: 400px;
-    padding-top: 50px;
+    padding-top: px;
     margin: 50px;
 }
 
@@ -377,6 +377,12 @@ body {
 
 .txt-historia {
     font-size: 20px;
+    text-align: justify;
+}
+.txt-subtitulo {
+    font-size: 18px;
+    
+    margin-top: 20px;
 }
 
 .container-config {

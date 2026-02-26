@@ -97,7 +97,7 @@
   <section class="hero max-width">
     <div class="container container-config text-center">
       <h2>Nosso impacto</h2>
-      <p class="txt-historia">
+      <p class="txt-subtitulo">
         Resultados concretos no combate ao desperdício de alimentos
       </p>
     </div>
