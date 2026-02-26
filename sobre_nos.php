@@ -27,7 +27,13 @@
   <section class="hero max-width">
     <div class="container container-config text-center">
       <h2>Desperdício Zero</h2>
-      <p class="txt-historia">
+      <p class="txt-historia hidden-sm hidden-lg hidden-md">
+        O Desperdício Zero nasceu como resposta ao contraste entre toneladas de alimentos descartados e famílias que lutam para ter o que comer.
+        Percebemos que o problema não era a falta de comida, mas a falha na conexão entre quem tem e quem precisa.
+        Hoje, somos a ponte que une supermercados, restaurantes e produtores agrícolas a instituições e beneficiários, garantindo que cada doação chegue ao destino certo com rapidez e dignidade.
+        Mais do que reduzir o desperdício, nossa missão é alimentar a esperança e transformar descarte em oportunidade.
+      </p>
+      <p class="txt-historia hidden-xs">
         O Desperdício Zero não nasceu apenas como uma plataforma, mas como uma
         resposta a um contraste inaceitável: toneladas de alimentos
         perfeitamente bons sendo descartados enquanto milhares de famílias
