@@ -46,7 +46,7 @@ if($_POST){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Refresh" content="1500;URL=../index.php" >
+    <meta http-equiv="Refresh" content="15;URL=../index.php" >
     <title>Modelo</title>
     <script src="https://kit.fontawesome.com/2495680ceb.js" crossorigin="anonymous"></script>
     <!-- Link CSS do Bootstrap -->
@@ -60,9 +60,9 @@ if($_POST){
     <article>
         <div class="row">
             <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
-                <h1 class="breadcrumb text-info text-center">Faça seu login</h1>
+                <h1 class="breadcrumb texto-shadow text-center">Faça seu login</h1>
                 <div class="thumbnail">
-                    <p class="text-info text-center" role="alert">
+                    <p class="texto-login text-center" role="alert">
                         <i class="fas fa-users fa-10x"></i>
                     </p>
                     <br>
@@ -82,14 +82,13 @@ if($_POST){
                                 </span>
                                 <input type="password" name="senha_usuario" id="senha_usuario" class="form-control" required placeholder="Digite sua senha.">
                             </p>
-                            <p class="text-right">
-                                <input type="submit" value="Entrar" class="btn btn-primary">
-                            </p>
-                        </form>
-                        <p class="text-center">
+                            
+                            <button class="botao-azul azul-escuro text-center">
+                                Entrar <span class="glyphicon glyphicon-log-in"></span>
+                            </button>
                             <small>
                                 <br>
-                                Caso não faça um escolha em 15 segundos será redirecionado automaticamente para página inicial.
+                                Caso não faça uma escolha em 15 segundos será redirecionado automaticamente para página inicial.
                             </small>
                         </p>                       
                     </div> <!-- fecha alert -->
